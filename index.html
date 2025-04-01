@@ -3,46 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheets/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Home</title>
+    <title>Psycflo</title>
 </head>
+
+<style>
+ 
+img {
+    width: 100%;
+}
+header {
+    height: 85vh;
+    background-image: url(./images/home.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.75;
+}
+nav {
+    width: 100%;
+    position: fixed;
+    inset-inline: 0;
+    background-color: white;
+}
+.nav {
+    height: 7vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin-inline: auto;
+}
+.nav-image {
+    width: 6.5%;
+}
+ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+li a {
+    color: black;
+    text-decoration: none;
+}
+
+.container {
+    height: 70vh; 
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+    color: black; 
+    font-size: 20px;
+    font-weight: 900;
+    font-family: sans-serif;
+}
+.container p {
+    font-weight: 200;
+}
+
+.get-started {
+    display: inline-block;
+    padding: 8px 30px;
+    background-color: darkblue;
+    color: white;
+    text-decoration: none;
+    border-radius: 15px;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 200;
+    font-family: sans-serif;
+}
+.get-started:hover {
+    background-color: darkblue;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: darkblue;
+    font-size: 18px;
+    font-weight: 200;
+    font-family: sans-serif; 
+}
+
+footer hr {
+    border: 0;
+    height: 1px; 
+    background: darkblue; 
+    margin: 20px 5%; 
+}
+
+</style>
 <body>
     <header>
         <div>
             <nav>
                 <div class="nav">
                     <div class="nav-image">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsDVxhSvrlVmL1TIwiXNGnfxYlbiptH5X9qQ&s" alt="">
+                        <img src="./images/logo.jpg" alt="">
                     </div>
                     <div class="nav-link">
                         <ul>
-                            <li><a href="index.html">Home</a></li>
+                            <li><a href="home.html">Home</a></li>
                             <li><a href="pages/about.html">About us</a></li>
                             <li><a href="pages/contact.html">Contact us</a></li>
                         </ul>
                     </div>
                 </div>
             </nav>
-            <div class="arrow">
-                <a href=""><i class="fa-solid fa-arrow-left"></i></a>
-            </div>
-            <div class="hero-sec">
+        
+            <div class="container">
                 <div>
-                <h1>Support Start Here: Mental <br> Wellness, Period Dignity, and <br>Community Care.</h1>
-                <p>Psycflo connects the dots ensuring <br>wellbeing for all.</p>
+                <h1>Support Starts Here: Mental <br> Wellness, Period Dignity, and <br>Community Care.</h1>
+                <p>Psycflo connects the dots ensuring <br> wellbeing for all.</p>
+                <a href="pages/home.html" class="get-started">Get Started</a>
+                
                 </div>
             </div>
         </div>
     </header>
-    <main>
-        <section>
-            <div class="first-sec">
-                <h5>Your Feelings Are Valid, Your Struggles <br> Are Real, And Your Healing Is Possible.</h5>
-                <p>Please, answer the following questions</p>
-            </div>
-        </section>
-    </main>
-    <footer></footer>
+
+    <footer>
+        <hr> <!-- Horizontal line -->
+        <p>Copyright &copy; 2025 - PSYCFLO</p>
+    </footer>
+    
+    <script>
+        // Add any JavaScript functionality here if needed
+        document.querySelector('.get-started').addEventListener('click', function() {
+            window.location.href = 'Get to know you forms'; // Change to the desired URL
+        });
+    </script>
+
 </body>
 </html>
