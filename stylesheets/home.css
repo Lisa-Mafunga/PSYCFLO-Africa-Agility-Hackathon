@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img {
+    width: 100%;
+}
+header {
+    height: 130vh;
+    background-image: url(../images/homepage.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    opacity: 0.7;
+}
+nav {
+    width: 100%;
+    position: fixed;
+    inset-inline: 0;
+    background-color: white;
+}
+.nav {
+    height: 7vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin-inline: auto;
+}
+.nav-image {
+    width: 3%;
+}
+ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+li a {
+    color: black;
+    text-decoration: none;
+}
+a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+.fa-solid {
+    margin-left: 100px;
+    margin-top: 80px;
+    font-size: 20px;
+    color: white;
+    border: 1px solid black;
+    border-radius: 50px;
+    background-color: black;
+    padding: 10px;
+}
+.hero-sec {
+    height: 70vh; 
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+    color: white; 
+    font-size: 20px;
+    font-weight: 900;
+    font-family: sans-serif;
+}
+.hero-sec p {
+    font-weight: 200;
+}
+
+.first-sec {
+    width: 22%;
+    margin-inline: auto;
+    margin-block: 40px;
+    border: 1px solid black;
+    text-align: center;
+    padding: 5px;
+}
+.first-sec h5 {
+    font-weight: 550;
+    font-size: 15px;
+}
+.first-sec p {
+    margin-top: 3px;
+    font-size: 12px;
+    font-weight: 200;
+}
+
+
+
+
+
