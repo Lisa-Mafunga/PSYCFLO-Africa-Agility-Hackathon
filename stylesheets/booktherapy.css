@@ -1,0 +1,115 @@
+section {
+    padding: 0 15px;
+  }
+  
+  
+  article h2 {
+    font-size: 16px;
+    margin: 0;
+    font-weight: 400;
+    color: black;
+  }
+  
+  .first-dr, .second-dr, .third-dr, .fourth-dr {
+    color: rgb(58, 57, 57);
+  }
+  
+  article h3,
+  article h4 {
+    font-size: 16px;
+    margin: 0;
+    font-weight: 400;
+    color: rgb(58, 57, 57);
+  }
+  
+  article h2,
+  article h3,
+  article h4 {
+    padding-left: 20px;
+  }
+  
+  
+  .star-filled {
+    display: flex;
+    font-size: 16px;
+    color: #f8c53a; 
+    gap: 5px;
+    align-items: center;
+    padding-left: 50px;
+  }
+  
+  .star-empty {
+    font-size: 16px;
+    color: black; 
+    text-shadow: 0 0 1px #999; 
+  }
+  
+  .fa-star-filled:before {
+    content: "\f005"; 
+    color: #f8c53a; 
+  }
+  
+  .fa-star-empty:before {
+    content: "\f005"; 
+    color: black;
+  }
+  
+  .stars {
+    margin-left: 20px;
+  }
+  
+  article {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  article img {
+    width: 600px; 
+    height: 300px; 
+    border: 5px;
+    border-radius: 5px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .therapist-one, .therapist-two, .therapist-three, .therapist-four {
+    line-height: 2;
+  }
+  
+  
+  .stars span {
+    font-size: 14px;
+    padding-left: 10px;
+    color: #000;
+  }
+  
+  article div {
+    flex-grow: 1; 
+  }
+  
+  .rating {
+    font-size: 14px;
+    color: #666; 
+  }
+  
+  button {
+    font-size: 16px;
+    background: white;
+    padding: 10px;
+    width: 30%;
+    color: #001c3f;
+    border: 1px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 20px;
+  }
+  
+  button:hover {
+    color: white;
+    background: #001c3f; 
+  }
+  
+  button:active {
+    transform: scale(0.9); 
+  }
+  
