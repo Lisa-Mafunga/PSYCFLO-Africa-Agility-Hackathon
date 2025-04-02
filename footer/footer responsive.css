@@ -1,0 +1,59 @@
+
+/* For tablets (max-width: 768px) */
+ @media screen and (max-width: 768px)
+  { #footer
+  { flex-direction: column;
+    align-items: center; text-align: center; gap: 2rem; }
+
+#footer .first,
+#footer #secondContainer {
+    width: 100%;
+}
+
+.companylink {
+    align-items: center;
+    width: auto;
+}
+
+.socialbox .socials {
+    justify-content: center;
+}
+
+}
+
+/* For mobile screens (max-width: 480px) */
+   @media screen and (max-width: 480px) 
+{ footer 
+    { padding: 2rem 1rem; }
+
+#footer {
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#footer .titlebox p {
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.companylink li a {
+    font-size: 16px;
+}
+
+.socialbox .socials {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.stroke {
+    width: 90%;
+}
+
+.copybox p {
+    font-size: 14px;
+}
+
+}
+
