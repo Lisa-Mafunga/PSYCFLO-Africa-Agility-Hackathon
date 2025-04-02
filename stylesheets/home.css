@@ -79,7 +79,7 @@ a:hover {
 }
 
 .first-sec {
-    width: 22%;
+    width: 50%;
     margin-inline: auto;
     margin-block: 40px;
     border: 1px solid black;
@@ -89,7 +89,7 @@ a:hover {
 
 .first-sec h5 {
     font-weight: 550;
-    font-size: 15px;
+    font-size: 30px;
 }
 
 .first-sec p {
@@ -98,14 +98,14 @@ a:hover {
     font-weight: 200;
 }
 .talktous-parent {
-    height: 70vh;
+    height: 80vh;
     margin-inline: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
-    /* background-color: rgb(245, 245, 245); */
+    background-color: rgb(245, 245, 245);
 }
 .talktous-container {
     height: 70vh;
@@ -179,6 +179,7 @@ a:hover {
     justify-content: center;
     align-items: center;
     margin-bottom: 40px;
+    background-color: rgb(245, 245, 245);
 }
 .other-services-container {
     height: 70vh;
