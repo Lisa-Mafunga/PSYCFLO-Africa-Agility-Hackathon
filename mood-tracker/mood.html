@@ -6,51 +6,62 @@
     <title>Mood Tracker</title>
     <link rel="stylesheet" href="../stylesheets/mood.css">
 </head>
+
+
 <body>
 
-    
+    <!-- Mood Tracked Message (Overlay) -->
+    <div id="mood-tracked" class="mood-tracked-overlay">
+        ✅ Mood tracked! Keep monitoring your emotions for better mental health.
+    </div>
 
-
-    <div class="container">
-
-         <!-- Frame 85 Image -->
-         <div class="header">
+    <!-- Mood Tracker (Will be blurred) -->
+    <div id="mood-container" class="container">
+        <div class="header">
             <a href="../pages/home.html">
                 <img src="../Images/Frame 85.png" alt="Frame 85" class="frame-image">
             </a>
             <h2>Track Your Mood Today</h2>
         </div>
 
-        <!-- Header -->
-        <!-- <h2>Track Your Mood Today</h2> -->
         <p>How are you feeling today? Select an option.</p>
 
-        <!-- Mood Cards -->
         <div class="mood-cards">
-            <div class="card happy">
+            <label class="card happy">
                 <span class="emoji">😊</span>
                 <p>Feeling Happy</p>
-            </div>
-            <div class="card calm">
+                <input type="checkbox">
+            </label>
+
+            <label class="card calm">
                 <span class="emoji">😌</span>
                 <p>Feeling Calm</p>
-            </div>
-            <div class="card sad">
+                <input type="checkbox">
+            </label>
+
+            <label class="card sad">
                 <span class="emoji">😢</span>
                 <p>Feeling Sad</p>
-            </div>
-            <div class="card neutral">
+                <input type="checkbox">
+            </label>
+
+            <label class="card neutral">
                 <span class="emoji">😐</span>
                 <p>Neutral</p>
-            </div>
+                <input type="checkbox">
+            </label>
         </div>
 
-        <!-- Save Button -->
-        <div style="height: 50px;"></div>
-        <a href="tracked.html" class="save">Save</a>
-
+        <div style="height: 20px;"></div>
+        <button class="save" onclick="showMoodTracked()">Save</button>
     </div>
 
-    <footer></footer>
+    <script>
+        function showMoodTracked() {
+            document.getElementById('mood-tracked').style.display = 'block';
+            document.getElementById('mood-container').classList.add('blur-background');
+        }
+    </script>
+
 </body>
 </html>
