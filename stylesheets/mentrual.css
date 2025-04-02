@@ -1,0 +1,260 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    height: 90px;
+    padding: 1rem 4rem;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    background: rgba(255, 255, 255, 0.90);
+    box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    width: 138px;
+    height: 90px;
+    flex-shrink: 0;
+    background: url(../images/logo3.svg) rgba(255, 255, 255, 0.90) 50% / cover no-repeat;
+    /* background-blend-mode: color-dodge; */
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    flex-shrink: 0;
+    list-style: none;
+}
+
+.nav-link li {
+    display: inline;
+    margin-right: 15px;
+}
+
+.nav-link a {
+    color: #000;
+    font-family: "Gayathri", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+}
+
+.nav-link a.active {
+    border-bottom: 1px solid #3A478D;
+    color: #3A478D;
+}
+
+.nav-link a:hover {
+    color: #3A478D;
+}
+
+.hamburger-menu {
+    display: none;
+    font-size: 1.8em;
+    cursor: pointer;
+    color: #3A478D;
+}
+
+#hero-section {
+    background: linear-gradient(0deg, rgba(220, 193, 224, 0.20) 0%, rgba(220, 193, 224, 0.20) 100%), rgba(103, 78, 133, 0.25);
+    padding: 10rem 4rem 3rem 4rem;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+#hero-section .container {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 4rem;
+}
+
+.leftcontent {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.icon {
+    width: 44px;
+    height: 44px;
+    color: white;
+    filter: drop-shadow(4px 0px 4px rgba(0, 0, 0, 0.25));
+}
+
+.fa-arrow-left,
+.fa-bars {
+    font-size: 20px;
+    color: white;
+    border: 1px solid black;
+    border-radius: 50px;
+    background-color: black;
+    padding: 10px;
+}
+
+.fa-bars {
+    color: #3A478D;
+    background-color: transparent;
+}
+
+.titlebox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 29px;
+    align-self: stretch;
+}
+
+.titlebox h1 {
+    color: rgba(0, 0, 0, 0.90);
+    font-family: "Montserrat", sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.titlebox h1 span {
+    color: #3A478D;
+}
+
+.titlebox p {
+    color: rgba(0, 0, 0, 0.75);
+    font-family: "Gayathri", sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.ter-btn {
+    display: flex;
+    height: 66px;
+    padding: 15px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 20px;
+    background: #3A478D;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.ter-btn:hover {
+    background: #222b60;
+}
+
+.ter-btn a {
+    color: #FFF;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration: none;
+}
+
+.rightcontent {
+    position: relative;
+    width: 50%;
+    max-width: 600px;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 200%;
+    padding: 5px;
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.carousel .img2 {
+    height: 450px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+        margin-left: 60%;
+        padding: 5px 10px;
+        font-size: 34px;
+    }
+
+    .menu {
+        flex-direction: column;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        width: 100%;
+        background: #3A478D;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        display: none;
+    }
+
+    .nav-link a {
+        color: white;
+    }
+
+    .nav-link {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    /* Show menu when active */
+    .menu.active {
+        display: flex;
+    }
+
+    #hero-section .container {
+        flex-direction: column;
+        gap: 4rem;
+    }
+
+    .leftcontent {
+        width: 100%;
+        gap: 2rem;
+    }
+
+    .rightcontent {
+        position: relative;
+        width: 100%;
+    }
+
+    .carousel img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.carousel .img2 {
+    height: 30.5rem;
+}
+}
