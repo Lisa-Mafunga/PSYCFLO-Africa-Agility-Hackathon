@@ -3,8 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    background-color: rgb(233, 233, 233);
+}
 img {
     width: 100%;
+}
+a:hover {
+    cursor: pointer;
 }
 header {
     height: 130vh;
@@ -13,13 +19,13 @@ header {
     background-size: cover;
     background-position: center;
     overflow: hidden;
-    opacity: 0.7;
 }
 nav {
     width: 100%;
     position: fixed;
     inset-inline: 0;
     background-color: white;
+
 }
 .nav {
     height: 7vh;
@@ -28,6 +34,7 @@ nav {
     align-items: center;
     width: 80%;
     margin-inline: auto;
+    background-color: white;
 }
 .nav-image {
     width: 5%;
@@ -72,7 +79,7 @@ a:hover {
 }
 
 .first-sec {
-    width: 22%;
+    width: 50%;
     margin-inline: auto;
     margin-block: 40px;
     border: 1px solid black;
@@ -82,7 +89,7 @@ a:hover {
 
 .first-sec h5 {
     font-weight: 550;
-    font-size: 15px;
+    font-size: 30px;
 }
 
 .first-sec p {
@@ -90,8 +97,151 @@ a:hover {
     font-size: 12px;
     font-weight: 200;
 }
+.talktous-parent {
+    height: 80vh;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: rgb(245, 245, 245);
+}
+.talktous-container {
+    height: 70vh;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 40px;
 
+}
+.talktous-image {
+    height: 80%;
+    width: 30%;
+}
+.talktous-image img {
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+}
+.talktous-div-parent {
+    height: 80%;
+    width: 35%;
+    /* padding: 20px; */
+}
+.talktous-div {
+    margin-bottom: 20px;
+}
+.talktous-div h6 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.talktous-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.talktous-button button {
+    background-color: rgb(58, 58, 155);
+    color: white;
+    padding-inline: 30px;
+    padding-block: 8px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+}
+.third-sec {
+    width: 30%;
+    margin-inline: auto;
+    margin-block: 50px;
+    /* border: 1px solid black; */
+    text-align: center;
+    padding: 5px;
+}
 
+.third-sec h5 {
+    font-weight: 550;
+    font-size: 25px;
+}
 
+.third-sec p {
+    margin-top: 3px;
+    font-size: 15px;
+    font-weight: 200;
+}
+.other-services-parent {
+    height: 80vh;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    background-color: rgb(245, 245, 245);
+}
+.other-services-container {
+    height: 70vh;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 45px;
 
+}
+.other-services-image img {
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+}
+.other-services-image {
+    height: 80%;
+    width: 30%;
+}
+.other-services-div-parent {
+    font-family: sans-serif;
+    height: 60%;
+    width: 35%;
+}
+.other-services-div h6 {
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.other-services-div p {
+    line-height: 20px;
+    font-weight: 100;
+}
+.other-services-button {
+    width: 100%;
+    margin-top: 35px;
+}
+.other-services-button button {
+    background-color: rgb(58, 58, 155);
+    color: white;
+    padding-inline: 20px;
+    padding-block: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    font-size: 15px;
+    font-weight: 700;
+}
 
+.other-services-button-2 {
+    width: 100%;
+    margin-top: 35px;
+}
+.other-services-button-2 button {
+    background-color: white;
+    color: blue;
+    padding-inline: 20px;
+    padding-block: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    font-size: 15px;
+    font-weight: 700;
+    border: 1px solid blue;
+}
