@@ -193,7 +193,8 @@ header .logo {
     height: 450px;
 }
 
-#section2 {
+#section2,
+#section3 {
     display: flex;
     flex-direction: column;
     padding: 8rem 4rem 3rem 4rem;
@@ -206,7 +207,8 @@ header .logo {
     gap: 2rem;
 }
 
-#section2 .titlebox {
+#section2 .titlebox,
+#section3 .titlebox {
     display: flex;
     width: 80%;
     max-width: 700px;
@@ -218,7 +220,15 @@ header .logo {
     gap: 30px;
 }
 
-#section2 .titlebox h2 {
+#section3 .titlebox {
+    padding-bottom: 3rem;
+}
+
+#section3 {
+    padding-top: 4rem;
+}
+
+h2 {
     color: rgba(0, 0, 0, 0.90);
     align-self: stretch;
     font-family: "Montserrat", sans-serif;
@@ -228,7 +238,8 @@ header .logo {
     line-height: normal;
 }
 
-#section2 .titlebox p {
+#section2 .titlebox p,
+#section3 .titlebox p{
     color: rgba(0, 0, 0, 0.75);
     font-family: "Gayathri", sans-serif;
     font-size: 20px;
