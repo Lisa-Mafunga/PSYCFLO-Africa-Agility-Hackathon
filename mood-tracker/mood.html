@@ -81,21 +81,45 @@
         const saveButton = document.querySelector(".save");
         const moodOverlay = document.querySelector(".mood-tracked-overlay");
         const container = document.querySelector(".container");
+        const checkboxes = document.querySelectorAll(".card input[type='checkbox']");
 
+        // Allow only one checkbox selection at a time
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener("change", function () {
+                if (this.checked) {
+                    checkboxes.forEach(otherCheckbox => {
+                        if (otherCheckbox !== this) {
+                            otherCheckbox.checked = false; // Uncheck other checkboxes
+                        }
+                    });
+                }
+            });
+        });
+
+        // Save button click event
         saveButton.addEventListener("click", function () {
-            // Show the overlay
+            const selectedMood = document.querySelector(".card input[type='checkbox']:checked");
+
+            if (!selectedMood) {
+                alert("Please select a mood before saving!");
+                return;
+            }
+
+            // Show the overlay message
             moodOverlay.style.display = "block";
             container.classList.add("blur-background");
 
-            // Hide after 2 seconds
+            // Hide message after 2 seconds and reset checkboxes
             setTimeout(function () {
                 moodOverlay.style.display = "none";
                 container.classList.remove("blur-background");
-            }, 2000); // 2000ms = 2 seconds
+
+                // Uncheck all checkboxes (reset selection)
+                checkboxes.forEach(checkbox => checkbox.checked = false);
+            }, 2000);
         });
     });
 </script>
-
 
 
 
