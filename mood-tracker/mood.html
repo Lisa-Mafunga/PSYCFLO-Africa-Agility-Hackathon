@@ -9,7 +9,27 @@
 
 
 <body>
+    
+    <header>
+        <div>
+            <nav>
+                <div class="nav">
+                    <div class="nav-image">
+                        <img src="../images/logo.jpg" alt="">
+                    </div>
+                    <div class="nav-link">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="pages/about.html">About us</a></li>
+                            <li><a href="pages/contact.html">Contact us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        </header>
 
+<div class="section">
     <!-- Mood Tracked Message (Overlay) -->
     <div id="mood-tracked" class="mood-tracked-overlay">
         ✅ Mood tracked! Keep monitoring your emotions for better mental health.
@@ -55,13 +75,29 @@
         <div style="height: 20px;"></div>
         <button class="save" onclick="showMoodTracked()">Save</button>
     </div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const saveButton = document.querySelector(".save");
+        const moodOverlay = document.querySelector(".mood-tracked-overlay");
+        const container = document.querySelector(".container");
 
-    <script>
-        function showMoodTracked() {
-            document.getElementById('mood-tracked').style.display = 'block';
-            document.getElementById('mood-container').classList.add('blur-background');
-        }
-    </script>
+        saveButton.addEventListener("click", function () {
+            // Show the overlay
+            moodOverlay.style.display = "block";
+            container.classList.add("blur-background");
+
+            // Hide after 2 seconds
+            setTimeout(function () {
+                moodOverlay.style.display = "none";
+                container.classList.remove("blur-background");
+            }, 2000); // 2000ms = 2 seconds
+        });
+    });
+</script>
+
+
+
 
 </body>
 </html>
