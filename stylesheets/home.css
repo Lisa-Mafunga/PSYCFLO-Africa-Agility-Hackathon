@@ -85,7 +85,7 @@ header .logo {
 }
 .fa-solid {
     margin-left: 50px;
-    /* margin-top: 20px; */
+    margin-bottom: 50px;
     font-size: 20px;
     color: white;
     border: 1px solid black;
@@ -102,20 +102,55 @@ header .logo {
     background-color: black;
     padding: 10px;
 }
+
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+        margin-left: 60%;
+        padding: 5px 10px;
+        font-size: 34px;
+    }
+
+    .menu {
+        flex-direction: column;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        width: 100%;
+        background: #3A478D;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        display: none;
+    }
+
+    .nav-link a {
+        color: white;
+    }
+
+    .nav-link {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+}
 main {
     margin-top: 90px; /* Add this - matches navbar height */
 }
 .heroSection {
     margin-block: 20px;
-    background-image: url(../images/homepage.png);
+    background-image: url(../images/newHomepage2.svg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 150vh;
+    height: 100vh;
     padding-top: 90px; /* Add this - matches navbar height */
 }
 .hero-sec {
-    height: 60vh; 
+    height: 40vh; 
     width: 50%;
     display: flex;
     justify-content: center;
