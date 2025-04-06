@@ -113,10 +113,63 @@
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             z-index: 1000;
-            width: 320px;
+            /* width: 320px; */
+            width: auto;
+            max-width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
             display: none;
             flex-direction: column;
             align-items: center;
+            transition: all 0.3s ease;
+        }
+        .modal .form-group {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        .modal .form-group div {
+            width: 50%;
+        }
+
+        .modal label {
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+        }
+
+        .modal input, 
+        .modal select {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .modal .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background: #374151;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .partner-options {
+            text-align: center;
+        }
+
+        .partner-options .button {
+            cursor: pointer;
+            background-color: #d3d3d3;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+
+        .partner-options .button:hover {
+            background-color: #b3b3b3;
         }
         .button {
             display: block;
@@ -174,22 +227,27 @@
         </div>
     </header>
 
-    <!-- Overlay and Modal -->
-    <div class="overlay" onclick="closeModal()"></div>
-    <div class="modal">
-        <button class="close-btn" onclick="closeModal()">&times;</button>
+   <!-- Modal -->
+<div class="overlay" onclick="closeModal()"></div>
+<div class="modal">
+    <button class="close-btn" onclick="closeModal()">&times;</button>
+    <div id="modal-content">
+        <!-- Content will be dynamically inserted here -->
         <h2>Select User Category</h2>
-        <a href="./forms/mentalhealth.html" class="button">Mental Health Care</a>
-        <a href="./forms/menstrualhealth.html" class="button">Menstrual Health Care</a>
-        <a href="./forms/partners.html" class="button">Partners (Sponsors)</a>
+        <span class="button" onclick="loadForm('mentalhealth.html'); event.preventDefault();">Mental Health Care</span>
+        <span class="button" onclick="loadForm('menstrualhealth.html'); event.preventDefault();">Menstrual Health Care</span>
+        <span class="button" onclick="loadForm('partners.html'); event.preventDefault();">Partners (Sponsors)</span>
     </div>
+</div>
+
+    
 
     <footer>
         <hr>
         <p>Copyright &copy; 2025 - PSYCFLO</p>
     </footer>
 
-    <script>
+    <!-- <script>
         function openModal() {
             document.querySelector(".overlay").style.display = "block";
             document.querySelector(".modal").style.display = "flex";
@@ -199,6 +257,83 @@
             document.querySelector(".overlay").style.display = "none";
             document.querySelector(".modal").style.display = "none";
         }
+    </script> -->
+
+    <script>
+        function openModal() {
+            document.querySelector(".overlay").style.display = "block";
+            document.querySelector(".modal").style.display = "flex";
+        }
+    
+        function closeModal() {
+            document.querySelector(".overlay").style.display = "none";
+            document.querySelector(".modal").style.display = "none";
+            // Reset modal content
+            document.getElementById("modal-content").innerHTML = `
+                <h2>Select User Category</h2>
+                <span class="button" onclick="loadForm('mentalhealth.html')">Mental Health Care</span>
+                <span class="button" onclick="loadForm('menstrualhealth.html')">Menstrual Health Care</span>
+                <span class="button" onclick="loadForm('partners.html')">Partners (Sponsors)</span>
+            `;
+        }
+    
+        function loadForm(formUrl) {
+            fetch(`forms/${formUrl}`)
+        .then(res => res.text())
+        .then(html => {
+            // Create a parser to extract the content we need
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+            
+            let content;
+            
+            // Special handling for partners.html (non-form content)
+            if (formUrl === 'partners.html') {
+                content = doc.querySelector('body').innerHTML;
+            } 
+            // Handling for form files
+            else {
+                content = doc.querySelector('.container')?.innerHTML || 
+                          doc.querySelector('form')?.innerHTML || 
+                          doc.querySelector('body').innerHTML;
+            }
+            
+            // Inject the content into modal
+            document.getElementById("modal-content").innerHTML = `
+                <button class="close-btn" onclick="closeModal()">&times;</button>
+                ${content}
+            `;
+            
+            // Adjust modal styling based on content type
+            const modal = document.querySelector('.modal');
+            modal.style.width = 'auto';
+            modal.style.maxWidth = '90%';
+            modal.style.maxHeight = '90vh';
+            modal.style.overflowY = 'auto';
+            
+            // Special styling for partners page
+            if (formUrl === 'partners.html') {
+                modal.style.textAlign = 'center';
+                modal.style.padding = '30px';
+                
+                // Make buttons look consistent with your modal style
+                const buttons = modal.querySelectorAll('.button');
+                buttons.forEach(button => {
+                    button.style.display = 'block';
+                    button.style.width = '100%';
+                    button.style.margin = '15px 0';
+                    button.style.padding = '15px';
+                });
+            }
+        })
+        .catch(err => {
+            console.error("Error loading form:", err);
+            document.getElementById("modal-content").innerHTML = `
+                <p>Error loading form. Check console for details.</p>
+                <button class="button" onclick="closeModal()">Close</button>
+            `;
+        });
+}
     </script>
 
 </body>
