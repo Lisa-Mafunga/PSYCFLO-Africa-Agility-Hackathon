@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../footer/footer responsive.css">
+    <link rel="stylesheet" href="../footer/footer.css">
+    <title>Contact Us</title>
+    <style>
+        img {
+            width: 100%;
+        }
+
+        header {
+            display: flex;
+            height: 90px;
+            padding: 1rem 4rem;
+            justify-content: space-between;
+            align-items: center;
+            flex-shrink: 0;
+            background: rgba(255, 255, 255, 0.90);
+            box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        header .logo {
+            width: 138px;
+            height: 90px;
+            flex-shrink: 0;
+            background: url(../images/logo3.svg) rgba(255, 255, 255, 0.90) 50% / cover no-repeat;
+            /* background-blend-mode: color-dodge; */
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            flex-shrink: 0;
+            list-style: none;
+        }
+
+        .nav-link li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        .nav-link a {
+            color: #000;
+            font-family: "Gayathri", sans-serif;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-decoration: none;
+        }
+
+        .nav-link a.active {
+            border-bottom: 1px solid #3A478D;
+            color: #3A478D;
+        }
+
+        .nav-link a:hover {
+            color: #3A478D;
+        }
+
+        .hamburger-menu {
+            display: none;
+            font-size: 1.8em;
+            cursor: pointer;
+            color: #3A478D;
+        }
+
+        .fa-solid {
+            margin-left: 50px;
+            margin-bottom: 50px;
+            font-size: 20px;
+            color: white;
+            border: 1px solid black;
+            border-radius: 50px;
+            background-color: black;
+            padding: 10px;
+        }
+
+        .fa-bars {
+            font-size: 20px;
+            color: white;
+            border: 1px solid black;
+            border-radius: 50px;
+            background-color: black;
+            padding: 10px;
+        }
+
+        .fa-arrow-left {
+            font-size: 20px;
+            color: white;
+            border: 1px solid black;
+            border-radius: 50px;
+            background-color: blueviolet;
+            padding: 10px;
+            margin-bottom: 90px;
+            margin-left: 80px;
+        }
+
+        .contact {
+            width: 90%;
+            margin-inline: auto;
+            height: 80vh;
+            background: #DEDFE14D;
+            display: flex;
+            flex-direction: column;
+            margin-top: 120px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .text {
+            width: 367;
+            height: 67;
+        }
+
+        .text h1 {
+            font-family: Montserrat;
+            font-weight: 700;
+            font-size: 55px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: center;
+            margin-block: 30px;
+        }
+
+        .text p {
+            width: 60%;
+            font-size: 40px;
+            line-height: 100%;
+            font-family: Montserrat;
+            font-weight: 500;
+            padding-left: 40px;
+        }
+
+        .flex-img1 {
+            width: 50%;
+            display: flex;
+            align-items: end;
+            justify-content: end;
+            height: 35%;
+            position: relative;
+            /* margin-top: 30px; */
+            /* margin-left: 100px; */
+            position: absolute;
+            left: 23%;
+            bottom: 22%;
+        }
+
+        .flex-img1 img {
+            width: 20%;
+            height: 50px;
+            position: absolute;
+            left: 34%;
+            right: 10%;
+            bottom: 3%;
+        }
+
+        .flex-img1 p {
+            background: #DEDFE1;
+            padding-block: 10px;
+            padding-inline: 30px;
+            font-size: 40px;
+            border-radius: 8px;
+        }
+
+        .flex-img2 {
+            width: 32%;
+            height: 100%;
+            position: absolute;
+            left: 68%;
+            bottom: 0%;
+        }
+
+        .flex-img2 img {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Media Queries for Header and Main Only */
+        @media (max-width: 1200px) {
+            header {
+                padding: 1rem 2rem;
+            }
+            
+            .nav-link {
+                gap: 2rem;
+            }
+            
+            .text p {
+                width: 70%;
+                font-size: 35px;
+            }
+            
+            .flex-img1 p {
+                font-size: 35px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            header {
+                padding: 1rem;
+            }
+            
+            .nav-link {
+                gap: 1.5rem;
+            }
+            
+            .nav-link a {
+                font-size: 18px;
+            }
+            
+            .text h1 {
+                font-size: 45px;
+            }
+            
+            .text p {
+                width: 80%;
+                font-size: 30px;
+                padding-left: 30px;
+            }
+            
+            .flex-img1 {
+                left: 20%;
+                bottom: 25%;
+            }
+            
+            .flex-img1 p {
+                font-size: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hamburger-menu {
+                display: block;
+                margin-left: 60%;
+                padding: 5px 10px;
+                font-size: 34px;
+            }
+
+            .menu {
+                flex-direction: column;
+                position: absolute;
+                top: 68px;
+                left: 0;
+                width: 100%;
+                background: #3A478D;
+                color: white;
+                text-align: center;
+                padding: 10px 0;
+                display: none;
+            }
+
+            .nav-link a {
+                color: white;
+            }
+
+            .nav-link {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .hamburger-menu {
+                display: block;
+            }
+            
+            .contact {
+                height: auto;
+                padding-bottom: 40px;
+            }
+            
+            .text h1 {
+                font-size: 40px;
+                margin-block: 20px;
+            }
+            
+            .text p {
+                width: 90%;
+                font-size: 40px;
+                padding-left: 20px;
+                line-height: 1.3;
+                text-align: center;
+            }
+            
+            .flex-img1 {
+                width: 50%;
+                height: 60%;
+                position: relative;
+                margin-top: 30px;
+                margin-left: 60px;
+                left: auto;
+                bottom: auto;
+                margin-bottom: 30px;
+            }
+
+            .flex-img1 img {
+                width: 20%;
+                height: 47px;
+                position: absolute;
+                left: -5%;
+                right: 10%;
+                bottom: 3%;
+            }
+
+            .flex-img1 p {
+                padding-block: 10px;
+                padding-inline: 30px;
+                font-size: 40px;
+            }
+            
+            .flex-img2 {
+                position: relative;
+                width: 80%;
+                height: auto;
+                left: auto;
+                bottom: auto;
+                margin: 0 auto;
+            }
+        }
+
+        @media (max-width: 576px) {
+            header {
+                height: 70px;
+            }
+            
+            header .logo {
+                width: 100px;
+                height: 70px;
+            }
+            
+            .hamburger-menu {
+                margin-left: auto;
+                font-size: 28px;
+            }
+            
+            .contact {
+                margin-top: 90px;
+            }
+            
+            .text h1 {
+                font-size: 32px;
+            }
+            
+            .text p {
+                font-size: 30px;
+                width: 95%;
+                padding-left: 10px;
+                text-align: center;
+            }
+            
+            .flex-img1 {
+                width: 80%;
+                height: 30%;
+                margin-inline: 20px;
+                position: relative;
+            }
+            
+            .flex-img1 p {
+                font-size: 30px;
+                padding-inline: 30px;
+            }
+            
+            .flex-img1 img {
+                width: 15%;
+                height: 40px;
+                position: absolute;
+                left: 7%;
+                bottom: 5%;
+            }
+            
+            .flex-img2 {
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .text h1 {
+                font-size: 28px;
+            }
+            
+            .text p {
+                font-size: 18px;
+            }
+            
+            .flex-img1 p {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo"></div>
+
+        <div class="hamburger-menu" id="hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <nav class="menu" id="nav">
+            <ul class="nav-link" id="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/pages/about.html">About us</a></li>
+                <li><a href="./contactus.html">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="contact">
+            <div class="text">
+                <h1>NEED HELP?</h1>
+            </div>
+            <div class="text">
+                <p>If you have inquiries or need assistance, do not hesitate to send us a message. We'll be happy to
+                    help!</p>
+            </div>
+            <div class="flex-img1">
+                <img src="../images2/Vector.svg" alt="">
+                <p>Dial or text 123#</p>
+            </div>
+            <div class="flex-img2">
+                <img src="../images2/send-message-by-phone-concept-illustration 1 (3).svg" alt="">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div id="footer">
+                <div class="first">
+                    <div class="titlebox">
+                        <div class="image">
+                        </div>
+                        <p>Need support? Contact us, and we'll be happy to assist!</p>
+                    </div>
+
+                    <div class="socialbox">
+                        <p>Follow us on social media</p>
+                        <div class="socials">
+                            <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://www.x.com"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.youtube.com"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="secondContainer">
+                    <ul class="companylink">
+                        <li><a href="./home.html">Home</a></li>
+                        <li><a href="./about.html">About us</a></li>
+                        <li><a href="./terms.html">Terms of use</a></li>
+                        <li><a href="./privacy">Privacy Policies</a></li>
+                    </ul>
+                </div>
+
+                <ul class="companylink">
+                    <li><a href="./help">Help Center</a></li>
+                    <li><a href="./chat">Chat with us</a></li>
+                    <li><a href="./contact">Contact us</a></li>
+                    <li><a href="./ussd">USSD Service</a></li>
+                </ul>
+
+            </div>
+
+            <div class="stroke"></div>
+
+            <div class="copybox">
+                <p>Copyright &copy; <span id="year"></span> - PSYCFLO</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Toggle mobile menu
+        const hamburger = document.getElementById('hamburger');
+        const nav = document.getElementById('nav');
+
+        hamburger.addEventListener('click', () => {
+            nav.style.display = nav.style.display === 'none' ? 'block' : 'none';
+        });
+
+        // Update copyright year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

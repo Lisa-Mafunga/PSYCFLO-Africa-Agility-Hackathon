@@ -92,16 +92,6 @@ header .logo {
     background-color: black;
     padding: 10px;
 }
-.fa-arrow-left {
-    font-size: 20px;
-    color: white;
-    border: 1px solid black;
-    border-radius: 50px;
-    background-color: blueviolet;
-    padding: 10px;
-    margin-bottom: 90px;
-    margin-left: 80px;
-}
 
 @media (max-width: 768px) {
     .hamburger-menu {
@@ -146,11 +136,17 @@ main {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 765px;
-    padding-top: 90px; /* Add this - matches navbar height */
+    height: 120vh;
+    /* padding-top: 90px; */
+}
+.icon img {
+    margin-top: 30px;
+    margin-left: 80px;
+    width: 60px;
+    height: 60px;
 }
 .hero-sec {
-    height: 200px; 
+    height: 300px; 
     width: 813px;
     display: flex;
     justify-content: center;
