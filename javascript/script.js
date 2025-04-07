@@ -42,3 +42,8 @@ function goBack() {
 document.getElementById("hamburger").addEventListener("click", function () {
     document.getElementById("nav").classList.toggle("active");
 });
+
+// index page
+document.querySelector('.get-started').addEventListener('click', function() {
+    alert('Get to know you forms');
+});
