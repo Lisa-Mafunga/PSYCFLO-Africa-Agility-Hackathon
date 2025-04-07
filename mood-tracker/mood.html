@@ -4,12 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mood Tracker</title>
-    <link rel="stylesheet" href="../stylesheets/mood.css">
+    <link rel="stylesheet" href="/stylesheets/mood.css">
+    <link rel="stylesheet" href="../footer/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gayathri:wght@100;400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
-
-
 <body>
-    
+
+    <!-- Header -->
     <header>
         <div class="logo"></div>
 
@@ -25,100 +32,113 @@
             </ul>
         </nav>
     </header>
+    <!-- Mood Tracker Section -->
 
-<div class="section">
     <!-- Mood Tracked Message (Overlay) -->
     <div id="mood-tracked" class="mood-tracked-overlay">
-        ✅ Mood tracked! Keep monitoring your emotions for better mental health.
+        <div class="overlay-box">
+            <img src="../Images/Smiley Face.png" alt="Smiley Face" class="overlay-smiley" />
+            <p>Thank you for your time today. See you tomorrow.</p>
+        </div>
     </div>
 
-    <!-- Mood Tracker (Will be blurred) -->
-    <div id="mood-container" class="container">
+    <div class="container">
         <div class="header">
-            <a href="../pages/home.html">
-                <img src="../Images/Frame 85.png" alt="Frame 85" class="frame-image">
-            </a>
+            <div class="back-button">
+                <a href="../pages/home.html">
+                    <img src="../Images/Frame 85.png" alt="Back" class="back-image">
+                </a>
+            </div>
             <h2>Track Your Mood Today</h2>
+            <p>What are you feeling like today? Select all that apply</p>
         </div>
 
-        <p>How are you feeling today? Select an option.</p>
+        <form>
+            <label for="feeling">How are you feeling today?</label>
+            <input type="text" id="feeling" name="feeling">
 
-        <div class="mood-cards">
-            <label class="card happy">
-                <span class="emoji">😊</span>
-                <p>Feeling Happy</p>
-                <input type="checkbox">
-            </label>
+            <label for="improvement">Have you had an improvement since your last session?</label>
+            <input type="text" id="improvement" name="improvement">
 
-            <label class="card calm">
-                <span class="emoji">😌</span>
-                <p>Feeling Calm</p>
-                <input type="checkbox">
-            </label>
+            <label for="routine">What is your current daily routine like?</label>
+            <input type="text" id="routine" name="routine">
 
-            <label class="card sad">
-                <span class="emoji">😢</span>
-                <p>Feeling Sad</p>
-                <input type="checkbox">
-            </label>
+            <label for="note">What would you like to tell us today?</label>
+            <input type="text" id="note" name="note">
 
-            <label class="card neutral">
-                <span class="emoji">😐</span>
-                <p>Neutral</p>
-                <input type="checkbox">
-            </label>
-        </div>
-
-        <div style="height: 20px;"></div>
-        <button class="save" onclick="showMoodTracked()">Save</button>
+            <!-- Save Button with correct ID -->
+            <button class="save" id="save-btn" type="button">Save</button>
+        </form>
     </div>
-</div>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const saveButton = document.querySelector(".save");
-        const moodOverlay = document.querySelector(".mood-tracked-overlay");
-        const container = document.querySelector(".container");
-        const checkboxes = document.querySelectorAll(".card input[type='checkbox']");
 
-        // Allow only one checkbox selection at a time
-        checkboxes.forEach(checkbox => {
-            checkbox.addEventListener("change", function () {
-                if (this.checked) {
-                    checkboxes.forEach(otherCheckbox => {
-                        if (otherCheckbox !== this) {
-                            otherCheckbox.checked = false; // Uncheck other checkboxes
-                        }
-                    });
-                }
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div id="footer">
+                <div class="first">
+                    <div class="titlebox">
+                        <div class="image">
+                        </div>
+                        <p>Need support? Contact us, and we&apos;ll be happy to assist!</p>
+                    </div>
+
+                    <div class="socialbox">
+                        <p>Follow us on social media</p>
+                        <div class="socials">
+                            <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://www.x.com"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.youtube.com"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="secondContainer">
+                    <ul class="companylink">
+                        <li><a href="./home.html">Home</a></li>
+                        <li><a href="./about.html">About us</a></li>
+                        <li><a href="./terms.html">Terms of use</a></li>
+                        <li><a href="./privacy">Privacy Policies</a></li>
+                    </ul>
+                </div>
+
+                    <ul class="companylink">
+                        <li><a href="./help">Help Center</a></li>
+                        <li><a href="./chat">Chat with us</a></li>
+                        <li><a href="./contact">Contact us</a></li>
+                        <li><a href="./ussd">USSD Service</a></li>
+                    </ul>
+
+            </div>
+
+            <div class="stroke"></div>
+
+            <div class="copybox">
+                <p>Copyright &copy; <span id="year"></span> - PSYCFLO</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./footer/script.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const saveButton = document.getElementById("save-btn");
+            const moodOverlay = document.getElementById("mood-tracked");
+
+            // Save button click event
+            saveButton.addEventListener("click", function () {
+                // Show the overlay
+                moodOverlay.style.display = "flex";
+
+                // Optional: hide it after a few seconds
+                setTimeout(() => {
+                    moodOverlay.style.display = "none";
+                }, 3000); // Adjust timing if needed
             });
         });
-
-        // Save button click event
-        saveButton.addEventListener("click", function () {
-            const selectedMood = document.querySelector(".card input[type='checkbox']:checked");
-
-            if (!selectedMood) {
-                alert("Please select a mood before saving!");
-                return;
-            }
-
-            // Show the overlay message
-            moodOverlay.style.display = "block";
-            container.classList.add("blur-background");
-
-            // Hide message after 2 seconds and reset checkboxes
-            setTimeout(function () {
-                moodOverlay.style.display = "none";
-                container.classList.remove("blur-background");
-
-                // Uncheck all checkboxes (reset selection)
-                checkboxes.forEach(checkbox => checkbox.checked = false);
-            }, 2000);
-        });
-    });
-</script>
-
-
+    </script>
 
 </body>
 </html>
