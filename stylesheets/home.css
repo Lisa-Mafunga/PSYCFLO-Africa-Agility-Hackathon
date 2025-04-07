@@ -74,7 +74,7 @@ header .logo {
     cursor: pointer;
     color: #3A478D;
 }
-.fa-solid {
+.fa-solid, .fa-arrow-left {
     margin-left: 50px;
     margin-bottom: 50px;
     font-size: 20px;
@@ -91,16 +91,6 @@ header .logo {
     border-radius: 50px;
     background-color: black;
     padding: 10px;
-}
-.fa-arrow-left {
-    font-size: 20px;
-    color: white;
-    border: 1px solid black;
-    border-radius: 50px;
-    background-color: blueviolet;
-    padding: 10px;
-    margin-bottom: 90px;
-    margin-left: 80px;
 }
 
 @media (max-width: 768px) {
@@ -148,6 +138,26 @@ main {
     background-repeat: no-repeat;
     height: 765px;
     padding-top: 90px; /* Add this - matches navbar height */
+}
+.arrow {
+    width: 30%;
+    margin-bottom: 80px;
+    border: 1px solid red;
+}
+.fa-arrow-left {
+    font-size: 20px;
+    color: white;
+    border: 1px solid black;
+    border-radius: 50px;
+    background-color: blueviolet;
+    padding: 10px;
+    margin-left: 80px;
+}
+.icon {
+    width: 44px;
+    height: 45px;
+    color: white;
+    filter: drop-shadow(4px 0px 4px rgba(0, 0, 0, 0.25));
 }
 .hero-sec {
     height: 200px; 
