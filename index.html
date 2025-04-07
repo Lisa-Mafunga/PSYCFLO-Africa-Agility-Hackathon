@@ -1,65 +1,165 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Psycflo</title>
 
     <style>
         img {
             width: 100%;
         }
+
         header {
-            height: 85vh;
+            display: flex;
+            height: 90px;
+            padding: 1rem 4rem;
+            justify-content: space-between;
+            align-items: center;
+            flex-shrink: 0;
+            background: rgba(255, 255, 255, 0.90);
+            box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        header .logo {
+            width: 138px;
+            height: 90px;
+            flex-shrink: 0;
+            background: url(../images/logo3.svg) rgba(255, 255, 255, 0.90) 50% / cover no-repeat;
+            /* background-blend-mode: color-dodge; */
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            flex-shrink: 0;
+            list-style: none;
+        }
+
+        .nav-link li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        .nav-link a {
+            color: #000;
+            font-family: "Gayathri", sans-serif;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-decoration: none;
+        }
+
+        .nav-link a.active {
+            border-bottom: 1px solid #3A478D;
+            color: #3A478D;
+        }
+
+        .nav-link a:hover {
+            color: #3A478D;
+        }
+
+        .hamburger-menu {
+            display: none;
+            font-size: 1.8em;
+            cursor: pointer;
+            color: #3A478D;
+        }
+
+        .fa-solid {
+            margin-left: 50px;
+            margin-bottom: 50px;
+            font-size: 20px;
+            color: white;
+            border: 1px solid black;
+            border-radius: 50px;
+            background-color: black;
+            padding: 10px;
+        }
+
+        .fa-bars {
+            font-size: 20px;
+            color: white;
+            border: 1px solid black;
+            border-radius: 50px;
+            background-color: black;
+            padding: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .hamburger-menu {
+                display: block;
+                margin-left: 60%;
+                padding: 5px 10px;
+                font-size: 34px;
+            }
+
+            .menu {
+                flex-direction: column;
+                position: absolute;
+                top: 68px;
+                left: 0;
+                width: 100%;
+                background: #3A478D;
+                color: white;
+                text-align: center;
+                padding: 10px 0;
+                display: none;
+            }
+
+            .nav-link a {
+                color: white;
+            }
+
+            .nav-link {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .hamburger-menu {
+                display: block;
+            }
+        }
+
+        .first-sec {
             background-image: url(./images/home.png);
+            height: 765px;
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
             opacity: 0.75;
+            margin-top: 20px
         }
-        nav {
-            width: 100%;
-            position: fixed;
-            inset-inline: 0;
-            background-color: white;
-            z-index: 100;
-        }
-        .nav {
-            height: 7vh;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 80%;
-            margin-inline: auto;
-        }
-        .nav-image {
-            width: 6.5%;
-        }
-        ul {
-            display: flex;
-            gap: 30px;
-            list-style: none;
-        }
-        li a {
-            color: black;
-            text-decoration: none;
-        }
+
         .container {
-            height: 70vh; 
-            width: 50%;
+            height: 768px;
+            width: 813px;
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-left: 50px;
-            color: black; 
-            font-size: 20px;
+            margin-left: 20px;
+            margin-top: 30px;
+            color: black;
+            font-size: 30px;
             font-weight: 900;
-            font-family: sans-serif;
+            font-family: "Montserrat", sans-serif;
         }
+
         .container p {
             font-weight: 200;
         }
+
         .get-started {
             display: inline-block;
             padding: 8px 30px;
@@ -73,6 +173,7 @@
             font-family: sans-serif;
             cursor: pointer;
         }
+
         .get-started:hover {
             background-color: navy;
         }
@@ -82,14 +183,15 @@
             margin-top: 20px;
             font-size: 18px;
             font-weight: 200;
-            font-family: sans-serif; 
+            font-family: sans-serif;
             color: darkblue;
         }
+
         footer hr {
             border: 0;
-            height: 1px; 
-            background: darkblue; 
-            margin: 20px 5%; 
+            height: 1px;
+            background: darkblue;
+            margin: 20px 5%;
         }
 
         /* Modal Styles */
@@ -103,6 +205,7 @@
             display: none;
             z-index: 999;
         }
+
         .modal {
             position: fixed;
             top: 50%;
@@ -123,12 +226,14 @@
             align-items: center;
             transition: all 0.3s ease;
         }
+
         .modal .form-group {
             display: flex;
             justify-content: space-between;
             gap: 15px;
             margin-bottom: 15px;
         }
+
         .modal .form-group div {
             width: 50%;
         }
@@ -139,7 +244,7 @@
             margin-bottom: 5px;
         }
 
-        .modal input, 
+        .modal input,
         .modal select {
             width: 80%;
             padding: 10px;
@@ -156,6 +261,7 @@
             border-radius: 5px;
             cursor: pointer;
         }
+
         .partner-options {
             text-align: center;
         }
@@ -171,6 +277,7 @@
         .partner-options .button:hover {
             background-color: #b3b3b3;
         }
+
         .button {
             display: block;
             width: 100%;
@@ -185,10 +292,12 @@
             box-sizing: border-box;
             cursor: pointer;
         }
+
         .button:hover {
             background-color: #b3b3b3;
             transition: background 0.3s ease-in-out;
         }
+
         .close-btn {
             position: absolute;
             top: 10px;
@@ -198,72 +307,62 @@
             font-size: 18px;
             cursor: pointer;
         }
-
     </style>
 </head>
+
 <body>
-
     <header>
-        <nav>
-            <div class="nav">
-                <div class="nav-image">
-                    <img src="./images/logo.jpg" alt="">
-                </div>
-                <div class="nav-link">
-                    <ul>
-                        <li><a href="home.html">Home</a></li>
-                        <li><a href="pages/about.html">About us</a></li>
-                        <li><a href="pages/contact.html">Contact us</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <div class="logo"></div>
 
-        <div class="container">
-            <div>
-                <h1>Support Starts Here: Mental <br> Wellness, Period Dignity, and <br>Community Care.</h1>
-                <p>Psycflo connects the dots ensuring <br> wellbeing for all.</p>
-                <span class="get-started" onclick="openModal()">Get Started</span>
-            </div>
+        <div class="hamburger-menu" id="hamburger">
+            <i class="fa-solid fa-bars"></i>
         </div>
+
+        <nav class="menu" id="nav">
+            <ul class="nav-link" id="nav-links">
+                <li><a href="./home.html">Home</a></li>
+                <li><a href="./about.html">About us</a></li>
+                <li><a href="./contact.html">Contact us</a></li>
+            </ul>
+        </nav>
     </header>
-
-   <!-- Modal -->
-<div class="overlay" onclick="closeModal()"></div>
-<div class="modal">
-    <button class="close-btn" onclick="closeModal()">&times;</button>
-    <div id="modal-content">
-        <!-- Content will be dynamically inserted here -->
-        <h2>Select User Category</h2>
-        <span class="button" onclick="loadForm('mentalhealth.html'); event.preventDefault();">Mental Health Care</span>
-        <span class="button" onclick="loadForm('menstrualhealth.html'); event.preventDefault();">Menstrual Health Care</span>
-        <span class="button" onclick="loadForm('partners.html'); event.preventDefault();">Partners (Sponsors)</span>
-    </div>
-</div>
-
+    <main>
+        <section class="first-sec">
+            <div class="container">
+                <div>
+                    <h1>Support Starts Here: Mental <br> Wellness, Period Dignity, and <br>Community Care.</h1>
+                    <p>Psycflo connects the dots ensuring <br> wellbeing for all.</p>
+                    <span class="get-started" onclick="openModal()">Get Started</span>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="overlay" onclick="closeModal()"></div>
+            <div class="modal">
+                <button class="close-btn" onclick="closeModal()">&times;</button>
+                <div id="modal-content">
+                    <!-- Content will be dynamically inserted here -->
+                    <h2>Select User Category</h2>
+                    <span class="button" onclick="loadForm('mentalhealth.html'); event.preventDefault();">Mental Health
+                        Care</span>
+                    <span class="button" onclick="loadForm('menstrualhealth.html'); event.preventDefault();">Menstrual
+                        Health Care</span>
+                    <span class="button" onclick="loadForm('partners.html'); event.preventDefault();">Partners
+                        (Sponsors)</span>
+                </div>
+            </div>
+        </section>
+    </main>
     <footer>
         <hr>
         <p>Copyright &copy; 2025 - PSYCFLO</p>
     </footer>
-
-    <!-- <script>
-        function openModal() {
-            document.querySelector(".overlay").style.display = "block";
-            document.querySelector(".modal").style.display = "flex";
-        }
-
-        function closeModal() {
-            document.querySelector(".overlay").style.display = "none";
-            document.querySelector(".modal").style.display = "none";
-        }
-    </script> -->
-
     <script>
         function openModal() {
             document.querySelector(".overlay").style.display = "block";
             document.querySelector(".modal").style.display = "flex";
         }
-    
+
         function closeModal() {
             document.querySelector(".overlay").style.display = "none";
             document.querySelector(".modal").style.display = "none";
@@ -275,65 +374,66 @@
                 <span class="button" onclick="loadForm('partners.html')">Partners (Sponsors)</span>
             `;
         }
-    
+
         function loadForm(formUrl) {
             fetch(`forms/${formUrl}`)
-        .then(res => res.text())
-        .then(html => {
-            // Create a parser to extract the content we need
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(html, 'text/html');
-            
-            let content;
-            
-            // Special handling for partners.html (non-form content)
-            if (formUrl === 'partners.html') {
-                content = doc.querySelector('body').innerHTML;
-            } 
-            // Handling for form files
-            else {
-                content = doc.querySelector('.container')?.innerHTML || 
-                          doc.querySelector('form')?.innerHTML || 
-                          doc.querySelector('body').innerHTML;
-            }
-            
-            // Inject the content into modal
-            document.getElementById("modal-content").innerHTML = `
+                .then(res => res.text())
+                .then(html => {
+                    // Create a parser to extract the content we need
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(html, 'text/html');
+
+                    let content;
+
+                    // Special handling for partners.html (non-form content)
+                    if (formUrl === 'partners.html') {
+                        content = doc.querySelector('body').innerHTML;
+                    }
+                    // Handling for form files
+                    else {
+                        content = doc.querySelector('.container')?.innerHTML ||
+                            doc.querySelector('form')?.innerHTML ||
+                            doc.querySelector('body').innerHTML;
+                    }
+
+                    // Inject the content into modal
+                    document.getElementById("modal-content").innerHTML = `
                 <button class="close-btn" onclick="closeModal()">&times;</button>
                 ${content}
             `;
-            
-            // Adjust modal styling based on content type
-            const modal = document.querySelector('.modal');
-            modal.style.width = 'auto';
-            modal.style.maxWidth = '90%';
-            modal.style.maxHeight = '90vh';
-            modal.style.overflowY = 'auto';
-            
-            // Special styling for partners page
-            if (formUrl === 'partners.html') {
-                modal.style.textAlign = 'center';
-                modal.style.padding = '30px';
-                
-                // Make buttons look consistent with your modal style
-                const buttons = modal.querySelectorAll('.button');
-                buttons.forEach(button => {
-                    button.style.display = 'block';
-                    button.style.width = '100%';
-                    button.style.margin = '15px 0';
-                    button.style.padding = '15px';
-                });
-            }
-        })
-        .catch(err => {
-            console.error("Error loading form:", err);
-            document.getElementById("modal-content").innerHTML = `
+
+                    // Adjust modal styling based on content type
+                    const modal = document.querySelector('.modal');
+                    modal.style.width = 'auto';
+                    modal.style.maxWidth = '90%';
+                    modal.style.maxHeight = '90vh';
+                    modal.style.overflowY = 'auto';
+
+                    // Special styling for partners page
+                    if (formUrl === 'partners.html') {
+                        modal.style.textAlign = 'center';
+                        modal.style.padding = '30px';
+
+                        // Make buttons look consistent with your modal style
+                        const buttons = modal.querySelectorAll('.button');
+                        buttons.forEach(button => {
+                            button.style.display = 'block';
+                            button.style.width = '100%';
+                            button.style.margin = '15px 0';
+                            button.style.padding = '15px';
+                        });
+                    }
+                })
+                .catch(err => {
+                    console.error("Error loading form:", err);
+                    document.getElementById("modal-content").innerHTML = `
                 <p>Error loading form. Check console for details.</p>
                 <button class="button" onclick="closeModal()">Close</button>
             `;
-        });
-}
+                });
+        }
     </script>
 
 </body>
+
 </html>

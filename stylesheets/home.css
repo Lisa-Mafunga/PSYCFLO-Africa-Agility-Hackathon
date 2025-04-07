@@ -28,15 +28,6 @@ header {
     z-index: 1000;
 }
 
-
-/* header {
-    height: 130vh;
-    background-image: url(../images/homepage.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
-} */
 header .logo {
     width: 138px;
     height: 90px;
@@ -93,7 +84,6 @@ header .logo {
     background-color: black;
     padding: 10px;
 }
-.fa-arrow-left,
 .fa-bars {
     font-size: 20px;
     color: white;
@@ -101,6 +91,16 @@ header .logo {
     border-radius: 50px;
     background-color: black;
     padding: 10px;
+}
+.fa-arrow-left {
+    font-size: 20px;
+    color: white;
+    border: 1px solid black;
+    border-radius: 50px;
+    background-color: blueviolet;
+    padding: 10px;
+    margin-bottom: 90px;
+    margin-left: 80px;
 }
 
 @media (max-width: 768px) {
@@ -142,20 +142,21 @@ main {
 }
 .heroSection {
     margin-block: 20px;
-    background-image: url(../images/newHomepage2.svg);
+    background-image: url(../images2/image\ copy.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 765px;
     padding-top: 90px; /* Add this - matches navbar height */
 }
 .hero-sec {
-    height: 40vh; 
-    width: 50%;
+    height: 200px; 
+    width: 813px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 50px;
+    margin-left: 20px;
+    margin-top: 30px;
     color: white; 
     font-size: 30px;
     font-weight: 900;
@@ -197,16 +198,16 @@ main {
 }
 .talktous-container {
     height: 90vh;
-    width: 80%;
+    width: 90%;
     display: flex;
     justify-content: center;
     align-items: center; 
-    gap: 40px;
+    gap: 95px;
 
 }
 .talktous-image {
     height: 90%;
-    width: 40%;
+    width: 45%;
 }
 .talktous-image img {
     height: 100%;
@@ -215,7 +216,7 @@ main {
 }
 .talktous-div-parent {
     height: 90%;
-    width: 40%;
+    width: 45%;
     font-family: "Montserrat", sans-serif;
     /* padding: 20px; */
 }
@@ -226,6 +227,9 @@ main {
 .talktous-div h6 {
     font-size: 16px;
     margin-bottom: 10px;
+}
+.talktous-div p {
+    line-height: 30px;
 }
 .talktous-button {
     width: 30%;
@@ -271,24 +275,24 @@ main {
     font-weight: 300;
 }
 .other-services-parent {
-    height: 110vh;
+    height: 765px;
     margin-inline: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 95px;
     font-family: "Montserrat", sans-serif;
     margin-bottom: 50px;
     /* background-color: rgb(245, 245, 245); */
 }
 .other-services-container {
     height: 90vh;
-    width: 80%;
+    width: 90%;
     display: flex;
     justify-content: center;
     align-items: center; 
-    gap: 30px;
+    gap: 95px;
 
 }
 .other-services-image img {
