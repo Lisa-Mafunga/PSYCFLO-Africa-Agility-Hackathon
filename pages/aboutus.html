@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../footer/footer.css">
+    <link rel="stylesheet" href="../footer/footer responsive.css">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(233, 233, 233);
+        }
+
+        img {
+            width: 100%;
+        }
+
+        a:hover {
+            cursor: pointer;
+        }
+
+        header {
+            display: flex;
+            height: 90px;
+            padding: 1rem 4rem;
+            justify-content: space-between;
+            align-items: center;
+            flex-shrink: 0;
+            background: rgba(255, 255, 255, 0.90);
+            box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        header .logo {
+            width: 138px;
+            height: 90px;
+            flex-shrink: 0;
+            background: url(../images/logo3.svg) rgba(255, 255, 255, 0.90) 50% / cover no-repeat;
+            /* background-blend-mode: color-dodge; */
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            flex-shrink: 0;
+            list-style: none;
+        }
+
+        .nav-link li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        .nav-link a {
+            color: #000;
+            font-family: "Gayathri", sans-serif;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-decoration: none;
+        }
+
+        .nav-link a.active {
+            border-bottom: 1px solid #3A478D;
+            color: #3A478D;
+        }
+
+        .nav-link a:hover {
+            color: #3A478D;
+        }
+
+        .hamburger-menu {
+            display: none;
+            font-size: 1.8em;
+            cursor: pointer;
+            color: #3A478D;
+        }
+
+        .fa-solid {
+            margin-left: 50px;
+            margin-bottom: 50px;
+            font-size: 20px;
+            color: white;
+            border: 1px solid black;
+            border-radius: 50px;
+            background-color: black;
+            padding: 10px;
+        }
+
+        .fa-bars {
+            font-size: 20px;
+            color: white;
+            border: 1px solid black;
+            border-radius: 50px;
+            background-color: black;
+            padding: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .hamburger-menu {
+                display: block;
+                margin-left: 60%;
+                padding: 5px 10px;
+                font-size: 34px;
+            }
+
+            .menu {
+                flex-direction: column;
+                position: absolute;
+                top: 68px;
+                left: 0;
+                width: 100%;
+                background: #3A478D;
+                color: white;
+                text-align: center;
+                padding: 10px 0;
+                display: none;
+            }
+
+            .nav-link a {
+                color: white;
+            }
+
+            .nav-link {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .hamburger-menu {
+                display: block;
+            }
+        }
+    </style>
+    <title>About Us</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo"></div>
+
+        <div class="hamburger-menu" id="hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <nav class="menu" id="nav">
+            <ul class="nav-link" id="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/pages/aboutus.html">About us</a></li>
+                <li><a href="/pages/contactus.html">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="bg-no-repeat bg-cover bg-center h-[110vh]" style="background-image: url(../images2/Rectangle\ 278.svg);">
+            <div class="h-[80vh] text-white flex items-center">
+                <a href="../pages/aboutus.html" class="text-6xl hover:border-b-4 hover:border-blue-600" style="margin-left: 40px;">About Us</a> 
+            </div>
+        </section>
+        <section></section>
+        <section></section>
+        <section></section>
+        <section></section>
+        <section></section>
+        <section></section>
+        <section></section>
+    </main>
+    <footer>
+        <div class="container">
+            <div id="footer">
+                <div class="first">
+                    <div class="titlebox">
+                        <div class="image">
+                            <!-- <div></div> -->
+                        </div>
+                        <p>Need support? Contact us, and we&apos;ll be happy to assist!</p>
+                    </div>
+
+                    <div class="socialbox">
+                        <p>Follow us on social media</p>
+                        <div class="socials">
+                            <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://www.x.com"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.youtube.com"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="secondContainer">
+                    <ul class="companylink">
+                        <li><a href="./home.html">Home</a></li>
+                        <li><a href="./about.html">About us</a></li>
+                        <li><a href="./terms.html">Terms of use</a></li>
+                        <li><a href="./privacy">Privacy Policies</a></li>
+                    </ul>
+                </div>
+
+                <ul class="companylink">
+                    <li><a href="./help">Help Center</a></li>
+                    <li><a href="./chat">Chat with us</a></li>
+                    <li><a href="./contact">Contact us</a></li>
+                    <li><a href="./ussd">USSD Service</a></li>
+                </ul>
+
+            </div>
+
+            <div class="stroke"></div>
+
+            <div class="copybox">
+                <p>Copyright &copy; <span id="year"></span> - PSYCFLO</p>
+            </div>
+        </div>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+
+</html>
