@@ -346,3 +346,129 @@ main {
     font-weight: 700;
     border: 1px solid blue;
 }
+/* Responsive styles for all devices (except footer) */
+@media (max-width: 1200px) {
+    .hero-sec {
+        width: 700px;
+    }
+    
+    .talktous-container, .other-services-container {
+        gap: 50px;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-sec {
+        width: 600px;
+        font-size: 25px;
+    }
+    
+    .first-sec h5, .third-sec h5 {
+        font-size: 25px;
+    }
+    
+    .talktous-container, .other-services-container {
+        flex-direction: column;
+        height: auto;
+        margin-top: 30px;
+    }
+    
+    .talktous-image, .talktous-div-parent,
+    .other-services-image, .other-services-div-parent {
+        width: 80%;
+    }
+    
+    .talktous-button {
+        width: 50%;
+    }
+    
+    .other-services-parent {
+        height: auto;
+        padding: 50px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 1rem 2rem;
+    }
+    
+    .hero-sec {
+        width: 90%;
+        margin-left: 0;
+        text-align: center;
+    }
+    
+    .icon img {
+        margin-left: 30px;
+    }
+    
+    .first-sec {
+        width: 80%;
+    }
+    
+    .talktous-parent {
+        height: auto;
+        padding: 30px 0;
+    }
+    
+    .talktous-button {
+        width: 70%;
+    }
+    
+    .third-sec {
+        height: auto;
+        padding: 30px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .heroSection {
+        height: 80vh;
+    }
+    
+    .hero-sec {
+        font-size: 20px;
+    }
+    
+    .hero-sec h1 {
+        font-size: 1.8em;
+    }
+    
+    .first-sec h5, .third-sec h5 {
+        font-size: 20px;
+    }
+    
+    .talktous-button, .other-services-button, .other-services-button-2 {
+        width: 80%;
+    }
+    
+    .talktous-button button {
+        padding-inline: 50px;
+        font-size: 16px;
+    }
+    
+    .other-services-div h6 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero-sec {
+        font-size: 18px;
+    }
+    
+    .icon img {
+        width: 40px;
+        height: 40px;
+        margin-left: 20px;
+    }
+    
+    .talktous-button button {
+        font-size: 14px;
+    }
+    
+    .other-services-div h6 {
+        font-size: 25px;
+    }
+}

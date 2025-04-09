@@ -143,6 +143,186 @@
                 display: block;
             }
         }
+
+        /* Responsive styles for all devices (except footer) */
+        @media (max-width: 1200px) {
+            header {
+                padding: 1rem 2rem;
+            }
+            
+            section.bg-no-repeat h1 {
+                font-size: 4rem;
+            }
+            
+            section.w-\[90\%\] div.w-\[45\%\] h5,
+            section.w-\[90\%\] div.w-\[45\%\] p {
+                font-size: 1.8rem;
+            }
+            
+            section.w-\[90\%\] div.w-\[50\%\] {
+                width: 55%;
+            }
+        }
+
+        @media (max-width: 992px) {
+            header {
+                padding: 1rem;
+            }
+            
+            section.bg-no-repeat h1 {
+                font-size: 3.5rem;
+            }
+            
+            section.w-\[90\%\] {
+                flex-direction: column;
+                width: 95%;
+            }
+            
+            section.w-\[90\%\] div.w-\[45\%\],
+            section.w-\[90\%\] div.w-\[50\%\] {
+                width: 100%;
+                padding-right: 0;
+            }
+            
+            section.w-\[90\%\] div.w-\[50\%\] {
+                margin-top: 30px;
+            }
+            
+            section.w-\[90\%\] div.w-\[100\%\] {
+                flex-direction: column;
+            }
+            
+            section.w-\[90\%\] div.w-\[50\%\],
+            section.w-\[90\%\] div.w-\[45\%\] {
+                width: 100%;
+                margin-top: 30px;
+            }
+            
+            section.w-\[80\%\] div.flex {
+                flex-direction: column;
+                padding: 20px;
+            }
+            
+            section.w-\[80\%\] div.w-\[50\%\] {
+                width: 100%;
+                margin: 15px 0;
+            }
+            
+            section.w-\[80\%\] div.w-\[50\%\] + div {
+                border-right: none;
+                border-top: 1px solid #FFFFFFB2;
+                padding-top: 30px;
+            }
+            
+            section.flex.w-\[90\%\] {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            section.flex.w-\[90\%\] div.w-\[40\%\] {
+                width: 48%;
+                margin-bottom: 15px;
+            }
+            
+            section.w-\[90\%\] div.flex {
+                flex-wrap: wrap;
+            }
+            
+            section.w-\[90\%\] div.w-\[40\%\] {
+                width: 48%;
+                margin-bottom: 15px;
+            }
+            
+            section.w-\[90\%\] div.w-\[80\%\] div.w-\[40\%\] {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            section.bg-no-repeat h1 {
+                font-size: 3rem;
+                margin-left: 20px;
+            }
+            
+            section.w-\[90\%\] div.text-center.w-\[15\%\] {
+                width: 30%;
+            }
+            
+            section.w-\[80\%\] div.text-center.w-\[50\%\] {
+                width: 80%;
+            }
+            
+            section.flex.w-\[90\%\] div.w-\[40\%\] {
+                width: 100%;
+            }
+            
+            section.text-center h1 {
+                font-size: 2.5rem;
+            }
+            
+            section.flex.items-center.justify-center div.w-\[65\%\] h1,
+            section.flex.items-center.justify-center div.w-\[80\%\] h1 {
+                font-size: 2.5rem;
+            }
+            
+            section.flex.items-center.justify-center div.w-\[65\%\] p,
+            section.flex.items-center.justify-center div.w-\[80\%\] p {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            header {
+                height: 70px;
+            }
+            
+            header .logo {
+                height: 70px;
+                width: 100px;
+                background-size: contain;
+            }
+            
+            section.bg-no-repeat h1 {
+                font-size: 2.5rem;
+            }
+            
+            section.w-\[90\%\] div.w-\[45\%\] h5,
+            section.w-\[90\%\] div.w-\[45\%\] p,
+            section.w-\[90\%\] div.w-\[45\%\] p {
+                font-size: 1.5rem;
+                line-height: 1.5;
+            }
+            
+            section.w-\[90\%\] div.text-center.w-\[15\%\] {
+                width: 50%;
+            }
+            
+            section.w-\[80\%\] div.text-center.w-\[50\%\] {
+                width: 100%;
+            }
+            
+            section.text-center h1 {
+                font-size: 2rem;
+            }
+            
+            section.flex.items-center.justify-center div.w-\[65\%\] h1,
+            section.flex.items-center.justify-center div.w-\[80\%\] h1 {
+                font-size: 2rem;
+            }
+            
+            section.flex.items-center.justify-center div.w-\[65\%\] p,
+            section.flex.items-center.justify-center div.w-\[80\%\] p {
+                font-size: 1.5rem;
+            }
+            
+            section.w-\[90\%\] div.w-\[40\%\] h6 {
+                font-size: 1.3rem;
+            }
+            
+            section.w-\[90\%\] div.w-\[40\%\] p {
+                font-size: 1rem;
+            }
+        }
     </style>
     <title>About Us</title>
 </head>
@@ -164,39 +344,154 @@
         </nav>
     </header>
     <main>
-        <section class="bg-no-repeat bg-cover bg-center h-[110vh]" style="background-image: url(../images2/Rectangle\ 278.svg);">
+        <section class="bg-no-repeat bg-cover bg-center h-[110vh]"
+            style="background-image: url(../images2/Rectangle\ 278.svg);">
             <div class="h-[80vh] text-white flex items-center">
-                <a href="../pages/aboutus.html" class="text-6xl hover:border-b-4 hover:border-blue-600" style="margin-left: 40px;">About Us</a> 
+                <a href="../pages/aboutus.html" class="text-6xl hover:border-b-4 hover:border-blue-600"
+                    style="margin-left: 40px;">About Us</a>
             </div>
         </section>
-        <section class="w-[80%] flex gap-[20px]" style="margin-inline: auto; margin-block: 60px;">
-            <div class="w-[50%] flex flex-col gap-[25px]">
-                <h5 class="text-4xl" style="margin-top: 30px; color: #3A478D;">At PSYCFLO</h5>
-                <p class="text-2xl">We believe that mental health support and menstrual well-being should be accessible to everyone, regardless of location, income, or societal stigma.</p>
-                <p class="text-2xl">We are committed to breaking barriers by providing direct, stigma-free, and culturally inclusive support.</p>
+        <section class="w-[90%] flex flex-col lg:flex-row" style="margin-inline: auto; margin-block: 90px; gap: 2%;">
+            <div class="w-[45%] flex flex-col"
+                style="gap: 20px; padding-right: 30px; margin-top: 20px; line-height: 50px;">
+                <h5 class="text-4xl" style="margin-top: 30px; color: #3A478D; font-weight: 600;">At PSYCFLO</h5>
+                <p class="text-2xl" style="font-weight: 400;">We believe that mental health support and menstrual well-being should be accessible
+                    to everyone, regardless of location, income, or societal stigma.</p>
+                <p class="text-2xl" style="font-weight: 400;">We are committed to breaking barriers by providing direct, stigma-free, and
+                    culturally inclusive support.</p>
             </div>
             <div class="w-[50%]">
                 <img class="w-[100%]" src="../images2/Rectangle 282.svg" alt="">
             </div>
         </section>
-        <section class="w-[80%] flex flex-col gap-[20px]" style="margin-inline: auto; margin-block: 60px;">
-            <h1 class="w-[40%] text-4xl text-center hover:border-b-4 hover:border-blue-600" style="color: #3A478D;">What We Do</h1>
-            <div class="w-[100%] flex gap-[20px]">
+        <section class="w-[90%] flex flex-col" style="margin-inline: auto; margin-block: 90px;">
+            <div class="text-center" style="color: #3A478D; margin-bottom: 40px; width: 15%; margin-inline: auto;">
+                <h1 class=" text-3xl text-center hover:border-b-4 hover:border-blue-600" style="font-weight: 600;">What We Do</h1>
+            </div>
+            <div class="w-[100%] flex" style="gap: 3%;">
                 <div class="w-[50%]">
                     <img class="w-[100%]" src="../images2/Rectangle 283.svg" alt="">
                 </div>
-                <div class="w-[50%] flex flex-col gap-[25px]">
-                    <h5 class="text-4xl" style="margin-top: 30px; color: #3A478D;">At PSYCFLO</h5>
-                    <p class="text-2xl">We believe that mental health support and menstrual well-being should be accessible to everyone, regardless of location, income, or societal stigma.</p>
-                    <p class="text-2xl">We are committed to breaking barriers by providing direct, stigma-free, and culturally inclusive support.</p>
+                <div class="w-[45%] flex flex-col" style="gap: 30px;">
+                    <h5 class="text-4xl" style="margin-top: 30px; color: #3A478D; font-weight: 600;">AI-powered well-being platform</h5>
+                    <p class="text-2xl" style="font-weight: 400;">It is designed to provide direct access to essential mental health and menstrual
+                        aid services.</p>
+                    <p class="text-2xl" style="font-weight: 400;">This will eliminate middlemen and ensure fast transparent support.</p>
                 </div>
             </div>
         </section>
-        <section></section>
-        <section></section>
-        <section></section>
-        <section></section>
-        <section></section>
+        <section class="w-[80%] flex flex-col" style="margin-inline: auto; margin-block: 90px;">
+            <div class="text-center" style="color: #3A478D; margin-bottom: 40px; width: 50%; margin-inline: auto;">
+                <h1 class=" text-3xl text-center hover:border-b-4 hover:border-blue-600" style="font-weight: 600;">Vision and Mission Statements
+                </h1>
+            </div>
+            <div class="flex text-white" style="background: #7E6FB0; border-radius: 10px; padding-block: 20px; padding-inline: 15px;">
+                <div class="flex flex-col w-[50%] justify-center items-center" style="gap: 15px; margin-right: 30px;">
+                    <div class="w-[50px]">
+                        <img class="w-[100%]" src="../images2/Group.png" alt="">
+                    </div>
+                    <div>
+                        <p class="text-center text-[30px]" style="margin-bottom: 10px; font-weight: 600;">Vision</p>
+                        <p style="font-size: 20px; margin-left: 15px; font-weight: 400;">
+                            PSYCFLO envisions a world where mental and menstrual health support is accessible, stigma-free,
+                            and inclusive for underserved communities. By combining advanced mental health tools with direct
+                            menstrual aid distribution, we empower individuals to seek help without financial or cultural
+                            barriers.
+                        </p>
+                    </div>
+                </div>
+                <div style="border-right: 1px solid #FFFFFFB2;">
+                </div>
+                <div class="flex flex-col w-[50%] justify-center items-center" style="gap: 15px; margin-left: 30px;">
+                    <div class="w-[50px]">
+                        <img class="w-[100%]" src="../images2/Vector (7).svg" alt="">
+                    </div>
+                    <div>
+                        <p class="text-center text-[30px]" style="margin-bottom: 10px; font-weight: 400;">Mission</p>
+                        <p style="font-size: 20px; font-weight: 400;">
+                            To provide affordable, anonymous, and accessible well-being support through USSD, SMS, WhatsApp, and mobile app solutions, ensuring that mental and menstrual health care reaches those who need it most.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="flex items-center justify-center" style="margin-inline: auto; margin-block: 90px;">
+            <div class="text-center w-[65%]">
+                <h1 class="text-[40px]" style="margin-bottom: 12px; font-weight: 600;">Who We Help</h1>
+                <p class="text-[30px]" style=" font-weight: 400;">We focus on low-income and rural communities, young adults, students, women and girls ensuring that no one is left behind.</p>
+            </div>
+        </section>
+        <section class="flex w-[90%]" style="margin-inline: auto; gap: 8px; margin-block: 90px;">
+            <div class="w-[40%]">
+                <img class="w-[100%]" src="../images2/Rectangle 284.svg" alt="">
+            </div>
+            <div class="w-[40%]">
+                <img class="w-[100%]" src="../images2/Rectangle 285.svg" alt="">
+            </div>
+            <div class="w-[40%]">
+                <img class="w-[100%]" src="../images2/Rectangle 286.svg" alt="">
+            </div>
+        </section>
+        <section class="text-center text-[40px]">
+            <h1 style="font-weight: 600;">Services We Offer</h1>
+        </section>
+        <section class="w-[90%]" style="margin-block: 90px; margin-inline: auto;">
+            <div class="flex" style="gap: 8px;">
+                <div class="w-[40%]" style="background: #DACFE0; box-shadow: 0px 4px 7px 0px #00000026; padding-block: 30px; border-radius: 10px;">
+                    <div class="w-[40px]" style="margin-left: 20px; margin-bottom: 15px;">
+                        <img class="w-[100%]" src="../images2/Group.svg" alt="">
+                    </div>
+                    <div>
+                        <h6 class="text-[25px] text-black-600" style="margin-left: 20px;">Mental Health Support</h6>
+                        <p class="text-[20px] text-black-400" style="margin-left: 20px;">Via USSD, SMS, WhatsApp, AI chatbot and App</p>
+                    </div>
+                </div>
+                <div class="w-[40%]" style="background: #7E6FB0; color: white; box-shadow: 0px 4px 7px 0px #00000026; padding-block: 30px; border-radius: 10px;">
+                    <div class="w-[40px]" style="margin-left: 20px; margin-bottom: 15px;">
+                        <img class="w-[100%]" src="../images2/Vector (4).svg" alt="">
+                    </div>
+                    <div>
+                        <h6 class="text-[25px] text-black-600" style="margin-left: 20px;">Menstrual aid</h6>
+                        <p class="text-[20px] text-black-400" style="margin-left: 20px;">Request system</p>
+                    </div>
+                </div>
+                <div class="w-[40%]" style="background: #DACFE0; box-shadow: 0px 4px 7px 0px #00000026; padding-block: 30px; border-radius: 10px;">
+                    <div class="w-[40px]" style="margin-left: 20px; margin-bottom: 15px;">
+                        <img class="w-[100%]" src="../images2/Vector (5).svg" alt="">
+                    </div>
+                    <div>
+                        <h6 class="text-[25px] text-black-600" style="margin-left: 20px;">Safe community</h6>
+                        <p class="text-[20px] text-black-400" style="margin-left: 20px;">Discussion rooms</p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-[80%] flex justify-center items-center" style="margin-inline: 10%; margin-top: 20px; gap: 10px;">
+                <div class="w-[40%]" style="background: #DACFE0; box-shadow: 0px 4px 7px 0px #00000026; padding-block: 30px; border-radius: 10px;">
+                    <div class="w-[40px]" style="margin-left: 20px; margin-bottom: 15px;">
+                        <img class="w-[100%]" src="../images2/Vector (8).svg" alt="">
+                    </div>
+                    <div>
+                        <h6 class="text-[25px] text-black-600" style="margin-left: 20px;">Freemium counselling services</h6>
+                        <p class="text-[20px] text-black-400" style="margin-left: 20px;">(3 free counselling/ therapy sessions, then paid plans).</p>
+                    </div>
+                </div>
+                <div class="w-[40%]" style="background: #DACFE0; box-shadow: 0px 4px 7px 0px #00000026; padding-block: 30px; border-radius: 10px;">
+                    <div class="w-[40px]" style="margin-left: 20px; margin-bottom: 15px;">
+                        <img class="w-[100%]" src="../images2/Group (1).svg" alt="">
+                    </div>
+                    <div>
+                        <h6 class="text-[25px] text-black-600" style="margin-left: 20px;">Accessibility to all</h6>
+                        <p class="text-[20px] text-black-400" style="margin-left: 20px;">Works even without smartphones, limited or no internet.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class=" flex items-center justify-center" style="margin-inline: auto; margin-block: 100px;">
+            <div class="text-center w-[80%]">
+                <h1 class="text-[40px]" style="margin-bottom: 12px; font-weight: 600;">Why PSYCFLO?</h1>
+                <p class=" text-[30px]" style="font-weight: 400;">Unlike traditional aid programs, we directly connect people to help, eliminating delays, reducing stigma, and making support available anytime, anywhere.</p>
+            </div>
+        </section>
     </main>
     <footer>
         <div class="container">
