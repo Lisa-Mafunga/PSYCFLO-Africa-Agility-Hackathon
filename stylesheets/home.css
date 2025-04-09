@@ -13,8 +13,8 @@ a:hover {
     cursor: pointer;
 }
 .fa-solid {
-    margin-left: 50px;
-    margin-bottom: 50px;
+    /* margin-left: 50px; */
+    /* margin-bottom: 50px; */
     font-size: 20px;
     color: white;
     border: 1px solid black;
@@ -34,7 +34,7 @@ a:hover {
 header {
     display: flex;
     height: 90px;
-    padding: 0.1rem 4rem;
+    /* padding: 0.1rem 4rem; */
     justify-content: space-between;
     align-items: center;
     flex-shrink: 0;
@@ -355,7 +355,7 @@ main {
 @media (max-width: 768px) { 
     .hamburger-menu {
         display: block;
-        margin: 2px 0 auto;
+        /* margin: 2px 0 auto; */
         padding: 5px 10px;
         font-size: 34px;
     }
@@ -472,15 +472,10 @@ main {
         justify-content: space-between;
     }
 
-    .hamburger-menu {
+    /* .hamburger-menu {
         margin: 40px auto 0 auto;
-    }
+    } */
 
-    header .logo {
-        width: 120px;
-        height: 60px;
-        margin-left: -20%;
-    }
     .hero-sec {
         font-size: 18px;
     }
