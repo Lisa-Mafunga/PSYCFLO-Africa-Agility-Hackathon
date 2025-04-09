@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #00796b;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: center;
+            display: inline-block;
+            margin: 20px;
+        }
+        .button:hover {
+            background-color: #004d40;
+        }
+        .form-container {
+            background: white;
+            padding: 60px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            width: 400px;
+            margin: 100px auto; /* Center the form */
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            text-align: center ;
+            margin-bottom: 45px;
+            font-size: 13px;
+        }
+        label {
+            margin-top: 10px;
+            display: block;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            width: 105%;
+            padding: 10px;
+            background-color: darkblue;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: darkblue;
+        }
+    </style>
+</head>
+<body>
+
+    
+        <div class="form-container">
+            <h2>Support Mental Care</h2>
+            <p>Your expertise helps provide essential mental health support to those in need. By 
+                joining our platform, you are making a meaningful difference in ensuring 
+                 accessibility and well-being for all.</p>
+            <form>
+                <label for="attendees">How many persons do you want to attend to in a day?</label>
+                <input type="number" id="attendees" required>
+                
+                <label for="sessions">How many sessions do you want to have with each person?</label>
+                <input type="number" id="sessions" required>
+                
+                <label for="minutes">How many minutes do you want to spend with each person?</label>
+                <input type="number" id="minutes" required>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+   
+</body>
+</html>

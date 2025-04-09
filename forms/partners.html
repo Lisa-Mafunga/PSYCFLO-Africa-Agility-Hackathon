@@ -33,11 +33,37 @@
         .button:hover {
             background-color: #b3b3b3;
         }
+
+        .overlay {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            background-color: rgba(0, 0, 0, 0.7); /* Black background with opacity */
+            z-index: 1; /* Sit on top */
+        }
+        .form-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            width: 400px;
+            height: 600px;
+            margin: 100px auto; /* Center the form */
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none; /* Remove default border */
+        }
     </style>
 </head>
 <body>
     <div class="partner-options">
         <h2>Select Partner Type</h2>
+
         <div class="button" onclick="loadPartnerForm('therapist')">Therapist</div>
         <div class="button" onclick="loadPartnerForm('donor')">Pad donor</div>
     </div>
