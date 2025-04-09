@@ -162,6 +162,7 @@
                 flex-direction: column;
             }
 
+
             section.w-\[90\%\] div.w-\[50\%\],
             section.w-\[90\%\] div.w-\[45\%\] {
                 width: 100%;
@@ -181,7 +182,7 @@
             section.w-\[80\%\] div.w-\[50\%\]+div {
                 border-right: none;
                 border-top: 1px solid #FFFFFFB2;
-                padding-top: 30px;
+                /* padding-top: 30px; */
             }
 
             section.flex.w-\[90\%\] {
@@ -190,16 +191,18 @@
             }
 
             section.flex.w-\[90\%\] div.w-\[40\%\] {
-                width: 48%;
+                width: 100%;
                 margin-bottom: 15px;
             }
 
             section.w-\[90\%\] div.flex {
-                flex-wrap: wrap;
+                flex-direction: column;
+                width: 90%;
             }
 
-            section.w-\[90\%\] div.w-\[40\%\] {
-                width: 48%;
+            section.w-\[90\%\] div.w-\[40\%\],
+            section.w-\[90\%\] div.w-\[80\%\] {
+                width: 100%;
                 margin-bottom: 15px;
             }
 
@@ -207,6 +210,65 @@
                 width: 100%;
             }
         }
+
+        @media (max-width: 992px) {
+    section.w-\[90\%\] > .flex {
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+    
+    section.w-\[90\%\] > .flex > .w-\[40\%\],
+    section.w-\[90\%\] > .w-\[80\%\] > .flex > .w-\[40\%\] {
+        width: 100% !important;
+    }
+    
+    section.w-\[90\%\] > .w-\[80\%\] {
+        width: 100% !important;
+        margin-inline: 0 !important;
+    }
+    
+    section.w-\[90\%\] > .w-\[80\%\] > .flex {
+        flex-direction: column !important;
+        gap: 20px !important;
+        align-items: center !important;
+    }
+}
+
+@media (max-width: 576px) {
+    section.w-\[90\%\] {
+        width: 95% !important;
+    }
+    
+    section.w-\[90\%\] > .flex > .w-\[40\%\] h6,
+    section.w-\[90\%\] > .flex > .w-\[40\%\] p,
+    section.w-\[90\%\] > .w-\[80\%\] > .flex > .w-\[40\%\] h6,
+    section.w-\[90\%\] > .w-\[80\%\] > .flex > .w-\[40\%\] p {
+        font-size: 18px !important;
+        margin-left: 15px !important;
+    }
+    
+    section.w-\[90\%\] > .flex > .w-\[40\%\] div,
+    section.w-\[90\%\] > .w-\[80\%\] > .flex > .w-\[40\%\] div {
+        margin-left: 15px !important;
+    }
+}
+@media (max-width: 992px) {
+    /* Add this new rule to make the first flex container full width */
+    section.w-\[90\%\] > .flex {
+        width: 100% !important;
+        flex-direction: column !important;
+        gap: 20px !important;
+        align-items: center !important;
+    }
+
+    /* Ensure all child elements take full width */
+    section.w-\[90\%\] > .flex > .w-\[40\%\] {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+}
+
 
         @media (max-width: 768px) {
             .hamburger-menu {
@@ -292,6 +354,13 @@
             }
         }
 
+        @media (max-width: 768px) {
+    /* Add more specific mobile styles if needed */
+    section.w-\[90\%\] > .flex > .w-\[40\%\] {
+        padding: 20px !important;  /* Add consistent padding */
+    }
+}
+
         @media (max-width: 576px) {
 
 
@@ -346,14 +415,14 @@
                 justify-content: space-between;
             }
 
-            .hamburger-menu {
+            /* .hamburger-menu {
                 margin: 40px auto 0 auto;
-            }
+            } */
 
             header .logo {
                 width: 120px;
                 height: 60px;
-                margin-left: -20%;
+                /* margin-left: -20%; */
             }
         }
     </style>
@@ -446,7 +515,7 @@
                 </div>
                 <div style="border-right: 1px solid #FFFFFFB2;">
                 </div>
-                <div class="flex flex-col w-[50%] justify-center items-center" style="gap: 15px; margin-left: 30px;">
+                <div class="flex flex-col w-[50%] justify-center items-center" style="gap: 15px;">
                     <div class="w-[50px]">
                         <img class="w-[100%]" src="../images2/Vector (7).svg" alt="">
                     </div>
