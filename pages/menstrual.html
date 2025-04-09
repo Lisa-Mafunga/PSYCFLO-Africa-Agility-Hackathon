@@ -9,6 +9,7 @@
     <!-- stylesheet -->
     <link rel="stylesheet" href="../stylesheets/mentrual.css">
     <link rel="stylesheet" href="../footer/footer.css">
+    <link rel="stylesheet" href="../footer/footer responsive.css">
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- Montserrat & Gayathri font -->
@@ -18,8 +19,7 @@
         href="https://fonts.googleapis.com/css2?family=Gayathri:wght@100;400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <style>
-        /* Responsive additions without changing original code */
-        @media (max-width: 1200px) {
+        /* @media (max-width: 1200px) {
             #hero-section .container {
                 flex-direction: column;
                 gap: 3rem;
@@ -254,7 +254,7 @@
             .community-sec .title p {
                 font-size: 14px;
             }
-        }
+        } */
     </style>
 </head>
 
@@ -422,13 +422,12 @@
             </div>
         </div>
     </footer>
-
-    <script src="../javascript/script.js"></script>
     <script>
         // Toggle mobile menu
-        document.getElementById('hamburger').addEventListener('click', function() {
-            document.getElementById('nav').classList.toggle('active');
+        document.getElementById("hamburger").addEventListener("click", function () {
+            document.getElementById("nav").classList.toggle("active");
         });
     </script>
+    <script src="./footer/script.js"></script>
 </body>
 </html>
