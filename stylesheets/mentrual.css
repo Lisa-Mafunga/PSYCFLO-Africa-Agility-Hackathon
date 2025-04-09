@@ -3,11 +3,10 @@
     margin: 0;
     box-sizing: border-box;
 }
-
 header {
     display: flex;
     height: 90px;
-    padding: 1rem 4rem;
+    padding: 0.1rem 4rem;
     justify-content: space-between;
     align-items: center;
     flex-shrink: 0;
@@ -66,7 +65,25 @@ header .logo {
     cursor: pointer;
     color: #3A478D;
 }
+.fa-solid {
+    margin-left: 50px;
+    margin-bottom: 50px;
+    font-size: 20px;
+    color: white;
+    border: 1px solid black;
+    border-radius: 50px;
+    background-color: black;
+    padding: 10px;
+}
 
+.fa-bars {
+    font-size: 20px;
+    color: white;
+    border: 1px solid black;
+    border-radius: 50px;
+    background-color: black;
+    padding: 10px;
+}
 #hero-section {
     background: linear-gradient(0deg, rgba(220, 193, 224, 0.20) 0%, rgba(220, 193, 224, 0.20) 100%), rgba(103, 78, 133, 0.25);
     padding: 10rem 4rem 3rem 4rem;
@@ -96,19 +113,13 @@ header .logo {
     filter: drop-shadow(4px 0px 4px rgba(0, 0, 0, 0.25));
 }
 
-.fa-arrow-left,
-.fa-bars {
+.fa-arrow-left{
     font-size: 20px;
     color: white;
     border: 1px solid black;
     border-radius: 50px;
     background-color: black;
     padding: 10px;
-}
-
-.fa-bars {
-    color: #3A478D;
-    background-color: transparent;
 }
 
 .titlebox {
@@ -546,6 +557,56 @@ input[type="submit"]:hover {
 }
 
 @media (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+        margin: 2px 0 auto;
+        padding: 5px 10px;
+        font-size: 34px;
+    }
+
+    header {
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 4rem;
+        /* max-width: 600px; */
+    }
+
+    header .logo {
+        width: 120px;
+        height: 60px;
+    }
+
+    .menu {
+        flex-direction: column;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        width: 100%;
+        background: #3A478D;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        display: none;
+    }
+
+    .nav-link a {
+        color: white;
+    }
+
+    .nav-link {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    /* Show menu when active */
+    .menu.active {
+        display: flex;
+    }
     #hero-section {
         padding: 8rem 2rem 2rem 2rem;
     }
@@ -634,6 +695,23 @@ input[type="submit"]:hover {
 
 
 @media (max-width: 400px) {
+    header {
+        height: 4rem;
+        width: 100%;
+        align-items: center;
+        gap: 30px;
+        justify-content: space-between;
+    }
+
+    .hamburger-menu {
+        margin: 40px auto 0 auto;
+    }
+
+    header .logo {
+        width: 120px;
+        height: 60px;
+        margin-left: -20%;
+    }
     #hero-section {
         padding: 6rem 1rem 1rem 1rem;
     }

@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../footer/footer.css">
     <link rel="stylesheet" href="../footer/footer responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gayathri:wght@100;400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <style>
         * {
@@ -26,10 +32,30 @@
             cursor: pointer;
         }
 
+        .fa-solid {
+            /* margin-left: 50px; */
+            /* margin-bottom: 50px; */
+            font-size: 20px;
+            color: white;
+            border: 1px solid black;
+            border-radius: 50px;
+            background-color: black;
+            padding: 10px;
+        }
+
+        .fa-bars {
+            font-size: 20px;
+            color: white;
+            border: 1px solid black;
+            border-radius: 50px;
+            background-color: black;
+            padding: 10px;
+        }
+
         header {
             display: flex;
             height: 90px;
-            padding: 1rem 4rem;
+            padding: 0.1rem 4rem;
             justify-content: space-between;
             align-items: center;
             flex-shrink: 0;
@@ -89,32 +115,180 @@
             color: #3A478D;
         }
 
-        .fa-solid {
-            margin-left: 50px;
-            margin-bottom: 50px;
-            font-size: 20px;
-            color: white;
-            border: 1px solid black;
-            border-radius: 50px;
-            background-color: black;
-            padding: 10px;
+        @media (max-width: 1200px) {
+            header {
+                padding: 1rem 2rem;
+            }
+
+            section.bg-no-repeat h1 {
+                font-size: 4rem;
+            }
+
+            section.w-\[90\%\] div.w-\[45\%\] h5,
+            section.w-\[90\%\] div.w-\[45\%\] p {
+                font-size: 1.8rem;
+            }
+
+            section.w-\[90\%\] div.w-\[50\%\] {
+                width: 55%;
+            }
         }
 
-        .fa-bars {
-            font-size: 20px;
-            color: white;
-            border: 1px solid black;
-            border-radius: 50px;
-            background-color: black;
-            padding: 10px;
+        @media (max-width: 992px) {
+            header {
+                padding: 1rem;
+            }
+
+            section.bg-no-repeat h1 {
+                font-size: 3.5rem;
+            }
+
+            section.w-\[90\%\] {
+                flex-direction: column;
+                width: 95%;
+            }
+
+            section.w-\[90\%\] div.w-\[45\%\],
+            section.w-\[90\%\] div.w-\[50\%\] {
+                width: 100%;
+                padding-right: 0;
+            }
+
+            section.w-\[90\%\] div.w-\[50\%\] {
+                margin-top: 30px;
+            }
+
+            section.w-\[90\%\] div.w-\[100\%\] {
+                flex-direction: column;
+            }
+
+
+            section.w-\[90\%\] div.w-\[50\%\],
+            section.w-\[90\%\] div.w-\[45\%\] {
+                width: 100%;
+                margin-top: 30px;
+            }
+
+            section.w-\[80\%\] div.flex {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            section.w-\[80\%\] div.w-\[50\%\] {
+                width: 100%;
+                margin: 15px 0;
+            }
+
+            section.w-\[80\%\] div.w-\[50\%\]+div {
+                border-right: none;
+                border-top: 1px solid #FFFFFFB2;
+                /* padding-top: 30px; */
+            }
+
+            section.flex.w-\[90\%\] {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            section.flex.w-\[90\%\] div.w-\[40\%\] {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+
+            section.w-\[90\%\] div.flex {
+                flex-direction: column;
+                width: 90%;
+            }
+
+            section.w-\[90\%\] div.w-\[40\%\],
+            section.w-\[90\%\] div.w-\[80\%\] {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+
+            section.w-\[90\%\] div.w-\[80\%\] div.w-\[40\%\] {
+                width: 100%;
+            }
         }
+
+        @media (max-width: 992px) {
+    section.w-\[90\%\] > .flex {
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+    
+    section.w-\[90\%\] > .flex > .w-\[40\%\],
+    section.w-\[90\%\] > .w-\[80\%\] > .flex > .w-\[40\%\] {
+        width: 100% !important;
+    }
+    
+    section.w-\[90\%\] > .w-\[80\%\] {
+        width: 100% !important;
+        margin-inline: 0 !important;
+    }
+    
+    section.w-\[90\%\] > .w-\[80\%\] > .flex {
+        flex-direction: column !important;
+        gap: 20px !important;
+        align-items: center !important;
+    }
+}
+
+@media (max-width: 576px) {
+    section.w-\[90\%\] {
+        width: 95% !important;
+    }
+    
+    section.w-\[90\%\] > .flex > .w-\[40\%\] h6,
+    section.w-\[90\%\] > .flex > .w-\[40\%\] p,
+    section.w-\[90\%\] > .w-\[80\%\] > .flex > .w-\[40\%\] h6,
+    section.w-\[90\%\] > .w-\[80\%\] > .flex > .w-\[40\%\] p {
+        font-size: 18px !important;
+        margin-left: 15px !important;
+    }
+    
+    section.w-\[90\%\] > .flex > .w-\[40\%\] div,
+    section.w-\[90\%\] > .w-\[80\%\] > .flex > .w-\[40\%\] div {
+        margin-left: 15px !important;
+    }
+}
+@media (max-width: 992px) {
+    /* Add this new rule to make the first flex container full width */
+    section.w-\[90\%\] > .flex {
+        width: 100% !important;
+        flex-direction: column !important;
+        gap: 20px !important;
+        align-items: center !important;
+    }
+
+    /* Ensure all child elements take full width */
+    section.w-\[90\%\] > .flex > .w-\[40\%\] {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+}
+
 
         @media (max-width: 768px) {
             .hamburger-menu {
                 display: block;
-                margin-left: 60%;
-                padding: 5px 10px;
+                /* margin: 2px 0 auto; */
+                padding: 5px 5px;
                 font-size: 34px;
+            }
+
+            header {
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                height: 4rem;
+                /* max-width: 600px; */
+            }
+
+            header .logo {
+                width: 120px;
+                height: 60px;
             }
 
             .menu {
@@ -142,185 +316,113 @@
             .hamburger-menu {
                 display: block;
             }
-        }
 
-        /* Responsive styles for all devices (except footer) */
-        @media (max-width: 1200px) {
-            header {
-                padding: 1rem 2rem;
+            /* Show menu when active */
+            .menu.active {
+                display: flex;
             }
-            
-            section.bg-no-repeat h1 {
-                font-size: 4rem;
-            }
-            
-            section.w-\[90\%\] div.w-\[45\%\] h5,
-            section.w-\[90\%\] div.w-\[45\%\] p {
-                font-size: 1.8rem;
-            }
-            
-            section.w-\[90\%\] div.w-\[50\%\] {
-                width: 55%;
-            }
-        }
 
-        @media (max-width: 992px) {
-            header {
-                padding: 1rem;
-            }
-            
-            section.bg-no-repeat h1 {
-                font-size: 3.5rem;
-            }
-            
-            section.w-\[90\%\] {
-                flex-direction: column;
-                width: 95%;
-            }
-            
-            section.w-\[90\%\] div.w-\[45\%\],
-            section.w-\[90\%\] div.w-\[50\%\] {
-                width: 100%;
-                padding-right: 0;
-            }
-            
-            section.w-\[90\%\] div.w-\[50\%\] {
-                margin-top: 30px;
-            }
-            
-            section.w-\[90\%\] div.w-\[100\%\] {
-                flex-direction: column;
-            }
-            
-            section.w-\[90\%\] div.w-\[50\%\],
-            section.w-\[90\%\] div.w-\[45\%\] {
-                width: 100%;
-                margin-top: 30px;
-            }
-            
-            section.w-\[80\%\] div.flex {
-                flex-direction: column;
-                padding: 20px;
-            }
-            
-            section.w-\[80\%\] div.w-\[50\%\] {
-                width: 100%;
-                margin: 15px 0;
-            }
-            
-            section.w-\[80\%\] div.w-\[50\%\] + div {
-                border-right: none;
-                border-top: 1px solid #FFFFFFB2;
-                padding-top: 30px;
-            }
-            
-            section.flex.w-\[90\%\] {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            
-            section.flex.w-\[90\%\] div.w-\[40\%\] {
-                width: 48%;
-                margin-bottom: 15px;
-            }
-            
-            section.w-\[90\%\] div.flex {
-                flex-wrap: wrap;
-            }
-            
-            section.w-\[90\%\] div.w-\[40\%\] {
-                width: 48%;
-                margin-bottom: 15px;
-            }
-            
-            section.w-\[90\%\] div.w-\[80\%\] div.w-\[40\%\] {
-                width: 100%;
-            }
-        }
-
-        @media (max-width: 768px) {
             section.bg-no-repeat h1 {
                 font-size: 3rem;
                 margin-left: 20px;
             }
-            
+
             section.w-\[90\%\] div.text-center.w-\[15\%\] {
                 width: 30%;
             }
-            
+
             section.w-\[80\%\] div.text-center.w-\[50\%\] {
                 width: 80%;
             }
-            
+
             section.flex.w-\[90\%\] div.w-\[40\%\] {
                 width: 100%;
             }
-            
+
             section.text-center h1 {
                 font-size: 2.5rem;
             }
-            
+
             section.flex.items-center.justify-center div.w-\[65\%\] h1,
             section.flex.items-center.justify-center div.w-\[80\%\] h1 {
                 font-size: 2.5rem;
             }
-            
+
             section.flex.items-center.justify-center div.w-\[65\%\] p,
             section.flex.items-center.justify-center div.w-\[80\%\] p {
                 font-size: 1.8rem;
             }
         }
 
+        @media (max-width: 768px) {
+    /* Add more specific mobile styles if needed */
+    section.w-\[90\%\] > .flex > .w-\[40\%\] {
+        padding: 20px !important;  /* Add consistent padding */
+    }
+}
+
         @media (max-width: 576px) {
-            header {
-                height: 70px;
-            }
-            
-            header .logo {
-                height: 70px;
-                width: 100px;
-                background-size: contain;
-            }
-            
+
+
             section.bg-no-repeat h1 {
                 font-size: 2.5rem;
             }
-            
+
             section.w-\[90\%\] div.w-\[45\%\] h5,
             section.w-\[90\%\] div.w-\[45\%\] p,
             section.w-\[90\%\] div.w-\[45\%\] p {
                 font-size: 1.5rem;
                 line-height: 1.5;
             }
-            
+
             section.w-\[90\%\] div.text-center.w-\[15\%\] {
                 width: 50%;
             }
-            
+
             section.w-\[80\%\] div.text-center.w-\[50\%\] {
                 width: 100%;
             }
-            
+
             section.text-center h1 {
                 font-size: 2rem;
             }
-            
+
             section.flex.items-center.justify-center div.w-\[65\%\] h1,
             section.flex.items-center.justify-center div.w-\[80\%\] h1 {
                 font-size: 2rem;
             }
-            
+
             section.flex.items-center.justify-center div.w-\[65\%\] p,
             section.flex.items-center.justify-center div.w-\[80\%\] p {
                 font-size: 1.5rem;
             }
-            
+
             section.w-\[90\%\] div.w-\[40\%\] h6 {
                 font-size: 1.3rem;
             }
-            
+
             section.w-\[90\%\] div.w-\[40\%\] p {
                 font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 400px) {
+            header {
+                height: 4rem;
+                width: 100%;
+                align-items: center;
+                gap: 30px;
+                justify-content: space-between;
+            }
+
+            /* .hamburger-menu {
+                margin: 40px auto 0 auto;
+            } */
+
+            header .logo {
+                width: 120px;
+                height: 60px;
+                /* margin-left: -20%; */
             }
         }
     </style>
@@ -355,9 +457,11 @@
             <div class="w-[45%] flex flex-col"
                 style="gap: 20px; padding-right: 30px; margin-top: 20px; line-height: 50px;">
                 <h5 class="text-4xl" style="margin-top: 30px; color: #3A478D; font-weight: 600;">At PSYCFLO</h5>
-                <p class="text-2xl" style="font-weight: 400;">We believe that mental health support and menstrual well-being should be accessible
+                <p class="text-2xl" style="font-weight: 400;">We believe that mental health support and menstrual
+                    well-being should be accessible
                     to everyone, regardless of location, income, or societal stigma.</p>
-                <p class="text-2xl" style="font-weight: 400;">We are committed to breaking barriers by providing direct, stigma-free, and
+                <p class="text-2xl" style="font-weight: 400;">We are committed to breaking barriers by providing direct,
+                    stigma-free, and
                     culturally inclusive support.</p>
             </div>
             <div class="w-[50%]">
@@ -366,26 +470,32 @@
         </section>
         <section class="w-[90%] flex flex-col" style="margin-inline: auto; margin-block: 90px;">
             <div class="text-center" style="color: #3A478D; margin-bottom: 40px; width: 15%; margin-inline: auto;">
-                <h1 class=" text-3xl text-center hover:border-b-4 hover:border-blue-600" style="font-weight: 600;">What We Do</h1>
+                <h1 class=" text-3xl text-center hover:border-b-4 hover:border-blue-600" style="font-weight: 600;">What
+                    We Do</h1>
             </div>
             <div class="w-[100%] flex" style="gap: 3%;">
                 <div class="w-[50%]">
                     <img class="w-[100%]" src="../images2/Rectangle 283.svg" alt="">
                 </div>
                 <div class="w-[45%] flex flex-col" style="gap: 30px;">
-                    <h5 class="text-4xl" style="margin-top: 30px; color: #3A478D; font-weight: 600;">AI-powered well-being platform</h5>
-                    <p class="text-2xl" style="font-weight: 400;">It is designed to provide direct access to essential mental health and menstrual
+                    <h5 class="text-4xl" style="margin-top: 30px; color: #3A478D; font-weight: 600;">AI-powered
+                        well-being platform</h5>
+                    <p class="text-2xl" style="font-weight: 400;">It is designed to provide direct access to essential
+                        mental health and menstrual
                         aid services.</p>
-                    <p class="text-2xl" style="font-weight: 400;">This will eliminate middlemen and ensure fast transparent support.</p>
+                    <p class="text-2xl" style="font-weight: 400;">This will eliminate middlemen and ensure fast
+                        transparent support.</p>
                 </div>
             </div>
         </section>
         <section class="w-[80%] flex flex-col" style="margin-inline: auto; margin-block: 90px;">
             <div class="text-center" style="color: #3A478D; margin-bottom: 40px; width: 50%; margin-inline: auto;">
-                <h1 class=" text-3xl text-center hover:border-b-4 hover:border-blue-600" style="font-weight: 600;">Vision and Mission Statements
+                <h1 class=" text-3xl text-center hover:border-b-4 hover:border-blue-600" style="font-weight: 600;">
+                    Vision and Mission Statements
                 </h1>
             </div>
-            <div class="flex text-white" style="background: #7E6FB0; border-radius: 10px; padding-block: 20px; padding-inline: 15px;">
+            <div class="flex text-white"
+                style="background: #7E6FB0; border-radius: 10px; padding-block: 20px; padding-inline: 15px;">
                 <div class="flex flex-col w-[50%] justify-center items-center" style="gap: 15px; margin-right: 30px;">
                     <div class="w-[50px]">
                         <img class="w-[100%]" src="../images2/Group.png" alt="">
@@ -393,23 +503,28 @@
                     <div>
                         <p class="text-center text-[30px]" style="margin-bottom: 10px; font-weight: 600;">Vision</p>
                         <p style="font-size: 20px; margin-left: 15px; font-weight: 400;">
-                            PSYCFLO envisions a world where mental and menstrual health support is accessible, stigma-free,
-                            and inclusive for underserved communities. By combining advanced mental health tools with direct
-                            menstrual aid distribution, we empower individuals to seek help without financial or cultural
+                            PSYCFLO envisions a world where mental and menstrual health support is accessible,
+                            stigma-free,
+                            and inclusive for underserved communities. By combining advanced mental health tools with
+                            direct
+                            menstrual aid distribution, we empower individuals to seek help without financial or
+                            cultural
                             barriers.
                         </p>
                     </div>
                 </div>
                 <div style="border-right: 1px solid #FFFFFFB2;">
                 </div>
-                <div class="flex flex-col w-[50%] justify-center items-center" style="gap: 15px; margin-left: 30px;">
+                <div class="flex flex-col w-[50%] justify-center items-center" style="gap: 15px;">
                     <div class="w-[50px]">
                         <img class="w-[100%]" src="../images2/Vector (7).svg" alt="">
                     </div>
                     <div>
                         <p class="text-center text-[30px]" style="margin-bottom: 10px; font-weight: 400;">Mission</p>
                         <p style="font-size: 20px; font-weight: 400;">
-                            To provide affordable, anonymous, and accessible well-being support through USSD, SMS, WhatsApp, and mobile app solutions, ensuring that mental and menstrual health care reaches those who need it most.
+                            To provide affordable, anonymous, and accessible well-being support through USSD, SMS,
+                            WhatsApp, and mobile app solutions, ensuring that mental and menstrual health care reaches
+                            those who need it most.
                         </p>
                     </div>
                 </div>
@@ -418,7 +533,8 @@
         <section class="flex items-center justify-center" style="margin-inline: auto; margin-block: 90px;">
             <div class="text-center w-[65%]">
                 <h1 class="text-[40px]" style="margin-bottom: 12px; font-weight: 600;">Who We Help</h1>
-                <p class="text-[30px]" style=" font-weight: 400;">We focus on low-income and rural communities, young adults, students, women and girls ensuring that no one is left behind.</p>
+                <p class="text-[30px]" style=" font-weight: 400;">We focus on low-income and rural communities, young
+                    adults, students, women and girls ensuring that no one is left behind.</p>
             </div>
         </section>
         <section class="flex w-[90%]" style="margin-inline: auto; gap: 8px; margin-block: 90px;">
@@ -437,16 +553,19 @@
         </section>
         <section class="w-[90%]" style="margin-block: 90px; margin-inline: auto;">
             <div class="flex" style="gap: 8px;">
-                <div class="w-[40%]" style="background: #DACFE0; box-shadow: 0px 4px 7px 0px #00000026; padding-block: 30px; border-radius: 10px;">
+                <div class="w-[40%]"
+                    style="background: #DACFE0; box-shadow: 0px 4px 7px 0px #00000026; padding-block: 30px; border-radius: 10px;">
                     <div class="w-[40px]" style="margin-left: 20px; margin-bottom: 15px;">
                         <img class="w-[100%]" src="../images2/Group.svg" alt="">
                     </div>
                     <div>
                         <h6 class="text-[25px] text-black-600" style="margin-left: 20px;">Mental Health Support</h6>
-                        <p class="text-[20px] text-black-400" style="margin-left: 20px;">Via USSD, SMS, WhatsApp, AI chatbot and App</p>
+                        <p class="text-[20px] text-black-400" style="margin-left: 20px;">Via USSD, SMS, WhatsApp, AI
+                            chatbot and App</p>
                     </div>
                 </div>
-                <div class="w-[40%]" style="background: #7E6FB0; color: white; box-shadow: 0px 4px 7px 0px #00000026; padding-block: 30px; border-radius: 10px;">
+                <div class="w-[40%]"
+                    style="background: #7E6FB0; color: white; box-shadow: 0px 4px 7px 0px #00000026; padding-block: 30px; border-radius: 10px;">
                     <div class="w-[40px]" style="margin-left: 20px; margin-bottom: 15px;">
                         <img class="w-[100%]" src="../images2/Vector (4).svg" alt="">
                     </div>
@@ -455,7 +574,8 @@
                         <p class="text-[20px] text-black-400" style="margin-left: 20px;">Request system</p>
                     </div>
                 </div>
-                <div class="w-[40%]" style="background: #DACFE0; box-shadow: 0px 4px 7px 0px #00000026; padding-block: 30px; border-radius: 10px;">
+                <div class="w-[40%]"
+                    style="background: #DACFE0; box-shadow: 0px 4px 7px 0px #00000026; padding-block: 30px; border-radius: 10px;">
                     <div class="w-[40px]" style="margin-left: 20px; margin-bottom: 15px;">
                         <img class="w-[100%]" src="../images2/Vector (5).svg" alt="">
                     </div>
@@ -465,23 +585,29 @@
                     </div>
                 </div>
             </div>
-            <div class="w-[80%] flex justify-center items-center" style="margin-inline: 10%; margin-top: 20px; gap: 10px;">
-                <div class="w-[40%]" style="background: #DACFE0; box-shadow: 0px 4px 7px 0px #00000026; padding-block: 30px; border-radius: 10px;">
+            <div class="w-[80%] flex justify-center items-center"
+                style="margin-inline: 10%; margin-top: 20px; gap: 10px;">
+                <div class="w-[40%]"
+                    style="background: #DACFE0; box-shadow: 0px 4px 7px 0px #00000026; padding-block: 30px; border-radius: 10px;">
                     <div class="w-[40px]" style="margin-left: 20px; margin-bottom: 15px;">
                         <img class="w-[100%]" src="../images2/Vector (8).svg" alt="">
                     </div>
                     <div>
-                        <h6 class="text-[25px] text-black-600" style="margin-left: 20px;">Freemium counselling services</h6>
-                        <p class="text-[20px] text-black-400" style="margin-left: 20px;">(3 free counselling/ therapy sessions, then paid plans).</p>
+                        <h6 class="text-[25px] text-black-600" style="margin-left: 20px;">Freemium counselling services
+                        </h6>
+                        <p class="text-[20px] text-black-400" style="margin-left: 20px;">(3 free counselling/ therapy
+                            sessions, then paid plans).</p>
                     </div>
                 </div>
-                <div class="w-[40%]" style="background: #DACFE0; box-shadow: 0px 4px 7px 0px #00000026; padding-block: 30px; border-radius: 10px;">
+                <div class="w-[40%]"
+                    style="background: #DACFE0; box-shadow: 0px 4px 7px 0px #00000026; padding-block: 30px; border-radius: 10px;">
                     <div class="w-[40px]" style="margin-left: 20px; margin-bottom: 15px;">
                         <img class="w-[100%]" src="../images2/Group (1).svg" alt="">
                     </div>
                     <div>
                         <h6 class="text-[25px] text-black-600" style="margin-left: 20px;">Accessibility to all</h6>
-                        <p class="text-[20px] text-black-400" style="margin-left: 20px;">Works even without smartphones, limited or no internet.</p>
+                        <p class="text-[20px] text-black-400" style="margin-left: 20px;">Works even without smartphones,
+                            limited or no internet.</p>
                     </div>
                 </div>
             </div>
@@ -489,7 +615,9 @@
         <section class=" flex items-center justify-center" style="margin-inline: auto; margin-block: 100px;">
             <div class="text-center w-[80%]">
                 <h1 class="text-[40px]" style="margin-bottom: 12px; font-weight: 600;">Why PSYCFLO?</h1>
-                <p class=" text-[30px]" style="font-weight: 400;">Unlike traditional aid programs, we directly connect people to help, eliminating delays, reducing stigma, and making support available anytime, anywhere.</p>
+                <p class=" text-[30px]" style="font-weight: 400;">Unlike traditional aid programs, we directly connect
+                    people to help, eliminating delays, reducing stigma, and making support available anytime, anywhere.
+                </p>
             </div>
         </section>
     </main>
@@ -541,7 +669,14 @@
             </div>
         </div>
     </footer>
-    <script src="./script.js"></script>
+    <script>
+        document.getElementById("hamburger").addEventListener("click", function () {
+            document.getElementById("nav").classList.toggle("active");
+        });
+
+    </script>
+
+    <script src="./footer/script.js"></script>
 </body>
 
 </html>

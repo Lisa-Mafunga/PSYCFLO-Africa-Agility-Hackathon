@@ -419,11 +419,10 @@ footer hr {
 @media (max-width: 400px) {
     header {
         height: 4rem;
-        width: 90%;
+        width: 100%;
         align-items: center;
         gap: 30px;
         justify-content: space-between;
-        max-width: 300px;
     }
 
     .hamburger-menu {

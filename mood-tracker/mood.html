@@ -121,9 +121,13 @@
         </div>
     </footer>
 
-    <script src="./footer/script.js"></script>
-
     <script>
+        // Toggle mobile menu
+        document.getElementById("hamburger").addEventListener("click", function () {
+            document.getElementById("nav").classList.toggle("active");
+        });
+
+
         document.addEventListener("DOMContentLoaded", function () {
             const saveButton = document.getElementById("save-btn");
             const moodOverlay = document.getElementById("mood-tracked");
@@ -140,6 +144,8 @@
             });
         });
     </script>
+    
 
+    <script src="./footer/script.js"></script>
 </body>
 </html>
