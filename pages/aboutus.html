@@ -13,6 +13,15 @@
         href="https://fonts.googleapis.com/css2?family=Gayathri:wght@100;400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <!-- chatbot -->
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <df-messenger
+      intent="WELCOME"
+      chat-title="psycflo-chatbot-for-mental-health-support"
+      agent-id="0f49367a-1f71-436f-a520-63d89ba46eea"
+      language-code="en"
+    ></df-messenger>
     <style>
         * {
             margin: 0;
@@ -433,7 +442,7 @@
 
         <nav class="menu" id="nav">
             <ul class="nav-link" id="nav-links">
-                <li><a href="/index.html">Home</a></li>
+                <li><a href="../index.html">Home</a></li>
                 <li><a href="/pages/aboutus.html">About us</a></li>
                 <li><a href="/pages/contactus.html">Contact us</a></li>
             </ul>
