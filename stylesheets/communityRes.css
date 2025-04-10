@@ -49,7 +49,7 @@
 @media (max-width: 768px) {
     .hamburger-menu {
         display: block;
-        margin: 2px 0 auto;
+        /* margin: 2px 0 auto; */
         padding: 5px 10px;
         font-size: 34px;
     }
@@ -224,13 +224,8 @@
         justify-content: space-between;
     }
 
-    /* .hamburger-menu {
+    /*.hamburger-menu {
         margin: 40px auto 0 auto;
     } */
-
-    header .logo {
-        width: 120px;
-        height: 60px;
-        /* margin-left: -20%; */
-    }
+ 
 }
