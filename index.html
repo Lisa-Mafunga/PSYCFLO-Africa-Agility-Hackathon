@@ -31,7 +31,7 @@
     <main>
         <section class="first-sec">
             <div class="container">
-                <div>
+                <div class="titlebox">
                     <h1>Support Starts Here: Mental <br> Wellness, Period Dignity, and <br>Community Care.</h1>
                     <p>Psycflo connects the dots ensuring <br> wellbeing for all.</p>
                     <span class="get-started" onclick="openModal()">Get Started</span>
@@ -112,10 +112,6 @@
 
                     // Adjust modal styling based on content type
                     const modal = document.querySelector('.modal');
-                    modal.style.width = 'auto';
-                    modal.style.maxWidth = '90%';
-                    modal.style.maxHeight = '90vh';
-                    modal.style.overflowY = 'auto';
 
                     // Special styling for partners page
                     if (formUrl === 'partners.html') {

@@ -20,16 +20,6 @@
 
     <!-- daisyui -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
-
-    <!-- chatbot -->
-    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-    <df-messenger
-      intent="WELCOME"
-      chat-title="psycflo-chatbot-for-mental-health-support"
-      agent-id="0f49367a-1f71-436f-a520-63d89ba46eea"
-      language-code="en"
-    ></df-messenger>
-    
 </head>
 
 <body>
@@ -42,10 +32,14 @@
 
         <nav class="menu" id="nav">
             <ul class="nav-link" id="nav-links">
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/pages/aboutus.html">About us</a></li>
-                <li><a href="/pages/contactus.html">Contact us</a></li>
-            </ul>
+
+                <li><a href="../pages/home.html">Home</a></li>
+                <li><a href="../pages/aboutus.html">About us</a></li>
+            <li><a href="../pages/contactus.html">Contact us</a></li>
+      
+      
+
+            
         </nav>
     </header>
 
@@ -59,7 +53,7 @@
             </div>
 
             <div class="greeting">
-                <h1>Hello, Ada <span class="wave">👋</span></h1>
+                <h1>Hello, <span id="user-name">Ada</span> <span class="wave">👋</span></h1>
                 <h3>How are you doing today?</h3>
             </div>
 
