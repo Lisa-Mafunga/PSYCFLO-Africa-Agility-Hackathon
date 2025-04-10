@@ -5,9 +5,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const navLinks = document.querySelectorAll(".nav-link a");
 
   navLinks.forEach((link) => {
-      if (link.getAttribute("href") === currentLocation) {
-          link.classList.add("active"); // Add active class
-      }
+    if (link.getAttribute("href") === currentLocation) {
+      link.classList.add("active"); // Add active class
+    }
   });
 });
 
@@ -182,3 +182,40 @@ document.addEventListener("DOMContentLoaded", function () {
   const name = prompt("Hi there! What's your name? 😊") || "Friend";
   document.getElementById("user-name").textContent = name;
 });
+
+
+//show popup in chatbot page
+let scrollCount = 0;
+let popupShown = false;
+
+function trackScroll() {
+  if (popupShown) return;
+
+  scrollCount++;
+  console.log("Scroll #" + scrollCount);
+
+  if (scrollCount >= 5) {
+    showPopup();
+    popupShown = true;
+    window.removeEventListener("scroll", trackScroll);
+  }
+}
+
+function showPopup() {
+  const popup = document.getElementById("popup");
+  const overlay = document.getElementById("overlay");
+  popup.style.display = "flex";
+  overlay.style.display = "block";
+  popup.classList.add("show");
+}
+
+function closePopup() {
+  document.getElementById("popup").style.display = "none";
+  document.getElementById("overlay").style.display = "none";
+}
+
+function goToAnotherPage() {
+  window.location.href = "../pages/booktherapy.html";
+}
+
+window.addEventListener("scroll", trackScroll);
