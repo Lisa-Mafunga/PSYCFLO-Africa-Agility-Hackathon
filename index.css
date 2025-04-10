@@ -256,7 +256,7 @@ footer hr {
 .modal .submit-btn {
     width: 100%;
     padding: 12px;
-    background: #374151;
+    background: #3A478D;
     color: white;
     border: none;
     border-radius: 5px;
@@ -468,7 +468,16 @@ footer hr {
     }
 
     .modal {
+        width: 70%;
         max-width: 70%;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .container {
+        width: 100%;
     }
 
     #modal-content {
@@ -484,7 +493,7 @@ footer hr {
     }
 }
     /* Modal Styles */
-.overlay {
+/* .overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -505,7 +514,6 @@ footer hr {
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    /* width: 320px; */
     width: auto;
     max-width: 90%;
     max-height: 90vh;
@@ -595,4 +603,4 @@ footer hr {
     background: none;
     font-size: 18px;
     cursor: pointer;
-}
+} */

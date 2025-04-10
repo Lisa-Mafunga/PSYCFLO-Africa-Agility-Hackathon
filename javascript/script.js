@@ -128,3 +128,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+// greeting in chatbot
+
+document.addEventListener("DOMContentLoaded", function () {
+  const name = prompt("Hi there! What's your name? 😊") || "Friend";
+  document.getElementById("user-name").textContent = name;
+});
