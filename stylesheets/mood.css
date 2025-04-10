@@ -16,7 +16,7 @@ body {
 header {
     display: flex;
     height: 90px;
-    padding: 1rem 4rem;
+    /* padding: 1rem 4rem; */
     justify-content: space-between;
     align-items: center;
     flex-shrink: 0;
@@ -35,6 +35,24 @@ header .logo {
     flex-shrink: 0;
     background: url(../images/logo3.svg) rgba(255, 255, 255, 0.90) 50% / cover no-repeat;
     /* background-blend-mode: color-dodge; */
+}
+.fa-solid {
+    /* margin-left: 50px; */
+    /* margin-bottom: 50px; */
+    font-size: 20px;
+    color: white;
+    border: 1px solid black;
+    border-radius: 50px;
+    background-color: black;
+    padding: 10px;
+}
+.fa-bars {
+    font-size: 20px;
+    color: white;
+    border: 1px solid black;
+    border-radius: 50px;
+    background-color: black;
+    padding: 10px;
 }
 
 .nav-link {
@@ -74,24 +92,6 @@ header .logo {
     font-size: 1.8em;
     cursor: pointer;
     color: #3A478D;
-}
-.fa-solid {
-    /* margin-left: 50px; */
-    /* margin-bottom: 50px; */
-    font-size: 20px;
-    color: white;
-    border: 1px solid black;
-    border-radius: 50px;
-    background-color: black;
-    padding: 10px;
-}
-.fa-bars {
-    font-size: 20px;
-    color: white;
-    border: 1px solid black;
-    border-radius: 50px;
-    background-color: black;
-    padding: 10px;
 }
 .fa-arrow-left {
     font-size: 20px;
@@ -164,16 +164,6 @@ header .logo {
         align-items: center;
         gap: 30px;
         justify-content: space-between;
-    }
-
-    .hamburger-menu {
-        margin: 40px auto 0 auto;
-    }
-
-    header .logo {
-        width: 120px;
-        height: 60px;
-        margin-left: -20%;
     }
 }
 /* Main container */

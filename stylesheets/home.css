@@ -3,15 +3,19 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     background-color: rgb(233, 233, 233);
 }
+
 img {
     width: 100%;
 }
+
 a:hover {
     cursor: pointer;
 }
+
 .fa-solid {
     /* margin-left: 50px; */
     /* margin-bottom: 50px; */
@@ -31,6 +35,7 @@ a:hover {
     background-color: black;
     padding: 10px;
 }
+
 header {
     display: flex;
     height: 90px;
@@ -54,6 +59,7 @@ header .logo {
     background: url(../images/logo3.svg) rgba(255, 255, 255, 0.90) 50% / cover no-repeat;
     /* background-blend-mode: color-dodge; */
 }
+
 .nav-link {
     display: flex;
     align-items: center;
@@ -76,6 +82,7 @@ header .logo {
     line-height: normal;
     text-decoration: none;
 }
+
 .nav-link a.active {
     border-bottom: 1px solid #3A478D;
     color: #3A478D;
@@ -91,9 +98,12 @@ header .logo {
     cursor: pointer;
     color: #3A478D;
 }
+
 main {
-    margin-top: 90px; /* Add this - matches navbar height */
+    margin-top: 90px;
+    /* Add this - matches navbar height */
 }
+
 .heroSection {
     margin-block: 20px;
     background-image: url(../images2/image\ copy.png);
@@ -103,6 +113,7 @@ main {
     height: 120vh;
     /* padding-top: 90px; */
 }
+
 .icon {
     margin-left: 80px;
     width: 55px;
@@ -110,24 +121,27 @@ main {
     color: white;
     filter: drop-shadow(4px 0px 4px rgba(0, 0, 0, 0.25));
 }
+
 .icon .fa-arrow-left {
     margin-left: 10px;
     margin-top: 30px;
     background-color: #3A478D;
 }
+
 .hero-sec {
-    height: 300px; 
+    height: 300px;
     width: 813px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: 20px;
     margin-top: 30px;
-    color: white; 
+    color: white;
     font-size: 30px;
     font-weight: 900;
     font-family: "Montserrat", sans-serif;
 }
+
 .hero-sec p {
     font-weight: 200;
 }
@@ -152,6 +166,7 @@ main {
     font-size: 12px;
     font-weight: 200;
 }
+
 .talktous-parent {
     height: 110vh;
     margin-inline: auto;
@@ -162,41 +177,49 @@ main {
     margin-bottom: 40px;
     /* background-color: rgb(245, 245, 245); */
 }
+
 .talktous-container {
     height: 90vh;
     width: 90%;
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     gap: 95px;
 
 }
+
 .talktous-image {
     height: 90%;
     width: 45%;
 }
+
 .talktous-image img {
     height: 100%;
     width: 100%;
     border-radius: 8px;
 }
+
 .talktous-div-parent {
     height: 90%;
     width: 45%;
     font-family: "Montserrat", sans-serif;
     /* padding: 20px; */
 }
+
 .talktous-div {
     margin-bottom: 20px;
     line-height: 26px;
 }
+
 .talktous-div h6 {
     font-size: 16px;
     margin-bottom: 10px;
 }
+
 .talktous-div p {
     line-height: 30px;
 }
+
 .talktous-button {
     width: 30%;
     display: flex;
@@ -204,6 +227,7 @@ main {
     align-items: center;
     /* border: 1px solid black; */
 }
+
 .talktous-button button {
     width: 100%;
     background-color: rgb(58, 58, 155);
@@ -216,6 +240,7 @@ main {
     cursor: pointer;
     border: none;
 }
+
 .third-sec {
     height: 35vh;
     display: flex;
@@ -240,6 +265,7 @@ main {
     font-size: 18px;
     font-weight: 300;
 }
+
 .other-services-parent {
     height: 765px;
     margin-inline: auto;
@@ -252,42 +278,50 @@ main {
     margin-bottom: 50px;
     /* background-color: rgb(245, 245, 245); */
 }
+
 .other-services-container {
     height: 90vh;
     width: 90%;
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     gap: 95px;
 
 }
+
 .other-services-image img {
     height: 100%;
     width: 100%;
     border-radius: 8px;
 }
+
 .other-services-image {
     height: 100%;
     width: 50%;
 }
+
 .other-services-div-parent {
     font-family: "Montserrat", sans-serif;
     height: 60%;
     width: 50%;
 }
+
 .other-services-div h6 {
     font-weight: 700;
     font-size: 40px;
     margin-bottom: 15px;
 }
+
 .other-services-div p {
     line-height: 30px;
     font-weight: 400;
 }
+
 .other-services-button {
     width: 100%;
     margin-top: 35px;
 }
+
 .other-services-button button {
     background-color: rgb(58, 58, 155);
     color: white;
@@ -304,6 +338,7 @@ main {
     width: 100%;
     margin-top: 35px;
 }
+
 .other-services-button-2 button {
     background-color: white;
     color: blue;
@@ -316,13 +351,15 @@ main {
     font-weight: 700;
     border: 1px solid blue;
 }
+
 /* Responsive styles for all devices (except footer) */
 @media (max-width: 1200px) {
     .hero-sec {
         width: 700px;
     }
-    
-    .talktous-container, .other-services-container {
+
+    .talktous-container,
+    .other-services-container {
         gap: 50px;
     }
 }
@@ -332,33 +369,37 @@ main {
         width: 600px;
         font-size: 25px;
     }
-    
-    .first-sec h5, .third-sec h5 {
+
+    .first-sec h5,
+    .third-sec h5 {
         font-size: 25px;
     }
-    
-    .talktous-container, .other-services-container {
+
+    .talktous-container,
+    .other-services-container {
         flex-direction: column;
         height: auto;
         margin-top: 30px;
     }
-    
-    .talktous-image, .talktous-div-parent,
-    .other-services-image, .other-services-div-parent {
+
+    .talktous-image,
+    .talktous-div-parent,
+    .other-services-image,
+    .other-services-div-parent {
         width: 80%;
     }
-    
+
     .talktous-button {
         width: 50%;
     }
-    
+
     .other-services-parent {
         height: auto;
         padding: 50px 0;
     }
 }
 
-@media (max-width: 768px) { 
+@media (max-width: 768px) {
     .hamburger-menu {
         display: block;
         /* margin: 2px 0 auto; */
@@ -409,29 +450,30 @@ main {
     .menu.active {
         display: flex;
     }
+
     .hero-sec {
         width: 90%;
         margin-left: 0;
         text-align: center;
     }
-    
+
     .icon img {
         margin-left: 30px;
     }
-    
+
     .first-sec {
         width: 80%;
     }
-    
+
     .talktous-parent {
         height: auto;
         padding: 30px 0;
     }
-    
+
     .talktous-button {
         width: 70%;
     }
-    
+
     .third-sec {
         height: auto;
         padding: 30px 0;
@@ -442,28 +484,31 @@ main {
     .heroSection {
         height: 70vh;
     }
-    
+
     .hero-sec {
         font-size: 20px;
     }
-    
+
     .hero-sec h1 {
         font-size: 1.8em;
     }
-    
-    .first-sec h5, .third-sec h5 {
+
+    .first-sec h5,
+    .third-sec h5 {
         font-size: 20px;
     }
-    
-    .talktous-button, .other-services-button, .other-services-button-2 {
+
+    .talktous-button,
+    .other-services-button,
+    .other-services-button-2 {
         width: 80%;
     }
-    
+
     .talktous-button button {
         padding-inline: 50px;
         font-size: 16px;
     }
-    
+
     .other-services-div h6 {
         font-size: 30px;
     }
@@ -485,17 +530,17 @@ main {
     .hero-sec {
         font-size: 18px;
     }
-    
+
     .icon img {
         width: 40px;
         height: 40px;
         margin-left: 20px;
     }
-    
+
     .talktous-button button {
         font-size: 14px;
     }
-    
+
     .other-services-div h6 {
         font-size: 25px;
     }
