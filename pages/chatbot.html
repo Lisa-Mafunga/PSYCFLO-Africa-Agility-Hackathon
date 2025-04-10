@@ -35,11 +35,11 @@
 
                 <li><a href="../pages/home.html">Home</a></li>
                 <li><a href="../pages/aboutus.html">About us</a></li>
-            <li><a href="../pages/contactus.html">Contact us</a></li>
-      
-      
+                <li><a href="../pages/contactus.html">Contact us</a></li>
 
-            
+
+
+
         </nav>
     </header>
 
@@ -78,6 +78,21 @@
                 </div>
             </div>
         </section>
+
+        <!-- popup -->
+        <div class="overlay" id="overlay"></div>
+
+        <!-- Popup -->
+        <div class="popup" id="popup">
+            <div class="popup-content">
+                <p>Continue to help us understand you better, or skip ahead to book a therapist now.</p>
+                <div class="popup-btn">
+                    <button class="continue-btn" onclick="closePopup()">Continue</button>
+                    <button class="skip-btn" onclick="goToAnotherPage()">Skip</button>
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <script src="../javascript/script.js"></script>
