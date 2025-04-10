@@ -103,11 +103,17 @@ main {
     height: 120vh;
     /* padding-top: 90px; */
 }
-.icon img {
-    margin-top: 30px;
+.icon {
     margin-left: 80px;
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 44px;
+    color: white;
+    filter: drop-shadow(4px 0px 4px rgba(0, 0, 0, 0.25));
+}
+.icon .fa-arrow-left {
+    margin-left: 10px;
+    margin-top: 30px;
+    background-color: #3A478D;
 }
 .hero-sec {
     height: 300px; 
