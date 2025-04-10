@@ -58,8 +58,8 @@
                         <i class="fa-solid fa-star" id="yellow"></i>
                         <i class="fa-solid fa-star" id="yellow"></i>
                         <i class="fa-solid fa-star" id="yellow"></i>
-                        <i class="fa-solid fa-star" id="yellow"></i>
-                        <i class="fa-solid fa-star" id="yellow-one"></i>
+                        <i class="fa-regular fa-star" id="yellow-one"></i>
+                        <i class="fa-regular fa-star" id="yellow-one"></i>
                        </div>
                         <div><p>3.5/5</p></div>
                     </div>
@@ -80,8 +80,8 @@
                         <i class="fa-solid fa-star" id="yellow"></i>
                         <i class="fa-solid fa-star" id="yellow"></i>
                         <i class="fa-solid fa-star" id="yellow"></i>
-                        <i class="fa-solid fa-star" id="yellow-one"></i>
-                        <i class="fa-solid fa-star" id="yellow-one"></i>
+                        <i class="fa-regular fa-star" id="yellow-one"></i>
+                        <i class="fa-regular fa-star" id="yellow-one"></i>
                        </div>
                         <div><p>3.5/5</p></div>
                     </div>
@@ -125,7 +125,7 @@
                         <i class="fa-solid fa-star" id="yellow"></i>
                         <i class="fa-solid fa-star" id="yellow"></i>
                         <i class="fa-solid fa-star" id="yellow"></i>
-                        <i class="fa-solid fa-star" id="yellow-one"></i>
+                        <i class="fa-regular fa-star" id="yellow-one"></i>
                        </div>
                         <div><p>3.5/5</p></div>
                     </div>
@@ -134,6 +134,70 @@
             </article>
         </section>
     </main>
+    <div id="bookingConfirmationModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:1000; justify-content:center; align-items:center; font-family:Montserrat;">
+        <div style="background:white; width:90%; max-width:400px; padding:40px; border-radius:10px; text-align:center; box-shadow:0 4px 20px rgba(0,0,0,0.1); position:relative;">
+          <!-- Calendar Icon -->
+          <div style="width:80px; height:80px; background:#3A478D; border-radius:50%; margin:0 auto 25px; display:flex; justify-content:center; align-items:center;">
+            <i class="fa-solid fa-calendar-check" style="color:white; font-size:40px;"></i>
+          </div>
+          
+          <!-- Message -->
+          <h2 style="color:#3A478D; font-size:24px; margin-bottom:15px;">Booking Confirmed!</h2>
+          <p style="font-size:16px; color:#555; line-height:1.5; margin-bottom:25px;">
+            Your session with <span id="therapistName" style="font-weight:600;"></span> has been scheduled for 
+            <span id="sessionDate" style="font-weight:600;"></span>.
+          </p>
+          <p style="font-size:14px; color:#777; margin-bottom:30px;">
+            A confirmation has been sent to your email.
+          </p>
+          
+          <!-- Close Button -->
+          <button onclick="closeBookingModal()" 
+                  style="background:#3A478D; color:white; border:none; 
+                         padding:12px 30px; border-radius:20px; 
+                         font-size:16px; cursor:pointer; 
+                         font-weight:600;">
+            Done
+          </button>
+          
+          <!-- Close Button (X) -->
+          <span onclick="closeBookingModal()" 
+                style="position:absolute; top:15px; right:15px; font-size:24px; 
+                       cursor:pointer; color:#3A478D;">&times;</span>
+        </div>
+      </div>
+
+      <div id="limitReachedModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:1000; justify-content:center; align-items:center; font-family:Montserrat;">
+        <div style="background:white; width:90%; max-width:400px; padding:30px; border-radius:10px; text-align:center; box-shadow:0 4px 20px rgba(0,0,0,0.1);">
+          <!-- Oops Icon -->
+          <div style="width:80px; height:80px; background:#FF6B6B; border-radius:50%; margin:0 auto 20px; display:flex; justify-content:center; align-items:center;">
+            <i class="fa-solid fa-exclamation" style="color:white; font-size:40px;"></i>
+          </div>
+          
+          <!-- Message -->
+          <h2 style="color:#3A478D; font-size:24px; margin-bottom:15px;">Oops!</h2>
+          <p style="font-size:16px; color:#555; line-height:1.5; margin-bottom:25px;">
+            Sorry, you have used up your 3 FREE sessions.<br>
+            Kindly subscribe to get more support and continue your wellness journey. Toddles!
+          </p>
+          
+          <hr style="border:0; height:1px; background:#eee; margin:20px 0;">
+          
+          <!-- Buttons -->
+          <div style="display:flex; justify-content:center; gap:15px;">
+            <a href="/pages/subscription.html" style="flex:1; text-decoration:none;">
+              <button style="width:100%; background:#3A478D; color:white; border:none; padding:12px; border-radius:20px; font-size:16px; cursor:pointer; font-weight:600;">
+                Subscribe
+              </button>
+            </a>
+            <button onclick="closeLimitModal()" style="flex:1; background:#F9FBFF; color:#3A478D; border:1px solid #3A478D; padding:12px; border-radius:20px; font-size:16px; cursor:pointer; font-weight:600;">
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+      
+
     <footer>
         <div class="container">
             <div id="footer">
@@ -186,8 +250,60 @@
         document.getElementById("hamburger").addEventListener("click", function () {
             document.getElementById("nav").classList.toggle("active");
         });
-    </script>
 
+
+        function showBookingConfirmation(therapist, date) {
+    document.getElementById('therapistName').textContent = therapist;
+    document.getElementById('sessionDate').textContent = date;
+    document.getElementById('bookingConfirmationModal').style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeBookingModal() {
+    document.getElementById('bookingConfirmationModal').style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+
+  // Attach to all Book buttons
+  document.querySelectorAll('.therapist-one button').forEach(button => {
+    button.addEventListener('click', function() {
+      const therapist = this.closest('.therapist-one').querySelector('h2').textContent;
+      const date = this.closest('.therapist-one').querySelector('h3').textContent;
+      showBookingConfirmation(therapist, date);
+    });
+  });
+
+
+  let bookingCount = localStorage.getItem('bookingCount') || 0;
+  
+  function showLimitReachedModal() {
+    document.getElementById('limitReachedModal').style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+  
+  function closeLimitModal() {
+    document.getElementById('limitReachedModal').style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+  
+  // Update your existing booking function
+  document.querySelectorAll('.therapist-one button').forEach(button => {
+    button.addEventListener('click', function() {
+      bookingCount++;
+      localStorage.setItem('bookingCount', bookingCount);
+      
+      if (bookingCount > 3) {
+        showLimitReachedModal();
+      } else {
+        const therapist = this.closest('.therapist-one').querySelector('h2').textContent;
+        const date = this.closest('.therapist-one').querySelector('h3').textContent;
+        showBookingConfirmation(therapist, date);
+      }
+    });
+     localStorage.setItem('bookingCount', 0);
+  console.log('Booking counter reset');
+  });
+    </script>
     <script src="./footer/script.js"></script>
 </body>
 
