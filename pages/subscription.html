@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Subscription</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        a:hover {
+            cursor: pointer;
+        }
+
+        .fa-solid {
+            /* margin-left: 50px; */
+            /* margin-bottom: 50px; */
+            font-size: 20px;
+            color: white;
+            border: 1px solid black;
+            border-radius: 50px;
+            background-color: black;
+            padding: 10px;
+        }
+
+        .fa-bars {
+            font-size: 20px;
+            color: white;
+            border: 1px solid black;
+            border-radius: 50px;
+            background-color: black;
+            padding: 10px;
+        }
+
+        header {
+            display: flex;
+            height: 90px;
+            /* padding: 0.1rem 4rem; */
+            justify-content: space-between;
+            align-items: center;
+            flex-shrink: 0;
+            background: rgba(255, 255, 255, 0.90);
+            box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        header .logo {
+            width: 138px;
+            height: 90px;
+            flex-shrink: 0;
+            background: url(../images/logo3.svg) rgba(255, 255, 255, 0.90) 50% / cover no-repeat;
+            /* background-blend-mode: color-dodge; */
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            flex-shrink: 0;
+            list-style: none;
+        }
+
+        .nav-link li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        .nav-link a {
+            color: #000;
+            font-family: "Gayathri", sans-serif;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-decoration: none;
+        }
+
+        .nav-link a.active {
+            border-bottom: 1px solid #3A478D;
+            color: #3A478D;
+        }
+
+        .nav-link a:hover {
+            color: #3A478D;
+        }
+
+        .hamburger-menu {
+            display: none;
+            font-size: 1.8em;
+            cursor: pointer;
+            color: #3A478D;
+        }
+
+        .icon {
+            margin-left: 80px;
+            width: 55px;
+            height: 44px;
+            color: white;
+            filter: drop-shadow(4px 0px 4px rgba(0, 0, 0, 0.25));
+        }
+
+        .icon .fa-arrow-left {
+            margin-left: 10px;
+            margin-top: 30px;
+            background-color: #3A478D;
+        }
+
+        .container {
+            margin-top: 90px;
+        }
+
+        .main-container {
+            width: 100%;
+            margin-inline: auto;
+            margin-top: 60px;
+        }
+
+        .text {
+            text-align: center;
+        }
+
+        .text h1 {
+            font-family: Montserrat;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: center;
+        }
+
+        .text p {
+            font-family: Gayathri;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: center;
+        }
+        .main-div {
+            width: 100%;
+            margin-inline: auto;
+            margin-top: 40px;
+            margin-bottom: 60px;
+            display: flex;
+            /* flex-direction: column; */
+            gap: 40px;
+        }
+
+        .first-div {
+            width: 30%;
+            height: 408px;
+            top: 363px;
+            left: 112px;
+            border-radius: 20px;
+            text-align: center;
+            background-color: #3A478D;
+            padding: 40px;
+        }
+
+        .first-div h2 {
+            font-family: Montserrat;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        .first-div .pay {
+            font-family: Montserrat;
+            font-weight: 600;
+            font-size: 36px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        .first-div .p {
+            font-family: Montserrat;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        .first-div .p-svg {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* width: 20%; */
+            font-family: Montserrat;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            color: white;
+            /* border-bottom: 1px solid white; */
+            text-decoration: underline;
+        }
+
+        @media (min-width: 1200px) {
+    .main-div {
+      gap: 40px;
+      max-width: 1200px;
+      margin: 40px auto 60px !important;
+    }
+
+    .first-div {
+      max-width: 350px;
+    }
+  }
+
+        @media (max-width: 768px) {
+            .hamburger-menu {
+                display: block;
+                /* margin: 2px 0 auto; */
+                padding: 5px 10px;
+                font-size: 34px;
+            }
+
+            header {
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                height: 4rem;
+                /* max-width: 600px; */
+            }
+
+            header .logo {
+                width: 120px;
+                height: 60px;
+            }
+
+            .menu {
+                flex-direction: column;
+                position: absolute;
+                top: 68px;
+                left: 0;
+                width: 100%;
+                background: #3A478D;
+                color: white;
+                text-align: center;
+                padding: 10px 0;
+                display: none;
+            }
+
+            .nav-link a {
+                color: white;
+            }
+
+            .nav-link {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .hamburger-menu {
+                display: block;
+            }
+
+            /* Show menu when active */
+            .menu.active {
+                display: flex;
+            }
+    .main-div {
+      /* flex-direction: row !important; */
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      padding: 0 20px;
+    }
+
+    .first-div {
+      flex: 1;
+      min-width: 280px;
+      max-width: 320px;
+      height: auto !important;
+      margin-bottom: 0 !important;
+    }
+  }
+
+        @media (max-width: 400px) {
+            header {
+                height: 4rem;
+                width: 100%;
+                align-items: center;
+                gap: 30px;
+                justify-content: space-between;
+            }
+
+            /* .hamburger-menu {
+                margin: 40px auto 0 auto;
+            } */
+            .icon img {
+                width: 40px;
+                height: 40px;
+                margin-left: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo"></div>
+
+        <div class="hamburger-menu" id="hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <nav class="menu" id="nav">
+            <ul class="nav-link" id="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/pages/aboutus.html">About us</a></li>
+                <li><a href="/pages/contactus.html">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="container">
+        <div class="icon">
+            <a href="/pages/booktherapy.html" onclick="goBack(); return false;"><i class="fa-solid fa-arrow-left"></i></a>
+        </div>
+    </section>
+    <main>
+        <section class="main-container">
+            <div class="text">
+                <h1>Subscribe</h1>
+                <p>Below are our general pricing packages for <br>...................................</p>
+            </div>
+            <div class="main-div">
+                <div class="first-div">
+                    <h2>Weekly Package</h2>
+                    <p class="pay">N3,000</p>
+                    <p class="p">7 Days Full Access to <br> Our Therapy Sessions</p>
+                    <p class="p-svg"> Choose Plan  
+                        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17.7806 8.53068L11.0306 15.2807C10.8899 15.4214 10.699 15.5005 10.5 15.5005C10.301 15.5005 10.1101 15.4214 9.96937 15.2807C9.82864 15.1399 9.74958 14.9491 9.74958 14.7501C9.74958 14.551 9.82864 14.3602 9.96937 14.2194L15.4397 8.75005H0.75C0.551088 8.75005 0.360322 8.67103 0.21967 8.53038C0.0790178 8.38973 0 8.19896 0 8.00005C0 7.80114 0.0790178 7.61037 0.21967 7.46972C0.360322 7.32907 0.551088 7.25005 0.75 7.25005H15.4397L9.96937 1.78068C9.82864 1.63995 9.74958 1.44907 9.74958 1.25005C9.74958 1.05103 9.82864 0.860156 9.96937 0.719426C10.1101 0.578695 10.301 0.499634 10.5 0.499634C10.699 0.499634 10.8899 0.578695 11.0306 0.719426L17.7806 7.46943C17.8504 7.53908 17.9057 7.6218 17.9434 7.71285C17.9812 7.80389 18.0006 7.90149 18.0006 8.00005C18.0006 8.09861 17.9812 8.19621 17.9434 8.28726C17.9057 8.3783 17.8504 8.46102 17.7806 8.53068Z"
+                                fill="#F8F8FD" />
+                        </svg>
+                    </p>
+                </div>
+                <div class="first-div">
+                    <h2>Monthly Package</h2>
+                    <p class="pay">N5,000</p>
+                    <p class="p">30 Days Full Access to <br>Our Therapy Sessions</p>
+                    <p class="p-svg"> Choose Plan  
+                        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17.7806 8.53068L11.0306 15.2807C10.8899 15.4214 10.699 15.5005 10.5 15.5005C10.301 15.5005 10.1101 15.4214 9.96937 15.2807C9.82864 15.1399 9.74958 14.9491 9.74958 14.7501C9.74958 14.551 9.82864 14.3602 9.96937 14.2194L15.4397 8.75005H0.75C0.551088 8.75005 0.360322 8.67103 0.21967 8.53038C0.0790178 8.38973 0 8.19896 0 8.00005C0 7.80114 0.0790178 7.61037 0.21967 7.46972C0.360322 7.32907 0.551088 7.25005 0.75 7.25005H15.4397L9.96937 1.78068C9.82864 1.63995 9.74958 1.44907 9.74958 1.25005C9.74958 1.05103 9.82864 0.860156 9.96937 0.719426C10.1101 0.578695 10.301 0.499634 10.5 0.499634C10.699 0.499634 10.8899 0.578695 11.0306 0.719426L17.7806 7.46943C17.8504 7.53908 17.9057 7.6218 17.9434 7.71285C17.9812 7.80389 18.0006 7.90149 18.0006 8.00005C18.0006 8.09861 17.9812 8.19621 17.9434 8.28726C17.9057 8.3783 17.8504 8.46102 17.7806 8.53068Z"
+                                fill="#F8F8FD" />
+                        </svg>
+                    </p>
+                </div>
+                <div class="first-div">
+                    <h2>Yearly Package</h2>
+                    <p class="pay">N30,000</p>
+                    <p class="p">12 Months Full Access <br>to Our Therapy <br>Sessions</p>
+                    <p class="p-svg"> Choose Plan  
+                        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17.7806 8.53068L11.0306 15.2807C10.8899 15.4214 10.699 15.5005 10.5 15.5005C10.301 15.5005 10.1101 15.4214 9.96937 15.2807C9.82864 15.1399 9.74958 14.9491 9.74958 14.7501C9.74958 14.551 9.82864 14.3602 9.96937 14.2194L15.4397 8.75005H0.75C0.551088 8.75005 0.360322 8.67103 0.21967 8.53038C0.0790178 8.38973 0 8.19896 0 8.00005C0 7.80114 0.0790178 7.61037 0.21967 7.46972C0.360322 7.32907 0.551088 7.25005 0.75 7.25005H15.4397L9.96937 1.78068C9.82864 1.63995 9.74958 1.44907 9.74958 1.25005C9.74958 1.05103 9.82864 0.860156 9.96937 0.719426C10.1101 0.578695 10.301 0.499634 10.5 0.499634C10.699 0.499634 10.8899 0.578695 11.0306 0.719426L17.7806 7.46943C17.8504 7.53908 17.9057 7.6218 17.9434 7.71285C17.9812 7.80389 18.0006 7.90149 18.0006 8.00005C18.0006 8.09861 17.9812 8.19621 17.9434 8.28726C17.9057 8.3783 17.8504 8.46102 17.7806 8.53068Z"
+                                fill="#F8F8FD" />
+                        </svg>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

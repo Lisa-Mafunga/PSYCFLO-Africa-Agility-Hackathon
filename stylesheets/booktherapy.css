@@ -170,13 +170,12 @@ letter-spacing: 0%;
   background-color: revert;
 }
 #yellow-one {
-  color: white;
+  /* color: #F9B63B; */
   font-size: 20px;
   border: 0;
   padding: 0;
   border-radius: 0;
-  background-color: gainsboro;
-  /* background-color: revert; */
+  background-color: revert;
 }
 .therapist-one .stars p {
   font-family: Montserrat;
