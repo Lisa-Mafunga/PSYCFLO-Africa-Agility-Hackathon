@@ -3,92 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main Page</title>
+    <title>Therapist Application</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
-        .button {
-            padding: 10px 20px;
-            background-color: #00796b;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
+        
+        .therapist-form-container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 400px;
+            padding: 30px;
+            box-sizing: border-box;
+        }
+        
+        .therapist-form-title {
+            color: #000000;
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 8px;
             text-align: center;
-            display: inline-block;
-            margin: 20px;
+            line-height: 1.3;
         }
-        .button:hover {
-            background-color: #004d40;
-        }
-        .form-container {
-            background: white;
-            padding: 60px;
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-            width: 400px;
-            margin: 100px auto; /* Center the form */
-        }
-        h2 {
+        
+        .therapist-form-subtitle {
+            color: #666666;
+            font-size: 14px;
+            margin-bottom: 25px;
             text-align: center;
+            line-height: 1.4;
+        }
+        
+        .form-group {
             margin-bottom: 20px;
         }
-
-        p {
-            text-align: center ;
-            margin-bottom: 45px;
-            font-size: 13px;
-        }
-        label {
-            margin-top: 10px;
+        
+        .form-group label {
             display: block;
+            margin-bottom: 6px;
+            color: #333333;
+            font-size: 14px;
+            font-weight: normal;
         }
-        input[type="number"] {
+        
+        .form-group input {
             width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
+            padding: 12px 10px;
+            background-color: #f5f5f5;
+            border: none;
             border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
         }
-        button {
-            width: 105%;
-            padding: 10px;
-            background-color: darkblue;
+        
+        .form-group input:focus {
+            outline: none;
+            background-color: #eeeeee;
+        }
+        
+        .submit-btn {
+            background-color: #4285f4;
             color: white;
             border: none;
-            border-radius: 12px;
+            border-radius: 4px;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: normal;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+            transition: background-color 0.2s;
+        }
+        
+        .submit-btn:hover {
+            background-color: #3367d6;
+        }
+        
+        .back-btn {
+            color: #4285f4;
+            text-decoration: none;
+            font-size: 14px;
+            display: inline-block;
+            margin-bottom: 20px;
             cursor: pointer;
         }
-        button:hover {
-            background-color: darkblue;
+        
+        .back-btn:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-
-    
-        <div class="form-container">
-            <h2>Support Mental Care</h2>
-            <p>Your expertise helps provide essential mental health support to those in need. By 
-                joining our platform, you are making a meaningful difference in ensuring 
-                 accessibility and well-being for all.</p>
-            <form>
-                <label for="attendees">How many persons do you want to attend to in a day?</label>
-                <input type="number" id="attendees" required>
-                
-                <label for="sessions">How many sessions do you want to have with each person?</label>
-                <input type="number" id="sessions" required>
-                
-                <label for="minutes">How many minutes do you want to spend with each person?</label>
-                <input type="number" id="minutes" required>
-                
-                <a href="/pages/booktherapy.html">
-                    <button type="submit">Submit</button>
-                </a>
-            </form>
-        </div>
+    <div class="therapist-form-container">
+        <a class="back-btn" onclick="window.history.back()">← Back</a>
+        <h1 class="therapist-form-title">Join Us in Making a Difference!</h1>
+        <p class="therapist-form-subtitle">Kindly fill out the form so you can support our mission.</p>
+        
+        <form id="therapistForm">
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
     </div>
-   
+
+    <script>
+        document.getElementById('therapistForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Form submission logic would go here
+            alert('Thank you for your application! We will contact you soon.');
+        });
+    </script>
 </body>
 </html>
