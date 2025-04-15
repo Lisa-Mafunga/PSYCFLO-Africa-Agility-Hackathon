@@ -7,69 +7,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- <script src="https://unpkg.com/@tailwindcss/browser@4"></script> -->
     <title>Psycflo</title>
 
     <link rel="stylesheet" href="./index.css">
     <style>
-        /* Modal styles */
-        .overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            z-index: 1000;
-        }
-
         .modal {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-            z-index: 1001;
-            max-height: 90vh;
-            overflow-y: auto;
-            width: auto;
-            max-width: 90%;
-        }
-
-        .close-btn {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: none;
-            border: none;
-            font-size: 24px;
-            cursor: pointer;
-        }
-
-        .button {
-            display: block;
-            width: 300px;
-            padding: 15px;
-            margin: 15px auto;
-            background-color: #d3d3d3;
-            color: black;
-            text-decoration: none;
-            font-size: 18px;
-            border-radius: 10px;
-            text-align: center;
-            cursor: pointer;
-        }
-
-        .button:hover {
-            background-color: #b3b3b3;
-        }
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 20px;
+}
     </style>
 </head>
-
 <body>
     <header>
         <div class="logo"></div>
@@ -103,9 +52,12 @@
                 <div id="modal-content">
                     <!-- Content will be dynamically inserted here -->
                     <h2>Select User Category</h2>
-                    <span class="button" onclick="loadForm('mentalhealth.html')">Mental Health Care</span>
-                    <span class="button" onclick="loadForm('menstrualhealth.html')">Menstrual Health Care</span>
-                    <span class="button" onclick="loadForm('partners.html')">Partners (Sponsors)</span>
+                    <span class="button" onclick="loadForm('mentalhealth.html'); event.preventDefault();">Mental Health
+                        Care</span>
+                    <span class="button" onclick="loadForm('menstrualhealth.html'); event.preventDefault();">Menstrual
+                        Health Care</span>
+                    <span class="button" onclick="loadForm('partners.html'); event.preventDefault();">Partners
+                        (Sponsors)</span>
                 </div>
             </div>
         </section>
@@ -115,21 +67,21 @@
         <p>Copyright &copy; 2025 - PSYCFLO</p>
     </footer>
     <script>
-        // Menu toggle
+        //menu
+
         document.getElementById("hamburger").addEventListener("click", function () {
             document.getElementById("nav").classList.toggle("active");
         });
 
-        // Modal functions
         function openModal() {
             document.querySelector(".overlay").style.display = "block";
-            document.querySelector(".modal").style.display = "block";
+            document.querySelector(".modal").style.display = "flex";
         }
 
         function closeModal() {
             document.querySelector(".overlay").style.display = "none";
             document.querySelector(".modal").style.display = "none";
-            // Reset modal content to initial state
+            // Reset modal content
             document.getElementById("modal-content").innerHTML = `
                 <h2>Select User Category</h2>
                 <span class="button" onclick="loadForm('mentalhealth.html')">Mental Health Care</span>
@@ -138,103 +90,116 @@
             `;
         }
 
-        // Form loading function
+        
         function loadForm(formUrl) {
-            fetch(`forms/${formUrl}`)
-                .then(res => res.text())
-                .then(html => {
-                    // Special handling for partners page
-                    if (formUrl === 'partners.html') {
-                        document.getElementById("modal-content").innerHTML = html;
-                        
-                        // Add event listeners to the partner buttons
-                        const therapistBtn = document.querySelector('.therapist-btn');
-                        const donorBtn = document.querySelector('.donor-btn');
-                        
-                        if (therapistBtn) {
-                            therapistBtn.addEventListener('click', function() {
-                                loadPartnerForm('therapist.html');
-                            });
-                        }
-                        
-                        if (donorBtn) {
-                            donorBtn.addEventListener('click', function() {
-                                loadPartnerForm('paddonor.html');
-                            });
-                        }
-                    } 
-                    // Handling for other forms
-                    else {
-                        const parser = new DOMParser();
-                        const doc = parser.parseFromString(html, 'text/html');
-                        let content = doc.querySelector('.container')?.innerHTML ||
-                            doc.querySelector('form')?.innerHTML ||
-                            doc.querySelector('body').innerHTML;
+    fetch(`forms/${formUrl}`)
+        .then(res => res.text())
+        .then(html => {
+            // Create a parser to extract the content we need
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
 
-                        document.getElementById("modal-content").innerHTML = `
-                            <button class="close-btn" onclick="closeModal()">&times;</button>
-                            ${content}
-                        `;
-                    }
+            let content;
 
-                    // Adjust modal styling
-                    const modal = document.querySelector('.modal');
-                    modal.style.width = 'auto';
-                    modal.style.maxWidth = '90%';
-                    modal.style.maxHeight = '90vh';
-                    modal.style.overflowY = 'auto';
-                })
-                .catch(err => {
-                    console.error("Error loading form:", err);
-                    document.getElementById("modal-content").innerHTML = `
-                        <p>Error loading form. Check console for details.</p>
-                        <button class="button" onclick="closeModal()">Close</button>
-                    `;
-                });
-        }
-
-        // Partner form loading function
-        function loadPartnerForm(formUrl) {
-            fetch(`forms/${formUrl}`)
-                .then(res => res.text())
-                .then(html => {
-                    const parser = new DOMParser();
-                    const doc = parser.parseFromString(html, 'text/html');
-                    let content = doc.querySelector('.container')?.innerHTML ||
-                        doc.querySelector('form')?.innerHTML ||
-                        doc.querySelector('body').innerHTML;
-
-                    // Add back button
-                    const backButton = `<button class="button" onclick="loadForm('partners.html')" style="margin-bottom: 20px;">&larr; Back to Partners</button>`;
-                    
-                    document.getElementById("modal-content").innerHTML = `
-                        <button class="close-btn" onclick="closeModal()">&times;</button>
-                        ${backButton}
-                        ${content}
-                    `;
-
-                    // Adjust modal styling
-                    const modal = document.querySelector('.modal');
-                    modal.style.width = 'auto';
-                    modal.style.maxWidth = '90%';
-                    modal.style.maxHeight = '90vh';
-                    modal.style.overflowY = 'auto';
-                })
-                .catch(err => {
-                    console.error("Error loading partner form:", err);
-                    document.getElementById("modal-content").innerHTML = `
-                        <p>Error loading form. Check console for details.</p>
-                        <button class="button" onclick="closeModal()">Close</button>
-                    `;
-                });
-        }
-
-        // Close modal when clicking outside
-        window.addEventListener('click', function(event) {
-            if (event.target === document.querySelector('.overlay')) {
-                closeModal();
+            // Special handling for partners.html (non-form content)
+            if (formUrl === 'partners.html') {
+                content = doc.querySelector('body').innerHTML;
             }
+            // Special handling for therapist.html - preserve all original styling
+            else if (formUrl === 'therapist.html') {
+                // Get the entire document structure including head and styles
+                content = doc.documentElement.innerHTML;
+                
+                // Inject the full HTML into modal
+                document.getElementById("modal-content").innerHTML = content;
+                
+                // Adjust modal container to accommodate the therapist form
+                const modal = document.querySelector('.modal');
+                modal.style.width = 'auto';
+                modal.style.maxWidth = 'auto';
+                modal.style.paddingY = '0';
+                modal.style.background = 'white';
+                modal.style.boxShadow = 'none';
+                
+                return; // Exit early since we've handled therapist.html specially
+            } else if (formUrl === 'donor.html') {
+                // Get the entire document structure including head and styles
+                content = doc.documentElement.innerHTML;
+                
+                // Inject the full HTML into modal
+                document.getElementById("modal-content").innerHTML = content;
+                
+                // Adjust modal container to accommodate the therapist form
+                const modal = document.querySelector('.modal');
+                modal.style.width = 'auto';
+                modal.style.maxWidth = 'auto';
+                modal.style.paddingY = '0';
+                modal.style.background = 'white';
+                modal.style.boxShadow = 'none';
+                
+                return; // Exit early since we've handled therapist.html specially
+            }
+            // Handling for other form files
+            else {
+                content = doc.querySelector('.container')?.innerHTML ||
+                    doc.querySelector('form')?.innerHTML ||
+                    doc.querySelector('body').innerHTML;
+            }
+
+            // Inject the content into modal for non-therapist forms
+            document.getElementById("modal-content").innerHTML = `
+                <button class="close-btn" onclick="closeModal()">&times;</button>
+                ${content}
+            `;
+            
+            // Adjust modal styling based on content type
+            const modal = document.querySelector('.modal');
+            modal.style.width = 'auto';
+            modal.style.maxWidth = '90%';
+            modal.style.maxHeight = '90vh';
+            modal.style.overflowY = 'auto';
+
+            // Special styling for partners page
+            if (formUrl === 'partners.html') {
+                modal.style.textAlign = 'center';
+                modal.style.padding = '30px';
+
+                // Make buttons look consistent with your modal style
+                // const buttons = modal.querySelectorAll('.button');
+                // buttons.forEach(button => {
+                //     button.style.display = 'block';
+                //     button.style.width = '100%';
+                //     button.style.margin = '15px 0';
+                //     button.style.padding = '15px';
+                // });
+                
+                const therapistBtn = document.querySelector('.therapist-btn');
+                if (therapistBtn) {
+                    therapistBtn.addEventListener('click', function() {
+                        loadForm('therapist.html');
+                    });
+                }
+
+                const donorBtn = document.querySelector('.donor-btn');
+                if (donorBtn) {
+                    donorBtn.addEventListener('click', function() {
+                        // You can implement donor form load if needed
+                        loadForm('donor.html');
+                    });
+                }
+            }
+        })
+        .catch(err => {
+            console.error("Error loading form:", err);
+            document.getElementById("modal-content").innerHTML = `
+                <p>Error loading form. Check console for details.</p>
+                <button class="button" onclick="closeModal()">Close</button>
+            `;
         });
+}
+        
     </script>
+
 </body>
+
 </html>
