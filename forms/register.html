@@ -7,6 +7,10 @@
   <link rel="stylesheet" href="../index.css">
   <title>Support Form</title>
   <style>
+    .first-sec {
+      height: 100vh;
+    }
+
     .registration-form {
       /* height: 100vh; */
       background: white;
@@ -96,8 +100,6 @@
       line-height: 100%;
       letter-spacing: 0%;
       text-align: center;
-
-
     }
 
     .submit-btn:hover {
@@ -109,12 +111,17 @@
       background: white;
       color: black;
       padding: 20px;
-      border: 1px solid black;
+      border: 1px solid #FFFFFFE5;
       border-radius: 8px;
       text-align: center;
       max-width: 400px;
       margin-inline: auto;
       margin-top: 100px;
+      font-family: Montserrat;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0%;
     }
 
     .confirmation i {
@@ -176,7 +183,8 @@
 
       <div class="confirmation" id="confirmationMessage" style="display: none;">
         <i class="fas fa-check-circle"></i>
-        <p>Thank you for joining us! Your support helps make mental health resources more accessible to those who need them. We're grateful to have you on board!</p>
+        <p>Thank you for joining us! Your support helps make mental health resources more accessible to those who need
+          them. We're grateful to have you on board!</p>
       </div>
     </section>
   </main>
@@ -187,10 +195,10 @@
   </footer>
 
   <script>
-    
+
     document.getElementById("hamburger").addEventListener("click", function () {
-            document.getElementById("nav").classList.toggle("active");
-        });
+      document.getElementById("nav").classList.toggle("active");
+    });
 
     document.getElementById('sessionForm').addEventListener('submit', function (e) {
       e.preventDefault();
