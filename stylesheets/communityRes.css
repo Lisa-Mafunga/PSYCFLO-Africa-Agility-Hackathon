@@ -155,6 +155,15 @@
     .second-div-3 {
         margin-left: 20px !important;
     }
+
+    .feedbackModal {
+        width: 90%;
+        height: 80%;
+        margin-top: 30px;
+    }
+    .confirmationModal {
+        width: 80%;
+    }
 }
 
 @media (max-width: 576px) {
