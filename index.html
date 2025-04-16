@@ -7,11 +7,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- <script src="https://unpkg.com/@tailwindcss/browser@4"></script> -->
     <title>Psycflo</title>
 
     <link rel="stylesheet" href="./index.css">
+    <style>
+        .modal {
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 20px;
+}
+    </style>
 </head>
-
 <body>
     <header>
         <div class="logo"></div>
@@ -84,59 +91,114 @@
             `;
         }
 
+        
         function loadForm(formUrl) {
-            fetch(`forms/${formUrl}`)
-                .then(res => res.text())
-                .then(html => {
-                    // Create a parser to extract the content we need
-                    const parser = new DOMParser();
-                    const doc = parser.parseFromString(html, 'text/html');
+    fetch(`forms/${formUrl}`)
+        .then(res => res.text())
+        .then(html => {
+            // Create a parser to extract the content we need
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
 
-                    let content;
+            let content;
 
-                    // Special handling for partners.html (non-form content)
-                    if (formUrl === 'partners.html') {
-                        content = doc.querySelector('body').innerHTML;
-                    }
-                    // Handling for form files
-                    else {
-                        content = doc.querySelector('.container')?.innerHTML ||
-                            doc.querySelector('form')?.innerHTML ||
-                            doc.querySelector('body').innerHTML;
-                    }
+            // Special handling for partners.html (non-form content)
+            if (formUrl === 'partners.html') {
+                content = doc.querySelector('body').innerHTML;
+            }
+            // Special handling for therapist.html - preserve all original styling
+            else if (formUrl === 'therapist.html') {
+                // Get the entire document structure including head and styles
+                content = doc.documentElement.innerHTML;
+                
+                // Inject the full HTML into modal
+                document.getElementById("modal-content").innerHTML = content;
+                
+                // Adjust modal container to accommodate the therapist form
+                const modal = document.querySelector('.modal');
+                modal.style.width = 'auto';
+                modal.style.maxWidth = 'auto';
+                modal.style.paddingY = '0';
+                modal.style.background = 'white';
+                modal.style.boxShadow = 'none';
+                
+                return; // Exit early since we've handled therapist.html specially
+            } else if (formUrl === 'donor.html') {
+                // Get the entire document structure including head and styles
+                content = doc.documentElement.innerHTML;
+                
+                // Inject the full HTML into modal
+                document.getElementById("modal-content").innerHTML = content;
+                
+                // Adjust modal container to accommodate the therapist form
+                const modal = document.querySelector('.modal');
+                modal.style.width = 'auto';
+                modal.style.maxWidth = 'auto';
+                modal.style.paddingY = '0';
+                modal.style.background = 'white';
+                modal.style.boxShadow = 'none';
+                
+                return; // Exit early since we've handled therapist.html specially
+            }
+            // Handling for other form files
+            else {
+                content = doc.querySelector('.container')?.innerHTML ||
+                    doc.querySelector('form')?.innerHTML ||
+                    doc.querySelector('body').innerHTML;
+            }
 
-                    // Inject the content into modal
-                    document.getElementById("modal-content").innerHTML = `
+            // Inject the content into modal for non-therapist forms
+            document.getElementById("modal-content").innerHTML = `
                 <button class="close-btn" onclick="closeModal()">&times;</button>
                 ${content}
             `;
+            
+            // Adjust modal styling based on content type
+            const modal = document.querySelector('.modal');
+            modal.style.width = 'auto';
+            modal.style.maxWidth = '90%';
+            modal.style.maxHeight = '90vh';
+            modal.style.overflowY = 'auto';
 
-                    // Adjust modal styling based on content type
-                    const modal = document.querySelector('.modal');
+            // Special styling for partners page
+            if (formUrl === 'partners.html') {
+                modal.style.textAlign = 'center';
+                modal.style.padding = '30px';
 
-                    // Special styling for partners page
-                    if (formUrl === 'partners.html') {
-                        modal.style.textAlign = 'center';
-                        modal.style.padding = '30px';
+                // Make buttons look consistent with your modal style
+                // const buttons = modal.querySelectorAll('.button');
+                // buttons.forEach(button => {
+                //     button.style.display = 'block';
+                //     button.style.width = '100%';
+                //     button.style.margin = '15px 0';
+                //     button.style.padding = '15px';
+                // });
+                
+                const therapistBtn = document.querySelector('.therapist-btn');
+                if (therapistBtn) {
+                    therapistBtn.addEventListener('click', function() {
+                        loadForm('therapist.html');
+                    });
+                }
 
-                        // Make buttons look consistent with your modal style
-                        const buttons = modal.querySelectorAll('.button');
-                        buttons.forEach(button => {
-                            button.style.display = 'block';
-                            button.style.width = '100%';
-                            button.style.margin = '15px 0';
-                            button.style.padding = '15px';
-                        });
-                    }
-                })
-                .catch(err => {
-                    console.error("Error loading form:", err);
-                    document.getElementById("modal-content").innerHTML = `
+                const donorBtn = document.querySelector('.donor-btn');
+                if (donorBtn) {
+                    donorBtn.addEventListener('click', function() {
+                        // You can implement donor form load if needed
+                        loadForm('donor.html');
+                    });
+                }
+            }
+        })
+        .catch(err => {
+            console.error("Error loading form:", err);
+            document.getElementById("modal-content").innerHTML = `
                 <p>Error loading form. Check console for details.</p>
                 <button class="button" onclick="closeModal()">Close</button>
             `;
-                });
-        }
+        });
+}
+        
     </script>
 
 </body>

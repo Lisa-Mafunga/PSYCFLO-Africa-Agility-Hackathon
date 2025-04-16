@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/favicon-16x16.png" type="image/x-icon">
+    <title>Payment Form</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Montserrat';
+        }
+        
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .payment-container {
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 100%;
+            max-width: 500px;
+        }
+        
+        h1 {
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: center;
+            color: #3A478D;
+            margin-bottom: 15px;
+        }
+        
+        p.payment-method {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: center;
+            color: #6B7280;
+            margin-bottom: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #374151;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #D1D5DB;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        input:focus {
+            border-color: #3A478D;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(58, 71, 141, 0.2);
+        }
+        
+        .pay-button {
+            background-color: #3A478D;
+            color: white;
+            border: none;
+            padding: 14px;
+            width: 100%;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+        
+        .pay-button:hover {
+            background-color: #2E3A73;
+        }
+        
+        /* Success Modal Styles */
+        .success-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .modal-content {
+            background-color: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+            animation: fadeIn 0.3s;
+        }
+        
+        .check-icon {
+            width: 80px;
+            height: 80px;
+            background-color: #10B981;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 25px;
+        }
+        
+        .check-icon::after {
+            content: "✓";
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+        }
+        
+        .success-message {
+            color: #374151;
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 25px;
+            font-weight: 500;
+        }
+        
+        .close-button {
+            background-color: #3A478D;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .close-button:hover {
+            background-color: #2E3A73;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @media (max-width: 600px) {
+            .payment-container {
+                padding: 25px;
+            }
+            
+            h1 {
+                font-size: 26px;
+            }
+            
+            p.payment-method {
+                font-size: 18px;
+            }
+            
+            input, .pay-button {
+                padding: 12px;
+            }
+            
+            .modal-content {
+                padding: 30px 20px;
+            }
+            
+            .check-icon {
+                width: 70px;
+                height: 70px;
+            }
+            
+            .success-message {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="payment-container">
+        <h1>Payment Details</h1>
+        <p class="payment-method">Payment Method: Bank Transfer</p>
+        
+        <form id="paymentForm">
+            <div class="form-group">
+                <label for="account-name">Account Name</label>
+                <input type="text" id="account-name" name="account-name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="account-number">Account Number</label>
+                <input type="text" id="account-number" name="account-number" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="amount">Amount</label>
+                <input type="number" id="amount" name="amount" required>
+            </div>
+            
+            <button type="submit" class="pay-button">Pay</button>
+        </form>
+    </div>
+
+    <div class="success-modal" id="successModal">
+        <div class="modal-content">
+            <div class="check-icon"></div>
+            <p class="success-message">
+                Thank you for your payment!<br>
+                Your subscription has been confirmed. You can now continue to book a session with any of our therapists.
+            </p>
+            <button class="close-button" id="closeButton">Close</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const paymentForm = document.getElementById('paymentForm');
+            const successModal = document.getElementById('successModal');
+            const closeButton = document.getElementById('closeButton');
+            
+            paymentForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                successModal.style.display = 'flex';
+            });
+            
+            closeButton.addEventListener('click', function() {
+                successModal.style.display = 'none';
+            });
+            
+            // Close modal when clicking outside of it
+            successModal.addEventListener('click', function(e) {
+                if (e.target === successModal) {
+                    successModal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

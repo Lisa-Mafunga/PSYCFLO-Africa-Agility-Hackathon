@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor Information Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-image: url(../images/home.png);
+            /* height: 110vh; */
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            /* opacity: 0.75; */
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        .fa-solid {
+            /* margin-left: 50px; */
+            /* margin-bottom: 50px; */
+            font-size: 20px;
+            color: white;
+            border: 1px solid black;
+            border-radius: 50px;
+            background-color: black;
+            padding: 10px;
+        }
+
+        .fa-bars {
+            font-size: 20px;
+            color: white;
+            border: 1px solid black;
+            border-radius: 50px;
+            background-color: black;
+            padding: 10px;
+        }
+
+        header {
+            display: flex;
+            height: 90px;
+            /* padding: 0.1rem 4rem; */
+            justify-content: space-between;
+            align-items: center;
+            flex-shrink: 0;
+            background: rgba(255, 255, 255, 0.90);
+            box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        header .logo {
+            width: 138px;
+            height: 90px;
+            flex-shrink: 0;
+            background: url(../images/logo3.svg) rgba(255, 255, 255, 0.90) 50% / cover no-repeat;
+            /* background-blend-mode: color-dodge; */
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            flex-shrink: 0;
+            list-style: none;
+        }
+
+        .nav-link li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        .nav-link a {
+            color: #000;
+            font-family: "Gayathri", sans-serif;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-decoration: none;
+        }
+
+        .nav-link a.active {
+            border-bottom: 1px solid #3A478D;
+            color: #3A478D;
+        }
+
+        .nav-link a:hover {
+            color: #3A478D;
+        }
+
+        .hamburger-menu {
+            display: none;
+            font-size: 1.8em;
+            cursor: pointer;
+            color: #3A478D;
+        }
+
+        .first-sec {
+            /* background-color: #f3f4f6; */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            position: relative;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            color: #777;
+        }
+
+        .close-btn:hover {
+            color: black;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .form-group div {
+            width: 48%;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            text-align: left;
+            margin-bottom: 5px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #e5e7eb;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background: #374151;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            background: #1f2937;
+        }
+
+        .confirmation {
+            background: white;
+            color: black;
+            padding: 20px;
+            border: 1px solid #FFFFFFE5;
+            border-radius: 8px;
+            text-align: center;
+            max-width: 400px;
+            margin-inline: auto;
+            font-family: Montserrat;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: 0%;
+
+            /* margin-top: 100px; */
+        }
+
+        .confirmation i {
+            /* background-color: green; */
+            color: green;
+            font-size: 48px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: 200;
+            font-family: sans-serif;
+            color: darkblue;
+        }
+
+        footer hr {
+            border: 0;
+            height: 1px;
+            background: darkblue;
+            margin: 20px 5%;
+        }
+
+        @media (max-width: 768px) {
+            .hamburger-menu {
+                display: block;
+                /* margin: 2px 0 auto; */
+                padding: 5px 10px;
+                font-size: 34px;
+            }
+
+            header {
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                height: 4rem;
+                /* max-width: 600px; */
+            }
+
+            header .logo {
+                width: 120px;
+                height: 60px;
+            }
+
+            .menu {
+                flex-direction: column;
+                position: absolute;
+                top: 68px;
+                left: 0;
+                width: 100%;
+                background: #3A478D;
+                color: white;
+                text-align: center;
+                padding: 10px 0;
+                display: none;
+            }
+
+            .nav-link a {
+                color: white;
+            }
+
+            .nav-link {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .hamburger-menu {
+                display: block;
+            }
+
+            /* Show menu when active */
+            .menu.active {
+                display: flex;
+            }
+        }
+
+        @media (max-width: 400px) {
+            header {
+                height: 4rem;
+                width: 100%;
+                align-items: center;
+                gap: 30px;
+                justify-content: space-between;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo"></div>
+
+        <div class="hamburger-menu" id="hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <nav class="menu" id="nav">
+            <ul class="nav-link" id="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/pages/aboutus.html">About us</a></li>
+                <li><a href="/pages/contactus.html">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="first-sec">
+            <div class="form-container" id="form-container">
+                <h2>Let’s get to know you!</h2>
+                <p>Kindly fill out the form so we can support you better.</p>
+                <form id="sessionForm">
+                    <div class="form-group">
+                        <div>
+                            <label for="full-name">Full Name</label>
+                            <input type="text" id="full-name" name="full-name">
+                        </div>
+                        <div>
+                            <label for="phone-number">Phone Number</label>
+                            <input type="text" id="phone-number" name="phone-number">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <label for="country">Country</label>
+                            <select id="country" name="country">
+                                <option value="">Select Country</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="email">E-mail (Optional)</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <label for="state">State</label>
+                            <input type="text" id="state" name="state">
+                        </div>
+                        <div>
+                            <label for="local-gov">Local Government</label>
+                            <input type="text" id="local-gov" name="local-gov">
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </div>
+            <div class="confirmation" id="confirmationMessage" style="display: none;">
+                <i class="fas fa-check-circle"></i>
+                <p>Thank you for your generosity! Your donation has been successfully recorded, and we appreciate your support in making menstrual care accessible to those in need. You will receive an email confirmation shortly. If you have any questions or would like to contribute more, feel free to contact our support team.</p>
+            </div>
+        </section>
+    </main>
+    <script>
+
+        document.getElementById("hamburger").addEventListener("click", function () {
+            document.getElementById("nav").classList.toggle("active");
+        });
+
+        document.getElementById('sessionForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            document.getElementById('form-container').style.display = 'none';
+            document.getElementById('confirmationMessage').style.display = 'block';
+
+            // Close modal after 3 seconds
+            setTimeout(function () {
+                if (window.parent.closeModal) {
+                    window.parent.closeModal();
+                }
+            }, 2000);
+        });
+    </script>
+</body>
+
+</html>

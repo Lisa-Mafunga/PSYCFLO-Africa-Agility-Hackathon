@@ -318,6 +318,7 @@ footer hr {
     cursor: pointer;
 }
 
+
 @media (max-width: 768px) {
     .hamburger-menu {
         display: block;
@@ -623,4 +624,6 @@ footer hr {
     background: none;
     font-size: 18px;
     cursor: pointer;
+}
+
 } */
