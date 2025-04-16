@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/favicon-16x16.png" type="image/x-icon">
     <title>Mood Tracker</title>
     <link rel="stylesheet" href="/stylesheets/mood.css">
+    <link rel="stylesheet" href="../footer/footer responsive.css">
     <link rel="stylesheet" href="../footer/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -26,9 +28,9 @@
 
         <nav class="menu" id="nav">
             <ul class="nav-link" id="nav-links">
-                <li><a href="./home.html">Home</a></li>
-                <li><a href="./about.html">About us</a></li>
-                <li><a href="./contact.html">Contact us</a></li>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/pages/aboutus.html">About us</a></li>
+                <li><a href="/pages/contactus.html">Contact us</a></li>
             </ul>
         </nav>
     </header>
@@ -42,7 +44,7 @@
         </div>
     </div>
 
-    <div class="container">
+    <div class="div-container">
         <div class="header">
             <div class="back-button">
                 <a href="../pages/home.html">
@@ -80,7 +82,7 @@
                         <div class="image">
                             <!-- <div></div> -->
                         </div>
-                        <p>Need support? Contact us, and we&apos;ll be happy to assist!</p>
+                        <p>Need support? <br> <span>Contact us, and we'll be happy to assist!</span></p>
                     </div>
 
                     <div class="socialbox">
@@ -97,19 +99,19 @@
 
                 <div id="secondContainer">
                     <ul class="companylink">
-                        <li><a href="./home.html">Home</a></li>
-                        <li><a href="./about.html">About us</a></li>
-                        <li><a href="./terms.html">Terms of use</a></li>
-                        <li><a href="./privacy">Privacy Policies</a></li>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/pages/aboutus.html">About us</a></li>
+                        <li><a href="/pages/Termsofuse.html">Terms of use</a></li>
+                        <li><a href="/pages/Privacy.html">Privacy Policies</a></li>
                     </ul>
                 </div>
 
-                    <ul class="companylink">
-                        <li><a href="./help">Help Center</a></li>
-                        <li><a href="./chat">Chat with us</a></li>
-                        <li><a href="./contact">Contact us</a></li>
-                        <li><a href="./ussd">USSD Service</a></li>
-                    </ul>
+                <ul class="companylink">
+                    <li><a href="./help">Help Center</a></li>
+                    <li><a href="../pages/chatbot.html">Chat with us</a></li>
+                    <li><a href="/pages/contactus.html">Contact us</a></li>
+                    <li><a href="/pages/contactus.html">USSD Service</a></li>
+                </ul>
 
             </div>
 
@@ -120,13 +122,22 @@
             </div>
         </div>
     </footer>
+<<<<<<< HEAD
 
     <script src="./script.js"></script>
 </body>
 
     <script src="./footer/script.js"></script>
 
+=======
+>>>>>>> 0e1de0e91fbad70dfed123b28ad22371c6cd2c8c
     <script>
+        // Toggle mobile menu
+        document.getElementById("hamburger").addEventListener("click", function () {
+            document.getElementById("nav").classList.toggle("active");
+        });
+
+
         document.addEventListener("DOMContentLoaded", function () {
             const saveButton = document.getElementById("save-btn");
             const moodOverlay = document.getElementById("mood-tracked");
@@ -143,6 +154,8 @@
             });
         });
     </script>
+    
 
+    <script src="./footer/script.js"></script>
 </body>
 </html>

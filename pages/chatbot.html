@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/favicon-16x16.png" type="image/x-icon">
+    <title>Chatbot</title>
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Montserrat & Gayathri font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gayathri:wght@100;400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../stylesheets/chatbot.css">
+
+    <!-- daisyui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <header>
+        <div class="logo"></div>
+
+        <div class="hamburger-menu" id="hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <nav class="menu" id="nav">
+            <ul class="nav-link" id="nav-links">
+
+                <li><a href="../pages/home.html">Home</a></li>
+                <li><a href="../pages/aboutus.html">About us</a></li>
+                <li><a href="../pages/contactus.html">Contact us</a></li>
+
+
+
+
+        </nav>
+    </header>
+
+    <main class="chatcontainer">
+        <section class="contents">
+            <div class="icon">
+                <a class="chatbot" href="/pages/home.html" onclick="goBack(); return false;">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <p>PSYCFLO-Ai</p>
+                </a>
+            </div>
+
+            <div class="greeting">
+                <h1>Hello, <span id="user-name">Ada</span> <span class="wave">👋</span></h1>
+                <h3>How are you doing today?</h3>
+            </div>
+
+            <div class="chat-container">
+                <div class="chat-box" id="chat-box">
+                    <!-- This will be injected by JavaScript -->
+                    <div class="typing-indicator" id="typing-indicator">Bot is typing<span class="dot">.</span><span
+                            class="dot">.</span><span class="dot">.</span></div>
+
+                </div>
+
+                <div class="input-area">
+                    <input type="text" id="chat-input" placeholder="Ask me anything ..." required />
+                    <div class="iconbox">
+                        <button type="button" id="voice-btn" title="Speak">
+                            <img src="../images/speakericon.svg" alt="speaker icon">
+                        </button>
+                        <button type="button" id="send-btn" title="Send">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- popup -->
+        <div class="overlay" id="overlay"></div>
+
+        <!-- Popup -->
+        <div class="popup" id="popup">
+            <div class="popup-content">
+                <p>Continue to help us understand you better, or skip ahead to book a therapist now.</p>
+                <div class="popup-btn">
+                    <button class="continue-btn" onclick="closePopup()">Continue</button>
+                    <button class="skip-btn" onclick="goToAnotherPage()">Skip</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="../javascript/script.js"></script>
+</body>
+
+</html>

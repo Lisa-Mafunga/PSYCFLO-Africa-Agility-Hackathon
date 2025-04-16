@@ -4,9 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/favicon-16x16.png" type="image/x-icon">
     <link rel="stylesheet" href="../footer/footer responsive.css">
     <link rel="stylesheet" href="../footer/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gayathri:wght@100;400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <title>Contact Us</title>
+
+    <!-- chatbot -->
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <df-messenger
+      intent="WELCOME"
+      chat-title="psycflo-chatbot-for-mental-health-support"
+      agent-id="0f49367a-1f71-436f-a520-63d89ba46eea"
+      language-code="en"
+    ></df-messenger>
     <style>
         img {
             width: 100%;
@@ -15,7 +31,7 @@
         header {
             display: flex;
             height: 90px;
-            padding: 1rem 4rem;
+            padding: 0.1rem 4rem;
             justify-content: space-between;
             align-items: center;
             flex-shrink: 0;
@@ -76,8 +92,8 @@
         }
 
         .fa-solid {
-            margin-left: 50px;
-            margin-bottom: 50px;
+            /* margin-left: 50px; */
+            /* margin-bottom: 50px; */
             font-size: 20px;
             color: white;
             border: 1px solid black;
@@ -191,16 +207,16 @@
             header {
                 padding: 1rem 2rem;
             }
-            
+
             .nav-link {
                 gap: 2rem;
             }
-            
+
             .text p {
                 width: 70%;
                 font-size: 35px;
             }
-            
+
             .flex-img1 p {
                 font-size: 35px;
             }
@@ -210,30 +226,30 @@
             header {
                 padding: 1rem;
             }
-            
+
             .nav-link {
                 gap: 1.5rem;
             }
-            
+
             .nav-link a {
                 font-size: 18px;
             }
-            
+
             .text h1 {
                 font-size: 45px;
             }
-            
+
             .text p {
                 width: 80%;
                 font-size: 30px;
                 padding-left: 30px;
             }
-            
+
             .flex-img1 {
                 left: 20%;
                 bottom: 25%;
             }
-            
+
             .flex-img1 p {
                 font-size: 30px;
             }
@@ -242,9 +258,21 @@
         @media (max-width: 768px) {
             .hamburger-menu {
                 display: block;
-                margin-left: 60%;
                 padding: 5px 10px;
                 font-size: 34px;
+            }
+
+            header {
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                height: 4rem;
+                /* max-width: 600px; */
+            }
+
+            header .logo {
+                width: 120px;
+                height: 60px;
             }
 
             .menu {
@@ -272,17 +300,22 @@
             .hamburger-menu {
                 display: block;
             }
-            
+
+            /* Show menu when active */
+            .menu.active {
+                display: flex;
+            }
+
             .contact {
                 height: auto;
                 padding-bottom: 40px;
             }
-            
+
             .text h1 {
                 font-size: 40px;
                 margin-block: 20px;
             }
-            
+
             .text p {
                 width: 90%;
                 font-size: 40px;
@@ -290,7 +323,7 @@
                 line-height: 1.3;
                 text-align: center;
             }
-            
+
             .flex-img1 {
                 width: 50%;
                 height: 60%;
@@ -316,7 +349,7 @@
                 padding-inline: 30px;
                 font-size: 40px;
             }
-            
+
             .flex-img2 {
                 position: relative;
                 width: 80%;
@@ -328,47 +361,33 @@
         }
 
         @media (max-width: 576px) {
-            header {
-                height: 70px;
-            }
-            
-            header .logo {
-                width: 100px;
-                height: 70px;
-            }
-            
-            .hamburger-menu {
-                margin-left: auto;
-                font-size: 28px;
-            }
-            
             .contact {
                 margin-top: 90px;
             }
-            
+
             .text h1 {
                 font-size: 32px;
             }
-            
+
             .text p {
                 font-size: 30px;
                 width: 95%;
                 padding-left: 10px;
                 text-align: center;
             }
-            
+
             .flex-img1 {
                 width: 80%;
                 height: 30%;
                 margin-inline: 20px;
                 position: relative;
             }
-            
+
             .flex-img1 p {
                 font-size: 30px;
                 padding-inline: 30px;
             }
-            
+
             .flex-img1 img {
                 width: 15%;
                 height: 40px;
@@ -376,21 +395,28 @@
                 left: 7%;
                 bottom: 5%;
             }
-            
+
             .flex-img2 {
                 width: 90%;
             }
         }
 
         @media (max-width: 400px) {
+            header {
+                height: 4rem;
+                width: 100%;
+                align-items: center;
+                gap: 30px;
+                justify-content: space-between;
+            }
             .text h1 {
                 font-size: 28px;
             }
-            
+
             .text p {
                 font-size: 18px;
             }
-            
+
             .flex-img1 p {
                 font-size: 20px;
             }
@@ -409,8 +435,8 @@
         <nav class="menu" id="nav">
             <ul class="nav-link" id="nav-links">
                 <li><a href="/index.html">Home</a></li>
-                <li><a href="/pages/about.html">About us</a></li>
-                <li><a href="./contactus.html">Contact us</a></li>
+                <li><a href="/pages/aboutus.html">About us</a></li>
+                <li><a href="/pages/contactus.html">Contact us</a></li>
             </ul>
         </nav>
     </header>
@@ -439,7 +465,7 @@
                     <div class="titlebox">
                         <div class="image">
                         </div>
-                        <p>Need support? Contact us, and we'll be happy to assist!</p>
+                        <p>Need support? <br> <span>Contact us, and we'll be happy to assist!</span></p>
                     </div>
 
                     <div class="socialbox">
@@ -456,18 +482,18 @@
 
                 <div id="secondContainer">
                     <ul class="companylink">
-                        <li><a href="./home.html">Home</a></li>
-                        <li><a href="./about.html">About us</a></li>
-                        <li><a href="./terms.html">Terms of use</a></li>
-                        <li><a href="./privacy">Privacy Policies</a></li>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/pages/aboutus.html">About us</a></li>
+                        <li><a href="/pages/Termsofuse.html">Terms of use</a></li>
+                        <li><a href="/pages/Privacy.html">Privacy Policies</a></li>
                     </ul>
                 </div>
 
                 <ul class="companylink">
                     <li><a href="./help">Help Center</a></li>
-                    <li><a href="./chat">Chat with us</a></li>
-                    <li><a href="./contact">Contact us</a></li>
-                    <li><a href="./ussd">USSD Service</a></li>
+                    <li><a href="/pages/chatbot.html">Chat with us</a></li>
+                    <li><a href="/pages/contactus.html">Contact us</a></li>
+                    <li><a href="/pages/contactus.html">USSD Service</a></li>
                 </ul>
 
             </div>
@@ -481,11 +507,8 @@
     </footer>
     <script>
         // Toggle mobile menu
-        const hamburger = document.getElementById('hamburger');
-        const nav = document.getElementById('nav');
-
-        hamburger.addEventListener('click', () => {
-            nav.style.display = nav.style.display === 'none' ? 'block' : 'none';
+        document.getElementById("hamburger").addEventListener("click", function () {
+            document.getElementById("nav").classList.toggle("active");
         });
 
         // Update copyright year

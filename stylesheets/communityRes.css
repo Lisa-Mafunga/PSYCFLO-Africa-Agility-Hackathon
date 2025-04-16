@@ -1,0 +1,231 @@
+
+@media (max-width: 1200px) {
+    .sec-3 {
+        flex-direction: column;
+    }
+    
+    .div-1, .div-2 {
+        width: 100% !important;
+    }
+    
+    .div-2 {
+        flex-direction: row;
+        gap: 20px;
+    }
+    
+    .con-1, .con-2 {
+        width: 48% !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .first-sec {
+        height: auto;
+        padding-bottom: 100px;
+    }
+    
+    .text h1 {
+        font-size: 40px !important;
+    }
+    
+    .text p {
+        font-size: 18px !important;
+    }
+    
+    .message {
+        display: none;
+    }
+    
+    .sec-2 {
+        height: auto;
+        padding: 30px 0;
+    }
+    
+    .sec-2-div p {
+        font-size: 18px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+        /* margin: 2px 0 auto; */
+        padding: 5px 10px;
+        font-size: 34px;
+    }
+
+    header {
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 4rem;
+        /* max-width: 600px; */
+    }
+
+    header .logo {
+        width: 120px;
+        height: 60px;
+    }
+
+    .menu {
+        flex-direction: column;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        width: 100%;
+        background: #3A478D;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        display: none;
+    }
+
+    .nav-link a {
+        color: white;
+    }
+
+    .nav-link {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    /* Show menu when active */
+    .menu.active {
+        display: flex;
+    }
+    .icon img {
+        margin-left: 30px !important;
+    }
+    
+    .text h1 {
+        font-size: 32px !important;
+        text-align: center;
+    }
+    
+    .text p {
+        font-size: 16px !important;
+        text-align: center;
+    }
+    
+    .list ul {
+        font-size: 18px !important;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .div-2 {
+        flex-direction: column;
+    }
+    
+    .con-1, .con-2 {
+        width: 100% !important;
+    }
+    
+    .first-div {
+        flex-direction: column;
+        height: auto !important;
+        padding: 20px;
+        gap: 20px !important;
+    }
+    
+    .two {
+        width: 100% !important;
+        height: auto !important;
+        padding: 15px;
+    }
+    
+    .two p {
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+    
+    .second-div-1 {
+        width: 90% !important;
+        margin-left: 20px !important;
+    }
+    
+    .second-div-2 p {
+        font-size: 16px !important;
+    }
+    
+    .second-div-3 {
+        margin-left: 20px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .icon img {
+        margin-left: 15px !important;
+        width: 40px !important;
+        height: 35px !important;
+    }
+    
+    .text h1 {
+        font-size: 28px !important;
+        padding: 0 15px;
+    }
+    
+    .sec-2-div h4 {
+        font-size: 20px !important;
+    }
+    
+    .sec-2-div p {
+        font-size: 16px !important;
+        padding: 0 15px;
+    }
+    
+    .list {
+        padding: 0 15px;
+    }
+    
+    .sec-3 {
+        width: 95% !important;
+    }
+    
+    .second {
+        height: auto !important;
+        padding-bottom: 20px;
+    }
+    
+    .second-div-1 {
+        flex-direction: column;
+        height: auto !important;
+        gap: 15px !important;
+    }
+    
+    .name {
+        margin-top: 5px !important;
+    }
+    
+    .con-child {
+        flex-direction: column;
+    }
+    
+    .con-child-image {
+        width: 100% !important;
+    }
+    
+    .con-child-text {
+        width: 100% !important;
+    }
+}
+
+
+@media (max-width: 400px) {
+    header {
+        height: 4rem;
+        width: 100%;
+        align-items: center;
+        gap: 30px;
+        justify-content: space-between;
+    }
+
+    /*.hamburger-menu {
+        margin: 40px auto 0 auto;
+    } */
+ 
+}

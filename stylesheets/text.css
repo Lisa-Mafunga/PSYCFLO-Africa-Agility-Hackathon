@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.fa-solid {
+    /* margin-left: 50px; */
+    /* margin-bottom: 50px; */
+    font-size: 20px;
+    color: white;
+    border: 1px solid black;
+    border-radius: 50px;
+    background-color: black;
+    padding: 10px;
+}
+
+.fa-bars {
+    font-size: 20px;
+    color: white;
+    border: 1px solid black;
+    border-radius: 50px;
+    background-color: black;
+    padding: 10px;
+}
+header {
+    display: flex;
+    height: 90px;
+    /* padding: 0.1rem 4rem */
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    background: rgba(255, 255, 255, 0.90);
+    box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    width: 138px;
+    height: 90px;
+    flex-shrink: 0;
+    background: url(../images/logo3.svg) rgba(255, 255, 255, 0.90) 50% / cover no-repeat;
+    /* background-blend-mode: color-dodge; */
+}
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    flex-shrink: 0;
+    list-style: none;
+}
+
+.nav-link li {
+    display: inline;
+    margin-right: 15px;
+}
+
+.nav-link a {
+    color: #000;
+    font-family: "Gayathri", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+}
+.nav-link a.active {
+    border-bottom: 1px solid #3A478D;
+    color: #3A478D;
+}
+
+.nav-link a:hover {
+    color: #3A478D;
+}
+
+.hamburger-menu {
+    display: none;
+    font-size: 1.8em;
+    cursor: pointer;
+    color: #3A478D;
+}
+.main-container {
+    width: 60%;
+    margin-top: 100px;
+    margin-inline: auto;
+    margin-bottom: 40px;
+}
+.main-container div {
+    margin-bottom: 27px;
+}
+.main-container h1 {
+    text-align: center;
+    font-family: Montserrat;
+font-weight: 600;
+font-size: 40px;
+line-height: 100%;
+letter-spacing: 0%;
+text-transform: capitalize;
+
+}
+.main-container h4 {
+    margin-bottom: 15px;
+    font-family: Montserrat;
+font-weight: 600;
+font-size: 30px;
+line-height: 100%;
+letter-spacing: 0%;
+text-transform: capitalize;
+
+}
+.main-container h6 {
+    margin-bottom: 15px;
+    font-family: Montserrat;
+font-weight: 500;
+font-size: 28px;
+line-height: 100%;
+letter-spacing: 0%;
+text-transform: capitalize;
+
+
+}
+.list p {
+    margin-bottom: 10px;
+}
+
+.list ul {
+    margin-left: 50px;
+    font-family: Gayathri;
+font-weight: 400;
+font-size: 22px;
+line-height: 100%;
+letter-spacing: 0%;
+}
+.main-container p {
+    margin-left: 25px;
+    font-family: Gayathri;
+font-weight: 400;
+font-size: 22px;
+line-height: 100%;
+letter-spacing: 0%;
+
+
+}
+.email {
+    margin-bottom: 13px;
+}
+@media (max-width: 768px) { 
+    .hamburger-menu {
+        display: block;
+        /* margin: 2px 0 auto; */
+        padding: 5px 10px;
+        font-size: 34px;
+    }
+
+    header {
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 4rem;
+        /* max-width: 600px; */
+    }
+
+    header .logo {
+        width: 120px;
+        height: 60px;
+    }
+
+    .menu {
+        flex-direction: column;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        width: 100%;
+        background: #3A478D;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        display: none;
+    }
+
+    .nav-link a {
+        color: white;
+    }
+
+    .nav-link {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+    /* Show menu when active */
+    .menu.active {
+        display: flex;
+    }
+    .main-container {
+        width: 90%;
+    }
+    .main-container h1 {
+        font-size: 30px;
+    }
+    .main-container h4 {
+    font-size: 20px;
+    
+    }
+    .main-container h6 {
+    font-size: 18px;
+    
+    
+    }
+    .list ul {
+    font-size: 16px;
+    }
+    .main-container p {
+    font-size: 16px;
+    
+    }
+}
+@media (max-width: 400px) {
+    header {
+        height: 4rem;
+        width: 100%;
+        align-items: center;
+        gap: 30px;
+        justify-content: space-between;
+    }
+
+    .main-container {
+        width: 90%;
+    }
+    .main-container h1 {
+        font-size: 20px;
+    }
+    .main-container h4 {
+    font-size: 20px;
+    
+    }
+    .main-container h6 {
+    font-size: 16px;
+    
+    
+    }
+    .list ul {
+    font-size: 16px;
+    }
+    .main-container p {
+    font-size: 16px;
+    
+    }
+}

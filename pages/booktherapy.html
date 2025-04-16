@@ -1,95 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="../images/favicon-16x16.png" type="image/x-icon">
     <link rel="stylesheet" href="../stylesheets/booktherapy.css">
+    <link rel="stylesheet" href="../footer/footer responsive.css">
+    <link rel="stylesheet" href="../footer/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Book A Therapy</title>
+
+    <!-- chatbot -->
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <df-messenger
+      intent="WELCOME"
+      chat-title="psycflo-chatbot-for-mental-health-support"
+      agent-id="0f49367a-1f71-436f-a520-63d89ba46eea"
+      language-code="en"
+    ></df-messenger>
 </head>
+
 <body>
     <header>
-        <h1>Meet Our Therapists</h1>
+        <div class="logo"></div>
+
+        <div class="hamburger-menu" id="hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <nav class="menu" id="nav">
+            <ul class="nav-link" id="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/pages/aboutus.html">About us</a></li>
+                <li><a href="/pages/contactus.html">Contact us</a></li>
+            </ul>
+        </nav>
     </header>
-
-    <section>
-        <article>
-        <img src="https://images.unsplash.com/photo-1595697231694-cdbd31488205?q=80&w=1421&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-        <div class="therapist-one">
-        <h2>Dr. Aisha Lawal <span class="first-dr">MD (Psychiatry)</span></h2>
-        <h3>March 17,2025</h3>
-        <h4>45  minutes</h4>
-        <h5 class="rating">
-            <div class="stars">
-            <i class="fa-solid fa-star-filled"></i>
-            <i class="fa-solid fa-star-filled"></i>
-            <i class="fa-solid fa-star-filled"></i>
-            <i class="fa-solid fa-star-empty"></i>
-            <i class="fa-solid fa-star-empty"></i> <span>3.5/5</span>
+    <main>
+        <section>
+            <div class="icon">
+                <a href="/pages/home.html" onclick="goBack(); return false;"><i class="fa-solid fa-arrow-left"></i></a>
             </div>
-        </h5>
-        <button>Book</button>
+            <h1>Meet Our Therapists</h1>
+            <article>
+                <div class="img-div">
+                    <img src="../images2/Rectangle 272.svg"
+                    alt="">
+                </div>
+                <div class="therapist-one">
+                    <h2>Dr. Aisha Lawal <span class="first-dr">MD (Psychiatry)</span></h2>
+                    <h3>March 17,2025</h3>
+                    <h4>45 minutes</h4>
+                    <div class="stars">
+                       <div class="i" >
+                        <i class="fa-solid fa-star" id="yellow"></i>
+                        <i class="fa-solid fa-star" id="yellow"></i>
+                        <i class="fa-solid fa-star" id="yellow"></i>
+                        <i class="fa-regular fa-star" id="yellow-one"></i>
+                        <i class="fa-regular fa-star" id="yellow-one"></i>
+                       </div>
+                        <div><p>3.5/5</p></div>
+                    </div>
+                    <button>Book</button>
+                </div>
+            </article>
+            <article>
+                <div class="img-div">
+                    <img src="../images2/Rectangle 272 (1).svg"
+                    alt="">
+                </div>
+                <div class="therapist-one">
+                    <h2>Dr. John Greg <span class="first-dr">MD (Psychiatry)</span></h2>
+                    <h3>March 17,2025</h3>
+                    <h4>45 minutes</h4>
+                    <div class="stars">
+                       <div class="i" >
+                        <i class="fa-solid fa-star" id="yellow"></i>
+                        <i class="fa-solid fa-star" id="yellow"></i>
+                        <i class="fa-solid fa-star" id="yellow"></i>
+                        <i class="fa-regular fa-star" id="yellow-one"></i>
+                        <i class="fa-regular fa-star" id="yellow-one"></i>
+                       </div>
+                        <div><p>3.5/5</p></div>
+                    </div>
+                    <button class="white">Book</button>
+                </div>
+            </article>
+            <article>
+                <div class="img-div">
+                    <img src="../images2/Rectangle 272 (2).svg"
+                    alt="">
+                </div>
+                <div class="therapist-one">
+                    <h2>Dr. Jenny Wilson <span class="first-dr">MD (Psychiatry)</span></h2>
+                    <h3>March 17,2025</h3>
+                    <h4>45 minutes</h4>
+                    <div class="stars">
+                       <div class="i" >
+                        <i class="fa-solid fa-star" id="yellow"></i>
+                        <i class="fa-solid fa-star" id="yellow"></i>
+                        <i class="fa-solid fa-star" id="yellow"></i>
+                        <i class="fa-solid fa-star" id="yellow"></i>
+                        <i class="fa-solid fa-star" id="yellow"></i>
+                       </div>
+                        <div><p>3.5/5</p></div>
+                    </div>
+                    <button class="white">Book</button>
+                </div>
+            </article>
+            <article>
+                <div class="img-div">
+                    <img src="../images2/Rectangle 272 (3).svg"
+                    alt="">
+                </div>
+                <div class="therapist-one">
+                    <h2>Dr. Robert Fox <span class="first-dr">MD (Psychiatry)</span></h2>
+                    <h3>March 17,2025</h3>
+                    <h4>45 minutes</h4>
+                    <div class="stars">
+                       <div class="i" >
+                        <i class="fa-solid fa-star" id="yellow"></i>
+                        <i class="fa-solid fa-star" id="yellow"></i>
+                        <i class="fa-solid fa-star" id="yellow"></i>
+                        <i class="fa-solid fa-star" id="yellow"></i>
+                        <i class="fa-regular fa-star" id="yellow-one"></i>
+                       </div>
+                        <div><p>3.5/5</p></div>
+                    </div>
+                    <button class="white">Book</button>
+                </div>
+            </article>
+        </section>
+    </main>
+    <div id="bookingConfirmationModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:1000; justify-content:center; align-items:center; font-family:Montserrat;">
+        <div style="background:white; width:90%; max-width:400px; padding:40px; border-radius:10px; text-align:center; box-shadow:0 4px 20px rgba(0,0,0,0.1); position:relative;">
+          <!-- Calendar Icon -->
+          <div style="width:80px; height:80px; background:#3A478D; border-radius:50%; margin:0 auto 25px; display:flex; justify-content:center; align-items:center;">
+            <i class="fa-solid fa-calendar-check" style="color:white; font-size:40px;"></i>
+          </div>
+          
+          <!-- Message -->
+          <h2 style="color:#3A478D; font-size:24px; margin-bottom:15px;">Booking Confirmed!</h2>
+          <p style="font-size:16px; color:#555; line-height:1.5; margin-bottom:25px;">
+            Your session with <span id="therapistName" style="font-weight:600;"></span> has been scheduled for 
+            <span id="sessionDate" style="font-weight:600;"></span>.
+          </p>
+          <p style="font-size:14px; color:#777; margin-bottom:30px;">
+            A confirmation has been sent to your email.
+          </p>
+          
+          <!-- Close Button -->
+          <button onclick="closeBookingModal()" 
+                  style="background:#3A478D; color:white; border:none; 
+                         padding:12px 30px; border-radius:20px; 
+                         font-size:16px; cursor:pointer; 
+                         font-weight:600;">
+            Done
+          </button>
+          
+          <!-- Close Button (X) -->
+          <span onclick="closeBookingModal()" 
+                style="position:absolute; top:15px; right:15px; font-size:24px; 
+                       cursor:pointer; color:#3A478D;">&times;</span>
         </div>
-        </article>
+      </div>
 
-        <article>
-        <img src="https://images.unsplash.com/photo-1595697231694-cdbd31488205?q=80&w=1421&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-        <div class="therapist-two">
-        <h2>Dr. John Greg <span class="second-dr">MD (Psychiatry)</span></h2>
-        <h3>March 17,2025</h3>
-        <h4>45  minutes</h4>
+      <div id="limitReachedModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:1000; justify-content:center; align-items:center; font-family:Montserrat;">
+        <div style="background:white; width:90%; max-width:400px; padding:30px; border-radius:10px; text-align:center; box-shadow:0 4px 20px rgba(0,0,0,0.1);">
+          <!-- Oops Icon -->
+          <div style="width:80px; height:80px; background:#FF6B6B; border-radius:50%; margin:0 auto 20px; display:flex; justify-content:center; align-items:center;">
+            <i class="fa-solid fa-exclamation" style="color:white; font-size:40px;"></i>
+          </div>
+          
+          <!-- Message -->
+          <h2 style="color:#3A478D; font-size:24px; margin-bottom:15px;">Oops!</h2>
+          <p style="font-size:16px; color:#555; line-height:1.5; margin-bottom:25px;">
+            Sorry, you have used up your 3 FREE sessions.<br>
+            Kindly subscribe to get more support and continue your wellness journey. Toddles!
+          </p>
+          
+          <hr style="border:0; height:1px; background:#eee; margin:20px 0;">
+          
+          <!-- Buttons -->
+          <div style="display:flex; justify-content:center; gap:15px;">
+            <a href="/pages/subscription.html" style="flex:1; text-decoration:none;">
+              <button style="width:100%; background:#3A478D; color:white; border:none; padding:12px; border-radius:20px; font-size:16px; cursor:pointer; font-weight:600;">
+                Subscribe
+              </button>
+            </a>
+            <button onclick="closeLimitModal()" style="flex:1; background:#F9FBFF; color:#3A478D; border:1px solid #3A478D; padding:12px; border-radius:20px; font-size:16px; cursor:pointer; font-weight:600;">
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+      
 
-        <h5 class="rating">
-            <div class="stars">
-            <i class="fa-solid fa-star-filled"></i>
-            <i class="fa-solid fa-star-filled"></i>
-            <i class="fa-solid fa-star-filled"></i>
-            <i class="fa-solid fa-star-empty"></i>
-            <i class="fa-solid fa-star-empty"></i> <span>3.5/5</span>
-            </div>
-        </h5>
-        <button>Book</button>
-        </div>
-        </article>
+    <footer>
+        <div class="container">
+            <div id="footer">
+                <div class="first">
+                    <div class="titlebox">
+                        <div class="image">
+                        </div>
+                        <p>Need support? <br> <span>Contact us, and we'll be happy to assist!</span></p>
+                    </div>
 
-        <article>
-        <img src="https://images.unsplash.com/photo-1595697231694-cdbd31488205?q=80&w=1421&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-        <div class="therapist-three">
-        <h2>Dr. Jenny Wilson <span class="third-dr">MD (Psychiatry)</span></h2>
-        <h3>March 17,2025</h3>
-        <h4>45  minutes</h4>
-        <h5 class="rating">
-            <div class="stars">
-           <i class="fa-solid fa-star-filled"></i>
-           <i class="fa-solid fa-star-filled"></i>
-           <i class="fa-solid fa-star-filled"></i>
-           <i class="fa-solid fa-star-empty"></i>
-           <i class="fa-solid fa-star-empty"></i> <span>3.5/5</span>
+                    <div class="socialbox">
+                        <p>Follow us on social media</p>
+                        <div class="socials">
+                            <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://www.x.com"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.youtube.com"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="secondContainer">
+                    <ul class="companylink">
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/pages/aboutus.html">About us</a></li>
+                        <li><a href="/pages/Termsofuse.html">Terms of use</a></li>
+                        <li><a href="/pages/Privacy.html">Privacy Policies</a></li>
+                    </ul>
+                </div>
+
+                <ul class="companylink">
+                    <li><a href="./help">Help Center</a></li>
+                    <li><a href="/pages/chatbot.html">Chat with us</a></li>
+                    <li><a href="/pages/contactus.html">Contact us</a></li>
+                    <li><a href="/pages/contactus.html">USSD Service</a></li>
+                </ul>
+
             </div>
-        </h5>
-        <button>Book</button>
-        </div>
-        </article>
-        
-        <article>
-        <img src="https://images.unsplash.com/photo-1595697231694-cdbd31488205?q=80&w=1421&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-        <div class="therapist-four">
-        <h2>Dr. Robert Fox <span class="fourth-dr">MD (Psychiatry)</span></h2>
-        <h3>March 17,2025</h3>
-        <h4>45  minutes</h4>
-        <h5 class="rating">
-            <div class="stars">
-            <i class="fa-solid fa-star-filled"></i>
-            <i class="fa-solid fa-star-filled"></i>
-            <i class="fa-solid fa-star-filled"></i>
-            <i class="fa-solid fa-star-empty"></i>
-            <i class="fa-solid fa-star-empty"></i> <span>3.5/5</span>
+
+            <div class="stroke"></div>
+
+            <div class="copybox">
+                <p>Copyright &copy; <span id="year"></span> - PSYCFLO</p>
             </div>
-        </h5>
-        <button>Book</button>
         </div>
-    </article>
-    </section>
-        
+    </footer>
+    <script>
+        // Toggle mobile menu
+        document.getElementById("hamburger").addEventListener("click", function () {
+            document.getElementById("nav").classList.toggle("active");
+        });
+
+
+        function showBookingConfirmation(therapist, date) {
+    document.getElementById('therapistName').textContent = therapist;
+    document.getElementById('sessionDate').textContent = date;
+    document.getElementById('bookingConfirmationModal').style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeBookingModal() {
+    document.getElementById('bookingConfirmationModal').style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+
+  // Attach to all Book buttons
+  document.querySelectorAll('.therapist-one button').forEach(button => {
+    button.addEventListener('click', function() {
+      const therapist = this.closest('.therapist-one').querySelector('h2').textContent;
+      const date = this.closest('.therapist-one').querySelector('h3').textContent;
+      showBookingConfirmation(therapist, date);
+    });
+  });
+
+
+  let bookingCount = localStorage.getItem('bookingCount') || 0;
+  
+  function showLimitReachedModal() {
+    document.getElementById('limitReachedModal').style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+  
+  function closeLimitModal() {
+    document.getElementById('limitReachedModal').style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+  
+  // Update your existing booking function
+  document.querySelectorAll('.therapist-one button').forEach(button => {
+    button.addEventListener('click', function() {
+      bookingCount++;
+      localStorage.setItem('bookingCount', bookingCount);
+      
+      if (bookingCount > 3) {
+        showLimitReachedModal();
+      } else {
+        const therapist = this.closest('.therapist-one').querySelector('h2').textContent;
+        const date = this.closest('.therapist-one').querySelector('h3').textContent;
+        showBookingConfirmation(therapist, date);
+      }
+    });
+     localStorage.setItem('bookingCount', 0);
+  console.log('Booking counter reset');
+  });
+
+  // footer
+  document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 </body>
+
 </html>

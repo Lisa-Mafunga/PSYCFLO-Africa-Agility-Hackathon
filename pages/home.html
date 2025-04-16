@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/favicon-16x16.png" type="image/x-icon">
     <link rel="stylesheet" href="../stylesheets/home.css">
-    <link rel="stylesheet" href="../footer/footer.css">
     <link rel="stylesheet" href="../footer/footer responsive.css">
+    <link rel="stylesheet" href="../footer/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,6 +15,17 @@
         href="https://fonts.googleapis.com/css2?family=Gayathri:wght@100;400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <title>Home</title>
+
+    <!-- chatbot -->
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <df-messenger
+      intent="WELCOME"
+      chat-title="psycflo-chatbot-for-mental-health-support"
+      agent-id="0f49367a-1f71-436f-a520-63d89ba46eea"
+      language-code="en"
+    ></df-messenger>
+
+    <!-- stylesheet -->
 </head>
 
 <body>
@@ -27,17 +39,15 @@
         <nav class="menu" id="nav">
             <ul class="nav-link" id="nav-links">
                 <li><a href="/index.html">Home</a></li>
-                <li><a href="./home.html">About us</a></li>
-                <li><a href="./contactus.html">Contact us</a></li>
+                <li><a href="/pages/home.html">About us</a></li>
+                <li><a href="/pages/contactus.html">Contact us</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section class="heroSection">
             <div class="icon">
-                <a href="/index.html">
-                    <img src="../images/Frame 85.png" alt="">
-                </a>
+                <a href="/index.html" onclick="goBack(); return false;"><i class="fa-solid fa-arrow-left"></i></a>
             </div>
             <div class="hero-sec">
                 <div>
@@ -97,7 +107,7 @@
                     </div>
                 </div>
                 <div class="talktous-button">
-                    <a href="./booktherapy.html">
+                    <a href="./chatbot.html">
                         <button>
                             <svg class="img" xmlns="http://www.w3.org/2000/svg" height="14px" viewBox="0 -960 960 960"
                                 width="18px" fill="#1f1f1f">
@@ -174,7 +184,7 @@
                     <div class="titlebox">
                         <div class="image">
                         </div>
-                        <p>Need support? Contact us, and we&apos;ll be happy to assist!</p>
+                        <p>Need support? <br> <span>Contact us, and we'll be happy to assist!</span></p>
                     </div>
 
                     <div class="socialbox">
@@ -191,18 +201,18 @@
 
                 <div id="secondContainer">
                     <ul class="companylink">
-                        <li><a href="./home.html">Home</a></li>
-                        <li><a href="./about.html">About us</a></li>
-                        <li><a href="./terms.html">Terms of use</a></li>
-                        <li><a href="./privacy">Privacy Policies</a></li>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/pages/aboutus.html">About us</a></li>
+                        <li><a href="/pages/Termsofuse.html">Terms of use</a></li>
+                        <li><a href="/pages/Privacy.html">Privacy Policies</a></li>
                     </ul>
                 </div>
 
                 <ul class="companylink">
                     <li><a href="./help">Help Center</a></li>
-                    <li><a href="./chat">Chat with us</a></li>
-                    <li><a href="./contact">Contact us</a></li>
-                    <li><a href="./ussd">USSD Service</a></li>
+                    <li><a href="/pages/chatbot.html">Chat with us</a></li>
+                    <li><a href="/pages/contactus.html">Contact us</a></li>
+                    <li><a href="/pages/contactus.html">USSD Service</a></li>
                 </ul>
 
             </div>
@@ -214,7 +224,12 @@
             </div>
         </div>
     </footer>
-
+    <script>
+        // Toggle mobile menu
+        document.getElementById("hamburger").addEventListener("click", function () {
+            document.getElementById("nav").classList.toggle("active");
+        });
+    </script>
     <script src="./footer/script.js"></script>
 </body>
 
