@@ -163,6 +163,7 @@
     }
     .confirmationModal {
         width: 80%;
+        height: 80%;
     }
 }
 
@@ -236,5 +237,13 @@
     /*.hamburger-menu {
         margin: 40px auto 0 auto;
     } */
- 
+    .feedbackModal {
+        width: 90%;
+        height: 70%;
+        margin-top: 30px;
+    }
+    .confirmationModal {
+        width: 90%;
+        height: 70%;
+    }
 }
