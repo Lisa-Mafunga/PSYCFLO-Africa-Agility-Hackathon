@@ -209,7 +209,7 @@ footer hr {
 
 .modal {
     position: fixed;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: white;
@@ -218,14 +218,23 @@ footer hr {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     /* width: 320px; */
-    width: auto;
-    max-width: 90%;
+    width: 60%;
+    max-width: 60%;
     max-height: 90vh;
     overflow-y: auto;
     display: none;
     flex-direction: column;
     align-items: center;
     transition: all 0.3s ease;
+}
+
+#modal-content {
+    width: 80%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 50px;
 }
 
 .modal .form-group {
@@ -236,7 +245,7 @@ footer hr {
 }
 
 .modal .form-group div {
-    width: 50%;
+    width: 60%;
 }
 
 .modal label {
@@ -256,7 +265,7 @@ footer hr {
 .modal .submit-btn {
     width: 100%;
     padding: 12px;
-    background: #374151;
+    background: #3A478D;
     color: white;
     border: none;
     border-radius: 5px;
@@ -305,7 +314,7 @@ footer hr {
     right: 10px;
     border: none;
     background: none;
-    font-size: 18px;
+    font-size: 32px;
     cursor: pointer;
 }
 
@@ -469,11 +478,31 @@ footer hr {
     }
 
     .modal {
-        max-width: 90%;
+        width: 70%;
+        max-width: 70%;
+        top: 65%;
+        overflow-y: auto;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .container {
+        width: 100%;
+    }
+    
+    .close-btn {
+        margin-top: -10px;
+        font-size: 28px;
+        margin-left: 20px;
     }
 
     #modal-content {
         width: 100%;
+        gap: 10px;
+        margin-bottom: 10px;
+        overflow-y: auto;
     }
 
     .modal .form-group {
@@ -485,7 +514,7 @@ footer hr {
     }
 }
     /* Modal Styles */
-.overlay {
+/* .overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -506,7 +535,6 @@ footer hr {
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    /* width: 320px; */
     width: auto;
     max-width: 90%;
     max-height: 90vh;
@@ -597,3 +625,5 @@ footer hr {
     font-size: 18px;
     cursor: pointer;
 }
+
+} */
