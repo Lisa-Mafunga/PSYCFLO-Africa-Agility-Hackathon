@@ -207,10 +207,10 @@
             max-width: 400px;
             margin-inline: auto;
             font-family: Montserrat;
-font-weight: 500;
-font-size: 16px;
-line-height: 24px;
-letter-spacing: 0%;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0%;
 
             /* margin-top: 100px; */
         }
@@ -290,6 +290,15 @@ letter-spacing: 0%;
             .menu.active {
                 display: flex;
             }
+
+            .form-container {
+            width: 80%;
+            max-width: 500px;
+        }
+        .confirmation {
+        width: 80%;
+      max-width: 400px;
+    }
         }
 
         @media (max-width: 400px) {
@@ -300,6 +309,14 @@ letter-spacing: 0%;
                 gap: 30px;
                 justify-content: space-between;
             }
+            .form-container {
+            width: 90%;
+            max-width: 350px;
+        }
+        .confirmation {
+            width: 90%;
+          max-width: 400px;
+        }
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -330,11 +347,11 @@ letter-spacing: 0%;
                     <div class="form-group">
                         <div>
                             <label for="full-name">Full Name</label>
-                            <input type="text" id="full-name" name="full-name">
+                            <input type="text" id="full-name" name="full-name" required>
                         </div>
                         <div>
                             <label for="phone-number">Phone Number</label>
-                            <input type="text" id="phone-number" name="phone-number">
+                            <input type="text" id="phone-number" name="phone-number" required>
                         </div>
                     </div>
                     <div class="form-group">
@@ -346,17 +363,17 @@ letter-spacing: 0%;
                         </div>
                         <div>
                             <label for="email">E-mail (Optional)</label>
-                            <input type="email" id="email" name="email">
+                            <input type="email" id="email" name="email" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <div>
                             <label for="state">State</label>
-                            <input type="text" id="state" name="state">
+                            <input type="text" id="state" name="state" required>
                         </div>
                         <div>
                             <label for="local-gov">Local Government</label>
-                            <input type="text" id="local-gov" name="local-gov">
+                            <input type="text" id="local-gov" name="local-gov" required>
                         </div>
                     </div>
                     <button type="submit" class="submit-btn">Submit</button>
@@ -364,7 +381,10 @@ letter-spacing: 0%;
             </div>
             <div class="confirmation" id="confirmationMessage" style="display: none;">
                 <i class="fas fa-check-circle"></i>
-                <p>Thank you for your generosity! Your donation has been successfully recorded, and we appreciate your support in making menstrual care accessible to those in need. You will receive an email confirmation shortly. If you have any questions or would like to contribute more, feel free to contact our support team.</p>
+                <p>Thank you for your generosity! Your donation has been successfully recorded, and we appreciate your
+                    support in making menstrual care accessible to those in need. You will receive an email confirmation
+                    shortly. If you have any questions or would like to contribute more, feel free to contact our
+                    support team.</p>
             </div>
         </section>
     </main>
