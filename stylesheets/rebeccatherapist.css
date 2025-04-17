@@ -1,0 +1,292 @@
+.fa-solid {
+    margin-left: 50px;
+    margin-bottom: 50px;
+    font-size: 20px;
+    color: white;
+    border: 1px solid black;
+    border-radius: 50px;
+    background-color: black;
+    padding: 10px;
+}
+
+.fa-bars {
+    font-size: 20px;
+    color: white;
+    border: 1px solid black;
+    border-radius: 50px;
+    background-color: black;
+    padding: 10px;
+}
+
+header {
+    display: flex;
+    height: 90px;
+    padding: 0.1rem 4rem;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    background: rgba(255, 255, 255, 0.90);
+    box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    width: 90%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    width: 138px;
+    height: 90px;
+    flex-shrink: 0;
+    background: url(E:\Africa-Agility-Hackathon\images\logo3.svg) rgba(255, 255, 255, 0.90) 50% / cover no-repeat;
+    /* background-blend-mode: color-dodge; */
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    flex-shrink: 0;
+    list-style: none;
+}
+
+.nav-link li {
+    display: inline;
+    margin-right: 15px;
+}
+
+.nav-link a {
+    color: #000;
+    font-family: "Gayathri", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+}
+
+.nav-link a.active {
+    border-bottom: 1px solid #3A478D;
+    color: #3A478D;
+}
+
+.nav-link a:hover {
+    color: #3A478D;
+}
+
+.hamburger-menu {
+    display: none;
+    font-size: 1.8em;
+    cursor: pointer;
+    color: #3A478D;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    margin: 20px;
+    padding: 80px;
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack title vertically above containers */
+}
+.title {
+    width: 100%; /* Full width */
+    margin-bottom: 20px; /* Space below title */
+}
+.main-container {
+    display: flex; /* Use flexbox for left and right containers */
+    width: 100%; /* Full width of the page */
+}
+.left-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    margin-right: 10px; /* Space between left and right containers */
+    flex: 3; /* Take up larger space */
+}
+.right-container {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px; /* Reduced padding for consistency */
+    width: 600px; /* Fixed width for right container */
+    flex: 1; /* Take up smaller space */
+    display: flex; /* Use flexbox for vertical alignment */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: flex-start; /* Align items to the top */
+}
+.container1 {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px; /* Padding for inner containers */
+    margin-bottom: 8px; /* Space between containers */
+    text-align: justify;
+    display: flex; /* Use flexbox for vertical alignment */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: flex-start; /* Align items to the top */
+}
+.profile-box {
+    display: flex;
+    align-items: center;
+}
+.profile-box img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
+}
+.profile-info {
+    flex: 1;
+}
+.name {
+    font-size: 1.2em;
+    color: #3A478D;
+    margin: 0;
+}
+.title, .container-title {
+    font-size: 1.2em;
+    color: #00796b;
+    margin: 5px 0;
+}
+.availability, .location {
+    font-size: 0.9em;
+    color: black;
+    margin: 2px 0;
+}
+.icon {
+    margin-right: 5px;
+    color: #3A478D; /* Icon color */
+}
+.description {
+    color: #555;
+    line-height: 1.5;
+    margin: 1.5px;
+}
+.availability-image {
+width: 100%; /* Adjust the width as needed */
+height: auto; /* Maintain aspect ratio */
+margin-bottom: 10px; /* Space below the image */
+border-radius: 10px; /* Optional: rounded corners */
+}
+.availability-title {
+    font-size: 1.5em;
+    color: #00796b;
+    margin-bottom: 15px;
+}
+.availability-item {
+    margin-bottom: 15px; /* Space between days */
+}
+.day-name {
+    font-weight: bold;
+    color: #00796b;
+    margin-right: 20px; /* Space between day name and time slots */
+}
+.time-slot {
+    display: flex;
+    align-items: center;
+    margin-top: 5px; /* Space above time slots */
+}
+.time-circle {
+    width: 60px; /* Circle size */
+    height: 30px; /* Circle height */
+    border-radius: 15px; /* Make it a circle */
+    background-color: #f0f0f0; /* Circle background color */
+    color: darkblue; /* Text color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px; /* Space between circle and time text */
+    font-size: 0.9em; /* Adjust font size */
+    border: 1px solid #00796b; /* Circle border */
+}
+.pricing-title {
+    font-size: 1.5em;
+    color: #00796b;
+    margin-top: 20px; /* Space above pricing */
+    margin-bottom: 15px;
+}
+.pricing-plan {
+    background: #f0f0f0;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px; /* Space between pricing plans */
+}
+.pricing-amount {
+    font-size: 1.2em;
+    color: darkblue;
+}
+.button {
+    display: inline-block;
+    background-color: #00796b;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 10px;
+}
+.button:hover {
+    background-color: #005f54; /* Darker shade on hover */
+}
+.review-section {
+    width: 100%; /* Full width */
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 2px; /* Adjusted padding for review section */
+    margin-top: 20px; /* Space above review section */
+}
+.review-header {
+    display: flex;
+    justify-content: space-between; /* Space between title and review count */
+    align-items: center;
+}
+.review-title {
+    font-size: 1.5em;
+    color: #00796b;
+    margin-bottom: 15px;
+    margin-left: 20px;
+}
+.review-count {
+    font-size: 0.9em;
+    color: #555; /* Color for review count */
+}
+.review-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Space between reviews */
+    padding: 10px 0; /* Adjust padding for review items */
+    margin-left: 20px;
+}
+.review-initial {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #00796b; /* Circle color */
+    color: white; /* Text color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em; /* Initial font size */
+    margin-right: 10px; /* Space between circle and text */
+}
+.review-content {
+    flex: 1; /* Allow text to fill available space */
+}
+.reviewer-name {
+    font-weight: bold;
+    color: darkblue;
+}
+.review-stars {
+    color: #ffcc00; /* Star color */
+}
+.review-divider {
+    border: none; /* Remove default border */
+    border-top: 1px solid #e0e0e0; /* Light gray color for the line */
+    margin: 0; /* Remove margins */
+    padding: 10px 0; /* Equal space above and below the line */
+    width: calc(100% - 20px); /* Adjust width for padding *
+    margin-right: 10px; /* Right margin for equal spacing */
+}
+
