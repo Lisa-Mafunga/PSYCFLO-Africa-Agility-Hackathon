@@ -304,7 +304,7 @@
             </div>
         </section>
     </main>
-    <div id="feedbackModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:1000; justify-content:center; align-items:center; padding:20px; box-sizing:border-box;">
+    <div class="feedbackModal" id="feedbackModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; z-index:1000; justify-content:center; align-items:center; padding:20px; margin-top: 80px;">
         <div style="background:#F9FBFF; width:100%; max-width:800px; box-shadow:2px 1px 4px 0px #00000040; display:flex; flex-direction:column; border-radius:10px; overflow:hidden;">
           <!-- Flex container for responsive layout -->
           <div style="display:flex; flex-direction:row; flex-wrap:wrap;">
@@ -370,8 +370,8 @@
       </div>
       
       <!-- Confirmation Modal -->
-      <div id="confirmationModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:1000; justify-content:center; align-items:center; padding:20px; box-sizing:border-box;">
-        <div style="background:white; width:100%; max-width:400px; padding:40px; border-radius:10px; text-align:center; box-shadow:0 4px 20px rgba(0,0,0,0.1); position:relative;">
+      <div class="confirmationModal" id="confirmationModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:1000; justify-content:center; align-items:center; padding:20px; margin-top: 80px;">
+        <div style="background:white; width:100%; max-width:400px; padding:40px; border-radius:10px; text-align:center; box-shadow:0 4px 20px #0000001a; position:relative;">
             <!-- Checkmark -->
             <div style="width:80px; height:80px; background: #1DAA3E; border-radius:50%; margin:0 auto 25px; display:flex; justify-content:center; align-items:center;">
               <i class="fa-solid fa-check" style="color:white; font-size:40px; background-color: transparent; border: none;"></i>
