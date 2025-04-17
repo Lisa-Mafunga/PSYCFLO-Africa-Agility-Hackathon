@@ -9,16 +9,46 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #e0f7fa;
-            margin: 0;
-            padding: 20px;
+            margin: 20px;
+            padding: 80px;
+            display: flex; /* Use flexbox for layout */
+            flex-direction: column; /* Stack title vertically above containers */
+        }
+        .title {
+            width: 100%; /* Full width */
+            margin-bottom: 20px; /* Space below title */
+        }
+        .main-container {
+            display: flex; /* Use flexbox for left and right containers */
+            width: 100%; /* Full width of the page */
+        }
+        .left-container {
+            display: flex;
+            flex-direction: column; /* Stack items vertically */
+            margin-right: 10px; /* Space between left and right containers */
+            flex: 3; /* Take up larger space */
+        }
+        .right-container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 15px; /* Reduced padding for consistency */
+            width: 600px; /* Fixed width for right container */
+            flex: 1; /* Take up smaller space */
+            display: flex; /* Use flexbox for vertical alignment */
+            flex-direction: column; /* Stack items vertically */
+            justify-content: flex-start; /* Align items to the top */
         }
         .container {
             background: white;
             border-radius: 10px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            width: 300px; /* Match profile width */
-            margin-bottom: 20px; /* Space between containers */
+            padding: 15px; /* Padding for inner containers */
+            margin-bottom: 8px; /* Space between containers */
+            text-align: justify;
+            display: flex; /* Use flexbox for vertical alignment */
+            flex-direction: column; /* Stack items vertically */
+            justify-content: flex-start; /* Align items to the top */
         }
         .profile-box {
             display: flex;
@@ -55,193 +85,206 @@
         .description {
             color: #555;
             line-height: 1.5;
-        }
-        ul {
-            list-style-type: disc; /* Default bullet style */
-            margin-left: 20px; /* Indent the list */
-            padding: 0; /* Remove padding */
-        }
-        ul li::marker {
-            color: darkblue; /* Change bullet color to blue */
+            margin: 1px;
         }
 
-
-        .right-container {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 400px; /* Adjust width as needed */
-    margin-left: 20px; /* Space between left and right containers */
-}
-
-.availability-title {
-    font-size: 1.5em;
-    color: #00796b;
-    margin-bottom: 15px;
-}
-
-.availability-list {
-    list-style-type: none; /* Remove default bullets */
-    padding: 0; /* Remove padding */
-}
-
-.availability-item {
-    font-size: 1em;
-    color: #555;
-    margin: 5px 0;
-}
-
-.pricing-title {
-    font-size: 1.5em;
-    color: #00796b;
-    margin-top: 20px; /* Space above pricing */
-    margin-bottom: 15px;
-}
-
-.pricing-plan {
-    background: #f0f0f0;
-    border-radius: 5px;
-    padding: 10px;
-    margin-bottom: 10px; /* Space between pricing plans */
-}
-
-.pricing-amount {
-    font-size: 1.2em;
-    color: darkblue;
-}
-
-.button {
-    display: inline-block;
-    background-color: #00796b;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
-    text-decoration: none;
-    text-align: center;
-    margin-top: 10px;
-}
-
-.button:hover {
-    background-color: #005f54; /* Darker shade on hover */
-}
+        .availability-title {
+            font-size: 1.5em;
+            color: #00796b;
+            margin-bottom: 15px;
+        }
+        .availability-item {
+            margin-bottom: 15px; /* Space between days */
+            display: flex; 
+            flex-direction: row;
+        }
+        .day-name {
+            font-weight: bold;
+            color: #00796b;
+            margin-right: 20px; /* Space between day name and time slots */
+        }
+        .time-slot {
+            display: flex;
+            align-items: center;
+            margin-top: 5px; /* Space above time slots */
+    
+        }
+        .time-circle {
+            width: 60px; /* Circle size */
+            height: 30px; /* Circle height */
+            border-radius: 15px; /* Make it a circle */
+            background-color: #f0f0f0; /* Circle background color */
+            color: darkblue; /* Text color */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 5px; /* Space between circle and time text */
+            font-size: 0.9em; /* Adjust font size */
+            border: 1px solid #00796b; /* Circle border */
+        }
+        .pricing-title {
+            font-size: 1.5em;
+            color: #00796b;
+            margin-top: 20px; /* Space above pricing */
+            margin-bottom: 15px;
+        }
+        .pricing-plan {
+            background: #f0f0f0;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px; /* Space between pricing plans */
+        }
+        .pricing-amount {
+            font-size: 1.2em;
+            color: darkblue;
+        }
+        .button {
+            display: inline-block;
+            background-color: #00796b;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .button:hover {
+            background-color: #005f54; /* Darker shade on hover */
+        }
     </style>
 </head>
 <body>
-    <h1>Rebecca C. James, (PhD)</h1>
-    <div class="container profile-box">
-        <img src="/images2/rebecca.jpg" alt="Rebecca C. James">
-        <div class="profile-info">
-            <p class="name">Rebecca C. James, PhD</p>
-            <p class="title">Therapist</p>
-            <p class="availability"><strong>Online</strong></p>
-            <p class="availability"><i class="fas fa-calendar-alt icon"></i> Mon, Wed, Fri</p>
-            <p class="location"><i class="fas fa-map-marker-alt icon"></i>Lagos, Nigeria</p>
-        </div>
+    <div class="title">
+        <h1>Rebecca C. James, (PhD)</h1>
     </div>
-
-    <div class="container">
-        <p class="container-title">Bio</p>
-        <p class="description">
-            Dr. Rebecca C. James is a licensed marriage and family therapist with over 15 years of experience supporting women through abuse recovery, anxiety, and spiritual trauma.
-            <br><br>
-            As a devout Christian, she integrates prayer, Scripture, and holistic wellness into therapy when desired. Her approach is empowering, gentle, and deeply rooted in compassion and evidence-based therapy models.
-        </p>
-    </div>
-
-    <div class="container">
-        <p class="container-title">Specialization</p>
-        <p class="description">
-            <ul>
-                <li>Religious Trauma & Spiritual Abuse</li>
-                <li>Anxiety and Panic Disorders</li>
-                <li>Sexual and Domestic Abuse in Women</li>
-                <li>Depression in Young & Midlife Women</li>
-                <li>Marriage Counselling</li>
-                <li>Christian Counselling and Faith Integration</li>
-            </ul>
-        </p>
-    </div>
-
-    <div class="container">
-        <p class="container-title">Qualifications</p>
-        <p class="description">
-            <ul>
-                <li>Master's in Psychology</li>
-            </ul>
-    </div>
-
-    <div class="container">
-        <p class="container-title">Practicing Since</p>
-        <p class="description">
-            <ul>
-                <li>2010</li>
-            </ul>
-    </div>
-
-    <div class="container">
-        <p class="container-title">Session Mode</p>
-        <p class="description">
-            <ul>
-                <li>Online</li>
-                <li>Webinar/Seminar</li>
-            </ul>
-    </div>
-
-
-    <div class="right-container">
-        <h2 class="availability-title">Availability</h2>
-        <ul class="availability-list">
-            <li class="availability-item">Monday: 10:00 AM - 02:00 PM</li>
-            <li class="availability-item">Wednesday: 10:00 AM - 02:00 PM</li>
-            <li class="availability-item">Friday: 10:00 AM - 02:00 PM</li>
-        </ul>
     
-        <h2 class="pricing-title">Pricing</h2>
-        <div class="pricing-plan">
-            <p class="pricing-amount">$20 <span>Weekly</span></p>
-            <p>Video + Messaging Therapy</p>
-            <p>30-min video sessions + messaging</p>
-            <a href="#" class="button">Choose Plan</a>
+    <div class="main-container">
+        <div class="left-container">
+            <div class="container profile-box">
+                <img src="/images2/rebecca.jpg" alt="Rebecca C. James">
+                <div class="profile-info">
+                    <p class="name">Rebecca C. James, PhD</p>
+                    <p class="title">Therapist</p>
+                    <p class="availability"><strong>Online</strong></p>
+                    <p class="availability"><i class="fas fa-calendar-alt icon"></i> Mon, Wed, Fri</p>
+                    <p class="location"><i class="fas fa-map-marker-alt icon"></i>Lagos, Nigeria</p>
+                </div>
+            </div>
+
+            <div class="container">
+                <p class="container-title">Bio</p>
+                <p class="description">
+                    Dr. Rebecca C. James is a licensed marriage and family therapist with over 15 years of experience supporting women through abuse recovery, anxiety, and spiritual trauma.
+                    <br><br>
+                    As a devout Christian, she integrates prayer, Scripture, and holistic wellness into therapy when desired. Her approach is empowering, gentle, and deeply rooted in compassion and evidence-based therapy models.
+                </p>
+            </div>
+
+            <div class="container">
+                <p class="container-title">Specialization</p>
+                <p class="description">
+                    <ul>
+                        <li>Religious Trauma & Spiritual Abuse</li>
+                        <li>Anxiety and Panic Disorders</li>
+                        <li>Sexual and Domestic Abuse in Women</li>
+                        <li>Depression in Young & Midlife Women</li>
+                        <li>Marriage Counselling</li>
+                        <li>Christian Counselling and Faith Integration</li>
+                    </ul>
+                </p>
+            </div>
+
+            <div class="container">
+                <p class="container-title">Qualifications</p>
+                <p class="description">
+                    <ul>
+                        <li>Master's in Psychology</li>
+                    </ul>
+                </p>
+            </div>
+
+            <div class="container">
+                <p class="container-title">Practicing Since</p>
+                <p class="description">
+                    <ul>
+                        <li>2010</li>
+                    </ul>
+                </p>
+            </div>
+
+            <div class="container">
+                <p class="container-title">Session Mode</p>
+                <p class="description">
+                    <ul>
+                        <li>Online</li>
+                        <li>Webinar/Seminar</li>
+                    </ul>
+                </p>
+            </div>
         </div>
-        <div class="pricing-plan">
-            <p class="pricing-amount">$75 <span>Monthly</span></p>
-            <p>Messaging Therapy</p>
-            <p>30-min video sessions + messaging</p>
-            <a href="#" class="button">Choose Plan</a>
+
+        <div class="right-container">
+            <div class="availability">
+            <h2 class="availability-title">Availability</h2>
+            <div class="availability-item">
+                <div class="dot"></div>
+                <div class="day-name">Monday</div>
+            </div>
+            <div class="time-slot">
+                <div class="time-circle">09:00</div>
+                <span>- 11:00 am</span>
+            </div>
+            <div class="time-slot">
+                <div class="time-circle">12:00</div>
+                <span>- 02:00 pm</span>
+            </div>
+            <div class="time-slot">
+                <div class="time-circle">03:00</div>
+                <span>- 05:00 pm</span>
+            </div>
+
+            <div class="availability-item">
+                <div class="dot"></div>
+                <div class="day-name">Wednesday</div>
+            </div>
+            <div class="time-slot">
+                <div class="time-circle">09:00</div>
+                <span>- 11:00 am</span>
+            </div>
+            <div class="time-slot">
+                <div class="time-circle">12:00</div>
+                <span>- 02:00 pm</span>
+            </div>
+
+            <div class="availability-item">
+                <div class="dot"></div>
+                <div class="day-name">Friday</div>
+            </div>
+            <div class="time-slot">
+                <div class="time-circle">09:00</div>
+                <span>- 11:00 am</span>
+            </div>
         </div>
-        <div class="pricing-plan">
-            <p class="pricing-amount">$900 <span>Yearly</span></p>
-            <p>Video + Messaging Therapy</p>
-            <p>30-min video sessions + messaging</p>
-            <a href="#" class="button">Choose Plan</a>
-        </div>
-    </div><div class="right-container">
-        <h2 class="availability-title">Availability</h2>
-        <ul class="availability-list">
-            <li class="availability-item">Monday: 10:00 AM - 02:00 PM</li>
-            <li class="availability-item">Wednesday: 10:00 AM - 02:00 PM</li>
-            <li class="availability-item">Friday: 10:00 AM - 02:00 PM</li>
-        </ul>
-    
-        <h2 class="pricing-title">Pricing</h2>
-        <div class="pricing-plan">
-            <p class="pricing-amount">$20 <span>Weekly</span></p>
-            <p>Video + Messaging Therapy</p>
-            <p>30-min video sessions + messaging</p>
-            <a href="#" class="button">Choose Plan</a>
-        </div>
-        <div class="pricing-plan">
-            <p class="pricing-amount">$75 <span>Monthly</span></p>
-            <p>Messaging Therapy</p>
-            <p>30-min video sessions + messaging</p>
-            <a href="#" class="button">Choose Plan</a>
-        </div>
-        <div class="pricing-plan">
-            <p class="pricing-amount">$900 <span>Yearly</span></p>
-            <p>Video + Messaging Therapy</p>
-            <p>30-min video sessions + messaging</p>
-            <a href="#" class="button">Choose Plan</a>
+        
+            <h2 class="pricing-title">Pricing</h2>
+            <div class="pricing-plan">
+                <p class="pricing-amount">$20 <span>Weekly</span></p>
+                <p>Video + Messaging Therapy</p>
+                <p>30-min video sessions + messaging</p>
+                <a href="#" class="button">Choose Plan</a>
+            </div>
+            <div class="pricing-plan">
+                <p class="pricing-amount">$75 <span>Monthly</span></p>
+                <p>Messaging Therapy</p>
+                <p>30-min video sessions + messaging</p>
+                <a href="#" class="button">Choose Plan</a>
+            </div>
+            <div class="pricing-plan">
+                <p class="pricing-amount">$900 <span>Yearly</span></p>
+                <p>Video + Messaging Therapy</p>
+                <p>30-min video sessions + messaging</p>
+                <a href="#" class="button">Choose Plan</a>
+            </div>
         </div>
     </div>
 </body>
