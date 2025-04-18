@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <!-- <script src="https://unpkg.com/@tailwindcss/browser@4"></script> -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- <script src="https://unpkg.com/@tailwindcss/browser@4"></script> -->
     <title>Psycflo</title>
 
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./index.css" />
     <!-- <style>
         .modal {
     max-height: 90vh;
@@ -18,133 +21,139 @@
     padding: 20px;
 }
     </style> -->
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="logo"></div>
+      <div class="logo"></div>
 
-        <div class="hamburger-menu" id="hamburger">
-            <i class="fa-solid fa-bars"></i>
-        </div>
+      <div class="hamburger-menu" id="hamburger">
+        <i class="fa-solid fa-bars"></i>
+      </div>
 
-        <nav class="menu" id="nav">
-            <ul class="nav-link" id="nav-links">
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/pages/aboutus.html">About us</a></li>
-                <li><a href="/pages/contactus.html">Contact us</a></li>
-            </ul>
-        </nav>
+      <nav class="menu" id="nav">
+        <ul class="nav-link" id="nav-links">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/pages/aboutus.html">About us</a></li>
+          <li><a href="/pages/contactus.html">Contact us</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-        <section class="first-sec">
-            <div class="container">
-                <div class="titlebox">
-                    <h1>Support Starts Here: Mental <br> Wellness, Period Dignity, and <br>Community Care.</h1>
-                    <p>Psycflo connects the dots ensuring <br> wellbeing for all.</p>
-                    <span class="get-started" onclick="openModal()">Get Started</span>
-                </div>
-            </div>
-        </section>
-        <section>
-            <div class="overlay" onclick="closeModal()"></div>
-            <div class="modal">
-                <button class="close-btn" onclick="closeModal()">&times;</button>
-                <div id="modal-content">
-                    <!-- Content will be dynamically inserted here -->
-                    <h2>Select User Category</h2>
-                    <span class="button" onclick="loadForm('mentalhealth.html'); event.preventDefault();">Mental Health
-                        Care</span>
-                    <span class="button" onclick="loadForm('menstrualhealth.html'); event.preventDefault();">Menstrual
-                        Health Care</span>
-                    <span class="button" onclick="loadForm('partners.html');">Partners
-                        (Sponsors)</span>
-                </div>
-            </div>
-        </section>
+      <section class="first-sec">
+        <div class="container">
+          <div class="titlebox">
+            <h1>
+              Support Starts Here: Mental <br />
+              Wellness, Period Dignity, and <br />Community Care.
+            </h1>
+            <p>
+              Psycflo connects the dots ensuring <br />
+              wellbeing for all.
+            </p>
+            <span class="get-started" onclick="openModal()">Get Started</span>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="overlay" onclick="closeModal()"></div>
+        <div class="modal">
+          <button class="close-btn" onclick="closeModal()">&times;</button>
+          <div id="modal-content">
+            <!-- Content will be dynamically inserted here -->
+            <h2>Select User Category</h2>
+            <span
+              class="button"
+              onclick="loadForm('mentalhealth.html'); event.preventDefault();"
+              >Mental Health Care</span
+            >
+            <span
+              class="button"
+              onclick="loadForm('menstrualhealth.html'); event.preventDefault();"
+              >Menstrual Health Care</span
+            >
+            <span class="button" onclick="loadForm('partners.html');"
+              >Partners (Sponsors)</span
+            >
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
-        <hr>
-        <p>Copyright &copy; 2025 - PSYCFLO</p>
+      <hr />
+      <p>Copyright &copy; 2025 - PSYCFLO</p>
     </footer>
     <script>
-        //menu
+      //menu
 
-        document.getElementById("hamburger").addEventListener("click", function () {
-            document.getElementById("nav").classList.toggle("active");
+      document
+        .getElementById("hamburger")
+        .addEventListener("click", function () {
+          document.getElementById("nav").classList.toggle("active");
         });
 
-        //forms
-        function openModal() {
-            document.querySelector(".overlay").style.display = "block";
-            document.querySelector(".modal").style.display = "flex";
-        }
+      //forms
+      function openModal() {
+        document.querySelector(".overlay").style.display = "block";
+        document.querySelector(".modal").style.display = "flex";
+      }
 
-        function closeModal() {
-            document.querySelector(".overlay").style.display = "none";
-            document.querySelector(".modal").style.display = "none";
-            // Reset modal content
-            document.getElementById("modal-content").innerHTML = `
+      function closeModal() {
+        document.querySelector(".overlay").style.display = "none";
+        document.querySelector(".modal").style.display = "none";
+        // Reset modal content
+        document.getElementById("modal-content").innerHTML = `
                 <h2>Select User Category</h2>
                 <span class="button" onclick="loadForm('mentalhealth.html')">Mental Health Care</span>
                 <span class="button" onclick="loadForm('menstrualhealth.html')">Menstrual Health Care</span>
                 <span class="button" onclick="loadForm('partners.html')">Partners (Sponsors)</span>
             `;
-        }
+      }
 
-        
-        function loadForm(formUrl) {
-    fetch(`forms/${formUrl}`)
-        .then(res => res.text())
-        .then(html => {
+      function loadForm(formUrl) {
+        fetch(`forms/${formUrl}`)
+          .then((res) => res.text())
+          .then((html) => {
             // Create a parser to extract the content we need
             const parser = new DOMParser();
-            const doc = parser.parseFromString(html, 'text/html');
+            const doc = parser.parseFromString(html, "text/html");
 
             let content;
 
             // Special handling for partners.html (non-form content)
-            if (formUrl === 'partners.html') {
-                content = doc.querySelector('body').innerHTML;
+            if (formUrl === "partners.html") {
+              content = doc.querySelector("body").innerHTML;
             }
             // Special handling for therapist.html - preserve all original styling
-            else if (formUrl === 'therapist.html') {
-                // Get the entire document structure including head and styles
-                content = doc.documentElement.innerHTML;
-                
-                // Inject the full HTML into modal
-                document.getElementById("modal-content").innerHTML = content;
-                
-                // Adjust modal container to accommodate the therapist form
-                const modal = document.querySelector('.modal');
-                // modal.style.width = 'auto';
-                // modal.style.maxWidth = 'auto';
-                modal.style.paddingY = '0';
-                // modal.style.background = 'white';
-                // modal.style.boxShadow = 'none';
-                
-                return; // Exit early since we've handled therapist.html specially
-            } else if (formUrl === 'donor.html') {
-                // Get the entire document structure including head and styles
-                content = doc.documentElement.innerHTML;
-                
-                // Inject the full HTML into modal
-                document.getElementById("modal-content").innerHTML = content;
-                
-                // Adjust modal container to accommodate the therapist form
-                const modal = document.querySelector('.modal');
-                // modal.style.width = 'auto';
-                // modal.style.maxWidth = 'auto';
-                // modal.style.paddingY = '0';
-                // modal.style.background = 'white';
-                // modal.style.boxShadow = 'none';
-                
-                return; // Exit early since we've handled therapist.html specially
+            else if (formUrl === "therapist.html") {
+              // Get the entire document structure including head and styles
+              content = doc.documentElement.innerHTML;
+
+              // Inject the full HTML into modal
+              document.getElementById("modal-content").innerHTML = content;
+
+              // Adjust modal container to accommodate the therapist form
+              const modal = document.querySelector(".modal");
+              modal.style.paddingY = "0";
+
+              return; // Exit early since we've handled therapist.html specially
+            } else if (formUrl === "donor.html") {
+              // Get the entire document structure including head and styles
+              content = doc.documentElement.innerHTML;
+
+              // Inject the full HTML into modal
+              document.getElementById("modal-content").innerHTML = content;
+
+              // Adjust modal container to accommodate the therapist form
+              const modal = document.querySelector(".modal");
+
+              return; // Exit early since we've handled therapist.html specially
             }
             // Handling for other form files
             else {
-                content = doc.querySelector('.container')?.innerHTML ||
-                    doc.querySelector('form')?.innerHTML ||
-                    doc.querySelector('body').innerHTML;
+              content =
+                doc.querySelector(".container")?.innerHTML ||
+                doc.querySelector("form")?.innerHTML ||
+                doc.querySelector("body").innerHTML;
             }
 
             // Inject the content into modal for non-therapist forms
@@ -152,55 +161,124 @@
                 <button class="close-btn" onclick="closeModal()">&times;</button>
                 ${content}
             `;
-            
+
             // Adjust modal styling based on content type
-            const modal = document.querySelector('.modal');
-            // modal.style.width = 'auto';
-            // modal.style.maxWidth = '90%';
-            // modal.style.maxHeight = '90vh';
-            modal.style.overflowY = 'auto';
+            const modal = document.querySelector(".modal");
+            modal.style.overflowY = "auto";
 
             // Special styling for partners page
-            if (formUrl === 'partners.html') {
-                modal.style.textAlign = 'center';
-                modal.style.padding = '30px';
+            if (formUrl === "partners.html") {
+              modal.style.textAlign = "center";
+              modal.style.padding = "30px";
 
-                // Make buttons look consistent with your modal style
-                // const buttons = modal.querySelectorAll('.button');
-                // buttons.forEach(button => {
-                //     button.style.display = 'block';
-                //     button.style.width = '100%';
-                //     button.style.margin = '15px 0';
-                //     button.style.padding = '15px';
-                // });
-                
-                const therapistBtn = document.querySelector('.therapist-btn');
-                if (therapistBtn) {
-                    therapistBtn.addEventListener('click', function() {
-                        loadForm('therapist.html');
-                    });
-                }
+              const therapistBtn = document.querySelector(".therapist-btn");
+              if (therapistBtn) {
+                therapistBtn.addEventListener("click", function () {
+                  loadForm("therapist.html");
+                });
+              }
 
-                const donorBtn = document.querySelector('.donor-btn');
-                if (donorBtn) {
-                    donorBtn.addEventListener('click', function() {
-                        // You can implement donor form load if needed
-                        loadForm('donor.html');
-                    });
-                }
+              const donorBtn = document.querySelector(".donor-btn");
+              if (donorBtn) {
+                donorBtn.addEventListener("click", function () {
+                  // You can implement donor form load if needed
+                  loadForm("donor.html");
+                });
+              }
             }
-        })
-        .catch(err => {
+          })
+          .catch((err) => {
             console.error("Error loading form:", err);
             document.getElementById("modal-content").innerHTML = `
                 <p>Error loading form. Check console for details.</p>
                 <button class="button" onclick="closeModal()">Close</button>
             `;
-        });
-}
-        
+          });
+        setTimeout(() => {
+          const form = document.getElementById("userForm");
+          if (form) {
+            form.addEventListener("submit", function (e) {
+              e.preventDefault();
+              let valid = true;
+
+              const fields = [
+                {
+                  id: "full-name",
+                  errorId: "usernameError",
+                  message: "Full name must be at least 3 characters.",
+                  minLength: 3,
+                },
+                {
+                  id: "phone-number",
+                  errorId: "phoneError",
+                  pattern: /^\d{10,15}$/,
+                  message: "Phone number must be 10 to 15 digits.",
+                },
+                {
+                  id: "country",
+                  errorId: "countryError",
+                  message: "Please select your country.",
+                  isSelect: true,
+                },
+                {
+                  id: "state",
+                  errorId: "stateError",
+                  message: "State is required.",
+                },
+                {
+                  id: "local-gov",
+                  errorId: "lgError",
+                  message: "Local government is required.",
+                },
+              ];
+
+              fields.forEach((field) => {
+                const input = document.getElementById(field.id);
+                const error = document.getElementById(field.errorId);
+
+                if (!input || !error) return;
+
+                if (field.isSelect && input.value === "") {
+                  error.textContent = field.message;
+                  valid = false;
+                } else if (field.pattern && !field.pattern.test(input.value)) {
+                  error.textContent = field.message;
+                  valid = false;
+                } else if (
+                  field.minLength &&
+                  input.value.trim().length < field.minLength
+                ) {
+                  error.textContent = field.message;
+                  valid = false;
+                } else if (
+                  !field.pattern &&
+                  !field.minLength &&
+                  !input.value.trim()
+                ) {
+                  error.textContent = field.message;
+                  valid = false;
+                } else {
+                  error.textContent = "";
+                }
+              });
+
+              const email = document.getElementById("email");
+              const emailError = document.getElementById("emailError");
+              const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+              if (email && email.value && !emailPattern.test(email.value)) {
+                emailError.textContent = "Please enter a valid email.";
+                valid = false;
+              } else if (emailError) {
+                emailError.textContent = "";
+              }
+
+              if (valid) {
+                window.location.href = "../pages/home.html";
+              }
+            });
+          }
+        }, 100);
+      }
     </script>
-
-</body>
-
+  </body>
 </html>
