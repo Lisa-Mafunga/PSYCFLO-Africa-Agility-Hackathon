@@ -28,7 +28,7 @@ header {
     background: rgba(255, 255, 255, 0.90);
     box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.05);
     position: fixed;
-    width: 90%;
+    width: 100%;
     top: 0;
     left: 0;
     z-index: 1000;
@@ -38,7 +38,7 @@ header .logo {
     width: 138px;
     height: 90px;
     flex-shrink: 0;
-    background: url(E:\Africa-Agility-Hackathon\images\logo3.svg) rgba(255, 255, 255, 0.90) 50% / cover no-repeat;
+    background: url(E:\Africa-Agility-Hackathon\images\logo.jpg) rgba(255, 255, 255, 0.90) 50% / cover no-repeat;
     /* background-blend-mode: color-dodge; */
 }
 
@@ -47,7 +47,9 @@ header .logo {
     align-items: center;
     gap: 3rem;
     flex-shrink: 0;
-    list-style: none;
+    list-style: none; /* Ensure no bullets are shown */
+    padding: 0; /* Remove any default padding */
+    margin: 0; /* Remove any default margin */
 }
 
 .nav-link li {
@@ -82,14 +84,24 @@ header .logo {
 }
 
 
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgb(75, 224, 217);
     margin: 20px;
     padding: 80px;
     display: flex; /* Use flexbox for layout */
     flex-direction: column; /* Stack title vertically above containers */
 }
+.title-container {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+}
+
+.title-container .icon {
+    margin-right: 100px; /* Space between the icon and title */
+}
+
 .title {
     width: 100%; /* Full width */
     margin-bottom: 20px; /* Space below title */
@@ -103,12 +115,14 @@ body {
     flex-direction: column; /* Stack items vertically */
     margin-right: 10px; /* Space between left and right containers */
     flex: 3; /* Take up larger space */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #272525;
 }
 .right-container {
     background: white;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 15px; /* Reduced padding for consistency */
+    padding: 35px; /* Reduced padding for consistency */
     width: 600px; /* Fixed width for right container */
     flex: 1; /* Take up smaller space */
     display: flex; /* Use flexbox for vertical alignment */
@@ -119,49 +133,88 @@ body {
     background: white;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 15px; /* Padding for inner containers */
+    padding: 35px; /* Padding for inner containers */
     margin-bottom: 8px; /* Space between containers */
     text-align: justify;
     display: flex; /* Use flexbox for vertical alignment */
     flex-direction: column; /* Stack items vertically */
     justify-content: flex-start; /* Align items to the top */
 }
-.profile-box {
+.container1-profile-box {
     display: flex;
     align-items: center;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 35px; /* Padding for inner containers */
+    margin-bottom: 8px; /* Space between containers */
+    text-align: justify;
+    flex-direction: row; /* Change to row to align items horizontally */
 }
-.profile-box img {
+
+.profile-image {
     border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    margin-right: 15px;
+    width: 110px;
+    height: 110px;
+    margin-right: 50px; /* Space between image and text */
+    margin-bottom: 20px;
 }
+
 .profile-info {
-    flex: 1;
+    flex: 1; /* Allow text to fill available space */
 }
 .name {
     font-size: 1.2em;
+    font-weight: bold;
     color: #3A478D;
     margin: 0;
+    margin-bottom: 5px;
 }
-.title, .container-title {
+.title1 {
+    width: 100%; /* Full width */
+}
+.title, .container1-title {
     font-size: 1.2em;
-    color: #00796b;
+    font-weight: bold;
+    color: black;
     margin: 5px 0;
 }
 .availability, .location {
     font-size: 0.9em;
     color: black;
     margin: 2px 0;
+    margin-bottom: 8px;
 }
 .icon {
     margin-right: 5px;
     color: #3A478D; /* Icon color */
 }
 .description {
-    color: #555;
+    color: #272525;
     line-height: 1.5;
-    margin: 1.5px;
+    margin: 1px;
+}
+.bullets{
+    list-style-type: disc; /* Use solid bullet points */
+    padding-left: 20px; /* Indent the list */
+}
+
+.bullets li {
+    margin-bottom: 8px; /* Space between list items */
+    position: relative;
+    color:#272525; /* Text color for list items */
+    line-height: 1.5; /* Adjust line height for readability */
+}
+.bullets ::before {
+    content: ""; /* Create a custom bullet */
+    position: absolute; /* Position it relative to the list item */
+    left: -20px; /* Adjust position to the left */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center the bullet */
+    width: 10px; /* Size of the bullet */
+    height: 10px; /* Size of the bullet */
+    border-radius: 50%; /* Make it a circle */
+    background-color: #3A478D; /* Bullet color */
 }
 .availability-image {
 width: 100%; /* Adjust the width as needed */
@@ -171,7 +224,7 @@ border-radius: 10px; /* Optional: rounded corners */
 }
 .availability-title {
     font-size: 1.5em;
-    color: #00796b;
+    color: black;
     margin-bottom: 15px;
 }
 .availability-item {
@@ -179,7 +232,7 @@ border-radius: 10px; /* Optional: rounded corners */
 }
 .day-name {
     font-weight: bold;
-    color: #00796b;
+    color: black;
     margin-right: 20px; /* Space between day name and time slots */
 }
 .time-slot {
@@ -202,7 +255,7 @@ border-radius: 10px; /* Optional: rounded corners */
 }
 .pricing-title {
     font-size: 1.5em;
-    color: #00796b;
+    color: black;
     margin-top: 20px; /* Space above pricing */
     margin-bottom: 15px;
 }
@@ -218,7 +271,7 @@ border-radius: 10px; /* Optional: rounded corners */
 }
 .button {
     display: inline-block;
-    background-color: #00796b;
+    background-color: #3A478D;
     color: white;
     padding: 10px 15px;
     border-radius: 5px;
@@ -236,6 +289,8 @@ border-radius: 10px; /* Optional: rounded corners */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding: 2px; /* Adjusted padding for review section */
     margin-top: 20px; /* Space above review section */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #272525;
 }
 .review-header {
     display: flex;
@@ -243,14 +298,17 @@ border-radius: 10px; /* Optional: rounded corners */
     align-items: center;
 }
 .review-title {
-    font-size: 1.5em;
-    color: #00796b;
-    margin-bottom: 15px;
+    font-size: 1.3em;
+    color: black;
+    margin-top: 25px;
+    margin-bottom: 25px;
     margin-left: 20px;
 }
 .review-count {
     font-size: 0.9em;
-    color: #555; /* Color for review count */
+    font-weight: bold;
+    color: black; /* Color for review count */
+    margin-right: 55px;
 }
 .review-item {
     display: flex;
@@ -258,12 +316,14 @@ border-radius: 10px; /* Optional: rounded corners */
     margin-bottom: 10px; /* Space between reviews */
     padding: 10px 0; /* Adjust padding for review items */
     margin-left: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #272525;
 }
 .review-initial {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: #00796b; /* Circle color */
+    background-color: #3A478D; /* Circle color */
     color: white; /* Text color */
     display: flex;
     align-items: center;
@@ -276,7 +336,7 @@ border-radius: 10px; /* Optional: rounded corners */
 }
 .reviewer-name {
     font-weight: bold;
-    color: darkblue;
+    color: black;
 }
 .review-stars {
     color: #ffcc00; /* Star color */

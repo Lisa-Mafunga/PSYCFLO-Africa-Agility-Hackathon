@@ -32,26 +32,30 @@
             </ul>
         </nav>
     </header>
-
     <div class="title">
-        <h1>Rebecca C. James, (PhD)</h1>
+        <div class="title-container">
+            <div class="icon">
+                <a href="/index.html" onclick="goBack(); return false;"><i class="fa-solid fa-arrow-left"></i></a>
+            </div>    
+            <h1>Rebecca C. James (PhD)</h1>
+        </div>
     </div>
     
     <div class="main-container">
         <div class="left-container">
-            <div class="container1 profile-box">
-                <img src="/images2/rebecca.jpg" alt="Rebecca C. James">
+            <div class="container1-profile-box">
+                <img src="E:\Africa-Agility-Hackathon\images2\rebecca.jpg" alt="Rebecca C. James" class="profile-image">
                 <div class="profile-info">
                     <p class="name">Rebecca C. James, PhD</p>
-                    <p class="title">Therapist</p>
-                    <p class="availability"><strong>Online</strong></p>
+                    <p class="title1">Therapist</p>
+                    <p class="availability"><b>Online</b></p>
                     <p class="availability"><i class="fas fa-calendar-alt icon"></i> Mon, Wed, Fri</p>
                     <p class="location"><i class="fas fa-map-marker-alt icon"></i>Lagos, Nigeria</p>
                 </div>
             </div>
 
             <div class="container1">
-                <p class="container-title">Bio</p>
+                <p class="container1-title">Bio</p>
                 <p class="description">
                     Dr. Rebecca C. James is a licensed marriage and family therapist with over 15 years of experience supporting women through abuse recovery, anxiety, and spiritual trauma.
                     <br><br>
@@ -60,9 +64,9 @@
             </div>
 
             <div class="container1">
-                <p class="container-title">Specialization</p>
+                <p class="container1-title">Specialization</p>
                 <p class="description">
-                    <ul>
+                    <ul class="bullets">
                         <li>Religious Trauma & Spiritual Abuse</li>
                         <li>Anxiety and Panic Disorders</li>
                         <li>Sexual and Domestic Abuse in Women</li>
@@ -74,27 +78,27 @@
             </div>
 
             <div class="container1">
-                <p class="container-title">Qualifications</p>
+                <p class="container1-title">Qualifications</p>
                 <p class="description">
-                    <ul>
+                    <ul class="bullets">
                         <li>Master's in Psychology</li>
                     </ul>
                 </p>
             </div>
 
             <div class="container1">
-                <p class="container-title">Practicing Since</p>
+                <p class="container1-title">Practicing Since</p>
                 <p class="description">
-                    <ul>
+                    <ul class="bullets">
                         <li>2010</li>
                     </ul>
                 </p>
             </div>
 
             <div class="container1">
-                <p class="container-title">Session Mode</p>
+                <p class="container1-title">Session Mode</p>
                 <p class="description">
-                    <ul>
+                    <ul class="bullets">
                         <li>Online</li>
                         <li>Webinar/Seminar</li>
                     </ul>
@@ -282,6 +286,12 @@
         </div>
     </footer>
 
+    <script>
+        // Toggle mobile menu
+        document.getElementById("hamburger").addEventListener("click", function () {
+            document.getElementById("nav").classList.toggle("active");
+        });
+    </script>
     <script src="./script.js"></script>
 </body>
 </html>
