@@ -194,7 +194,7 @@ function trackScroll() {
   scrollCount++;
   console.log("Scroll #" + scrollCount);
 
-  if (scrollCount >= 5) {
+  if (scrollCount >= 8) {
     showPopup();
     popupShown = true;
     window.removeEventListener("scroll", trackScroll);

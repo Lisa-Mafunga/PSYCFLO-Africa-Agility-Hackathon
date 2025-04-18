@@ -100,11 +100,23 @@
         .submit-btn:hover {
             background: #1f2937;
         }
+
+        @media (max-width: 400px) {
+            .form-group {
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        .form-group div {
+            width: 100%;
+        } 
+        }
     </style>
 </head>
 <body>
     <div class="form-container">
-            <h2>Let’s get to know you!</h2>
+            <h2>Let&apos;s get to know you!</h2>
             <p>Kindly fill out the form so we can support you better.</p>
             <form id="userForm">
                 <div class="form-group">
@@ -120,8 +132,15 @@
                 <div class="form-group">
                     <div>
                         <label for="country">Country</label>
-                        <select id="country" name="country">
+                        <select id="country" name="country" required>
                             <option value="">Select Country</option>
+                            <option value="1">Nigeria</option>
+                            <option value="2">Ghana</option>
+                            <option value="3">Egypt</option>
+                            <option value="4">South Africa</option>
+                            <option value="5">Kenya</option>
+                            <option value="6">Mali</option>
+                            <option value="7">Morocco</option>
                         </select>
                     </div>
                     <div>

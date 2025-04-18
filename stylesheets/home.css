@@ -1,547 +1,552 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: rgb(233, 233, 233);
+  background-color: rgb(233, 233, 233);
 }
 
 img {
-    width: 100%;
+  width: 100%;
 }
 
 a:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .fa-solid {
-    /* margin-left: 50px; */
-    /* margin-bottom: 50px; */
-    font-size: 20px;
-    color: white;
-    border: 1px solid black;
-    border-radius: 50px;
-    background-color: black;
-    padding: 10px;
+  /* margin-left: 50px; */
+  /* margin-bottom: 50px; */
+  font-size: 20px;
+  color: white;
+  border: 1px solid black;
+  border-radius: 50px;
+  background-color: black;
+  padding: 10px;
 }
 
 .fa-bars {
-    font-size: 20px;
-    color: white;
-    border: 1px solid black;
-    border-radius: 50px;
-    background-color: black;
-    padding: 10px;
+  font-size: 20px;
+  color: white;
+  border: 1px solid black;
+  border-radius: 50px;
+  background-color: black;
+  padding: 10px;
 }
 
 header {
-    display: flex;
-    height: 90px;
-    /* padding: 0.1rem 4rem; */
-    justify-content: space-between;
-    align-items: center;
-    flex-shrink: 0;
-    background: rgba(255, 255, 255, 0.90);
-    box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.05);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
+  display: flex;
+  height: 90px;
+  /* padding: 0.1rem 4rem; */
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.05);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 header .logo {
-    width: 138px;
-    height: 90px;
-    flex-shrink: 0;
-    background: url(../images/logo3.svg) rgba(255, 255, 255, 0.90) 50% / cover no-repeat;
-    /* background-blend-mode: color-dodge; */
+  width: 138px;
+  height: 90px;
+  flex-shrink: 0;
+  background: url(../images/logo3.svg) rgba(255, 255, 255, 0.9) 50% / cover
+    no-repeat;
+  /* background-blend-mode: color-dodge; */
 }
 
 .nav-link {
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-    flex-shrink: 0;
-    list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  flex-shrink: 0;
+  list-style: none;
 }
 
 .nav-link li {
-    display: inline;
-    margin-right: 15px;
+  display: inline;
+  margin-right: 15px;
 }
 
 .nav-link a {
-    color: #000;
-    font-family: "Gayathri", sans-serif;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-decoration: none;
+  color: #000;
+  font-family: "Gayathri", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
 }
 
 .nav-link a.active {
-    border-bottom: 1px solid #3A478D;
-    color: #3A478D;
+  border-bottom: 1px solid #3a478d;
+  color: #3a478d;
 }
 
 .nav-link a:hover {
-    color: #3A478D;
+  color: #3a478d;
 }
 
 .hamburger-menu {
-    display: none;
-    font-size: 1.8em;
-    cursor: pointer;
-    color: #3A478D;
+  display: none;
+  font-size: 1.8em;
+  cursor: pointer;
+  color: #3a478d;
 }
 
 main {
-    margin-top: 90px;
-    /* Add this - matches navbar height */
+  margin-top: 90px;
+  /* Add this - matches navbar height */
 }
 
 .heroSection {
-    margin-block: 20px;
-    background-image: url(../images2/image\ copy.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 120vh;
-    /* padding-top: 90px; */
+  margin-block: 20px;
+  background-image: url(../images2/image\ copy.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 120vh;
+  /* padding-top: 90px; */
 }
 
 .icon {
-    margin-left: 80px;
-    width: 55px;
-    height: 44px;
-    color: white;
-    filter: drop-shadow(4px 0px 4px rgba(0, 0, 0, 0.25));
+  margin-left: 80px;
+  width: 55px;
+  height: 44px;
+  color: white;
+  filter: drop-shadow(4px 0px 4px rgba(0, 0, 0, 0.25));
 }
 
 .icon .fa-arrow-left {
-    margin-left: 10px;
-    margin-top: 30px;
-    background-color: #3A478D;
+  margin-left: 10px;
+  margin-top: 30px;
+  background-color: #3a478d;
 }
 
 .hero-sec {
-    height: 300px;
-    width: 813px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 20px;
-    margin-top: 30px;
-    color: white;
-    font-size: 30px;
-    font-weight: 900;
-    font-family: "Montserrat", sans-serif;
+  height: 300px;
+  width: 813px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+  margin-top: 30px;
+  color: white;
+  font-size: 30px;
+  font-weight: 900;
+  font-family: "Montserrat", sans-serif;
 }
 
 .hero-sec p {
-    font-weight: 200;
+  font-weight: 200;
 }
 
 .first-sec {
-    width: 50%;
-    margin-inline: auto;
-    margin-block: 40px;
-    /* border: 1px solid black; */
-    text-align: center;
-    padding: 5px;
-    font-family: "Montserrat", sans-serif;
+  width: 50%;
+  margin-inline: auto;
+  margin-block: 40px;
+  /* border: 1px solid black; */
+  text-align: center;
+  padding: 5px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .first-sec h5 {
-    font-weight: 550;
-    font-size: 30px;
+  font-weight: 550;
+  font-size: 30px;
 }
 
 .first-sec p {
-    margin-top: 3px;
-    font-size: 12px;
-    font-weight: 200;
+  margin-top: 3px;
+  font-size: 12px;
+  font-weight: 200;
 }
 
 .talktous-parent {
-    height: 110vh;
-    margin-inline: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 40px;
-    /* background-color: rgb(245, 245, 245); */
+  height: 110vh;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  /* background-color: rgb(245, 245, 245); */
 }
 
 .talktous-container {
-    height: 90vh;
-    width: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 95px;
-
+  height: 90vh;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 95px;
 }
 
 .talktous-image {
-    height: 90%;
-    width: 45%;
+  height: 90%;
+  width: 45%;
 }
 
 .talktous-image img {
-    height: 100%;
-    width: 100%;
-    border-radius: 8px;
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
 }
 
 .talktous-div-parent {
-    height: 90%;
-    width: 45%;
-    font-family: "Montserrat", sans-serif;
-    /* padding: 20px; */
+  height: 90%;
+  width: 45%;
+  font-family: "Montserrat", sans-serif;
+  /* padding: 20px; */
 }
 
 .talktous-div {
-    margin-bottom: 20px;
-    line-height: 26px;
+  margin-bottom: 20px;
+  line-height: 26px;
 }
 
 .talktous-div h6 {
-    font-size: 16px;
-    margin-bottom: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 
 .talktous-div p {
-    line-height: 30px;
+  line-height: 30px;
 }
 
 .talktous-button {
-    width: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* border: 1px solid black; */
+  display: flex;
+  margin-top: 20px;
+  width: 30%;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  /* border: 1px solid black; */
 }
 
 .talktous-button button {
-    width: 100%;
-    background-color: rgb(58, 58, 155);
-    color: white;
-    font-size: 20px;
-    padding-inline: 100px;
-    padding-block: 13px;
-    border-radius: 10px;
-    margin-top: 15px;
-    cursor: pointer;
-    border: none;
+  width: 100%;
+  background-color: rgb(58, 58, 155);
+  color: white;
+  font-size: 18px;
+  padding-inline: 60px;
+  padding-block: 13px;
+  border-radius: 10px;
+  margin-top: 15px;
+  cursor: pointer;
+  border: none;
+}
+
+.talktous-button button:hover {
+    background-color: #2d3c93;
 }
 
 .third-sec {
-    height: 35vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    margin-inline: auto;
-    margin-bottom: 30px;
-    text-align: center;
-    font-family: "Montserrat", sans-serif;
-    padding: 5px;
+  height: 35vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin-inline: auto;
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  padding: 5px;
 }
 
 .third-sec h5 {
-    font-weight: 550;
-    font-size: 30px;
+  font-weight: 550;
+  font-size: 30px;
 }
 
 .third-sec p {
-    margin-top: 3px;
-    font-size: 18px;
-    font-weight: 300;
+  margin-top: 3px;
+  font-size: 18px;
+  font-weight: 300;
 }
 
 .other-services-parent {
-    height: 765px;
-    margin-inline: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 95px;
-    font-family: "Montserrat", sans-serif;
-    margin-bottom: 50px;
-    /* background-color: rgb(245, 245, 245); */
+  height: 765px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 95px;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 50px;
+  /* background-color: rgb(245, 245, 245); */
 }
 
 .other-services-container {
-    height: 90vh;
-    width: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 95px;
-
+  height: 90vh;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 95px;
 }
 
 .other-services-image img {
-    height: 100%;
-    width: 100%;
-    border-radius: 8px;
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
 }
 
 .other-services-image {
-    height: 100%;
-    width: 50%;
+  height: 100%;
+  width: 50%;
 }
 
 .other-services-div-parent {
-    font-family: "Montserrat", sans-serif;
-    height: 60%;
-    width: 50%;
+  font-family: "Montserrat", sans-serif;
+  height: 60%;
+  width: 50%;
 }
 
 .other-services-div h6 {
-    font-weight: 700;
-    font-size: 40px;
-    margin-bottom: 15px;
+  font-weight: 700;
+  font-size: 40px;
+  margin-bottom: 15px;
 }
 
 .other-services-div p {
-    line-height: 30px;
-    font-weight: 400;
+  line-height: 30px;
+  font-weight: 400;
 }
 
 .other-services-button {
-    width: 100%;
-    margin-top: 35px;
+  width: 100%;
+  margin-top: 35px;
 }
 
 .other-services-button button {
-    background-color: rgb(58, 58, 155);
-    color: white;
-    padding-inline: 30px;
-    padding-block: 12px;
-    border-radius: 10px;
-    cursor: pointer;
-    border: none;
-    font-size: 15px;
-    font-weight: 700;
+  background-color: rgb(58, 58, 155);
+  color: white;
+  padding-inline: 30px;
+  padding-block: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  font-size: 15px;
+  font-weight: 700;
 }
 
 .other-services-button-2 {
-    width: 100%;
-    margin-top: 35px;
+  width: 100%;
+  margin-top: 35px;
 }
 
 .other-services-button-2 button {
-    background-color: white;
-    color: blue;
-    padding-inline: 30px;
-    padding-block: 12px;
-    border-radius: 10px;
-    cursor: pointer;
-    border: none;
-    font-size: 15px;
-    font-weight: 700;
-    border: 1px solid blue;
+  background-color: white;
+  color: blue;
+  padding-inline: 30px;
+  padding-block: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  font-size: 15px;
+  font-weight: 700;
+  border: 1px solid blue;
 }
 
 /* Responsive styles for all devices (except footer) */
 @media (max-width: 1200px) {
-    .hero-sec {
-        width: 700px;
-    }
+  .hero-sec {
+    width: 700px;
+  }
 
-    .talktous-container,
-    .other-services-container {
-        gap: 50px;
-    }
+  .talktous-container,
+  .other-services-container {
+    gap: 50px;
+  }
 }
 
 @media (max-width: 992px) {
-    .hero-sec {
-        width: 600px;
-        font-size: 25px;
-    }
+  .hero-sec {
+    width: 600px;
+    font-size: 25px;
+  }
 
-    .first-sec h5,
-    .third-sec h5 {
-        font-size: 25px;
-    }
+  .first-sec h5,
+  .third-sec h5 {
+    font-size: 25px;
+  }
 
-    .talktous-container,
-    .other-services-container {
-        flex-direction: column;
-        height: auto;
-        margin-top: 30px;
-    }
+  .talktous-container,
+  .other-services-container {
+    flex-direction: column;
+    height: auto;
+    margin-top: 30px;
+  }
 
-    .talktous-image,
-    .talktous-div-parent,
-    .other-services-image,
-    .other-services-div-parent {
-        width: 80%;
-    }
+  .talktous-image,
+  .talktous-div-parent,
+  .other-services-image,
+  .other-services-div-parent {
+    width: 80%;
+  }
 
-    .talktous-button {
-        width: 50%;
-    }
+  .talktous-button {
+    width: 50%;
+  }
 
-    .other-services-parent {
-        height: auto;
-        padding: 50px 0;
-    }
+  .other-services-parent {
+    height: auto;
+    padding: 50px 0;
+  }
 }
 
 @media (max-width: 768px) {
-    .hamburger-menu {
-        display: block;
-        /* margin: 2px 0 auto; */
-        padding: 5px 10px;
-        font-size: 34px;
-    }
+  .hamburger-menu {
+    display: block;
+    /* margin: 2px 0 auto; */
+    padding: 5px 10px;
+    font-size: 34px;
+  }
 
-    header {
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        height: 4rem;
-        /* max-width: 600px; */
-    }
+  header {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 4rem;
+    /* max-width: 600px; */
+  }
 
-    header .logo {
-        width: 120px;
-        height: 60px;
-    }
+  header .logo {
+    width: 120px;
+    height: 60px;
+  }
 
-    .menu {
-        flex-direction: column;
-        position: absolute;
-        top: 68px;
-        left: 0;
-        width: 100%;
-        background: #3A478D;
-        color: white;
-        text-align: center;
-        padding: 10px 0;
-        display: none;
-    }
+  .menu {
+    flex-direction: column;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    width: 100%;
+    background: #3a478d;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    display: none;
+  }
 
-    .nav-link a {
-        color: white;
-    }
+  .nav-link a {
+    color: white;
+  }
 
-    .nav-link {
-        flex-direction: column;
-        gap: 15px;
-    }
+  .nav-link {
+    flex-direction: column;
+    gap: 15px;
+  }
 
-    .hamburger-menu {
-        display: block;
-    }
+  .hamburger-menu {
+    display: block;
+  }
 
-    /* Show menu when active */
-    .menu.active {
-        display: flex;
-    }
+  /* Show menu when active */
+  .menu.active {
+    display: flex;
+  }
 
-    .hero-sec {
-        width: 90%;
-        margin-left: 0;
-        text-align: center;
-    }
+  .hero-sec {
+    width: 90%;
+    margin-left: 0;
+    text-align: center;
+  }
 
-    .icon img {
-        margin-left: 30px;
-    }
+  .icon img {
+    margin-left: 30px;
+  }
 
-    .first-sec {
-        width: 80%;
-    }
+  .first-sec {
+    width: 80%;
+  }
 
-    .talktous-parent {
-        height: auto;
-        padding: 30px 0;
-    }
+  .talktous-parent {
+    height: auto;
+    padding: 30px 0;
+  }
 
-    .talktous-button {
-        width: 70%;
-    }
+  .talktous-button {
+    width: 70%;
+  }
 
-    .third-sec {
-        height: auto;
-        padding: 30px 0;
-    }
+  .third-sec {
+    height: auto;
+    padding: 30px 0;
+  }
 }
 
 @media (max-width: 576px) {
-    .heroSection {
-        height: 70vh;
-    }
+  .heroSection {
+    height: 70vh;
+  }
 
-    .hero-sec {
-        font-size: 20px;
-    }
+  .hero-sec {
+    font-size: 20px;
+  }
 
-    .hero-sec h1 {
-        font-size: 1.8em;
-    }
+  .hero-sec h1 {
+    font-size: 1.8em;
+  }
 
-    .first-sec h5,
-    .third-sec h5 {
-        font-size: 20px;
-    }
+  .first-sec h5,
+  .third-sec h5 {
+    font-size: 20px;
+  }
 
-    .talktous-button,
-    .other-services-button,
-    .other-services-button-2 {
-        width: 80%;
-    }
+  .talktous-button,
+  .other-services-button,
+  .other-services-button-2 {
+    width: 80%;
+  }
 
-    .talktous-button button {
-        padding-inline: 50px;
-        font-size: 16px;
-    }
+  .talktous-button button {
+    padding-inline: 50px;
+    font-size: 16px;
+  }
 
-    .other-services-div h6 {
-        font-size: 30px;
-    }
+  .other-services-div h6 {
+    font-size: 30px;
+  }
 }
 
 @media (max-width: 400px) {
-    header {
-        height: 4rem;
-        width: 100%;
-        align-items: center;
-        gap: 30px;
-        justify-content: space-between;
-    }
+  header {
+    height: 4rem;
+    width: 100%;
+    align-items: center;
+    gap: 30px;
+    justify-content: space-between;
+  }
 
-    /* .hamburger-menu {
+  /* .hamburger-menu {
         margin: 40px auto 0 auto;
     } */
 
-    .hero-sec {
-        font-size: 18px;
-    }
+  .hero-sec {
+    font-size: 18px;
+  }
 
-    .icon img {
-        width: 40px;
-        height: 40px;
-        margin-left: 20px;
-    }
+  .icon img {
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+  }
 
-    .talktous-button button {
-        font-size: 14px;
-    }
+  .talktous-button button {
+    font-size: 14px;
+  }
 
-    .other-services-div h6 {
-        font-size: 25px;
-    }
+  .other-services-div h6 {
+    font-size: 25px;
+  }
 }
