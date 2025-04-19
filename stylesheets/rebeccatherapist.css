@@ -406,11 +406,59 @@ header .logo {
     color: #272525;
 }
 
-.review-initial {
+.review-initial1 {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: #3A478D; /* Circle color */
+    background-color: rgba(35, 128, 35, 0.822); /* Circle color */
+    color: white; /* Text color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em; /* Initial font size */
+    margin-right: 10px; /* Space between circle and text */
+}
+.review-initial2 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(153, 40, 40); /* Circle color */
+    color: white; /* Text color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em; /* Initial font size */
+    margin-right: 10px; /* Space between circle and text */
+}
+.review-initial3 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: purple; /* Circle color */
+    color: white; /* Text color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em; /* Initial font size */
+    margin-right: 10px; /* Space between circle and text */
+}
+.review-initial4 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 88); /* Circle color */
+    color: white; /* Text color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em; /* Initial font size */
+    margin-right: 10px; /* Space between circle and text */
+}
+.review-initial5 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(2, 56, 2); /* Circle color */
     color: white; /* Text color */
     display: flex;
     align-items: center;
