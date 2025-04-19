@@ -1,0 +1,142 @@
+.fa-solid {
+    margin-left: 50px;
+    margin-bottom: 50px;
+    font-size: 20px;
+    color: white;
+    border: 1px solid black;
+    border-radius: 50px;
+    background-color: black;
+    padding: 10px;
+}
+
+.fa-bars {
+    font-size: 20px;
+    color: white;
+    border: 1px solid black;
+    border-radius: 50px;
+    background-color: black;
+    padding: 10px;
+}
+
+header {
+    display: flex;
+    height: 90px;
+    padding: 0.1rem 4rem;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    background: rgba(255, 255, 255, 0.90);
+    box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    width: 138px;
+    height: 90px;
+    flex-shrink: 0;
+    background: url(E:\Africa-Agility-Hackathon\images\logo.jpg) rgba(255, 255, 255, 0.90) 50% / cover no-repeat;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    flex-shrink: 0;
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+}
+
+.nav-link li {
+    display: inline;
+    margin-right: 15px;
+}
+
+.nav-link a {
+    color: #000;
+    font-family: "Gayathri", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+}
+
+.nav-link a.active {
+    border-bottom: 1px solid #3A478D;
+    color: #3A478D;
+}
+
+.nav-link a:hover {
+    color: #3A478D;
+}
+
+.hamburger-menu {
+    display: none;
+    font-size: 1.8em;
+    cursor: pointer;
+    color: #3A478D;
+}
+        .form{
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%; /* Full viewport height */
+        }
+
+        .main {
+            text-align: center; /* Center text */
+        }
+
+        .questions-container {
+            max-width: 900px; /* Set a smaller width for the questions container */
+            margin: 20px auto; /* Center the container */
+            background-color: white;
+            border-radius: 15px; /* Round corners */
+            padding: 20px; /* Add padding */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow */
+            margin-top: 60px;
+        }
+
+        input[type="checkbox"], input[type="radio"] {
+            accent-color: #3A478D; /* Change checkbox and radio button color to blue */
+            margin-right: 10px; /* Space between input and label text */
+        }
+
+        label {
+            display: block; /* Stack labels vertically */
+            margin-bottom: 10px; /* Space between labels */
+            text-align: justify;
+            margin-left: 20px;
+
+        }
+        p{
+           display: block; /* Stack labels vertically */
+           margin-bottom: 10px; /* Space between labels */
+           text-align: justify;
+           margin: 5px 0;
+           margin-left: 20px;
+        }
+
+        .submit-button {
+            background-color: #3A478D;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 1em;
+            width: 100%; /* Make button full width */
+            margin-top: 20px; /* Space above the button */
+        }
+
+        .submit-button:hover {
+            background-color: #313f8f; /* Darker shade on hover */
+        }
