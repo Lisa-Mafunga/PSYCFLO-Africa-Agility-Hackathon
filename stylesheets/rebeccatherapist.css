@@ -124,7 +124,7 @@ body {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding: 35px; /* Reduced padding for consistency */
     width: 600px; /* Fixed width for right container */
-    flex: 1; /* Take up smaller space */
+    flex: 1.5; /* Take up smaller space */
     display: flex; /* Use flexbox for vertical alignment */
     flex-direction: column; /* Stack items vertically */
     justify-content: flex-start; /* Align items to the top */
@@ -253,32 +253,75 @@ border-radius: 10px; /* Optional: rounded corners */
     font-size: 0.9em; /* Adjust font size */
     border: 1px solid #00796b; /* Circle border */
 }
-.pricing-title {
-    font-size: 1.5em;
-    color: black;
-    margin-top: 20px; /* Space above pricing */
-    margin-bottom: 15px;
+.pricing-container {
+    display: flex;
+    flex-direction: column; /* Stack pricing plans vertically */
+    gap: 20px; /* Space between pricing plans */
+    width: 100%; /* Full width */
 }
+
 .pricing-plan {
-    background: #f0f0f0;
-    border-radius: 5px;
-    padding: 10px;
-    margin-bottom: 10px; /* Space between pricing plans */
+    background: white; /* Background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    padding: 20px; /* Padding around content */
+    position: relative; /* For positioning the icon */
 }
+
+.icon-container {
+    position: absolute; /* Position in the top right corner */
+    top: 10px; /* Adjust top position */
+    right: 10px; /* Adjust right position */
+}
+
+.icon-background {
+    background-color: rgba(58, 71, 141, 0.1); /* Light blue background */
+    border-radius: 50%; /* Circular background */
+    width: 60px; /* Size of the circle */
+    height: 60px; /* Size of the circle */
+    display: flex; /* Center icons */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    position: relative; /* For positioning the icons */
+}
+
+.icon-background i {
+    font-size: 1.5em; /* Size of the icons */
+    color: #3A478D; /* Color of the icons */
+    margin: 0 5px; /* Space between icons */
+    text-shadow: none; /* Remove any text shadow */
+    outline: none; /* Remove any outline */
+}
+
 .pricing-amount {
-    font-size: 1.2em;
-    color: darkblue;
+    font-size: 1.5em; /* Size of the pricing amount */
+    font-weight: bold; /* Bold text */
+    color: #3A478D; /* Color for pricing */
+    margin-bottom: 10px; /* Space below amount */
 }
+
+.plan-title {
+    font-size: 1.2em; /* Size for the plan title */
+    margin-bottom: 5px; /* Space below title */
+}
+
+.plan-details {
+    font-size: 0.9em; /* Size for details */
+    color: #555; /* Dark gray for details */
+    margin-bottom: 15px; /* Space below details */
+}
+
 .button {
     display: inline-block;
-    background-color: #3A478D;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
-    text-decoration: none;
+    background-color: #3A478D; /* Button background color */
+    color: white; /* Button text color */
+    padding: 10px 15px; /* Button padding */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* No underline */
     text-align: center;
-    margin-top: 10px;
+    transition: background-color 0.3s; /* Smooth transition */
 }
+
 .button:hover {
     background-color: #005f54; /* Darker shade on hover */
 }
