@@ -160,6 +160,7 @@ header .logo {
     height: 110px;
     margin-right: 50px; /* Space between image and text */
     margin-bottom: 20px;
+    object-fit: cover;
 }
 
 .profile-info {
