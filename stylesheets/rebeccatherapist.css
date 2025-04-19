@@ -363,7 +363,8 @@ header .logo {
     border: none; /* Remove default border */
     border-top: 1px solid #e0e0e0; /* Light gray color for the line */
     margin: 0; /* Remove margins */
-    padding: 10px 0; /* Equal space above and below the line */
+    padding: 6px 0; /* Equal space above and below the line */
     width: calc(100% - 20px); /* Adjust width for padding */
     margin-right: 10px; /* Right margin for equal spacing */
+    margin-top: 10px;
 }
