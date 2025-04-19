@@ -46,9 +46,9 @@ header .logo {
     align-items: center;
     gap: 3rem;
     flex-shrink: 0;
-    list-style: none; /* Ensure no bullets are shown */
-    padding: 0; /* Remove any default padding */
-    margin: 0; /* Remove any default margin */
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
 }
 
 .nav-link li {
@@ -87,7 +87,7 @@ header .logo {
     background-color: white;
     margin: 20px;
     padding: 80px;
-    display: flex; /* Use flexbox for layout */
+    display: flex; 
     flex-direction: column; /* Stack title vertically above containers */
 }
 
