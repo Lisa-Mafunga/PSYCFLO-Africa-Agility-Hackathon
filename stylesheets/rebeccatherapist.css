@@ -39,7 +39,6 @@ header .logo {
     height: 90px;
     flex-shrink: 0;
     background: url(E:\Africa-Agility-Hackathon\images\logo.jpg) rgba(255, 255, 255, 0.90) 50% / cover no-repeat;
-    /* background-blend-mode: color-dodge; */
 }
 
 .nav-link {
@@ -83,16 +82,15 @@ header .logo {
     color: #3A478D;
 }
 
-
-
-body {
+.section {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: rgb(75, 224, 217);
+    background-color: white;
     margin: 20px;
     padding: 80px;
     display: flex; /* Use flexbox for layout */
     flex-direction: column; /* Stack title vertically above containers */
 }
+
 .title-container {
     display: flex; /* Use flexbox for layout */
     align-items: center; /* Center items vertically */
@@ -106,18 +104,20 @@ body {
     width: 100%; /* Full width */
     margin-bottom: 20px; /* Space below title */
 }
+
 .main-container {
     display: flex; /* Use flexbox for left and right containers */
     width: 100%; /* Full width of the page */
 }
+
 .left-container {
     display: flex;
     flex-direction: column; /* Stack items vertically */
     margin-right: 10px; /* Space between left and right containers */
     flex: 3; /* Take up larger space */
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: #272525;
 }
+
 .right-container {
     background: white;
     border-radius: 10px;
@@ -129,6 +129,7 @@ body {
     flex-direction: column; /* Stack items vertically */
     justify-content: flex-start; /* Align items to the top */
 }
+
 .container1 {
     background: white;
     border-radius: 10px;
@@ -140,6 +141,7 @@ body {
     flex-direction: column; /* Stack items vertically */
     justify-content: flex-start; /* Align items to the top */
 }
+
 .container1-profile-box {
     display: flex;
     align-items: center;
@@ -163,6 +165,7 @@ body {
 .profile-info {
     flex: 1; /* Allow text to fill available space */
 }
+
 .name {
     font-size: 1.2em;
     font-weight: bold;
@@ -170,31 +173,37 @@ body {
     margin: 0;
     margin-bottom: 5px;
 }
+
 .title1 {
     width: 100%; /* Full width */
 }
+
 .title, .container1-title {
     font-size: 1.2em;
     font-weight: bold;
     color: black;
     margin: 5px 0;
 }
+
 .availability, .location {
     font-size: 0.9em;
     color: black;
     margin: 2px 0;
     margin-bottom: 8px;
 }
+
 .icon {
     margin-right: 5px;
     color: #3A478D; /* Icon color */
 }
+
 .description {
     color: #272525;
     line-height: 1.5;
     margin: 1px;
 }
-.bullets{
+
+.bullets {
     list-style-type: disc; /* Use solid bullet points */
     padding-left: 20px; /* Indent the list */
 }
@@ -202,10 +211,11 @@ body {
 .bullets li {
     margin-bottom: 8px; /* Space between list items */
     position: relative;
-    color:#272525; /* Text color for list items */
+    color: #272525; /* Text color for list items */
     line-height: 1.5; /* Adjust line height for readability */
 }
-.bullets ::before {
+
+.bullets li::before {
     content: ""; /* Create a custom bullet */
     position: absolute; /* Position it relative to the list item */
     left: -20px; /* Adjust position to the left */
@@ -216,115 +226,73 @@ body {
     border-radius: 50%; /* Make it a circle */
     background-color: #3A478D; /* Bullet color */
 }
+
 .availability-image {
-width: 100%; /* Adjust the width as needed */
-height: auto; /* Maintain aspect ratio */
-margin-bottom: 10px; /* Space below the image */
-border-radius: 10px; /* Optional: rounded corners */
+    width: 100%; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space below the image */
+    border-radius: 10px; /* Optional: rounded corners */
 }
+
 .availability-title {
     font-size: 1.5em;
     color: black;
     margin-bottom: 15px;
 }
+
+.availability-list {
+    display: flex; /* Align items in a row */
+    gap: 45px; /* Space between each item */
+    align-items: center; /* Center items vertically */
+}
+
 .availability-item {
-    margin-bottom: 15px; /* Space between days */
+    display: flex; /* Flex for bullet and text */
+    align-items: center; /* Center items vertically */
 }
-.day-name {
-    font-weight: bold;
+
+.bullet {
+    display: inline-block; /* Inline block for the bullet */
+    background-color: #3A478D; /* Color for the bullet */
+    border-radius: 50%; /* Circular bullet */
+    width: 10px; /* Size of the bullet */
+    height: 10px; /* Size of the bullet */
+    margin-right: 5px; /* Space between bullet and text */
+}
+.pricing-title {
+    font-size: 1.5em;
     color: black;
-    margin-right: 20px; /* Space between day name and time slots */
-}
-.time-slot {
-    display: flex;
-    align-items: center;
-    margin-top: 5px; /* Space above time slots */
-}
-.time-circle {
-    width: 60px; /* Circle size */
-    height: 30px; /* Circle height */
-    border-radius: 15px; /* Make it a circle */
-    background-color: #f0f0f0; /* Circle background color */
-    color: darkblue; /* Text color */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 5px; /* Space between circle and time text */
-    font-size: 0.9em; /* Adjust font size */
-    border: 1px solid #00796b; /* Circle border */
-}
-.pricing-container {
-    display: flex;
-    flex-direction: column; /* Stack pricing plans vertically */
-    gap: 20px; /* Space between pricing plans */
-    width: 100%; /* Full width */
+    margin-top: 20px; /* Space above pricing */
+    margin-bottom: 15px;
 }
 
 .pricing-plan {
-    background: white; /* Background color */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
-    padding: 20px; /* Padding around content */
-    position: relative; /* For positioning the icon */
-}
-
-.icon-container {
-    position: absolute; /* Position in the top right corner */
-    top: 10px; /* Adjust top position */
-    right: 10px; /* Adjust right position */
-}
-
-.icon-background {
-    background-color: rgba(58, 71, 141, 0.1); /* Light blue background */
-    border-radius: 50%; /* Circular background */
-    width: 60px; /* Size of the circle */
-    height: 60px; /* Size of the circle */
-    display: flex; /* Center icons */
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
-    position: relative; /* For positioning the icons */
-}
-
-.icon-background i {
-    font-size: 1.5em; /* Size of the icons */
-    color: #3A478D; /* Color of the icons */
-    margin: 0 5px; /* Space between icons */
-    text-shadow: none; /* Remove any text shadow */
-    outline: none; /* Remove any outline */
+    background: #f0f0f0;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px; /* Space between pricing plans */
 }
 
 .pricing-amount {
-    font-size: 1.5em; /* Size of the pricing amount */
-    font-weight: bold; /* Bold text */
-    color: #3A478D; /* Color for pricing */
-    margin-bottom: 10px; /* Space below amount */
-}
-
-.plan-title {
-    font-size: 1.2em; /* Size for the plan title */
-    margin-bottom: 5px; /* Space below title */
-}
-
-.plan-details {
-    font-size: 0.9em; /* Size for details */
-    color: #555; /* Dark gray for details */
-    margin-bottom: 15px; /* Space below details */
+    font-size: 1.2em;
+    color: darkblue;
 }
 
 .button {
     display: inline-block;
-    background-color: #3A478D; /* Button background color */
-    color: white; /* Button text color */
-    padding: 10px 15px; /* Button padding */
-    border-radius: 5px; /* Rounded corners */
-    text-decoration: none; /* No underline */
+    background-color: #3A478D;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
     text-align: center;
-    transition: background-color 0.3s; /* Smooth transition */
+    margin-top: 10px;
 }
 
 .button:hover {
     background-color: #005f54; /* Darker shade on hover */
 }
+
 .review-section {
     width: 100%; /* Full width */
     background: white;
@@ -332,14 +300,15 @@ border-radius: 10px; /* Optional: rounded corners */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding: 2px; /* Adjusted padding for review section */
     margin-top: 20px; /* Space above review section */
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: #272525;
 }
+
 .review-header {
     display: flex;
     justify-content: space-between; /* Space between title and review count */
     align-items: center;
 }
+
 .review-title {
     font-size: 1.3em;
     color: black;
@@ -347,21 +316,23 @@ border-radius: 10px; /* Optional: rounded corners */
     margin-bottom: 25px;
     margin-left: 20px;
 }
+
 .review-count {
     font-size: 0.9em;
     font-weight: bold;
     color: black; /* Color for review count */
     margin-right: 55px;
 }
+
 .review-item {
     display: flex;
     align-items: center;
     margin-bottom: 10px; /* Space between reviews */
     padding: 10px 0; /* Adjust padding for review items */
     margin-left: 20px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: #272525;
 }
+
 .review-initial {
     width: 50px;
     height: 50px;
@@ -374,22 +345,25 @@ border-radius: 10px; /* Optional: rounded corners */
     font-size: 1.5em; /* Initial font size */
     margin-right: 10px; /* Space between circle and text */
 }
+
 .review-content {
     flex: 1; /* Allow text to fill available space */
 }
+
 .reviewer-name {
     font-weight: bold;
     color: black;
 }
+
 .review-stars {
     color: #ffcc00; /* Star color */
 }
+
 .review-divider {
     border: none; /* Remove default border */
     border-top: 1px solid #e0e0e0; /* Light gray color for the line */
     margin: 0; /* Remove margins */
     padding: 10px 0; /* Equal space above and below the line */
-    width: calc(100% - 20px); /* Adjust width for padding *
+    width: calc(100% - 20px); /* Adjust width for padding */
     margin-right: 10px; /* Right margin for equal spacing */
 }
-
