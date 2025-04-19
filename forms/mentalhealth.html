@@ -1,169 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>User Information Form</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-        body {
-            background-color: #f3f4f6;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5); /* dark background */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999; /* Ensure overlay is on top */
-        }
-        .form-container {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 500px;
-            position: relative;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-        }
-        .close-btn {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: none;
-            border: none;
-            font-size: 18px;
-            cursor: pointer;
-            color: #777;
-        }
-        .close-btn:hover {
-            color: black;
-        }
-        h2 {
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-        p {
-            font-size: 14px;
-            color: #555;
-            margin-bottom: 20px;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+      body {
+        background-color: #f3f4f6;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); /* dark background */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999; /* Ensure overlay is on top */
+      }
+      .form-container {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 500px;
+        position: relative;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+      }
+      .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: none;
+        border: none;
+        font-size: 18px;
+        cursor: pointer;
+        color: #777;
+      }
+      .close-btn:hover {
+        color: black;
+      }
+      h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 14px;
+        color: #555;
+        margin-bottom: 20px;
+      }
+      .form-group {
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+        margin-bottom: 15px;
+      }
+      .form-group div {
+        width: 48%;
+      }
+      label {
+        display: block;
+        font-size: 14px;
+        text-align: left;
+        margin-bottom: 5px;
+      }
+      input,
+      select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #e5e7eb;
+      }
+      .submit-btn {
+        width: 100%;
+        padding: 12px;
+        background: #374151;
+        color: white;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+      .submit-btn:hover {
+        background: #1f2937;
+      }
+
+      .error {
+        color: red;
+        font-size: 0.85rem;
+      }
+
+      @media (max-width: 400px) {
         .form-group {
-            display: flex;
-            justify-content: space-between;
-            gap: 15px;
-            margin-bottom: 15px;
+          flex-direction: column;
+          justify-content: space-between;
+          gap: 15px;
+          margin-bottom: 15px;
         }
         .form-group div {
-            width: 48%;
+          width: 100%;
         }
-        label {
-            display: block;
-            font-size: 14px;
-            text-align: left;
-            margin-bottom: 5px;
-        }
-        input, select {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #e5e7eb;
-        }
-        .submit-btn {
-            width: 100%;
-            padding: 12px;
-            background: #374151;
-            color: white;
-            font-size: 16px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-        .submit-btn:hover {
-            background: #1f2937;
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="form-container">
-            <h2>Let’s get to know you!</h2>
-            <p>Kindly fill out the form so we can support you better.</p>
-            <form id="userForm">
-                <div class="form-group">
-                    <div>
-                        <label for="full-name">Full Name</label>
-                        <input type="text" id="full-name" name="full-name" required> 
-                    </div>
-                    <div>
-                        <label for="phone-number">Phone Number</label>
-                        <input type="text" id="phone-number" name="phone-number" required>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div>
-                        <label for="country">Country</label>
-                        <select id="country" name="country">
-                            <option value="">Select Country</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="email">E-mail (Optional)</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div>
-                        <label for="state">State</label>
-                        <input type="text" id="state" name="state" required>
-                    </div>
-                    <div>
-                        <label for="local-gov">Local Government</label>
-                        <input type="text" id="local-gov" name="local-gov" required>
-                    </div>
-                </div>
-                <!-- <button type="submit" class="submit-btn">Submit</button> -->
-                <button 
-                type="button" 
-                class="submit-btn" 
-                onclick="window.location.href='../pages/home.html'">
-                Submit
-                </button>
-            </form>
+      <h2>Let&apos;s get to know you!</h2>
+      <p>Kindly fill out the form so we can support you better.</p>
+      <form id="userForm">
+        <div class="form-group">
+          <div>
+            <label for="full-name">Full Name</label>
+            <input
+              type="text"
+              id="full-name"
+              name="full-name"
+              required
+              minlength="3"
+            />
+            <span class="error" id="usernameError"></span><br /><br />
+          </div>
+          <div>
+            <label for="phone-number">Phone Number</label>
+            <input
+              type="text"
+              id="phone-number"
+              name="phone-number"
+              required
+              pattern="^\d{10,15}$"
+            />
+            <span class="error" id="phoneError"></span><br /><br />
+          </div>
+        </div>
+        <div class="form-group">
+          <div>
+            <label for="country">Country</label>
+            <select id="country" name="country" required>
+              <option value="">Select Country</option>
+              <option value="1">Nigeria</option>
+              <option value="2">Ghana</option>
+              <option value="3">Egypt</option>
+              <option value="4">South Africa</option>
+              <option value="5">Kenya</option>
+              <option value="6">Mali</option>
+              <option value="7">Morocco</option>
+            </select>
+            <span class="error" id="countryError"></span>
+          </div>
+          <div>
+            <label for="email">E-mail (Optional)</label>
+            <input type="email" id="email" name="email" required />
+            <span class="error" id="emailError"></span><br /><br />
+          </div>
+        </div>
+        <div class="form-group">
+          <div>
+            <label for="state">State</label>
+            <input type="text" id="state" name="state" required />
+            <span class="error" id="stateError"></span>
+          </div>
+          <div>
+            <label for="local-gov">Local Government</label>
+            <input type="text" id="local-gov" name="local-gov" required />]
+            <span class="error" id="lgError"></span>
+          </div>
+        </div>
+        <!-- <button type="submit" class="submit-btn">Submit</button> -->
+        <button
+          type="button"
+          class="submit-btn"
+          onclick="window.location.href='../pages/home.html'"
+        >
+          Submit
+        </button>
+      </form>
     </div>
-    <!-- <script>
-        window.addEventListener("DOMContentLoaded", () => {
-            const form = document.getElementById("userForm");
-            if (form) {
-                form.addEventListener("submit", function (e) {
-                    e.preventDefault();
-                    console.log("Form submitted"); // test log
-                    window.location.href = "../pages/menstrual.html";
-                });
-            } else {
-                console.error("Form not found");
-            }
-        });
-
-    </script> -->
-    
-    
-</body>
+    <script src="../javascript/login.js"></script>
+  </body>
 </html>

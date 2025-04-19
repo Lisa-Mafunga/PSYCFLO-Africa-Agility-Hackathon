@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
 // menu
 
 document.getElementById("hamburger").addEventListener("click", function () {
@@ -20,8 +19,8 @@ document.getElementById("hamburger").addEventListener("click", function () {
 
 // carousel
 document.addEventListener("DOMContentLoaded", () => {
-  const carousel = document.querySelector('.carousel');
-  const images = document.querySelectorAll('.carousel-img');
+  const carousel = document.querySelector(".carousel");
+  const images = document.querySelectorAll(".carousel-img");
 
   let index = 0;
   const totalSlides = images.length;
@@ -41,28 +40,27 @@ document.addEventListener("DOMContentLoaded", () => {
     if (document.referrer) {
       window.history.back();
     } else {
-      window.location.href = '../index.html'; // Fallback if no history
+      window.location.href = "../index.html"; // Fallback if no history
     }
   }
 });
 
-
 //chat-bot
 document.addEventListener("DOMContentLoaded", function () {
-  const input = document.getElementById('chat-input');
-  const chatBox = document.getElementById('chat-box');
-  const voiceBtn = document.getElementById('voice-btn');
-  const sendBtn = document.getElementById('send-btn');
+  const input = document.getElementById("chat-input");
+  const chatBox = document.getElementById("chat-box");
+  const voiceBtn = document.getElementById("voice-btn");
+  const sendBtn = document.getElementById("send-btn");
 
-  function addMessage(content, sender = 'user') {
-    const msgElement = document.createElement('div');
-    msgElement.classList.add('message', sender);
+  function addMessage(content, sender = "user") {
+    const msgElement = document.createElement("div");
+    msgElement.classList.add("message", sender);
 
     if (Array.isArray(content)) {
-      const list = document.createElement('ul');
+      const list = document.createElement("ul");
       content.forEach((item, index) => {
         setTimeout(() => {
-          const li = document.createElement('li');
+          const li = document.createElement("li");
           li.textContent = item;
           list.appendChild(li);
         }, index * 300);
@@ -80,37 +78,56 @@ document.addEventListener("DOMContentLoaded", function () {
     const message = input.value.trim();
     if (!message) return;
 
-    addMessage(message, 'user');
-    input.value = '';
+    addMessage(message, "user");
+    input.value = "";
 
-    const typing = document.createElement('div');
-    typing.id = 'typing-indicator';
-    typing.className = 'typing-indicator';
-    typing.innerHTML = 'Bot is typing<span class="dot">.</span><span class="dot">.</span><span class="dot">.</span>';
+    const typing = document.createElement("div");
+    typing.id = "typing-indicator";
+    typing.className = "typing-indicator";
+    typing.innerHTML =
+      'Bot is typing<span class="dot">.</span><span class="dot">.</span><span class="dot">.</span>';
     chatBox.appendChild(typing);
     chatBox.scrollTop = chatBox.scrollHeight;
 
     setTimeout(() => {
       typing.remove();
       const botReplyList = getBotResponse(message);
-      addMessage(botReplyList, 'bot');
+      addMessage(botReplyList, "bot");
     }, 1500);
   }
 
-  sendBtn.addEventListener('click', sendMessage);
-  input.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') sendMessage();
+  sendBtn.addEventListener("click", sendMessage);
+  input.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") sendMessage();
   });
 
   // Voice support
-  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  const SpeechRecognition =
+    window.SpeechRecognition || window.webkitSpeechRecognition;
 
   if (SpeechRecognition) {
     const recognition = new SpeechRecognition();
-    recognition.lang = 'en-US';
+    recognition.lang = "en-US";
 
-    voiceBtn.addEventListener('click', () => {
-      recognition.start();
+    voiceBtn.addEventListener("click", () => {
+      let isRecognizing = false;
+
+      voiceBtn.addEventListener("click", () => {
+        if (isRecognizing) return; // prevent multiple starts
+
+        recognition.start();
+        isRecognizing = true;
+      });
+
+      // Reset state when recognition ends or errors
+      recognition.onend = () => {
+        isRecognizing = false;
+      };
+
+      recognition.onerror = (event) => {
+        console.error("Speech recognition error:", event.error);
+        isRecognizing = false;
+      };
     });
 
     recognition.onresult = (event) => {
@@ -119,7 +136,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
   } else {
     voiceBtn.disabled = true;
-    voiceBtn.title = 'Speech not supported';
+    voiceBtn.title = "Speech not supported";
   }
 
   function getBotResponse(userMsg) {
@@ -129,18 +146,21 @@ document.addEventListener("DOMContentLoaded", function () {
       return [
         "Hey there! 👋",
         "How can I help you today?",
-        "You can ask me about mental health, coping with stress."
+        "You can ask me about mental health, coping with stress.",
       ];
     }
 
-    if (msg.includes("i'm feeling stressed") || msg.includes("how can i reduce stress")) {
+    if (
+      msg.includes("i'm feeling stressed") ||
+      msg.includes("how can i reduce stress")
+    ) {
       return [
         "I'm so sorry to hear that you're feeling stressed. Here are some tips to help:",
         "- Deep breathing exercises",
         "- Physical activity (e.g., walking, yoga)",
         "- Mindfulness meditation",
         "- Relaxing hobbies (e.g., reading, listening to music)",
-        "- Take care of yourself."
+        "- Take care of yourself.",
       ];
     }
 
@@ -157,18 +177,18 @@ document.addEventListener("DOMContentLoaded", function () {
         "I'm really sorry you're feeling this way 💙",
         "You're not alone — many people go through tough times.",
         "Here are a few things you can try:",
-        "1. Talk to someone you trust.",
-        "2. Take a walk or get fresh air.",
-        "3. Try journaling your thoughts.",
-        "4. Reach out to a professional if it's too much to handle.",
-        "Remember: you're valuable, and your feelings matter. 🌟"
+        "- Talk to someone you trust.",
+        "- Take a walk or get fresh air.",
+        "- Try journaling your thoughts.",
+        "- Reach out to a professional if it's too much to handle.",
+        "Remember: you're valuable, and your feelings matter. 🌟",
       ];
     }
 
     if (msg.includes("thank") || msg.includes("thanks")) {
       return [
         "You're very welcome! 😊",
-        "Any other questions? I’m here to help!"
+        "Any other questions? I’m here to help!",
       ];
     }
 
@@ -183,7 +203,6 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("user-name").textContent = name;
 });
 
-
 //show popup in chatbot page
 let scrollCount = 0;
 let popupShown = false;
@@ -194,7 +213,7 @@ function trackScroll() {
   scrollCount++;
   console.log("Scroll #" + scrollCount);
 
-  if (scrollCount >= 5) {
+  if (scrollCount >= 8) {
     showPopup();
     popupShown = true;
     window.removeEventListener("scroll", trackScroll);
