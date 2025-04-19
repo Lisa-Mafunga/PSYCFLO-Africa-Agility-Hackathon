@@ -241,24 +241,65 @@ header .logo {
 }
 
 .availability-list {
-    display: flex; /* Align items in a row */
-    gap: 45px; /* Space between each item */
-    align-items: center; /* Center items vertically */
-}
 
-.availability-item {
+    display: flex; /* Align items in a row */
+    
+    gap: 45px; /* Space between each item */
+    
+    align-items: center; /* Center items vertically */
+    
+    }
+    .days{
     display: flex; /* Flex for bullet and text */
     align-items: center; /* Center items vertically */
-}
-
-.bullet {
-    display: inline-block; /* Inline block for the bullet */
-    background-color: #3A478D; /* Color for the bullet */
-    border-radius: 50%; /* Circular bullet */
-    width: 10px; /* Size of the bullet */
-    height: 10px; /* Size of the bullet */
-    margin-right: 5px; /* Space between bullet and text */
-}
+    }
+    
+    .availability-item {
+    display: flex; 
+    align-items: center; 
+    flex-direction: column; 
+    margin-bottom: 15px; 
+    }
+    
+    .bullet {
+    display: inline-block; 
+    background-color: #3A478D; 
+    border-radius: 50%; 
+    width: 10px; 
+    height: 10px; 
+    margin-right: 5px; 
+    }
+    .time-slots {
+    display: flex; 
+    gap: 10px; 
+    margin-top: 5px; 
+    }
+    
+    .time-circle1 {
+    width: 100px; 
+    height: 30px; 
+    border-radius: 15px; 
+    background-color: rgb(46, 34, 46); 
+    color: grey; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9em;
+    }
+    .time-circle2 {
+        width: 100px; 
+        height: 30px; 
+        border-radius: 15px; 
+        background-color: white; 
+        color: darkblue; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.9em;
+        border: 1px solid #3A478D;
+        }
+    
+    
 .pricing-title {
     font-size: 1.5em;
     color: black;
