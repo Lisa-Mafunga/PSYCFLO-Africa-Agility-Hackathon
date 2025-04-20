@@ -46,9 +46,9 @@ header .logo {
     align-items: center;
     gap: 3rem;
     flex-shrink: 0;
-    list-style: none; /* Ensure no bullets are shown */
-    padding: 0; /* Remove any default padding */
-    margin: 0; /* Remove any default margin */
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
 }
 
 .nav-link li {
@@ -87,7 +87,7 @@ header .logo {
     background-color: white;
     margin: 20px;
     padding: 80px;
-    display: flex; /* Use flexbox for layout */
+    display: flex; 
     flex-direction: column; /* Stack title vertically above containers */
 }
 
@@ -120,7 +120,7 @@ header .logo {
 
 .right-container {
     background: white;
-    border-radius: 10px;
+    border-radius: 15px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding: 35px; /* Reduced padding for consistency */
     width: 600px; /* Fixed width for right container */
@@ -132,7 +132,7 @@ header .logo {
 
 .container1 {
     background: white;
-    border-radius: 10px;
+    border-radius: 15px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding: 35px; /* Padding for inner containers */
     margin-bottom: 8px; /* Space between containers */
@@ -160,6 +160,7 @@ header .logo {
     height: 110px;
     margin-right: 50px; /* Space between image and text */
     margin-bottom: 20px;
+    object-fit: cover;
 }
 
 .profile-info {
@@ -183,6 +184,8 @@ header .logo {
     font-weight: bold;
     color: black;
     margin: 5px 0;
+    margin-top: 1.5px;
+    margin-bottom: 5px;
 }
 
 .availability, .location {
@@ -241,24 +244,65 @@ header .logo {
 }
 
 .availability-list {
-    display: flex; /* Align items in a row */
-    gap: 45px; /* Space between each item */
-    align-items: center; /* Center items vertically */
-}
 
-.availability-item {
+    display: flex; /* Align items in a row */
+    
+    gap: 45px; /* Space between each item */
+    
+    align-items: center; /* Center items vertically */
+    
+    }
+    .days{
     display: flex; /* Flex for bullet and text */
     align-items: center; /* Center items vertically */
-}
-
-.bullet {
-    display: inline-block; /* Inline block for the bullet */
-    background-color: #3A478D; /* Color for the bullet */
-    border-radius: 50%; /* Circular bullet */
-    width: 10px; /* Size of the bullet */
-    height: 10px; /* Size of the bullet */
-    margin-right: 5px; /* Space between bullet and text */
-}
+    }
+    
+    .availability-item {
+    display: flex; 
+    align-items: center; 
+    flex-direction: column; 
+    margin-bottom: 15px; 
+    }
+    
+    .bullet {
+    display: inline-block; 
+    background-color: #3A478D; 
+    border-radius: 50%; 
+    width: 10px; 
+    height: 10px; 
+    margin-right: 5px; 
+    }
+    .time-slots {
+    display: flex; 
+    gap: 10px; 
+    margin-top: 5px; 
+    }
+    
+    .time-circle1 {
+    width: 100px; 
+    height: 30px; 
+    border-radius: 15px; 
+    background-color: #f0f0f0; 
+    color: grey; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9em;
+    }
+    .time-circle2 {
+        width: 100px; 
+        height: 30px; 
+        border-radius: 15px; 
+        background-color: white; 
+        color: darkblue; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.9em;
+        border: 1px solid #3A478D;
+        }
+    
+    
 .pricing-title {
     font-size: 1.5em;
     color: black;
@@ -268,29 +312,59 @@ header .logo {
 
 .pricing-plan {
     background: #f0f0f0;
-    border-radius: 5px;
+    border-radius: 15px;
     padding: 10px;
     margin-bottom: 10px; /* Space between pricing plans */
 }
 
 .pricing-amount {
     font-size: 1.2em;
-    color: darkblue;
+    color: black;
+    margin-top: 15px;
+    margin-bottom: 10px;
 }
-
+.therapy-type{
+    font-size: 1.2em;
+    color: #3A478D; 
+    margin-bottom: 4px; 
+}
+.button-container {
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+    margin-top: 10px; /* Add space above the buttons if needed */
+    margin-right: 25px;
+}
 .button {
     display: inline-block;
+    width: 100px; 
+    height: 30px; 
+    border-radius: 10px; 
     background-color: #3A478D;
     color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
-    text-decoration: none;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 15px;
+    margin-bottom: 12px;
+    text-decoration: none; /* Remove underline */
+}
+
+.button1 {
+    width: 100px; 
+    height: 30px; 
+    border-radius: 10px; 
+    background-color: white; 
+    color: darkblue; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9em;
+    border: 1px solid #3A478D;
+    text-decoration: none; /* Remove underline */
+    margin-top: 15px;
+    margin-bottom: 12px;
 }
 
 .button:hover {
-    background-color: #005f54; /* Darker shade on hover */
+    background-color: #313f8f; /* Darker shade on hover */
 }
 
 .review-section {
@@ -333,11 +407,59 @@ header .logo {
     color: #272525;
 }
 
-.review-initial {
+.review-initial1 {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: #3A478D; /* Circle color */
+    background-color: rgba(35, 128, 35, 0.822); /* Circle color */
+    color: white; /* Text color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em; /* Initial font size */
+    margin-right: 10px; /* Space between circle and text */
+}
+.review-initial2 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(153, 40, 40); /* Circle color */
+    color: white; /* Text color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em; /* Initial font size */
+    margin-right: 10px; /* Space between circle and text */
+}
+.review-initial3 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: purple; /* Circle color */
+    color: white; /* Text color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em; /* Initial font size */
+    margin-right: 10px; /* Space between circle and text */
+}
+.review-initial4 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 88); /* Circle color */
+    color: white; /* Text color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em; /* Initial font size */
+    margin-right: 10px; /* Space between circle and text */
+}
+.review-initial5 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(2, 56, 2); /* Circle color */
     color: white; /* Text color */
     display: flex;
     align-items: center;

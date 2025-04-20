@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Your Therapist</title>
+    <link rel="stylesheet" href="E:\Africa-Agility-Hackathon\stylesheets\therapy.css">
+    <link rel="stylesheet" href="../footer/footer responsive.css">
+    <link rel="stylesheet" href="../stylesheets/rebeccatherapist.css ">
+    <link rel="stylesheet" href="../footer/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gayathri:wght@100;400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    
+</head>
+<body>
+    <header>
+        <div class="logo"></div>
+
+        <div class="hamburger-menu" id="hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <nav class="menu" id="nav">
+            <ul class="nav-link" id="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/pages/aboutus.html">About us</a></li>
+                <li><a href="/pages/contactus.html">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+<div class="form">
+    <div class="main">
+        <div class="title"> 
+            <div class="icon">
+                <a href="e:\Africa-Agility-Hackathon\pages\home.html" onclick="goBack(); return false;"><i class="fa-solid fa-arrow-left"></i></a>
+            
+            </div>
+            <h2>Help us match you to the right therapist</h1>
+            <div class="welcome"> 
+            <p1>Please fill our short questionnaire. It will help us understand your 
+            <br>issues and match you with the right therapist.</p1>
+        </div>
+    </div>
+        <div class="questions-container">
+            <p><b>What area would you like your therapist to specialize in?</b></p>
+            <label>
+                <input type="checkbox" name="specialization" value="Anxiety Disorders (GAD, Social Anxiety, Panic)">
+                Anxiety Disorders (GAD, Social Anxiety, Panic)
+            </label>
+            <label>
+                <input type="checkbox" name="specialization" value="Depression (including Postpartum)">
+                Depression (including Postpartum)
+            </label>
+            <label>
+                <input type="checkbox" name="specialization" value="Complex Trauma and PTSD">
+                Complex Trauma and PTSD
+            </label>
+            <label>
+                <input type="checkbox" name="specialization" value="Addiction & Childhood Abuse Recovery">
+                Addiction & Childhood Abuse Recovery
+            </label>
+            <label>
+                <input type="checkbox" name="specialization" value="Relationship & Family Issues">
+                Relationship & Family Issues
+            </label>
+
+            <p><b>Do you prefer a therapist with a specific religious background?</b></p>
+            <label>
+                <input type="radio" name="religion" value="No Preference">
+                No Preference
+            </label>
+            <label>
+                <input type="radio" name="religion" value="Christian">
+                Christian
+            </label>
+            <label>
+                <input type="radio" name="religion" value="Muslim">
+                Muslim
+            </label>
+            <label>
+                <input type="radio" name="religion" value="Atheist">
+                Atheist
+            </label>
+
+            <p><b>Do you have a gender preference for your therapist?</b></p>
+            <label>
+                <input type="radio" name="gender" value="No Preference">
+                No Preference
+            </label>
+            <label>
+                <input type="radio" name="gender" value="Female">
+                Female
+            </label>
+            <label>
+                <input type="radio" name="gender" value="Male">
+                Male
+            </label>
+
+            <!-- Move the button inside the questions container -->
+            <button type="button" class="submit-button" onclick="window.location.href='therapist.html';">Find Therapist</button>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <div id="footer">
+            <div class="first">
+                <div class="titlebox">
+                    <div class="image">
+                        <!-- <div></div> -->
+                    </div>
+                    <p>Need support? Contact us, and we&apos;ll be happy to assist!</p>
+                </div>
+
+                <div class="socialbox">
+                    <p>Follow us on social media</p>
+                    <div class="socials">
+                        <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.x.com"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.youtube.com"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="secondContainer">
+                <ul class="companylink">
+                    <li><a href="../pages/home.html">Home</a></li>
+                    <li><a href="../pages/aboutus.html">About us</a></li>
+                    <li><a href="../pages/Termsofuse.html">Terms of use</a></li>
+                    <li><a href="../pages/Privacy.html">Privacy Policies</a></li>
+                </ul>
+            </div>
+
+                <ul class="companylink">
+                    <li><a href="../pages/contactus.html">Help Center</a></li>
+                    <li><a href="../pages/chatbot.html">Chat with us</a></li>
+                    <li><a href="../pages/contactus.html">Contact us</a></li>
+                    <li><a href="./ussd">USSD Service</a></li>
+                </ul>
+
+        </div>
+
+        <div class="stroke"></div>
+
+        <div class="copybox">
+            <p>Copyright &copy; <span id="year"></span> - PSYCFLO</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Toggle mobile menu
+    document.getElementById("hamburger").addEventListener("click", function () {
+        document.getElementById("nav").classList.toggle("active");
+    });
+</script>
+<script src="./script.js"></script>
+</body>
+</html>

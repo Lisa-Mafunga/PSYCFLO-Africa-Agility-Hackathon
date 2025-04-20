@@ -1,223 +1,372 @@
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Inter', sans-serif;
+.fa-solid {
+  margin-left: 50px;
+  margin-bottom: 50px;
+  font-size: 20px;
+  color: white;
+  border: 1px solid black;
+  border-radius: 50px;
+  background-color: black;
+  padding: 10px;
 }
 
-
-body {
-  background: #b2f2e9;
-  padding: 80px;
-  color: #333;
+.fa-bars {
+  font-size: 20px;
+  color: white;
+  border: 1px solid black;
+  border-radius: 50px;
+  background-color: black;
+  padding: 10px;
 }
 
-/* Header styles */
 header {
-display: flex;
-height: 90px;
-/* padding: 1rem 4rem; */
-justify-content: space-between;
-align-items: center;
-flex-shrink: 0;
-background: rgba(255, 255, 255, 0.90);
-box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.05);
-position: fixed;
-width: 100%;
-top: 0;
-left: 0;
-z-index: 1000;
+  display: flex;
+  height: 90px;
+  padding: 0.1rem 4rem;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.90);
+  box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.05);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 header .logo {
-width: 138px;
-height: 90px;
-flex-shrink: 0;
-background: url(../images/logo3.svg) rgba(255, 255, 255, 0.90) 50% / cover no-repeat;
-/* background-blend-mode: color-dodge; */
-}
-.fa-solid {
-/* margin-left: 50px; */
-/* margin-bottom: 50px; */
-font-size: 20px;
-color: white;
-border: 1px solid black;
-border-radius: 50px;
-background-color: black;
-padding: 10px;
-}
-.fa-bars {
-font-size: 20px;
-color: white;
-border: 1px solid black;
-border-radius: 50px;
-background-color: black;
-padding: 10px;
+  width: 138px;
+  height: 90px;
+  flex-shrink: 0;
+  background: url(E:\Africa-Agility-Hackathon\images\logo.jpg) rgba(255, 255, 255, 0.90) 50% / cover no-repeat;
 }
 
 .nav-link {
-display: flex;
-align-items: center;
-gap: 3rem;
-flex-shrink: 0;
-list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  flex-shrink: 0;
+  list-style: none; 
+  padding: 0; 
+  margin: 0; 
 }
 
 .nav-link li {
-display: inline;
-margin-right: 15px;
+  display: inline;
+  margin-right: 15px;
 }
 
 .nav-link a {
-color: #000;
-font-family: "Gayathri", sans-serif;
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-text-decoration: none;
+  color: #000;
+  font-family: "Gayathri", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
 }
 
 .nav-link a.active {
-border-bottom: 1px solid #3A478D;
-color: #3A478D;
+  border-bottom: 1px solid #3A478D;
+  color: #3A478D;
 }
 
 .nav-link a:hover {
-color: #3A478D;
+  color: #3A478D;
 }
 
 .hamburger-menu {
-display: none;
-font-size: 1.8em;
-cursor: pointer;
-color: #3A478D;
-}
-.fa-arrow-left {
-font-size: 20px;
-color: white;
-border: 1px solid black;
-border-radius: 50px;
-background-color: blueviolet;
-padding: 10px;
-margin-bottom: 90px;
-margin-left: 80px;
+  display: none;
+  font-size: 1.8em;
+  cursor: pointer;
+  color: #3A478D;
 }
 
-.container {
-  background: #fff;
-  max-width: 800px;
-  margin: 0 auto;
-  border-radius: 8px;
-  padding: 30px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.05);
-  margin-top: 150px;
+.section {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: white;
+  margin: 20px;
+  padding: 80px;
+  display: flex; 
+  flex-direction: column; /* Stack title vertically above containers */
 }
-.icon{
-  margin-right: 100px;
+
+.title-container {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
 }
-.top-section {
+
+.title-container .icon {
+  margin-right: 100px; /* Space between the icon and title */
+}
+
+.title {
+  width: 100%; /* Full width */
+  margin-bottom: 20px; /* Space below title */
+}
+
+.main-container {
+  display: flex; /* Use flexbox for left and right containers */
+  width: 100%; /* Full width of the page */
+}
+
+.left-container {
   display: flex;
-  gap: 20px;
-  align-items: flex-start;
-  margin-bottom: 20px;
+  flex-direction: column; /* Stack items vertically */
+  margin-right: 10px; /* Space between left and right containers */
+  flex: 3; /* Take up larger space */
+  color: #272525;
 }
+
+.right-container {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 35px; /* Reduced padding for consistency */
+  width: 600px; /* Fixed width for right container */
+  flex: 1.5; /* Take up smaller space */
+  display: flex; /* Use flexbox for vertical alignment */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: flex-start; /* Align items to the top */
+}
+
+.container1 {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 35px; /* Padding for inner containers */
+  margin-bottom: 8px; /* Space between containers */
+  text-align: justify;
+  display: flex; /* Use flexbox for vertical alignment */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: flex-start; /* Align items to the top */
+}
+
+.container1-profile-box {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 35px; /* Padding for inner containers */
+  margin-bottom: 8px; /* Space between containers */
+  text-align: justify;
+  flex-direction: row; /* Change to row to align items horizontally */
+}
+
 .profile-image {
-  width: 100px;
-  height: 100px;
   border-radius: 50%;
+  width: 110px;
+  height: 110px;
+  margin-right: 50px; /* Space between image and text */
+  margin-bottom: 20px;
   object-fit: cover;
 }
-.info {
-  flex: 1;
+
+.profile-info {
+  flex: 1; /* Allow text to fill available space */
 }
-.info h1 {
-  font-size: 1.5rem;
+
+.name {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #3A478D;
+  margin: 0;
   margin-bottom: 5px;
 }
-.info .details {
-  font-size: 0.9rem;
-  color: #666;
+
+.title1 {
+  width: 100%; /* Full width */
 }
-.bio, .specialization, .qualification, .insurances, .reviews {
-  margin: 20px 0;
+
+.title, .container1-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: black;
+  margin: 5px 0;
+  margin-top: 1.5px;
+  margin-bottom: 5px;
 }
-.section-title {
-  font-weight: 600;
+
+.availability, .location {
+  font-size: 0.9em;
+  color: black;
+  margin: 2px 0;
   margin-bottom: 8px;
 }
-.card-box {
-  background: #f9f9f9;
-  border-radius: 8px;
-  padding: 16px;
+
+.icon {
+  margin-right: 5px;
+  color: #3A478D; /* Icon color */
+}
+
+.description {
+  color: #272525;
+  line-height: 1.5;
+  margin: 1px;
+}
+
+.bullets {
+  list-style-type: disc; /* Use solid bullet points */
+  padding-left: 20px; /* Indent the list */
+}
+
+.bullets li {
+  margin-bottom: 8px; /* Space between list items */
+  position: relative;
+  color: #272525; /* Text color for list items */
+  line-height: 1.5; /* Adjust line height for readability */
+}
+
+.bullets li::before {
+  content: ""; /* Create a custom bullet */
+  position: absolute; /* Position it relative to the list item */
+  left: -20px; /* Adjust position to the left */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Center the bullet */
+  width: 10px; /* Size of the bullet */
+  height: 10px; /* Size of the bullet */
+  border-radius: 50%; /* Make it a circle */
+  background-color: #3A478D; /* Bullet color */
+}
+
+.availability-image {
+  width: 100%; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 10px; /* Space below the image */
+  border-radius: 10px; /* Optional: rounded corners */
+}
+
+.availability-title {
+  font-size: 1.5em;
+  color: black;
+  margin-bottom: 15px;
+}
+
+.availability-list {
+
+  display: flex; /* Align items in a row */
+  
+  gap: 45px; /* Space between each item */
+  
+  align-items: center; /* Center items vertically */
+  
+  }
+  .days{
+  display: flex; /* Flex for bullet and text */
+  align-items: center; /* Center items vertically */
+  }
+  
+  .availability-item {
+  display: flex; 
+  align-items: center; 
+  flex-direction: column; 
+  margin-bottom: 15px; 
+  }
+  
+  .bullet {
+  display: inline-block; 
+  background-color: #3A478D; 
+  border-radius: 50%; 
+  width: 10px; 
+  height: 10px; 
+  margin-right: 5px; 
+  }
+  .time-slots {
+  display: flex; 
+  gap: 10px; 
+  margin-top: 5px; 
+  }
+  
+  .time-circle1 {
+  width: 100px; 
+  height: 30px; 
+  border-radius: 15px; 
+  background-color: #f0f0f0; 
+  color: grey; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9em;
+  }
+  .time-circle2 {
+      width: 100px; 
+      height: 30px; 
+      border-radius: 15px; 
+      background-color: white; 
+      color: darkblue; 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9em;
+      border: 1px solid #3A478D;
+      }
+  
+  
+.pricing-title {
+  font-size: 1.5em;
+  color: black;
+  margin-top: 20px; /* Space above pricing */
+  margin-bottom: 15px;
+}
+
+.pricing-plan {
+  background: #f0f0f0;
+  border-radius: 15px;
+  padding: 10px;
+  margin-bottom: 10px; /* Space between pricing plans */
+}
+
+.pricing-amount {
+  font-size: 1.2em;
+  color: black;
+  margin-top: 15px;
   margin-bottom: 10px;
 }
-.sidebar {
-  background: #f3f4f6;
-  border-radius: 8px;
-  padding: 20px;
-  width: 320px;
+.therapy-type{
+  font-size: 1.2em;
+  color: #3A478D; 
+  margin-bottom: 4px; 
 }
-.badge {
-  display: inline-block;
-  background: #e0e7ff;
-  color: #3730a3;
-  padding: 4px 8px;
-  border-radius: 999px;
-  font-size: 0.75rem;
-  margin: 4px 0;
-}
-.availability-time {
-  font-size: 0.8rem;
-  margin-bottom: 4px;
-  background: #e0e7ff;
-  color: #3730a3;
-  padding: 4px 8px;
-  border-radius: 999px;
-}
-.availability-days {
+.button-container {
   display: flex;
-  flex-direction: row;
-  gap: 10px;
-  flex-wrap: wrap wrap;
-
+  justify-content: flex-end; /* Align buttons to the right */
+  margin-top: 10px; /* Add space above the buttons if needed */
+  margin-right: 25px;
 }
-.day {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 10px;
-  width: 90px;
-  text-align: center;
-}
-.pricing-plan {
-  background: #f9f9f9;
-  border-radius: 8px;
-  padding: 16px;
-  margin-bottom: 16px;
-}
-.pricing-plan h3 {
-  font-size: 1rem;
-  margin-bottom: 8px;
-}
-.pricing-plan p {
-  font-size: 0.85rem;
-  margin: 4px 0;
-  color: #444;
-}
-.pricing-plan button {
-  margin-top: 10px;
-  padding: 8px 12px;
-  background: #1e3a8a;
+.button {
+  display: inline-block;
+  width: 100px; 
+  height: 30px; 
+  border-radius: 10px; 
+  background-color: #3A478D;
   color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 0.9rem;
-  font-weight: 600;
-  margin-left: 120px;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 12px;
+  text-decoration: none; /* Remove underline */
 }
+
+.button1 {
+  width: 100px; 
+  height: 30px; 
+  border-radius: 10px; 
+  background-color: white; 
+  color: darkblue; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9em;
+  border: 1px solid #3A478D;
+  text-decoration: none; /* Remove underline */
+  margin-top: 15px;
+  margin-bottom: 12px;
+}
+
+.button:hover {
+  background-color: #313f8f; /* Darker shade on hover */
+}
+
 .review-section {
   width: 100%; /* Full width */
   background: white;
@@ -258,11 +407,59 @@ margin-left: 80px;
   color: #272525;
 }
 
-.review-initial {
+.review-initial1 {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: #3A478D; /* Circle color */
+  background-color: rgba(35, 128, 35, 0.822); /* Circle color */
+  color: white; /* Text color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em; /* Initial font size */
+  margin-right: 10px; /* Space between circle and text */
+}
+.review-initial2 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(153, 40, 40); /* Circle color */
+  color: white; /* Text color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em; /* Initial font size */
+  margin-right: 10px; /* Space between circle and text */
+}
+.review-initial3 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: purple; /* Circle color */
+  color: white; /* Text color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em; /* Initial font size */
+  margin-right: 10px; /* Space between circle and text */
+}
+.review-initial4 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(20, 20, 88); /* Circle color */
+  color: white; /* Text color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em; /* Initial font size */
+  margin-right: 10px; /* Space between circle and text */
+}
+.review-initial5 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(2, 56, 2); /* Circle color */
   color: white; /* Text color */
   display: flex;
   align-items: center;
@@ -293,99 +490,3 @@ margin-left: 80px;
   margin-right: 10px; /* Right margin for equal spacing */
   margin-top: 10px;
 }
-
-/* Responsive Styles */
-@media (max-width: 1024px) {
-  body {
-    padding: 40px;
-    margin-left: 50px;
-  }
-
-  .top-section {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .info {
-    width: 100%;
-    padding: 0 1rem;
-  }
-
-  .sidebar {
-    width: 100%;
-    margin-top: 2rem;
-    padding: 1rem;
-  }
-
-  .review-section {
-    padding: 1rem;
-  }
-
-  .review-item {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .review-content {
-    margin-left: 0;
-    margin-top: 0.5rem;
-  }
-}
-
-@media (max-width: 768px) {
-  header {
-    flex-direction: row;
-    padding: 1rem;
-  }
-
-  .menu {
-    display: none;
-  }
-
-  .hamburger-menu {
-    display: block;
-  }
-
-  body {
-    padding: 20px;
-  }
-
-  .top-section img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-  }
-
-  .availability-days {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .pricing-plan {
-    margin-bottom: 2rem;
-  }
-}
-
-@media (max-width: 480px) {
-  h1 {
-    font-size: 1.5rem;
-  }
-
-  .text-xl {
-    font-size: 1.2rem;
-  }
-
-  .text-lg {
-    font-size: 1rem;
-  }
-
-  .review-title {
-    font-size: 1.3rem;
-  }
-
-  .review-content p {
-    font-size: 0.9rem;
-  }
-}
-
-
