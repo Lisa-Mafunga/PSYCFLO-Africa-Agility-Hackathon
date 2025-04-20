@@ -273,7 +273,7 @@ main {
 }
 
 .other-services-parent {
-  height: 765px;
+  height: 180vh;
   margin-inline: auto;
   display: flex;
   flex-direction: column;
@@ -346,7 +346,7 @@ main {
 
 .other-services-button-2 button {
   background-color: white;
-  color: blue;
+  color: #3a478d;
   padding-inline: 30px;
   padding-block: 12px;
   border-radius: 10px;
@@ -354,7 +354,7 @@ main {
   border: none;
   font-size: 15px;
   font-weight: 700;
-  border: 1px solid blue;
+  border: 1px solid #3a478d;
 }
 
 /* Responsive styles for all devices (except footer) */
