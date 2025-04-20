@@ -221,6 +221,9 @@ color: white;
 text-decoration: none;
 
 }
+.button:hover {
+  background-color: #313f8f; /* Darker shade on hover */
+}
 .therapist-one .white {
   font-family: Montserrat;
 font-weight: 600;
