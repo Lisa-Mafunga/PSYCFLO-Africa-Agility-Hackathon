@@ -279,7 +279,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 95px;
+  gap: 50px;
   font-family: "Montserrat", sans-serif;
   margin-bottom: 100px;
   /* background-color: rgb(245, 245, 245); */
@@ -306,7 +306,7 @@ main {
 }
 
 .other-services-div-parent {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat";
   height: 60%;
   width: 50%;
 }
@@ -400,7 +400,7 @@ main {
 
   .other-services-parent {
     height: auto;
-    padding: 50px 0;
+    padding: 30px 0;
   }
 }
 
@@ -460,6 +460,7 @@ main {
     width: 90%;
     margin-left: 0;
     text-align: center;
+  
   }
 
   .icon img {
