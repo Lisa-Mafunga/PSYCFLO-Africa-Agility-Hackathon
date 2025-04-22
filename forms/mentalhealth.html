@@ -1,197 +1,315 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>User Information Form</title>
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: Arial, sans-serif;
-      }
-      body {
-        background-color: #f3f4f6;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5); /* dark background */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 9999; /* Ensure overlay is on top */
-      }
-      .form-container {
-        background: white;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        width: 100%;
-        max-width: 500px;
-        position: relative;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-      }
-      .close-btn {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        background: none;
-        border: none;
-        font-size: 18px;
-        cursor: pointer;
-        color: #777;
-      }
-      .close-btn:hover {
-        color: black;
-      }
-      h2 {
-        font-size: 20px;
-        margin-bottom: 10px;
-      }
-      p {
-        font-size: 14px;
-        color: #555;
-        margin-bottom: 20px;
-      }
-      .form-group {
-        display: flex;
-        justify-content: space-between;
-        gap: 15px;
-        margin-bottom: 15px;
-      }
-      .form-group div {
-        width: 48%;
-      }
-      label {
-        display: block;
-        font-size: 14px;
-        text-align: left;
-        margin-bottom: 5px;
-      }
-      input,
-      select {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        background-color: #e5e7eb;
-      }
-      .submit-btn {
-        width: 100%;
-        padding: 12px;
-        background: #374151;
-        color: white;
-        font-size: 16px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        margin-top: 10px;
-      }
-      .submit-btn:hover {
-        background: #1f2937;
-      }
-
-      .error {
-        color: red;
-        font-size: 0.85rem;
-      }
-
-      @media (max-width: 400px) {
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Montserrat", sans-serif;
+        }
+        body {
+            background-color: #f3f4f6;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: "Montserrat", sans-serif;
+        }
+        .login-container {
+            position: relative;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 50px;
+            width: 350px;
+            height: 70%;
+        }
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            color: #333;
+        }
+        .login-form h2 {
+            text-align: center;
+            margin-bottom: 1px;
+        }
+        .login-form p {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .login-form input {
+            width: 90%;
+            padding: 8px;
+            margin: 10px 0px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-left: 3%;
+        }
+        .login-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            margin-left: 3%;
+        }
+        .login-form button {
+            width: 95%;
+            padding: 10px;
+            background-color: #3a478d;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 10%;
+            margin-left: 3%;
+            font-weight: bold;
+        }
+        .login-form button:hover {
+            background-color: #3a478d;
+        }
+        .error-message {
+            color: red;
+            margin: 10px 0;
+            text-align: center;
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* dark background */
+            display: none; /* Initially hidden */
+            justify-content: center;
+            align-items: center;
+            z-index: 9999; /* Ensure overlay is on top */
+        }
+        .form-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            position: relative;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            color: #777;
+        }
+        .close-btn:hover {
+            color: black;
+        }
+        h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 20px;
+            margin-top: 10px;
+        }
         .form-group {
-          flex-direction: column;
-          justify-content: space-between;
-          gap: 15px;
-          margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            margin-bottom: 15px;
         }
         .form-group div {
-          width: 100%;
+            width: 48%;
         }
-      }
+        label {
+            display: block;
+            font-size: 14px;
+            text-align: left;
+            margin-bottom: 5px;
+        }
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #e5e7eb;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background: #374151;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .submit-btn:hover {
+            background: #1f2937;
+        }
+        .error {
+            color: red;
+            font-size: 0.85rem;
+        }
+        @media (max-width: 400px) {
+            .form-group {
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 15px;
+                margin-bottom: 15px;
+            }
+            .form-group div {
+                width: 100%;
+            }
+        }
     </style>
-  </head>
-  <body>
-    <div class="form-container">
-      <h2>Let&apos;s get to know you!</h2>
-      <p>Kindly fill out the form so we can support you better.</p>
-      <form id="userForm">
-        <div class="form-group">
-          <div>
-            <label for="full-name">Full Name</label>
-            <input
-              type="text"
-              id="full-name"
-              name="full-name"
-              required
-              minlength="3"
-            />
-            <span class="error" id="usernameError"></span><br /><br />
-          </div>
-          <div>
-            <label for="phone-number">Phone Number</label>
-            <input
-              type="text"
-              id="phone-number"
-              name="phone-number"
-              required
-              pattern="^\d{10,15}$"
-            />
-            <span class="error" id="phoneError"></span><br /><br />
-          </div>
+</head>
+<body>
+    <div class="login-container">
+        <button class="close-button" onclick="closeForm()">×</button>
+        <div class="login-form">
+            <h2>Login to Your Wellness Hub</h2>
+            <p>Login to continue your healing journey</p>
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" required>
+            <label for="e-mail">E-mail</label>
+            <input type="email" id="e-mail" required>
+            <div id="errorMessage" class="error-message" style="display: none;"></div>
+            <button id="loginButton">Login</button>
+            <p>Don't have an account yet? <a href="#" onclick="showSignup()">Sign up</a></p>
         </div>
-        <div class="form-group">
-          <div>
-            <label for="country">Country</label>
-            <select id="country" name="country" required>
-              <option value="">Select Country</option>
-              <option value="1">Nigeria</option>
-              <option value="2">Ghana</option>
-              <option value="3">Egypt</option>
-              <option value="4">South Africa</option>
-              <option value="5">Kenya</option>
-              <option value="6">Mali</option>
-              <option value="7">Morocco</option>
-            </select>
-            <span class="error" id="countryError"></span>
-          </div>
-          <div>
-            <label for="email">E-mail (Optional)</label>
-            <input type="email" id="email" name="email" required />
-            <span class="error" id="emailError"></span><br /><br />
-          </div>
-        </div>
-        <div class="form-group">
-          <div>
-            <label for="state">State</label>
-            <input type="text" id="state" name="state" required />
-            <span class="error" id="stateError"></span>
-          </div>
-          <div>
-            <label for="local-gov">Local Government</label>
-            <input type="text" id="local-gov" name="local-gov" required />
-            <span class="error" id="lgError"></span>
-          </div>
-        </div>
-        <!-- <button type="submit" class="submit-btn">Submit</button> -->
-        <button
-          type="button"
-          class="submit-btn"
-          onclick="window.location.href='../pages/home.html'"
-        >
-          Submit
-        </button>
-      </form>
     </div>
-    <script src="../javascript/login.js"></script>
-  </body>
+
+    <!-- Welcome Popup -->
+    <div id="popupForm" class="overlay" style="display: none;">    
+        <div class="form-container">
+            <button class="close-btn" onclick="closePopup()">×</button>
+            <h2 id="welcomeMessage">Welcome Back, Portia!</h2>
+            <p>Where would you like to go?</p>
+            <button onclick="window.location.href='../pages/home.html'">Explore Mental Wellness</button>
+            <button onclick="location.href='dashboard.html'">Go to My Dashboard</button>
+        </div>
+    </div>
+
+    <!-- Signup Popup -->
+    <div id="signupForm" class="overlay" style="display: none;">
+        <div class="form-container">
+            <button class="close-btn" onclick="closeSignup()">×</button>
+            <h2>Let's get to know you!</h2>
+            <p>Kindly fill out the form so we can support you better.</p>
+            <form id="userForm">
+                <div class="form-group">
+                    <div>
+                        <label for="full-name">Full Name</label>
+                        <input type="text" id="full-name" name="full-name" required minlength="3" />
+                        <span class="error" id="usernameError"></span>
+                    </div>
+                    <div>
+                        <label for="phone-number">Phone Number</label>
+                        <input type="text" id="phone-number" name="phone-number" required pattern="^\d{10,15}$" />
+                        <span class="error" id="phoneError"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div>
+                        <label for="country">Country</label>
+                        <select id="country" name="country" required>
+                            <option value="">Select Country</option>
+                            <option value="1">Nigeria</option>
+                            <option value="2">Ghana</option>
+                            <option value="3">Egypt</option>
+                            <option value="4">South Africa</option>
+                            <option value="5">Kenya</option>
+                            <option value="6">Mali</option>
+                            <option value="7">Morocco</option>
+                            <option value="8">Zimbabwe</option>
+                        </select>
+                        <span class="error" id="countryError"></span>
+                    </div>
+                    <div>
+                        <label for="email">E-mail (Optional)</label>
+                        <input type="email" id="email" name="email" />
+                        <span class="error" id="emailError"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div>
+                        <label for="state">State</label>
+                        <input type="text" id="state" name="state" required />
+                        <span class="error" id="stateError"></span>
+                    </div>
+                    <div>
+                        <label for="local-gov">Local Government</label>
+                        <input type="text" id="local-gov" name="local-gov" required />
+                        <span class="error" id="lgError"></span>
+                    </div>
+                </div>
+                <button type="button" class="submit-btn" onclick="window.location.href='../pages/home.html'">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function closeForm() {
+            document.querySelector('.login-container').style.display = 'none';
+        }
+
+        function closePopup() {
+            document.getElementById('popupForm').style.display = 'none';
+        }
+
+        function closeSignup() {
+            document.getElementById('signupForm').style.display = 'none';
+        }
+
+        document.getElementById('loginButton').addEventListener('click', function() {
+            const fullName = document.getElementById('fullName').value;
+            const email = document.getElementById('e-mail').value;
+            const errorMessage = document.getElementById('errorMessage');
+
+            // Clear previous error message
+            errorMessage.style.display = 'none';
+            errorMessage.textContent = '';
+
+            // Validate input
+            if (!fullName || !email) {
+                errorMessage.textContent = 'Please fill in all fields.';
+                errorMessage.style.display = 'block';
+                return; // Stop further execution
+            }
+
+            // If valid, close the login form and show the popup
+            closeForm();
+            document.getElementById('popupForm').style.display = 'flex';
+            setUserName(fullName); // Set the user's name in the popup
+        });
+
+        function setUserName(userName) {
+            document.getElementById('welcomeMessage').textContent = `Welcome Back, ${userName}!`;
+        }
+
+        function showSignup() {
+            closeForm(); // Close the login form
+            document.getElementById('signupForm').style.display = 'flex'; // Show the signup form
+        }
+
+    </script>
+</body>
 </html>
