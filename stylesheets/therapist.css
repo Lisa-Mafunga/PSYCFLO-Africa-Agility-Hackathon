@@ -91,6 +91,7 @@ section {
   width: 90%;
   margin-inline: auto;
   margin-bottom: 30px;
+  font-family: "Montserrat", sans-serif
 }
 
 .icon {
@@ -101,9 +102,7 @@ section {
 }
 
 h1 {
-  font-family: Montserrat;
   font-weight: 700;
-  font-size: 40px;
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
@@ -112,7 +111,6 @@ h1 {
   margin-bottom: 5px;
 }
 .p1{
-  font-family: Montserrat;
   font-size: 20px;
   line-height: 100%;
   letter-spacing: 0%;
@@ -141,25 +139,19 @@ article {
   margin-bottom: 30px;
 }
 .therapist-one h2 {
-  font-family: Montserrat;
 font-weight: 600;
-font-size: 30px;
 line-height: 100%;
 letter-spacing: 0%;
 
 }
 .therapist-one h3 {
-  font-family: Montserrat;
 font-weight: 500;
-font-size: 28px;
 line-height: 100%;
 letter-spacing: 0%;
 
 }
 .therapist-one h4 {
-  font-family: Montserrat;
 font-weight: 500;
-font-size: 28px;
 line-height: 100%;
 letter-spacing: 0%;
 
@@ -173,7 +165,6 @@ letter-spacing: 0%;
 }
 #yellow {
   color: #F9B63B;
-  font-size: 20px;
   border: 0;
   padding: 0;
   border-radius: 0;
@@ -181,16 +172,13 @@ letter-spacing: 0%;
 }
 #yellow-one {
   /* color: #F9B63B; */
-  font-size: 20px;
   border: 0;
   padding: 0;
   border-radius: 0;
   background-color: revert;
 }
 .therapist-one .stars p {
-  font-family: Montserrat;
 font-weight: 600;
-font-size: 20px;
 line-height: 100%;
 letter-spacing: 0%;
 }
@@ -207,7 +195,6 @@ background: #3A478D;
 
 }
 button1 {
-  font-family: Montserrat;
 font-weight: 600;
 font-size: 20px;
 line-height: 100%;
@@ -225,7 +212,6 @@ text-decoration: none;
   background-color: #313f8f; /* Darker shade on hover */
 }
 .therapist-one .white {
-  font-family: Montserrat;
 font-weight: 600;
     width: 181;
   height: 66;
@@ -237,7 +223,9 @@ font-weight: 600;
 background: white;
 border: 1px solid #3A478D;
 color: #3A478D;
-
+}
+.white:hover {
+  background-color: #313f8f; /* Darker shade on hover */
 }
 
 @media (max-width: 768px) {
