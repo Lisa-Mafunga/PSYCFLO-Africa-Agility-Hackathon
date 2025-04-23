@@ -1,0 +1,553 @@
+.fa-solid {
+    margin-left: 50px;
+    margin-bottom: 50px;
+    font-size: 20px;
+    color: white;
+    border: 1px solid black;
+    border-radius: 50px;
+    background-color: black;
+    padding: 10px;
+}
+
+.fa-bars {
+    font-size: 20px;
+    color: white;
+    border: 1px solid black;
+    border-radius: 50px;
+    background-color: black;
+    padding: 10px;
+}
+
+header {
+    display: flex;
+    height: 90px;
+    padding: 0.1rem 4rem;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    background: rgba(255, 255, 255, 0.90);
+    box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    width: 138px;
+    height: 90px;
+    flex-shrink: 0;
+    background: url(../images/logo.jpg) rgba(255, 255, 255, 0.90) 50% / cover no-repeat;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    flex-shrink: 0;
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+}
+
+.nav-link li {
+    display: inline;
+    margin-right: 15px;
+}
+
+.nav-link a {
+    color: #000;
+    font-family: "Gayathri", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+}
+
+.nav-link a.active {
+    border-bottom: 1px solid #3A478D;
+    color: #3A478D;
+}
+
+.nav-link a:hover {
+    color: #3A478D;
+}
+
+.hamburger-menu {
+    display: none;
+    font-size: 1.8em;
+    cursor: pointer;
+    color: #3A478D;
+}
+
+.section {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: white;
+    margin: 20px;
+    padding: 80px;
+    display: flex; 
+    flex-direction: column; /* Stack title vertically above containers */
+}
+
+.title-container {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+}
+
+.title-container .icon {
+    margin-right: 100px; /* Space between the icon and title */
+}
+
+.title {
+    width: 100%; /* Full width */
+    margin-bottom: 20px; /* Space below title */
+}
+
+.main-container {
+    display: flex; /* Use flexbox for left and right containers */
+    width: 100%; /* Full width of the page */
+}
+
+.left-container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    margin-right: 10px; /* Space between left and right containers */
+    flex: 3; /* Take up larger space */
+    color: #272525;
+}
+
+.right-container {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 35px; /* Reduced padding for consistency */
+    width: 600px; /* Fixed width for right container */
+    flex: 1.5; /* Take up smaller space */
+    display: flex; /* Use flexbox for vertical alignment */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: flex-start; /* Align items to the top */
+}
+
+.container1 {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 35px; /* Padding for inner containers */
+    margin-bottom: 8px; /* Space between containers */
+    text-align: justify;
+    display: flex; /* Use flexbox for vertical alignment */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: flex-start; /* Align items to the top */
+}
+
+.container1-profile-box {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 35px; /* Padding for inner containers */
+    margin-bottom: 8px; /* Space between containers */
+    text-align: justify;
+    flex-direction: row; /* Change to row to align items horizontally */
+}
+
+.profile-image {
+    border-radius: 50%;
+    width: 110px;
+    height: 110px;
+    margin-right: 50px; /* Space between image and text */
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+.profile-info {
+    flex: 1; /* Allow text to fill available space */
+}
+
+.name {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #3A478D;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.title1 {
+    width: 100%; /* Full width */
+}
+
+.title, .container1-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: black;
+    margin: 5px 0;
+    margin-top: 1.5px;
+    margin-bottom: 5px;
+}
+
+.availability, .location {
+    font-size: 0.9em;
+    color: black;
+    margin: 2px 0;
+    margin-bottom: 8px;
+}
+
+.icon {
+    margin-right: 5px;
+    color: #3A478D; /* Icon color */
+}
+
+.description {
+    color: #272525;
+    line-height: 1.5;
+    margin: 1px;
+}
+
+.bullets {
+    list-style-type: disc; /* Use solid bullet points */
+    padding-left: 20px; /* Indent the list */
+}
+
+.bullets li {
+    margin-bottom: 8px; /* Space between list items */
+    position: relative;
+    color: #272525; /* Text color for list items */
+    line-height: 1.5; /* Adjust line height for readability */
+}
+
+.bullets li::before {
+    content: ""; /* Create a custom bullet */
+    position: absolute; /* Position it relative to the list item */
+    left: -20px; /* Adjust position to the left */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center the bullet */
+    width: 10px; /* Size of the bullet */
+    height: 10px; /* Size of the bullet */
+    border-radius: 50%; /* Make it a circle */
+    background-color: #3A478D; /* Bullet color */
+}
+
+.availability-image {
+    width: 100%; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space below the image */
+    border-radius: 10px; /* Optional: rounded corners */
+}
+
+.availability-title {
+    font-size: 1.5em;
+    color: black;
+    margin-bottom: 15px;
+}
+
+.availability-list {
+
+    display: flex; /* Align items in a row */
+    
+    gap: 45px; /* Space between each item */
+    
+    align-items: center; /* Center items vertically */
+    
+    }
+    .days{
+    display: flex; /* Flex for bullet and text */
+    align-items: center; /* Center items vertically */
+    }
+    
+    .availability-item {
+    display: flex; 
+    align-items: center; 
+    flex-direction: column; 
+    margin-bottom: 15px; 
+    }
+    
+    .bullet {
+    display: inline-block; 
+    background-color: #3A478D; 
+    border-radius: 50%; 
+    width: 10px; 
+    height: 10px; 
+    margin-right: 5px; 
+    }
+    .time-slots {
+    display: flex; 
+    gap: 10px; 
+    margin-top: 5px; 
+    }
+    
+    .time-circle1 {
+    width: 100px; 
+    height: 30px; 
+    border-radius: 15px; 
+    background-color: #f0f0f0; 
+    color: grey; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9em;
+    }
+    .time-circle2 {
+        width: 100px; 
+        height: 30px; 
+        border-radius: 15px; 
+        background-color: white; 
+        color: darkblue; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.9em;
+        border: 1px solid #3A478D;
+        }
+    
+    
+.pricing-title {
+    font-size: 1.5em;
+    color: black;
+    margin-top: 20px; /* Space above pricing */
+    margin-bottom: 15px;
+}
+
+.pricing-plan {
+    background: #f0f0f0;
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 10px; /* Space between pricing plans */
+}
+
+.pricing-amount {
+    font-size: 1.2em;
+    color: black;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.therapy-type{
+    font-size: 1.2em;
+    color: #3A478D; 
+    margin-bottom: 4px; 
+}
+.button-container {
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+    margin-top: 10px; /* Add space above the buttons if needed */
+    margin-right: 25px;
+}
+.button {
+    display: inline-block;
+    width: 100px; 
+    height: 30px; 
+    border-radius: 10px; 
+    background-color: #3A478D;
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 12px;
+    text-decoration: none; /* Remove underline */
+}
+
+.button1 {
+    width: 100px; 
+    height: 30px; 
+    border-radius: 10px; 
+    background-color: white; 
+    color: darkblue; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9em;
+    border: 1px solid #3A478D;
+    text-decoration: none; /* Remove underline */
+    margin-top: 15px;
+    margin-bottom: 12px;
+}
+
+.button:hover {
+    background-color: #313f8f; /* Darker shade on hover */
+}
+.probono-section {
+    width: 100%; /* Full width */
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 2px; /* Adjusted padding for review section */
+    margin-top: 20px; /* Space above review section */
+    color: #272525;
+}
+
+.probono-header {
+    display: flex;
+    justify-content: space-between; /* Space between title and review count */
+    align-items: center;
+}
+
+.probono-title {
+    font-size: 1.3em;
+    color: black;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 20px;
+}
+.probono-button {
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+    margin-top: 10px; /* Add space above the buttons if needed */
+    margin-right: 25px;
+}
+.probono button {
+    display: inline-block;
+    width: 100px; 
+    height: 30px; 
+    border-radius: 10px; 
+    background-color: #3A478D;
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 12px;
+    text-decoration: none; /* Remove underline */
+}
+
+.probono button1 {
+    width: 100px; 
+    height: 30px; 
+    border-radius: 10px; 
+    background-color: white; 
+    color: darkblue; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9em;
+    border: 1px solid #3A478D;
+    text-decoration: none; /* Remove underline */
+    margin-top: 15px;
+    margin-bottom: 12px;
+}
+
+.probono button:hover {
+    background-color: #313f8f; /* Darker shade on hover */
+}
+
+.review-section {
+    width: 100%; /* Full width */
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 2px; /* Adjusted padding for review section */
+    margin-top: 20px; /* Space above review section */
+    color: #272525;
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between; /* Space between title and review count */
+    align-items: center;
+}
+
+.review-title {
+    font-size: 1.3em;
+    color: black;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 20px;
+}
+
+.review-count {
+    font-size: 0.9em;
+    font-weight: bold;
+    color: black; /* Color for review count */
+    margin-right: 55px;
+}
+
+.review-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Space between reviews */
+    padding: 10px 0; /* Adjust padding for review items */
+    margin-left: 20px;
+    color: #272525;
+}
+
+.review-initial1 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(35, 128, 35, 0.822); /* Circle color */
+    color: white; /* Text color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em; /* Initial font size */
+    margin-right: 10px; /* Space between circle and text */
+}
+.review-initial2 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(153, 40, 40); /* Circle color */
+    color: white; /* Text color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em; /* Initial font size */
+    margin-right: 10px; /* Space between circle and text */
+}
+.review-initial3 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: purple; /* Circle color */
+    color: white; /* Text color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em; /* Initial font size */
+    margin-right: 10px; /* Space between circle and text */
+}
+.review-initial4 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 88); /* Circle color */
+    color: white; /* Text color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em; /* Initial font size */
+    margin-right: 10px; /* Space between circle and text */
+}
+.review-initial5 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(2, 56, 2); /* Circle color */
+    color: white; /* Text color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em; /* Initial font size */
+    margin-right: 10px; /* Space between circle and text */
+}
+
+.review-content {
+    flex: 1; /* Allow text to fill available space */
+}
+
+.reviewer-name {
+    font-weight: bold;
+    color: black;
+}
+
+.review-stars {
+    color: #ffcc00; /* Star color */
+}
+
+.review-divider {
+    border: none; /* Remove default border */
+    border-top: 1px solid #e0e0e0; /* Light gray color for the line */
+    margin: 0; /* Remove margins */
+    padding: 6px 0; /* Equal space above and below the line */
+    width: calc(100% - 20px); /* Adjust width for padding */
+    margin-right: 10px; /* Right margin for equal spacing */
+    margin-top: 10px;
+}
