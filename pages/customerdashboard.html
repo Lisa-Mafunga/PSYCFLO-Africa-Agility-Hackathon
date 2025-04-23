@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Dashboard</title>
+    <style>
+        body {
+            font-family: "Montserrat", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+        }
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .main {
+            flex: 1;
+            margin-right: 20px;
+        }
+        .header {
+            background-color: #3a478d;
+            color: white;
+            padding: 60px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .header h2 {
+            margin: 5px 0;
+            font-weight: normal;
+        }
+        .dashboard-info {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            position: relative;
+        }
+        .dashboard-info div {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            margin-right: 10px;
+            position: relative;
+        }
+        .dashboard-info div:last-child {
+            margin-right: 0;
+        }
+        .dashboard-info h3{
+            margin-top: 1px;
+        }
+        
+        .appointment {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    position: relative;
+}
+
+.appointment-content {
+    display: flex; /* Use flexbox to align items */
+    align-items: center; /* Center items vertically */
+}
+
+.appointment img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px; /* Space between circle and text */
+}
+
+.appointment h3 {
+    margin-bottom: 10px;
+    margin-top: 1px;
+}
+.date {
+    margin-left: auto; /* Pushes the date to the right */
+    align-self: flex-start; /* Aligns date to the bottom of the flex container */
+}
+        .sidebar {
+            width: 400px;
+            margin-top: 80px;
+        }
+        .footer {
+            
+            text-align: center;
+            background: white;
+            padding: 60px;
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            margin-right: 10px;
+            position: relative;
+        }
+        .footer h3{
+            margin-top: 1px;
+        }
+        button {
+            background-color: #3a478d;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 15px;
+            cursor: pointer;
+            position: absolute;
+            right: 20px; /* Adjust as needed */
+            position: absolute;
+            right: 20px; /* Adjust as needed */
+            bottom: 20px; /* Adjust as needed */
+        }
+        button:hover {
+            background-color: #3a478d;
+        }
+        button1 {
+            background-color: white;
+            color: #3a478d;
+            border: 2px solid #3a478d;
+            padding: 8px 10px;
+            border-radius: 15px;
+            cursor: pointer;
+            position: absolute;
+            right: 20px; /* Adjust as needed */
+            bottom: 15px;
+        }
+        button1:hover {
+            background-color: #3a478d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <h1>Dashboard</h1>
+            <div class="header">
+                <h2>Good morning, <span id="userName">User</span>!</h2>
+                <h3>10:30 AM, Monday, April 15, 2025</h3>
+            </div>
+
+            <div class="dashboard-info">
+                <div>
+                    <h3>Next Session</h3>
+                    <p>Monday, April 15, 2025
+                        <br>
+                        10:00a.m
+                    </p>
+                    <button>Join Now</button>
+                </div>
+                <div>
+                    <h3>Weekly Plan</h3>
+                    <p>Weekly
+                        <br>
+                        $20.00</p>
+                    <button1>Change Plan</button>
+                </div>
+            </div>
+            <div class="footer">
+                <h3>Sessions Completed</h3>
+                <h3>07</h3>
+                <button1>Book a New Session</button>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="appointments">
+                <div class="appointment">
+                    <h3>Past Appointments</h3>
+                    <div class="appointment-content">
+                        <img src="../images2/aisha.jpg" alt="Dr. Aisha Abdullahi" class="profile-image">
+                        <div class="appointment-details">
+                            <p>Dr. Aisha Abdullahi</p>
+                            <p class="time">10:00 AM</p>
+                        </div>
+                        <p class="date">April 13, 2025</p>
+                    </div>
+                    <hr class="appointment-divider">
+                    <div class="appointment-content">
+                        <img src="../images2/aisha.jpg" alt="Dr. Aisha Abdullahi" class="profile-image">
+                        <div class="appointment-details">
+                            <p>Dr. Aisha Abdullahi</p>
+                            <p class="time">10:00 AM</p>
+                        </div>
+                        <p class="date">April 11, 2025</p>
+                    </div>
+                    <hr class="appointment-divider">
+                    <div class="appointment-content">
+                        <img src="../images2/aisha.jpg" alt="Dr. Aisha Abdullahi" class="profile-image">
+                        <div class="appointment-details">
+                            <p>Dr. Aisha Abdullahi</p>
+                            <p class="time">10:00 AM</p>
+                        </div>
+                        <p class="date">April 10, 2025</p>
+                    </div>
+                    <hr class="appointment-divider">
+                    <div class="appointment-content">
+                        <img src="../images2/aisha.jpg" alt="Dr. Aisha Abdullahi" class="profile-image">
+                        <div class="appointment-details">
+                            <p>Dr. Aisha Abdullahi</p>
+                            <p class="time">10:00 AM</p>
+                        </div>
+                        <p class="date">April 08, 2025</p>
+                    </div>
+                    <hr class="appointment-divider">
+                    <div class="appointment-content">
+                        <img src="../images2/aisha.jpg" alt="Dr. Aisha Abdullahi" class="profile-image">
+                        <div class="appointment-details">
+                            <p>Dr. Aisha Abdullahi</p>
+                            <p class="time">10:00 AM</p>
+                        </div>
+                        <p class="date">April 05, 2025</p>
+                    </div>
+                    <hr class="appointment-divider">
+                    <div class="appointment-content">
+                        <img src="../images2/aisha.jpg" alt="Dr. Aisha Abdullahi" class="profile-image">
+                        <div class="appointment-details">
+                            <p>Dr. Aisha Abdullahi</p>
+                            <p class="time">10:00 AM</p>
+                        </div>
+                        <p class="date">April 02, 2025</p>
+                    </div>
+                    <hr class="appointment-divider">
+                    <div class="appointment-content">
+                        <img src="../images2/aisha.jpg" alt="Dr. Aisha Abdullahi" class="profile-image">
+                        <div class="appointment-details">
+                            <p>Dr. Aisha Abdullahi</p>
+                            <p class="time">10:00 AM</p>
+                        </div>
+                        <p class="date">March 30, 2025</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <script>
+         // Retrieve the username from local storage
+function setUserName() {
+    const userName = localStorage.getItem("userName");
+    if (userName) {
+        document.getElementById("userName").textContent = `${userName}!`;
+    } else {
+        document.getElementById("userName").textContent = "User!";
+    }
+}
+
+// Call the function when the page loads
+window.onload = setUserName;
+    </script>
+</body>
+</html>
