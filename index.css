@@ -304,6 +304,10 @@ footer hr {
   margin-left: 3% !important;
   font-weight: bold !important;
 }
+.error {
+  color: red;
+  font-size: 0.85rem;
+}
 
 .partner-options {
   text-align: center;
