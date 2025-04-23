@@ -308,6 +308,7 @@
 
         function setUserName(userName) {
             document.getElementById('welcomeMessage').textContent = `Welcome Back, ${userName}!`;
+            localStorage.setItem("userName", userName);
         }
 
         function showSignup() {
