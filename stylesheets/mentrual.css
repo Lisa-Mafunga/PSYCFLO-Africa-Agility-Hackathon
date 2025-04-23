@@ -146,10 +146,11 @@ header .logo {
 .textbox p {
     color: rgba(0, 0, 0, 0.75);
     font-family: "Gayathri", sans-serif;
-    font-size: 30px;
+    font-size: 35px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    margin-top: 30px;
 }
 
 .ter-btn {
