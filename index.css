@@ -426,11 +426,11 @@ footer hr {
     top: 40px;
   }
 .modal {
-    top: 60%;
+    top: 40%;
     left: 50%;
     z-index: 1000;
     width: 90%;
-    max-width: 500px;
+    max-width: 650px;
   } 
 
  .modal .form-group {
@@ -438,7 +438,7 @@ footer hr {
   }
 
   .modal .form-group div {
-    width: 80%;
+    width: 90%;
   }
 
   #modal-content {
@@ -511,7 +511,7 @@ footer hr {
   }
 
    .modal {
-    width: 70%;
+    width: 90%;
     max-width: 90%;
     top: 65%;
     overflow-y: auto;
