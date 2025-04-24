@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -18,6 +17,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        overflow: hidden; /* Prevent scrolling */
       }
       .overlay {
         position: fixed;
@@ -25,7 +25,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.5); /* dark background */
+        background: rgba(0, 0, 0, 0.5); /* Dark background */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -35,7 +35,6 @@
         background: white;
         padding: 20px;
         border-radius: 10px;
-        
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         width: 100%;
         max-width: 500px;
@@ -103,12 +102,10 @@
       .submit-btn:hover {
         background: #1f2937;
       }
-
       .error {
         color: red;
         font-size: 0.85rem;
       }
-
       @media (max-width: 400px) {
         .form-group {
           flex-direction: column;
@@ -123,78 +120,82 @@
     </style>
   </head>
   <body>
-    <div class="form-container">
-      <h2>Let&apos;s get to know you!</h2>
-      <p>Kindly fill out the form so we can support you better.</p>
-      <form id="userForm">
-        <div class="form-group">
-          <div>
-            <label for="full-name">Full Name</label>
-            <input
-              type="text"
-              id="full-name"
-              name="full-name"
-              required
-              minlength="3"
-            />
-            <span class="error" id="usernameError"></span><br /><br />
+    <div class="overlay">
+      <div class="form-container">
+        <button class="close-btn" onclick="closeModal()">&times;</button>
+        <h2>Let's get to know you!</h2>
+        <p>Kindly fill out the form so we can support you better.</p>
+        <form id="userForm">
+          <div class="form-group">
+            <div>
+              <label for="full-name">Full Name</label>
+              <input type="text" id="full-name" name="full-name" required minlength="3" />
+              <span class="error" id="usernameError"></span>
+            </div>
+            <div>
+              <label for="phone-number">Phone Number</label>
+              <input type="text" id="phone-number" name="phone-number" required pattern="^\d{10,15}$" />
+              <span class="error" id="phoneError"></span>
+            </div>
           </div>
-          <div>
-            <label for="phone-number">Phone Number</label>
-            <input
-              type="text"
-              id="phone-number"
-              name="phone-number"
-              required
-              pattern="^\d{10,15}$"
-            />
-            <span class="error" id="phoneError"></span><br /><br />
+          <div class="form-group">
+            <div>
+              <label for="country">Country</label>
+              <select id="country" name="country" required>
+                <option value="">Select Country</option>
+                <option value="1">Nigeria</option>
+                <option value="2">Ghana</option>
+                <option value="3">Egypt</option>
+                <option value="4">South Africa</option>
+                <option value="5">Kenya</option>
+                <option value="6">Mali</option>
+                <option value="7">Morocco</option>
+                <option value="8">Zimbabwe</option>
+              </select>
+              <span class="error" id="countryError"></span>
+            </div>
+            <div>
+              <label for="email">E-mail (Optional)</label>
+              <input type="email" id="email" name="email" />
+              <span class="error" id="emailError"></span>
+            </div>
           </div>
-        </div>
-        <div class="form-group">
-          <div>
-            <label for="country">Country</label>
-            <select id="country" name="country" required>
-              <option value="">Select Country</option>
-              <option value="1">Nigeria</option>
-              <option value="2">Ghana</option>
-              <option value="3">Egypt</option>
-              <option value="4">South Africa</option>
-              <option value="5">Kenya</option>
-              <option value="6">Mali</option>
-              <option value="7">Morocco</option>
-              <option value="8">Zimbabwe</option>
-            </select>
-            <span class="error" id="countryError"></span>
+          <div class="form-group">
+            <div>
+              <label for="state">State</label>
+              <input type="text" id="state" name="state" required />
+              <span class="error" id="stateError"></span>
+            </div>
+            <div>
+              <label for="quantity">Quantity</label>
+              <input type="number" id="quantity" name="quantity" required />
+              <span class="error" id="lgError"></span>
+            </div>
           </div>
-          <div>
-            <label for="email">E-mail (Optional)</label>
-            <input type="email" id="email" name="email" required />
-            <span class="error" id="emailError"></span><br /><br />
-          </div>
-        </div>
-        <div class="form-group">
-          <div>
-            <label for="state">State</label>
-            <input type="text" id="state" name="state" required />
-            <span class="error" id="stateError"></span>
-          </div>
-          <div>
-            <label for="quantity">Quantity</label>
-            <input type="number" id="quantity" name="quantity" required />
-            <span class="error" id="lgError"></span>
-          </div>
-        </div>
-        <!-- <button type="submit" class="submit-btn">Submit</button> -->
-        <button
-          type="button"
-          class="submit-btn"
-          onclick="window.location.href='../pages/menstrual.html'"
-        >
-          Submit
-        </button>
-      </form>
+          <button
+
+type="button"
+
+class="submit-btn"
+
+onclick="window.location.href='../pages/menstrual.html'"
+
+>
+
+Submit
+
+</button>
+        </form>
+      </div>
     </div>
-    <script src="../javascript/login.js"></script>
+    <script>
+      function closeModal() {
+        document.querySelector('.overlay').style.display = 'none';
+      }
+      function submitForm() {
+        // Implement your form submission logic here
+        alert('Form submitted!');
+      }
+    </script>
   </body>
 </html>
