@@ -17,6 +17,7 @@
             display: flex !important;
             justify-content: center !important;
             align-items: center !important;
+            font-family: "Montserrat";
         }
         .login-container {
             position: relative !important;
@@ -105,9 +106,10 @@
             flex-direction: column;
         }
         .form-container button {
-            margin-top: 10px; /* Add space above each button */
-            padding: 10px;
-        }      
+    margin-top: 10px; /* Add space above each button */
+    padding: 10px;
+    
+}      
         .close-btn {
             position: absolute;
             top: 10px;
@@ -117,6 +119,7 @@
             font-size: 18px;
             cursor: pointer;
             color: #777;
+            
         }
         .close-btn:hover {
             color: black;
@@ -171,6 +174,7 @@
         .errorMessage {
             color: red;
             font-size: 0.85rem;
+            text-align: center;
         }
         @media (max-width: 400px) {
             .form-group {
@@ -189,7 +193,7 @@
     <div class="login-container">
         <div class="login-form">
             <h2>Join us in making a difference!</h2>
-            <p>Login to manage sessions and connect with clients</p>
+            <p>Manage sessions and connect with clients</p>
             <label for="fullName">Full Name</label>
             <input type="text" id="fullName" required>
             <label for="e-mail">E-mail</label>
@@ -199,10 +203,20 @@
             <p>Not registered yet? <a href="#" onclick="showSignup()">Sign up as a Therapist</a></p>
         </div>
     </div>
+        </div>
+    </div>
 
     <script>
         function closeForm() {
             document.querySelector('.login-container').style.display = 'none';
+        }
+
+        function closePopup() {
+            document.getElementById('popupForm').style.display = 'none';
+        }
+
+        function closeSignup() {
+            document.getElementById('signupForm').style.display = 'none';
         }
 
         document.getElementById('loginButton').addEventListener('click', function() {
@@ -229,6 +243,7 @@
             // Redirect to signup page
             window.location.href = 'signup.html'; // Change this to the correct signup page
         }
+
     </script>
 </body>
 </html>
