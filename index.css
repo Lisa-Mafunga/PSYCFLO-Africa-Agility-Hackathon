@@ -1,9 +1,8 @@
-/* General Styles */
 img {
   width: 100%;
 }
 
-.fa-solid, .fa-bars {
+.fa-solid {
   margin-left: 50px;
   margin-bottom: 50px;
   font-size: 20px;
@@ -14,17 +13,22 @@ img {
   padding: 10px;
 }
 
+.fa-bars {
+  font-size: 20px;
+  color: white;
+  border: 1px solid black;
+  border-radius: 50px;
+  background-color: black;
+  padding: 10px;
+}
+
 .first-sec {
-  background: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.3) 0%,
-      rgba(0, 0, 0, 0.3) 100%
-    ),
-    url(./images/home.png);
+  background-image: url(./images/home.png);
   height: 765px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  opacity: 0.75;
   margin-top: 20px;
 }
 
@@ -63,7 +67,9 @@ img {
 .get-started:hover {
   background-color: navy;
 }
-
+img {
+  width: 100%;
+}
 header {
   display: flex;
   height: 90px;
@@ -84,5 +90,471 @@ header .logo {
   width: 138px;
   height: 90px;
   flex-shrink: 0;
-  background: url(../images2/logo.png) rgba(255, 255,
+  background: url(../images2/logo.png) rgba(255, 255, 255, 0.9) 50% / cover
+    no-repeat;
+  /* background-blend-mode: color-dodge; */
 }
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  flex-shrink: 0;
+  list-style: none;
+}
+
+.nav-link li {
+  display: inline;
+  margin-right: 15px;
+}
+
+.nav-link a {
+  color: #000;
+  font-family: "Gayathri", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+}
+
+.nav-link a.active {
+  border-bottom: 1px solid #3a478d;
+  color: #3a478d;
+}
+
+.nav-link a:hover {
+  color: #3a478d;
+}
+
+.hamburger-menu {
+  display: none;
+  font-size: 1.8em;
+  cursor: pointer;
+  color: #3a478d;
+}
+
+.first-sec {
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 0.3) 100%
+    ),
+    url(./images/home.png);
+  height: 765px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  margin-top: 20px 0 0 0;
+  padding: 0;
+}
+
+.container {
+  height: 768px;
+  width: 813px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+  margin-top: 30px;
+  color: black;
+  font-size: 30px;
+  font-weight: 900;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container p {
+  font-weight: 700;
+}
+
+.get-started {
+  display: inline-block;
+  padding: 8px 30px;
+  background-color: darkblue;
+  color: white;
+  text-decoration: none;
+  border-radius: 15px;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 200;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+
+.get-started:hover {
+  background-color: navy;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 200;
+  font-family: sans-serif;
+  color: darkblue;
+} 
+footer hr {
+  border: 0;
+  height: 1px;
+  background: darkblue;
+  margin: 20px 5%;
+}
+
+/* Modal Styles */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 999;
+}
+
+.modal {
+  position: fixed;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 30%;
+  max-width: 60%;
+  max-height: 90vh;
+  overflow-y: auto;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+  overflow-y: auto;
+}
+
+#modal-content {
+  width: 70%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 50px;
+} 
+
+.modal .form-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 15px;
+  overflow-y: auto;
+}
+
+.modal .form-group div {
+  width: 60%;
+}  
+
+.modal label {
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.modal input,
+.modal select {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+} 
+
+.login-form input {
+  width: 100% !important;
+  padding: 8px !important;
+  margin: 10px 0px !important;
+  border: 1px solid #ccc !important;
+  border-radius: 5px !important;
+  margin-left: 3% !important;
+}
+.login-form label {
+  display: block !important;
+  margin-bottom: 5px !important;
+  font-weight: bold !important;
+  margin-left: 3% !important;
+}
+.login-form h2 {
+  text-align: center !important;
+  margin-bottom: 1px !important;
+
+}
+.login-form p {
+  text-align: center !important;
+  margin-bottom: 40px !important;
+}
+.modal .submit-btn {
+  width: 100%;
+  padding: 12px;
+  background: #3a478d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-form button {
+  width: 95% !important;
+  padding: 10px !important;
+  background-color: #3a478d !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 10px !important;
+  cursor: pointer !important;
+  margin-top: 10% !important;
+  margin-left: 3% !important;
+  font-weight: bold !important;
+}
+.errorMessage {
+  color: red;
+  font-size: 0.85rem;
+}
+
+.partner-options {
+  text-align: center;
+}
+
+.partner-options .button {
+  cursor: pointer;
+  background-color: #d3d3d3;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 8px;
+}
+
+.partner-options .button:hover {
+  background-color: #b3b3b3;
+} 
+
+.button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  background-color: #d3d3d3;
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 10px;
+  text-align: center;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #b3b3b3;
+  transition: background 0.3s ease-in-out;
+} 
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: none;
+  font-size: 32px;
+  cursor: pointer;
+} 
+
+
+/* Add more of your original mentalhealth.html styles as needed */
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: block;
+    margin: 3rem auto 0 auto;
+    padding: 5px 10px;
+    font-size: 34px;
+  }
+
+  header {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 4rem;
+    /* max-width: 600px; */
+  }
+
+  header .logo {
+    width: 120px;
+    height: 60px;
+  }
+
+  .menu {
+    flex-direction: column;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    width: 100%;
+    background: #3a478d;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    display: none;
+  }
+
+  .nav-link a {
+    color: white;
+  }
+
+  .nav-link {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  /* Show menu when active */
+  .menu.active {
+    display: flex;
+  }
+
+  .first-sec {
+    height: 765px;
+    margin-top: 20px;
+  }
+
+  .container {
+    height: 100vh;
+    width: 100%;
+    max-width: 700px;
+    margin-left: 20px;
+    margin-top: 40px;
+    align-items: center;
+  }
+
+  .overlay {
+    top: 40px;
+  }
+.modal {
+    top: 60%;
+    left: 50%;
+    z-index: 1000;
+    width: 90%;
+    max-width: 600px;
+  } 
+
+ .modal .form-group {
+    width: 90%;
+  }
+
+  .modal .form-group div {
+    width: 90%;
+  }
+
+  #modal-content {
+    width: 100%;
+  }
+
+  .close-btn {
+    font-size: 40px;
+  } 
+ 
+  .modal .submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: #3a478d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  } 
+}
+
+@media (max-width: 400px) {
+  header {
+    height: 4rem;
+    width: 100%;
+    align-items: center;
+    gap: 30px;
+    justify-content: space-between;
+  }
+
+  .hamburger-menu {
+    margin: 40px auto 0 auto;
+  }
+
+  header .logo {
+    width: 120px;
+    height: 60px;
+    margin-left: -20%;
+  }
+
+  .first-sec {
+    overflow: hidden;
+    height: 120vh;
+  }
+
+  .overlay {
+    height: 120vh;
+    width: 100%;
+  }
+
+  .container h1 {
+    font-size: 32px;
+    width: 100%;
+  }
+
+  .container {
+    margin: 1rem auto 0 auto;
+    padding: 3rem 20px;
+    height: 100vh;
+  }
+
+  .titlebox {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .titlebox p {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+   .modal {
+    width: 85%;
+    max-width: 90%;
+    top: 65%;
+    overflow-y: auto;
+  }
+
+  .form {
+    width: 100%;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .close-btn {
+    margin-top: -10px;
+    font-size: 28px;
+    margin-left: 20px;
+  } */
+
+   #modal-content {
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 10px;
+    overflow-y: auto;
+  }
+
+  .modal .form-group {
+    width: 100%;
+  }
+
+  .modal .form-group div {
+    width: 80%;
+  } 
+}
+
+
