@@ -49,8 +49,8 @@
           <button class="close-btn" onclick="closeModal()">&times;</button>
           <div id="modal-content">
             <h2>Select User Category</h2>
-            <span class="button" onclick="loadForm('forms/mentalhealth.html'); event.preventDefault();">Mental Health Care</span>
-            <span class="button" onclick="loadForm('forms/menstrualhealth.html'); event.preventDefault();">Menstrual Health Care</span>
+            <span class="button" onclick="loadForm('mentalhealth.html'); event.preventDefault();">Mental Health Care</span>
+            <span class="button" onclick="loadForm('menstrualhealth.html'); event.preventDefault();">Menstrual Health Care</span>
             <span class="button" onclick="loadForm('partners.html');">Partners (Sponsors)</span>
           </div>
         </div>
@@ -75,8 +75,8 @@
         document.querySelector(".modal").style.display = "none";
         document.getElementById("modal-content").innerHTML = `
           <h2>Select User Category</h2>
-          <span class="button" onclick="loadForm('forms/mentalhealth.html')">Mental Health Care</span>
-          <span class="button" onclick="loadForm('forms/menstrualhealth.html')">Menstrual Health Care</span>
+          <span class="button" onclick="loadForm('mentalhealth.html')">Mental Health Care</span>
+          <span class="button" onclick="loadForm('menstrualhealth.html')">Menstrual Health Care</span>
           <span class="button" onclick="loadForm('partners.html')">Partners (Sponsors)</span>
         `;
       }
