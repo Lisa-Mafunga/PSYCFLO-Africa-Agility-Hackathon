@@ -68,7 +68,7 @@
             >
             <span
               class="button"
-              onclick="loadForm('../forms/menstrualhealth.html'); event.preventDefault();"
+              onclick="loadForm('menstrualhealth.html'); event.preventDefault();"
               >Menstrual Health Care</span
             >
             <span class="button" onclick="loadForm('partners.html');"
@@ -162,7 +162,7 @@
               modal.style.paddingY = "0";
               return;
             } 
-            else if (formUrl === "../forms/menstrualhealth.html") {
+            else if (formUrl === "menstrualhealth.html") {
               content = doc.documentElement.innerHTML;
               document.getElementById("modal-content").innerHTML = content;
               return;
@@ -196,7 +196,7 @@
               const donorBtn = document.querySelector(".log-btn");
               if (donorBtn) {
                 donorBtn.addEventListener("click", function () {
-                  loadForm("../forms/menstrualhealth.html");
+                  loadForm("menstrualhealth.html");
                 });
               }
             }
