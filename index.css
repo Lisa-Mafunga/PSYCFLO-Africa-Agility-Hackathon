@@ -268,7 +268,9 @@ footer hr {
   border: 1px solid #ccc;
   border-radius: 5px;
 } 
-
+.login-form{
+  width:400px;
+}
 .login-form input {
   width: 90% !important;
   padding: 8px !important;
