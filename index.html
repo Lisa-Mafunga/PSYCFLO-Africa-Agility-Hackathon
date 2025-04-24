@@ -125,7 +125,7 @@
               // Adjust modal styling for the login form
               const modal = document.querySelector('.modal');
               modal.style.padding = '0';
-              modal.style.maxWidth = '600px';
+              modal.style.maxWidth = '700px';
               modal.style.alignItems = 'center';
               modal.style.justifyContent = 'center';
               
@@ -141,43 +141,7 @@
             });
           return;
         }
-      }
-
-        function loadForm(formUrl) {
-        // Special handling for menstrual health form
-        if (formUrl === '../forms/mentalhealth.html') {
-          fetch(`forms/${formUrl}`)
-            .then((res) => res.text())
-            .then((html) => {
-              const parser = new DOMParser();
-              const doc = parser.parseFromString(html, 'text/html');
-              const loginContainer = doc.querySelector('.login-container');
-              
-              // Inject the login form into modal
-              document.getElementById('modal-content').innerHTML = `
-                <button class="close-btn" onclick="closeModal()">&times;</button>
-                ${loginContainer.outerHTML}
-              `;
-              
-              // Adjust modal styling for the login form
-              const modal = document.querySelector('.modal');
-              modal.style.padding = '0';
-              modal.style.maxWidth = '600px';
-              modal.style.alignItems = 'center';
-              modal.style.justifyContent = 'center';
-              
-              // Initialize the mental health form functionality
-              initMentalHealthForm();
-            })
-            .catch((err) => {
-              console.error("Error loading form:", err);
-              document.getElementById("modal-content").innerHTML = `
-                <p>Error loading form. Please try again.</p>
-                <button class="button" onclick="closeModal()">Close</button>
-              `;
-            });
-          return;
-        }
+        
     
         // Original handling for other forms (menstrual health and partners)
         fetch(`forms/${formUrl}`)
