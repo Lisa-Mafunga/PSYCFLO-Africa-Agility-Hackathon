@@ -63,7 +63,7 @@
             <h2>Select User Category</h2>
             <span
               class="button"
-              onclick="loadForm('mentalhealth.html'); event.preventDefault();"
+              onclick="loadForm('../forms/mentalhealth.html'); event.preventDefault();"
               >Mental Health Care</span
             >
             <span
@@ -107,7 +107,7 @@
       }
     
       function loadForm(formUrl) {
-        // Special handling for mental health forms
+        // Special handling for mental health form
         if (formUrl === 'mentalhealth.html') {
           fetch(`forms/${formUrl}`)
             .then((res) => res.text())
@@ -125,7 +125,7 @@
               // Adjust modal styling for the login form
               const modal = document.querySelector('.modal');
               modal.style.padding = '0';
-              modal.style.maxWidth = '700px';
+              modal.style.maxWidth = '500px';
               modal.style.alignItems = 'center';
               modal.style.justifyContent = 'center';
               
@@ -141,7 +141,6 @@
             });
           return;
         }
-        
     
         // Original handling for other forms (menstrual health and partners)
         fetch(`forms/${formUrl}`)
@@ -162,7 +161,7 @@
               modal.style.paddingY = "0";
               return;
             } 
-            else if (formUrl === "menstrualhealth.html") {
+            else if (formUrl === "donor.html") {
               content = doc.documentElement.innerHTML;
               document.getElementById("modal-content").innerHTML = content;
               return;
@@ -193,10 +192,10 @@
                 });
               }
     
-              const donorBtn = document.querySelector(".log-btn");
+              const donorBtn = document.querySelector(".donor-btn");
               if (donorBtn) {
                 donorBtn.addEventListener("click", function () {
-                  loadForm("menstrualhealth.html");
+                  loadForm("donor.html");
                 });
               }
             }
@@ -211,15 +210,55 @@
       }
     
       // New functions for mental health form handling
-      
-        
+      function initMentalHealthForm() {
+        // Handle login button
+        const loginButton = document.getElementById('loginButton');
+        if (loginButton) {
+          loginButton.addEventListener('click', function() {
+            const fullName = document.getElementById('fullName')?.value;
+            const email = document.getElementById('e-mail')?.value;
+            const errorMessage = document.getElementById('errorMessage');
+    
+            // Clear previous error
+            if (errorMessage) {
+              errorMessage.style.display = 'none';
+              errorMessage.textContent = '';
+            }
+    
+            // Validate
+            if (!fullName || !email) {
+              if (errorMessage) {
+                errorMessage.textContent = 'Please fill in all fields.';
+                errorMessage.style.display = 'block';
+              }
+              return;
+            }
+    
+            // Show welcome message
+            document.getElementById('modal-content').innerHTML = `
+              <button class="close-btn" onclick="closeModal()">&times;</button>
+              <div style="padding: 20px; text-align: center;">
+                <h2>Welcome Back, ${fullName}!</h2>
+                <p>Where would you like to go?</p>
+                <button class="button" onclick="window.location.href='pages/home.html'" 
+                  style="margin: 10px; padding: 10px 20px; width: 80%;">
+                  Explore Mental Wellness
+                </button>
+                <button class="button" onclick="window.location.href='pages/customerdashboard.html'" 
+                  style="margin: 10px; padding: 10px 20px; width: 80%;">
+                  Go to My Dashboard
+                </button>
+              </div>
+            `;
+          });
+        }
     
         // Handle signup link
         const signupLink = document.querySelector('.login-form a[onclick="showSignup()"]');
         if (signupLink) {
           signupLink.onclick = function(e) {
             e.preventDefault();
-            fetch(`mentalhealth.html`)
+            fetch(`forms/mentalhealth.html`)
               .then((res) => res.text())
               .then((html) => {
                 const parser = new DOMParser();
@@ -238,7 +277,7 @@
               });
           };
         }
-      
+      }
     
       function initSignupForm() {
         const userForm = document.getElementById('userForm');
