@@ -68,7 +68,7 @@
             >
             <span
               class="button"
-              onclick="loadForm('menstrualhealth.html'); event.preventDefault();"
+              onclick="loadForm('../forms/menstrualhealth.html'); event.preventDefault();"
               >Menstrual Health Care</span
             >
             <span class="button" onclick="loadForm('partners.html');"
@@ -108,7 +108,7 @@
     
       function loadForm(formUrl) {
         // Special handling for mental health form
-        if (formUrl === 'mentalhealth.html') {
+        if (formUrl === '../forms/mentalhealth.html') {
           fetch(`forms/${formUrl}`)
             .then((res) => res.text())
             .then((html) => {
@@ -258,7 +258,7 @@
         if (signupLink) {
           signupLink.onclick = function(e) {
             e.preventDefault();
-            fetch(`forms/mentalhealth.html`)
+            fetch(`../forms/mentalhealth.html`)
               .then((res) => res.text())
               .then((html) => {
                 const parser = new DOMParser();
