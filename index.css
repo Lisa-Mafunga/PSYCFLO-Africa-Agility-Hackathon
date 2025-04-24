@@ -286,6 +286,7 @@ footer hr {
 .login-form h2 {
   text-align: center !important;
   margin-bottom: 1px !important;
+  font-size: 15px;
 }
 .login-form p {
   text-align: center !important;
