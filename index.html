@@ -162,7 +162,7 @@
               modal.style.paddingY = "0";
               return;
             } 
-            else if (formUrl === "donor.html") {
+            else if (formUrl === "../forms/menstrualhealth.html") {
               content = doc.documentElement.innerHTML;
               document.getElementById("modal-content").innerHTML = content;
               return;
@@ -193,10 +193,10 @@
                 });
               }
     
-              const donorBtn = document.querySelector(".donor-btn");
+              const donorBtn = document.querySelector(".log-btn");
               if (donorBtn) {
                 donorBtn.addEventListener("click", function () {
-                  loadForm("donor.html");
+                  loadForm("../forms/menstrualhealth.html");
                 });
               }
             }

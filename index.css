@@ -90,7 +90,7 @@ header .logo {
   width: 138px;
   height: 90px;
   flex-shrink: 0;
-  background: url(./images/logo3.svg) rgba(255, 255, 255, 0.9) 50% / cover
+  background: url(../images2/logo.png) rgba(255, 255, 255, 0.9) 50% / cover
     no-repeat;
   /* background-blend-mode: color-dodge; */
 }
@@ -286,6 +286,7 @@ footer hr {
 .login-form h2 {
   text-align: center !important;
   margin-bottom: 1px !important;
+
 }
 .login-form p {
   text-align: center !important;

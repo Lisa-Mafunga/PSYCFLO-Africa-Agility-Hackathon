@@ -24,7 +24,7 @@ header .logo {
   width: 138px;
   height: 90px;
   flex-shrink: 0;
-  background: url(../images/logo3.svg) rgba(255, 255, 255, 0.90) 50% / cover no-repeat;
+  background: url(../images2/logo.png) rgba(255, 255, 255, 0.90) 50% / cover no-repeat;
   /* background-blend-mode: color-dodge; */
 }
 .fa-solid {
