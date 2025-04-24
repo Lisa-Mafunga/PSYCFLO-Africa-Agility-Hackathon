@@ -62,7 +62,8 @@
             <!-- Content will be dynamically inserted here -->
             <h2>Select User Category</h2>
             <span
-              class="button"onclick="loadForm('../forms/mentalhealth.html'); event.preventDefault();"
+              class="button"
+              onclick="loadForm('../forms/mentalhealth.html'); event.preventDefault();"
               >Mental Health Care</span
             >
             <span
@@ -99,8 +100,8 @@
         // Reset to initial modal content when closed
         document.getElementById("modal-content").innerHTML = `
           <h2>Select User Category</h2>
-          <span class="button" onclick="loadForm('../forms/mentalhealth.html')">Mental Health Care</span>
-          <span class="button" onclick="loadForm('../forms/menstrualhealth.html')">Menstrual Health Care</span>
+          <span class="button" onclick="loadForm('mentalhealth.html')">Mental Health Care</span>
+          <span class="button" onclick="loadForm('menstrualhealth.html')">Menstrual Health Care</span>
           <span class="button" onclick="loadForm('partners.html')">Partners (Sponsors)</span>
         `;
       }
@@ -240,11 +241,11 @@
               <div style="padding: 20px; text-align: center;">
                 <h2>Welcome Back, ${fullName}!</h2>
                 <p>Where would you like to go?</p>
-                <button class="button" onclick="window.location.href='../pages/home.html'" 
+                <button class="button" onclick="window.location.href='pages/home.html'" 
                   style="margin: 10px; padding: 10px 20px; width: 80%;">
                   Explore Mental Wellness
                 </button>
-                <button class="button" onclick="window.location.href='../pages/customerdashboard.html'" 
+                <button class="button" onclick="window.location.href='pages/customerdashboard.html'" 
                   style="margin: 10px; padding: 10px 20px; width: 80%;">
                   Go to My Dashboard
                 </button>
