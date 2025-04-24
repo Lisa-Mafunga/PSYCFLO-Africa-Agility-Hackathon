@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/favicon-16x16.png" type="image/x-icon">
+    <title>Chatbot</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Montserrat & Gayathri font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gayathri:wght@100;400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../stylesheets/AI Chatbot.css">
+
+    <!-- DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+
+    <style>
+         body {
+            font-family: "Montserrat", sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+         .nav-icon {
+    font-size: 30px; /* Size of the icon */
+    cursor: pointer; /* Pointer cursor on hover */
+    position: fixed; /* Fixed position */
+    left: 10px; /* Distance from the left */
+    top: 20px; /* Distance from the top */
+    z-index: 1000; /* Ensure it's above other content */
+    margin-top: 10%;
+}
+
+.navigation {
+    width: 200px; /* Width of the navigation panel */
+    background-color: #f5f5f5; /* Light background color */
+    padding: 20px; /* Padding inside the navigation */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    position: fixed; /* Fixed position */
+    height: 100%; /* Full height */
+    left: -220px; /* Initially hidden off-screen */
+    transition: left 0.3s; /* Smooth transition for opening/closing */
+}
+
+.navigation.active {
+    left: 0; /* Show the navigation panel */
+}
+
+.navigation h2 {
+    font-size: 20px; /* Font size for the menu title */
+    margin: 0 0 20px 0; /* Margin for spacing */
+}
+
+.navigation ul {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0; /* Remove padding */
+}
+
+.navigation li {
+    margin: 15px 0; /* Margin for spacing between items */
+}
+
+.navigation a {
+    text-decoration: none; /* Remove underline */
+    color: #2c3e50; /* Dark text color */
+    font-size: 18px; /* Font size for links */
+    display: block; /* Block display for full clickable area */
+    padding: 10px; /* Padding for links */
+    border-radius: 5px; /* Rounded corners for links */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.navigation a:hover {
+    background-color: #e0e0e0; /* Background color on hover */
+}
+
+.navigation a.active {
+    background-color: #5c6bc0; /* Active link background color */
+    color: white; /* White text for active link */
+}
+        .chat-wrapper {
+            display: flex; /* Flexbox for layout */
+            align-items: stretch; /* Make items stretch to the same height */
+            margin-top: 5px; /* Space above chat */
+            max-width: 1000px; /* Increase container width */
+            margin: auto; /* Center the chat wrapper */
+        }
+
+        .user-image {
+            margin-right: 15px; /* Space between image and chat */
+            flex-shrink: 0; /* Prevent image from shrinking */
+            margin-top: 10%;
+        }
+
+        .user-image img {
+            width: 400px; /* Size of the user image */
+            max-height: 400px; /* Limit height of chat container */
+            border-radius: 10px; /* Rounded corners */
+        }
+
+        .chat-container {
+            flex: 1; /* Take remaining space */
+            background-color: #fff; /* Background for chat area */
+            border-radius: 15px; /* Rounded corners */
+            padding: 10px; /* Padding inside chat */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for chat */
+            max-height: 400px; /* Limit height of chat container */
+            display: flex;
+            flex-direction: column; /* Column layout for chat and input */
+
+        }
+
+        .chat-box {
+            flex: 1; /* Take remaining space */
+            max-height: 300px; /* Limit height of chat box */
+            overflow-y: auto; /* Scroll if too many messages */
+            margin-bottom: 15px; /* Space below chat box */
+        }
+
+        .input-area {
+            display: flex; /* Flex for input area */
+            align-items: center; /* Center items vertically */
+            padding: 5px; /* Padding inside chat */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for chat */
+            border-radius: 15px;
+            width: 450px;
+            position: relative;
+
+        }
+
+        .input-area input {
+            flex: 1; /* Take remaining space */
+            padding: 10px; /* Padding for input */
+            border: 1px solid #ddd; /* Border for input */
+            border-radius: 15px; /* Rounded corners */
+        }
+
+        .iconbox {
+            display: flex; /* Flex for icon buttons */
+            margin-left: 10px; /* Space between input and icons */
+        }
+
+       
+        .iconbox button1 {
+            background-color: #3a478d; /* Blue background for button */
+            color: white; /* White text */
+            border: none; /* Remove border */
+            border-radius: 5px; /* Rounded corners */
+            padding: 10px 15px; /* Padding for buttons */
+            cursor: pointer; /* Pointer cursor */
+        }
+        .iconbox button1:hover{
+            background: #3a478d; /* No background */
+        }
+
+        .popup {
+            width: 400px; /* Wider popup */
+            padding: 20px; /* Padding for popup */
+            border-radius: 15px; /* Rounded corners */
+        }
+
+        .popup-btn {
+            display: flex; /* Flex for buttons */
+            justify-content: space-between; /* Space buttons apart */
+        }
+
+        .popup-btn button {
+            background-color: #3a478d; /* Blue background */
+            color: white; /* White text */
+            border: none; /* Remove border */
+            border-radius: 5px; /* Rounded corners */
+            padding: 10px 15px; /* Padding for buttons */
+            cursor: pointer; /* Pointer cursor */
+            margin-top: 10px; /* Space above buttons */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo"></div>
+
+        <div class="hamburger-menu" id="hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+    <div class="nav-icon" onclick="toggleNav()">
+        &#9776; <!-- Hamburger icon -->
+    </div>
+    
+    <div class="navigation" id="navPanel">
+        <ul>
+            <li><a href="../pages/customerdashboard.html" class="active">Dashboard</a></li>
+            <li><a href="../pages/sessions.html">Session</a></li>
+            <li><a href="../forms/mentalhealth.html">Logout</a></li>
+        </ul>
+    </div>
+    <main class="chatcontainer">
+        <section class="contents">
+            <div class="chat-wrapper">
+                <div class="user-image">
+                    <img src="../images2/aishasessions.jpg" alt="Aisha">
+                </div>
+                <div class="chat-container">
+                    <div class="chat-box" id="chat-box">
+                        <!-- This will be injected by JavaScript -->
+                        <div class="typing-indicator" id="typing-indicator">Bot is typing<span class="dot">.</span><span
+                                class="dot">.</span><span class="dot">.</span></div>
+                    </div>
+                    <div class="input-area">
+                        <input type="text" id="chat-input" placeholder="Type a message..." required />
+                        <div class="iconbox">
+                            <button type="button" id="voice-btn" title="Speak">
+                                <img src="../images/speakericon.svg" alt="speaker icon">
+                            </button>
+                            <button type="button1" id="send-btn" title="Send" >
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popup -->
+        <div class="overlay" id="overlay"></div>
+        <div class="popup" id="popup">
+            <div class="popup-content">
+                <p>Free Session Limit Reached! <br><br>
+                    Your 3-days access to free therapy sessions has come to a close. Choose a plan that works for you
+                    and continue your journey with the right support.
+                </p>
+                <div class="popup-btn">
+                    <button class="continue-btn" onclick="closePopup()">View Plan</button>
+                    <button class="skip-btn" onclick="goToAnotherPage()">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function toggleNav() {
+        const navPanel = document.getElementById("navPanel");
+        navPanel.classList.toggle("active");
+}
+    </script>
+</body>
+
+</html>
