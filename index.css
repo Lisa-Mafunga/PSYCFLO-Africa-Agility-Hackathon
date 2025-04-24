@@ -304,7 +304,7 @@ footer hr {
   margin-left: 3% !important;
   font-weight: bold !important;
 }
-.error {
+.errorMessage {
   color: red;
   font-size: 0.85rem;
 }
